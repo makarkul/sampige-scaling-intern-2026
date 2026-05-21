@@ -8,8 +8,7 @@ versus the current single-instance `docker compose` setup.
 ## Internship at a glance
 
 - **Duration:** 8 weeks (2 months)
-- **Intern profile:** 3rd-year CS student, comfortable with Linux, containers, and Python/Bash
-- **Target host:** single server, ~128 cores, large memory
+- **Target host:** single server, 48 cores to start, large memory
 - **Cluster:** lightweight Kubernetes on that single server (k3s recommended; kind/minikube acceptable)
 - **Primary success metric:** wall-clock time to execute the full TTCN-3 suite
   - Baseline = current `docker compose` run on the same host

@@ -6,7 +6,7 @@ new joiner and produce one trustworthy baseline number on the target server.
 ## Accounts and access (day 1)
 
 - GitHub access to this repo, push permission
-- SSH access to the 128-core target server
+- SSH access to the 48-core target server
 - Access to the existing osmocom `docker compose` setup (clone it into `compose/`
   in this repo as a reference snapshot — do not modify it there)
 - Slack / mail group, calendar invite for Friday demos

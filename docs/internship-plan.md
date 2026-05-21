@@ -8,7 +8,7 @@ runs a TTCN-3 suite from an integrated pod, then tears the whole stack down. Bri
 and tear-down dominate per-test cost, so the full suite takes much longer than the
 sum of the actual test logic.
 
-We have a single host with ~128 cores and a lot of RAM. Each network instance only
+We have a single host with 48 cores (to start) and a lot of RAM. Each network instance only
 uses a small fraction of those resources, so we can run many independent instances in
 parallel — one per Kubernetes namespace — and shard the test suite across them. The
 internship is to build that and prove the speed-up with numbers.
