@@ -31,9 +31,5 @@ Total tests: 3
 - The second testcase appeared to spend a long time in execution and failed.
 - Based on container activity and timestamps, the campaign infrastructure overhead seems significant relative to the actual testcase logic.
 - The GSM stack is initialised each time.
-
-
-
-
 - Container activity was monitored using `docker ps`.
 - Further log inspection may be required for long-running testcase behavior.
