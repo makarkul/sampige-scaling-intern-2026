@@ -18,7 +18,7 @@ Run everything from `refs/osmocom-demo/` unless noted otherwise.
 - [ ] If images aren't built: `./build-images.sh` and capture the wall-clock
       time. (One-time cost, but useful to know.)
 - **Evidence:** paste the output of `./run-ttcn3-tests.sh status` into
-  `week0/notes/A-status.txt`.
+  `week00/notes/A-status.txt`.
 
 ## B. Run the virtual-Um demo end-to-end
 
@@ -38,7 +38,7 @@ does — one shell, one network, one MS attaching to one BSC.
   - `t_start_to_ready` = `start` invocation → `status` shows all Up
   - `t_attach`         = subscriber registered → "normal service" in mobile log
   - `t_teardown`       = `stop` invocation → no `osmo-` containers left
-- **Evidence:** `week0/notes/B-virtual-um.md` with the three timings and one
+- **Evidence:** `week00/notes/B-virtual-um.md` with the three timings and one
   line per step ("worked / didn't work / had to do X").
 
 ## C. Run a single TTCN-3 test
@@ -74,7 +74,7 @@ network bring-up. This is what we'll be parallelizing.
       (smoke has 3 tests). Note which tests it includes.
 - [ ] `./run-ttcn3-tests.sh campaign smoke`.
 - [ ] Note the wall-clock for the full campaign and for each test inside it.
-- **Evidence:** `week0/notes/D-campaign-smoke.md` with:
+- **Evidence:** `week00/notes/D-campaign-smoke.md` with:
   - Total wall-clock for the campaign.
   - Per-test wall-clock (from the per-test log directories under
     `ttcn3/logs/`).
@@ -92,7 +92,7 @@ This is the muscle memory you need for the rest of the internship.
 - [ ] Look at mobile state — `grep -E "new state|LOCATION UPDATING|no IMSI|
       shutdown" ttcn3/logs/<TC>-*/container-logs/*mobile.log`.
 - [ ] Look at MSC stub I/O — `cat ttcn3/logs/<TC>-*/container-logs/*msc-stub.log`.
-- **Evidence:** one paragraph in `week0/notes/E-log-tour.md` explaining where
+- **Evidence:** one paragraph in `week00/notes/E-log-tour.md` explaining where
   you'd start if a test failed unexpectedly tomorrow.
 
 ## F. Capture rough numbers for the week-1 baseline
@@ -104,14 +104,14 @@ good enough to predict whether the parallelism strategy will pay off.
 - [ ] One full campaign (smoke): total wall-clock + count of tests.
 - [ ] Container count during a single test (peak `docker ps | wc -l`).
 - [ ] Approx. RAM used during a single test (`docker stats --no-stream` once).
-- **Evidence:** `week0/notes/F-baseline-hints.md` — one table.
+- **Evidence:** `week00/notes/F-baseline-hints.md` — one table.
 
 ## G. EOD checklist
 
-- [ ] `week0/notes/` has files for A, B, D, E, F.
+- [ ] `week00/notes/` has files for A, B, D, E, F.
 - [ ] `day1-reflection.md` filled in (next file).
 - [ ] No stray containers (`docker ps | grep osmo-` is empty).
-- [ ] Push a branch with everything you've added under `week0/`.
+- [ ] Push a branch with everything you've added under `week00/`.
 - [ ] Drop a one-line update in `tracking.csv` `Notes` column.
 
 ---

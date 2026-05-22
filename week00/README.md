@@ -26,7 +26,7 @@ help. Day 1 is that warm-up.
 
 ## Where to write outputs
 
-- Logs and timings collected today: keep under `week0/notes/` (create the
+- Logs and timings collected today: keep under `week00/notes/` (create the
   directory; not tracked yet).
 - Anything that turns into a baseline number: it moves into `results/week01/`
   next week, **not** here.

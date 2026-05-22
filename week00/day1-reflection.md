@@ -3,7 +3,7 @@
 Fill in by end of day. Bullets are fine. Keep it short — this is what
 Makarand reviews on Friday, not a writeup.
 
-Reference the evidence files under `week0/notes/` rather than pasting logs
+Reference the evidence files under `week00/notes/` rather than pasting logs
 inline.
 
 ---
@@ -29,7 +29,7 @@ In your own words, what does the existing demo actually do when you run
 - Section D (campaign `smoke`): <verdict> — wall-clock <seconds> for
   <N> tests
 
-Evidence: `week0/notes/`.
+Evidence: `week00/notes/`.
 
 ## 3. The two phases that look most expensive
 
