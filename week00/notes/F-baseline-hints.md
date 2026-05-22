@@ -9,5 +9,3 @@
 | Peak container count during single test | 9 |
 | Approximate RAM usage | 56 MiB |
 | TTCN-3 verdict | `pass` for `TC_26_2_3` |
-| Campaign behavior | Tests executed sequentially |
-
