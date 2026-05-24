@@ -15,7 +15,7 @@ Total tests: 3
 ## Per-Test Wall Clock
 
 - TC_26_7_4_5_1: approximately 6-7 minutes
-- TC_26_7_4_5_2: exceeded 25 minutes during execution (failed)
+- TC_26_7_4_5_2: exceeded 25 minutes during execution (failed) --> Log dir: `ttcn3/logs/TC_26_7_4_5_2-2026-05-22-113546`
 - TC_26_7_4_5_3: not completed
 
 ## Observations
