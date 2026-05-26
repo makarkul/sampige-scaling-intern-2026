@@ -82,6 +82,14 @@ done
   done
 } > "${OUT_DIR}/events.csv"
 
+# Aggregate pods
+{
+  echo "namespace,pod,container,restarts,oom_killed,exit_code"
+  for i in $(seq 1 "${N}"); do
+    tail -n +2 "${OUT_DIR}/ns-${i}/pods.csv" 2>/dev/null || true
+  done
+} > "${OUT_DIR}/pods.csv"
+
 # Stop host collection
 kill "${HOST_PID}" 2>/dev/null || true
 wait "${HOST_PID}" 2>/dev/null || true

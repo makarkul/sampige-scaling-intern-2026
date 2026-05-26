@@ -72,8 +72,27 @@ log "Namespace : $NS"
 log "Tests     : ${TESTS[*]}"
 log "Results   : $RUN_DIR"
 
+collect_pods() {
+  kubectl get pods -n "${NS}" -o json 2>/dev/null | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+print('namespace,pod,container,restarts,oom_killed,exit_code')
+for pod in data.get('items', []):
+    pname = pod['metadata']['name']
+    for cs in pod.get('status', {}).get('containerStatuses', []):
+        last = cs.get('lastState', {}).get('terminated', {})
+        print(','.join([
+            '${NS}', pname, cs['name'],
+            str(cs.get('restartCount', 0)),
+            'true' if last.get('reason') == 'OOMKilled' else 'false',
+            str(last.get('exitCode', '')),
+        ]))
+" > "${RUN_DIR}/pods.csv" 2>/dev/null || true
+}
+
 # Always delete the namespace on exit, even if the script fails mid-run.
 cleanup() {
+  collect_pods
   # Delete the L1CTL socket from inside virtphy (runs as root) before the
   # namespace goes away — host path is root-owned so rm from userspace fails.
   kubectl exec -n "$NS" deployment/virtphy -- rm -f /tmp/osmocom_l2 2>/dev/null || true
