@@ -152,7 +152,10 @@ run_test() {
   local pod
   pod=$(kubectl get pods -n "$NS" -l "job-name=$JOB_NAME" \
     -o jsonpath='{.items[0].metadata.name}' 2>/dev/null || echo "")
-  if [ -n "$pod" ]; then
+  if [ -z "$pod" ]; then
+    fail "$TEST_NAME: no pod found for job $JOB_NAME — cannot collect logs or reports"
+    echo "WARN: no pod found for $JOB_NAME" > "$TEST_DIR/REPORTS_MISSING"
+  else
     kubectl logs -n "$NS" "$pod" > "$TEST_DIR/ttcn3-pod.log" 2>&1 || true
   fi
 
@@ -165,8 +168,13 @@ run_test() {
   local TITAN_DIR
   TITAN_DIR=$(ls -td "$TTCN3_DIR/logs/$TEST_NAME"-* 2>/dev/null | head -1)
   if [ -n "$TITAN_DIR" ] && [ -d "$TITAN_DIR" ]; then
-    cp -r "$TITAN_DIR/." "$TEST_DIR/titan-logs/"  2>/dev/null || \
-      cp -rp "$TITAN_DIR" "$TEST_DIR/titan-logs"  2>/dev/null || true
+    if cp -r "$TITAN_DIR/." "$TEST_DIR/titan-logs/" 2>/dev/null || \
+       cp -rp "$TITAN_DIR" "$TEST_DIR/titan-logs"   2>/dev/null; then
+      : # copy succeeded
+    else
+      fail "$TEST_NAME: failed to copy TITAN reports from $TITAN_DIR"
+      echo "WARN: cp failed from $TITAN_DIR" > "$TEST_DIR/REPORTS_MISSING"
+    fi
     if grep -qi 'verdict: pass' "$TITAN_DIR"/*.log 2>/dev/null; then
       ok "$TEST_NAME: PASS"
       echo "PASS" > "$TEST_DIR/verdict.txt"
@@ -176,6 +184,9 @@ run_test() {
       echo "FAIL" > "$TEST_DIR/verdict.txt"
       return 1
     fi
+  else
+    fail "$TEST_NAME: no TITAN report dir found under $TTCN3_DIR/logs/"
+    echo "WARN: no TITAN dir found" > "$TEST_DIR/REPORTS_MISSING"
   fi
 
   if grep -qi 'verdict: pass' "$TEST_DIR/ttcn3-pod.log" 2>/dev/null; then
