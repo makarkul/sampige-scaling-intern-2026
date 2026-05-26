@@ -49,12 +49,12 @@ log "Results   : $RUN_DIR"
 
 # Always delete the namespace on exit, even if the script fails mid-run.
 cleanup() {
+  # Delete the L1CTL socket from inside virtphy (runs as root) before the
+  # namespace goes away — host path is root-owned so rm from userspace fails.
+  kubectl exec -n "$NS" deployment/virtphy -- rm -f /tmp/osmocom_l2 2>/dev/null || true
   info "Teardown: deleting namespace $NS..."
   kubectl delete namespace "$NS" --wait=true --timeout=300s 2>/dev/null || true
   event t_teardown
-  # Remove the virtphy L1CTL socket from the host so the next run doesn't
-  # find a stale socket and spend time in a crash loop before camping.
-  rm -f /tmp/osmocom-l2/osmocom_l2 2>/dev/null || true
 }
 trap cleanup EXIT
 
