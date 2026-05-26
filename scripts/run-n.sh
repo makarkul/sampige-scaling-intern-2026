@@ -4,7 +4,7 @@
 # Usage:
 #   scripts/run-n.sh <N> [--prefix gsm] [--keep]
 #
-# Writes to: results/runs/<timestamp>-N<N>/
+# Writes to: results/weekNN/run<YYYYMMDD>-<HHMMSS>-N<N>/
 #   meta.json
 #   events.csv          (concatenated from per-namespace events)
 #   host-samples.csv    (collected by scripts/collect-host.sh in background)
@@ -26,9 +26,17 @@ while (($#)); do
   esac
 done
 
-TS="$(date -u +%Y%m%dT%H%M%SZ)"
-OUT_DIR="results/runs/${TS}-N${N}"
+DEMO_REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/refs/osmocom-demo"
+BASE="${DEMO_REPO}/k8s/base"
+
+WEEK=${WEEK:-$(date -u +%V)}
+TS="$(date -u +%Y%m%d-%H%M%S)"
+OUT_DIR="results/week${WEEK}/run${TS}-N${N}"
 mkdir -p "${OUT_DIR}"
+
+SUITE_REV=$(git -C "${DEMO_REPO}" rev-parse --short HEAD 2>/dev/null || echo unknown)
+IMAGE_TAGS=$(grep -h 'image:' "${BASE}"/*.yaml 2>/dev/null \
+  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || echo unknown)
 
 # Capture host facts up front
 cat > "${OUT_DIR}/meta.json" <<EOF
@@ -40,8 +48,8 @@ cat > "${OUT_DIR}/meta.json" <<EOF
   "cpus": $(nproc),
   "mem_kb": $(awk '/MemTotal/ {print $2}' /proc/meminfo),
   "k3s_version": "$(k3s --version 2>/dev/null | head -1 || echo unknown)",
-  "image_tags": "TODO: capture from chart values",
-  "suite_revision": "TODO: capture from suite repo"
+  "image_tags": "${IMAGE_TAGS}",
+  "suite_revision": "${SUITE_REV}"
 }
 EOF
 
@@ -54,14 +62,9 @@ trap 'kill ${HOST_PID} 2>/dev/null || true' EXIT
 pids=()
 for i in $(seq 1 "${N}"); do
   ns="${PREFIX}-${i}"
-  ( scripts/run-one.sh "${ns}" ${KEEP} > "${OUT_DIR}/ns-${i}.log" 2>&1
-    mkdir -p "${OUT_DIR}/ns-${i}"
-    # The most recent run dir for this namespace:
-    latest="$(ls -1dt results/runs/*-"${ns}" 2>/dev/null | head -1 || true)"
-    if [[ -n "${latest}" && -d "${latest}" ]]; then
-      mv "${latest}"/* "${OUT_DIR}/ns-${i}/" 2>/dev/null || true
-      rmdir "${latest}" 2>/dev/null || true
-    fi
+  ns_dir="${OUT_DIR}/ns-${i}"
+  mkdir -p "${ns_dir}"
+  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" > "${ns_dir}/run-one-outer.log" 2>&1
   ) &
   pids+=($!)
 done

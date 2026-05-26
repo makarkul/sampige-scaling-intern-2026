@@ -21,10 +21,35 @@ fi
 
 BASE="${DEMO_REPO}/k8s/base"
 TTCN3_DIR="${DEMO_REPO}/ttcn3"
-TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
-RUN_DIR="${META_ROOT}/results/runs/${TIMESTAMP}-${NS}"
+WEEK=${WEEK:-$(date -u +%V)}
+TIMESTAMP=$(date -u +%Y%m%d-%H%M%S)
+RUN_DIR="${RUN_ONE_OUT:-${META_ROOT}/results/week${WEEK}/run${TIMESTAMP}-N1}"
 
 mkdir -p "${RUN_DIR}"
+
+# ── meta.json ──────────────────────────────────────────────────────────────────
+
+SUITE_REV=$(git -C "${DEMO_REPO}" rev-parse --short HEAD 2>/dev/null || echo unknown)
+CPU_MODEL=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs 2>/dev/null || echo unknown)
+IMAGE_TAGS=$(grep -h 'image:' "${BASE}"/*.yaml 2>/dev/null \
+  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || echo unknown)
+
+cat > "${RUN_DIR}/meta.json" <<EOF
+{
+  "N": 1,
+  "namespace": "${NS}",
+  "start_utc": "${TIMESTAMP}",
+  "end_utc": null,
+  "host": "$(hostname)",
+  "kernel": "$(uname -r)",
+  "cpu_model": "${CPU_MODEL}",
+  "cpus": $(nproc),
+  "mem_kb": $(awk '/MemTotal/ {print $2}' /proc/meminfo),
+  "k3s_version": "$(k3s --version 2>/dev/null | head -1 || echo unknown)",
+  "image_tags": "${IMAGE_TAGS}",
+  "suite_revision": "${SUITE_REV}"
+}
+EOF
 
 # ── Metrics contract ───────────────────────────────────────────────────────────
 
@@ -54,6 +79,14 @@ cleanup() {
   kubectl exec -n "$NS" deployment/virtphy -- rm -f /tmp/osmocom_l2 2>/dev/null || true
   info "Teardown: deleting namespace $NS..."
   kubectl delete namespace "$NS" --wait=true --timeout=300s 2>/dev/null || true
+  python3 -c "
+import json, pathlib
+p = pathlib.Path('${RUN_DIR}/meta.json')
+if p.exists():
+    d = json.loads(p.read_text())
+    d['end_utc'] = '$(date -u +%Y%m%d-%H%M%S)'
+    p.write_text(json.dumps(d, indent=2) + '\n')
+" 2>/dev/null || true
   event t_teardown
 }
 trap cleanup EXIT
@@ -273,6 +306,8 @@ event t_testN
   echo "  PASS: $PASS   FAIL: $FAIL   INCONCLUSIVE: $INCONC"
   echo "====================================================="
 } | tee "${RUN_DIR}/summary.txt"
+
+python3 "${META_ROOT}/scripts/summarize.py" "${RUN_DIR}"
 
 info "Done. Results: $RUN_DIR"
 
