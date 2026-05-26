@@ -9,8 +9,8 @@ import json
 import sys
 from pathlib import Path
 
-PHASES = ["t0", "ns_created", "t_ready", "t_attached",
-          "t_test0", "t_testN", "teardown_start", "teardown_end"]
+PHASES = ["t0", "t_apply", "t_ready", "t_attached",
+          "t_test0", "t_testN", "t_teardown"]
 
 
 def load_events(events_csv: Path) -> dict[str, dict[str, float]]:
@@ -34,15 +34,15 @@ def derive(per_ns: dict[str, dict[str, float]]) -> dict:
             "namespace": ns,
             "bringup_s":  d("t0", "t_attached"),
             "testing_s":  d("t_test0", "t_testN"),
-            "teardown_s": d("t_testN", "teardown_end"),
-            "total_s":    d("t0", "teardown_end"),
+            "teardown_s": d("t_testN", "t_teardown"),
+            "total_s":    d("t0", "t_teardown"),
         })
 
     if not namespaces:
         return {"namespaces": [], "T_suite_s": None}
 
     t0_min = min((ts["t0"] for ts in per_ns.values() if "t0" in ts), default=None)
-    end_max = max((ts.get("teardown_end", ts.get("t_testN", 0)) for ts in per_ns.values()),
+    end_max = max((ts.get("t_teardown", ts.get("t_testN", 0)) for ts in per_ns.values()),
                   default=None)
     t_suite = round(end_max - t0_min, 3) if t0_min and end_max else None
 
