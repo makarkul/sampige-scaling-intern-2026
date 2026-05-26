@@ -105,7 +105,7 @@ wait_attached() {
   info "Waiting up to ${timeout}s for MS to camp on cell (MM_EVENT_CELL_SELECTED)..."
   local deadline=$(( $(date +%s) + timeout ))
   while true; do
-    if kubectl logs -n "$NS" deployment/osmo-mobile 2>/dev/null | grep -q "MM_EVENT_CELL_SELECTED"; then
+    if { kubectl logs -n "$NS" deployment/osmo-mobile 2>/dev/null || true; } | grep -q "MM_EVENT_CELL_SELECTED"; then
       info "MS camped on cell."
       return 0
     fi
