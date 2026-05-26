@@ -47,6 +47,17 @@ log "Namespace : $NS"
 log "Tests     : ${TESTS[*]}"
 log "Results   : $RUN_DIR"
 
+# Always delete the namespace on exit, even if the script fails mid-run.
+cleanup() {
+  info "Teardown: deleting namespace $NS..."
+  kubectl delete namespace "$NS" --wait=true --timeout=300s 2>/dev/null || true
+  event t_teardown
+  # Remove the virtphy L1CTL socket from the host so the next run doesn't
+  # find a stale socket and spend time in a crash loop before camping.
+  rm -f /tmp/osmocom-l2/osmocom_l2 2>/dev/null || true
+}
+trap cleanup EXIT
+
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 apply() {
@@ -81,6 +92,27 @@ wait_deployments() {
       return 1
     fi
     echo "  Not ready: $not_ready"
+    sleep 5
+  done
+}
+
+wait_attached() {
+  # Probe for MM_EVENT_CELL_SELECTED rather than "normal service": the msc-stub
+  # holds the LU open until TTCN-3 explicitly accepts it, so normal service never
+  # fires pre-test. Cell-selected means the radio layer is up and the stack is
+  # ready for the test to run.
+  local timeout=${1:-300}
+  info "Waiting up to ${timeout}s for MS to camp on cell (MM_EVENT_CELL_SELECTED)..."
+  local deadline=$(( $(date +%s) + timeout ))
+  while true; do
+    if kubectl logs -n "$NS" deployment/osmo-mobile 2>/dev/null | grep -q "MM_EVENT_CELL_SELECTED"; then
+      info "MS camped on cell."
+      return 0
+    fi
+    if [ "$(date +%s)" -ge "$deadline" ]; then
+      fail "Timeout waiting for MS to camp in namespace $NS"
+      return 1
+    fi
     sleep 5
   done
 }
@@ -191,8 +223,7 @@ event t_ready
 
 # ── Wait for MS attach → t_attached ───────────────────────────────────────────
 
-info "Waiting 90s extra for mobile SIM stack and initial LU..."
-sleep 90
+wait_attached 300
 event t_attached
 
 # ── Run tests → t_test0 … t_testN ─────────────────────────────────────────────
@@ -231,12 +262,6 @@ event t_testN
   echo "  PASS: $PASS   FAIL: $FAIL   INCONCLUSIVE: $INCONC"
   echo "====================================================="
 } | tee "${RUN_DIR}/summary.txt"
-
-# ── Teardown → t_teardown ──────────────────────────────────────────────────────
-
-info "Deleting namespace $NS..."
-kubectl delete namespace "$NS" --wait=true --timeout=300s 2>/dev/null || true
-event t_teardown
 
 info "Done. Results: $RUN_DIR"
 
