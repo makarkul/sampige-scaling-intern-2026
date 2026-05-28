@@ -1,7 +1,11 @@
-# Baseline — osmocom + TTCN-3 on k8s (single namespace)
+# Baseline — docker-compose setup (pre-k8s)
 
-Measured on **cn083**, calendar week 22 (2026-05-26/27).
-Raw data: `results/week01/` (symlink → `results/week22/`; runs are named by calendar week).
+Measured on **cn083**, 2026-05-22 (day 1 / week 0).
+Raw evidence: `week00/notes/`.
+
+This is the reference point for all parallelism speed-up measurements.
+The setup being timed is `refs/osmocom-demo/virtual-um-demo.sh` — the
+existing docker-compose stack, run with no modifications.
 
 ## Host
 
@@ -12,8 +16,6 @@ Raw data: `results/week01/` (symlink → `results/week22/`; runs are named by ca
 | RAM | 187.6 GB (196,702,648 KB) |
 | Disk (`/`) | 439 GB total, 34 GB free (92% used) |
 | Kernel | 6.8.0-101-generic |
-| k3s | v1.35.4+k3s1 |
-| Suite revision | 1bd74dc |
 | `ulimit -n` (open files) | 1,048,576 |
 | `nf_conntrack_max` | 1,572,864 |
 | `inotify.max_user_watches` | 65,536 |
@@ -22,125 +24,104 @@ Raw data: `results/week01/` (symlink → `results/week22/`; runs are named by ca
 
 ## Stack
 
-Eight containers run in a single Kubernetes namespace per test instance.
+Eight docker-compose containers per test run. The network is brought up
+fresh for every test case (confirmed from `docker ps` timestamps during
+the smoke campaign — `week00/notes/D-campaign-smoke.md`).
 
 ```
                         ┌──────────────┐
                         │  ttcn3-pod   │  ← drives the test
                         └──────┬───────┘
-                               │ (TTCN-3 test ports / IP)
+                               │ (TCP/JSON + VTY + GSMTAP)
                         ┌──────▼───────┐     ┌──────────┐
-                        │ msc-test-stub│◄────►│ osmo-hlr │
+                        │   osmo-msc   │◄────►│ osmo-hlr │
                         └──────┬───────┘     └──────────┘
                                │ SS7/SCCP (M3UA)
                         ┌──────▼───────┐
-                        │  osmo-stp    │  ← SS7 signaling transfer point
+                        │   osmo-stp   │  ← SS7 signaling transfer point
                         └──────┬───────┘
                                │ SS7/SCCP (M3UA)
-                        ┌──────▼───────┐
-                        │  osmo-bsc    │  ← base station controller
-                        └──────┬───────┘
+                        ┌──────▼───────┐     ┌──────────┐
+                        │   osmo-bsc   │◄────►│ osmo-mgw │
+                        └──────┬───────┘     └──────────┘
                                │ Abis/OML (TCP)
                         ┌──────▼──────────┐
-                        │ osmo-bts-virtual│  ← virtual BTS
+                        │ osmo-bts-virtual│
                         └──────┬──────────┘
                                │ L1CTL (Unix socket)
                         ┌──────▼───────┐
-                        │ osmo-virtphy │  ← virtual radio PHY
+                        │ osmo-virtphy │
                         └──────┬───────┘
                                │ L1CTL (Unix socket)
-                        ┌──────▼───────┐
-                        │ osmo-mobile  │  ← simulated mobile station (UE)
-                        └──────────────┘
+                        ┌──────▼──────────┐
+                        │ osmo-mobile-ms1 │  ← simulated mobile station
+                        └─────────────────┘
 ```
 
-### Component roles
+Peak container count during a single test run: **9** (8 stack containers +
+the TTCN-3 runner). Source: `week00/notes/F-baseline-hints.md`.
 
-| Image | Role |
-|---|---|
-| `osmo-bsc` | Base Station Controller — manages radio resources, routes traffic between BTS and MSC via SS7 |
-| `osmo-bts-virtual` | Virtual BTS — implements the Abis interface upward and L1CTL downward; no real radio hardware needed |
-| `osmo-virtphy` | Virtual PHY — simulates the GSM radio layer; both BTS and the mobile station connect to it via L1CTL sockets |
-| `osmo-stp` | Signaling Transfer Point — routes SS7/SCCP messages between BSC and MSC |
-| `msc-test-stub` | Stub MSC — controlled by the TTCN-3 pod; sends/receives protocol messages on behalf of a real MSC |
-| `osmo-hlr` | Home Location Register — subscriber database; answers GSUP queries from the MSC stub |
-| `osmo-mobile` | Simulated mobile station — drives the air-side traffic through virtphy |
-| `ttcn3-compiler` | TTCN-3 test pod — compiles and runs the test suite; result verdicts are written to the filesystem |
+Approximate RAM per stack instance: **56 MiB**. Source: `docker stats
+--no-stream` snapshot in `week00/notes/F-baseline-hints.md`.
 
 ## Per-phase timing
 
-Phases are recorded in `events.csv` for each run. Definitions:
+Phases measured using `date +%s.%N` before/after each step.
 
-| Phase label | Meaning |
+| Phase | Duration |
 |---|---|
-| `t0` | `kubectl apply` issued |
-| `t_apply` | `kubectl apply` returns |
-| `t_ready` | all pods `Ready` (k8s readiness gates pass) |
-| `t_attached` | L1CTL socket between virtphy and BTS confirmed open |
-| `t_test0` | first TTCN-3 verdict line appears |
-| `t_testN` | last TTCN-3 verdict line appears |
-| `t_teardown` | `kubectl delete namespace` returns |
+| Stack bring-up (`start` → all containers Up + MS "normal service") | **51.76 s** |
+| Subscriber attach (register IMSI → "normal service" in mobile log) | 5.64 s |
+| Stack teardown (`stop` → no `osmo-*` containers remaining) | **44.26 s** |
+| **Fixed overhead per test run (bring-up + teardown)** | **~96 s** |
 
-### Timing summary across measured runs
+Source: `week00/notes/B-virtual-um.md`.
 
-All values in seconds.
+## Test execution times
 
-| Run | TCs | bringup | testing | teardown | T\_suite |
-|---|---|---|---|---|---|
-| 20260527-040108 | 3 (TC_26_7_4_5_1/2/3) | 50.1 | 1995.5 | 46.2 | 2045.6 |
-| 20260527-053848 | 2 (TC_26_7_4_5_1/3) | 39.4 | 1097.7 | 50.3 | 1137.1 |
-| 20260527-075711 | 5 (mixed) | 36.6 | 262.8 | 53.0 | 299.4 |
-| 20260527-074811 | 5 (mixed, short) | 35.0 | 58.0 | 52.9 | 93.0 |
-| 20260527-052358 | 1 (TC_26_6_4_1) | 44.7 | 26.6 | 44.8 | 71.3 |
-| 20260527-052648 | 1 (TC_26_6_8_5) | 39.7 | 10.7 | — | 50.4 |
-| 20260527-052857 | 1 (TC_26_6_13_9) | 41.3 | 13.6 | — | 54.9 |
-| 20260527-053109 | 1 (TC_26_8_1_3_4_2) | 44.1 | 27.0 | — | 71.1 |
+### Short test — TC_26_2_3 (PASS)
 
-`bringup` = `t_ready − t0`. `testing` = `t_testN − t_test0`. `teardown` = `t_teardown − t_testN`.
-
-### Bringup breakdown (run 20260527-040108)
-
-| Sub-phase | Duration |
+| Phase | Duration |
 |---|---|
-| `kubectl apply` call | 2.4 s |
-| Pod startup (apply → ready) | 47.5 s |
-| L1CTL socket attach (ready → attached) | 0.2 s |
-| **Total bringup** | **50.1 s** |
+| TTCN-3 execution (test start → final verdict) | 53 s |
+| Total wall-clock including bring-up and teardown | ~149 s |
+| Overhead fraction | ~64% |
 
-Pod startup is almost all of bringup. The 2.4 s apply time and 0.2 s socket attach are negligible.
+Source: `week00/notes/C-single-test.md`. Verdict log confirms `pass`.
 
-## Short test vs. long test
+### Smoke campaign — TC_26_7_4_5_1 / _2 / _3
 
-Individual test probe runs (single TC, namespace `gsm-probe`):
+| Test | Result | Wall-clock |
+|---|---|---|
+| TC_26_7_4_5_1 | ran | ~6–7 min |
+| TC_26_7_4_5_2 | FAIL | > 25 min |
+| TC_26_7_4_5_3 | not reached | — |
 
-| Test case | testing (s) | bringup (s) | bringup / testing |
-|---|---|---|---|
-| TC_26_6_8_5 | 10.7 | 39.7 | **3.7×** — bringup dominates |
-| TC_26_6_13_9 | 13.6 | 41.3 | **3.0×** |
-| TC_26_6_4_1 | 26.6 | 44.7 | 1.7× |
-| TC_26_8_1_3_4_2 | 27.0 | 44.1 | 1.6× |
-| TC_26_7_4_5_1 (in 2-TC run) | ~549 (est.) | 39.4 | 0.07× — test dominates |
+Total observed: 30+ minutes before campaign was abandoned.
 
-The TC_26_7_4_5_x family runs for many minutes and eventually FAILs (likely hitting a timeout in the test logic). These are the long test cases. The TC_26_6_x and short TC_26_8_x cases complete in under 30 s each.
+Key observation: the network is brought up fresh for each test case in
+the campaign (not shared). This means fixed overhead (~96 s) is paid once
+per test case, not once per campaign run.
+
+Source: `week00/notes/D-campaign-smoke.md`.
 
 ## Key findings
 
-1. **Fixed overhead per run is ~90 s** (≈ 40 s bringup + ≈ 50 s teardown), regardless of how many test cases are packed into the run. This overhead is what parallelism amortizes.
+1. **Fixed overhead is ~96 s per test run** (52 s bring-up + 44 s teardown),
+   regardless of what the test actually does.
 
-2. **For short tests, fixed overhead exceeds test time.** TC_26_6_8_5 takes 10.7 s but costs 39.7 s just to bring up the stack — a 3.7× overhead ratio. Packing more short tests per namespace and running namespaces in parallel are both important.
+2. **For short tests, overhead exceeds test time.** TC_26_2_3 runs for 53 s
+   but costs 96 s just to bring up and tear down the stack — overhead is
+   64% of total wall-clock.
 
-3. **Bringup time is stable at 35–50 s** across all runs. The variance is pod scheduling jitter, not image pulls (images are pre-loaded in the local registry at `localhost:5000`).
+3. **The network is not reused across tests in a campaign.** Each test pays
+   the full bring-up and teardown cost. This is the primary inefficiency the
+   k8s parallelism work is targeting.
 
-4. **The two phases to amortize are pod startup (~40 s) and teardown (~50 s).** These together account for ~90 s of wall-clock time that is paid once per namespace, not once per test case.
+4. **Long tests in the smoke campaign time out.** TC_26_7_4_5_2 ran for over
+   25 minutes before failing, suggesting it hits a GSM protocol timer rather
+   than completing normally. Understanding which tests are genuinely long vs.
+   broken is important for sharding strategy (Week 4/7).
 
-5. **Image pull is not a measured phase.** All images are pre-loaded into the node-local registry at `localhost:5000`, so there is no pull latency at run time. Pull cost is a one-time setup step and is not included in any timing above.
-
-## Reproducibility
-
-A single-namespace run from a clean checkout:
-
-```
-scripts/run-one.sh gsm-baseline results/week22
-```
-
-This brings up the stack, runs the suite, writes `events.csv`, `summary.json`, `pods.csv`, and per-TC logs to the target directory, then tears down. Confirmed reproducible across the runs above.
+5. **Image pull is a one-time cost.** Images were already present on the
+   host; pull time was not measured and is not part of the per-run overhead.
