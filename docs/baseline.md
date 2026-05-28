@@ -125,3 +125,21 @@ Source: `week00/notes/D-campaign-smoke.md`.
 
 5. **Image pull is a one-time cost.** Images were already present on the
    host; pull time was not measured and is not part of the per-run overhead.
+
+## Reproducibility
+
+From a clean clone on the target server, with images already built:
+
+```
+scripts/run-baseline.sh
+```
+
+This brings up the docker-compose stack, runs TC_26_2_3, tears down, and
+writes `events.csv` and `summary.json` to `results/week01/`.
+
+If images are not yet built (first time only):
+
+```
+cd refs/osmocom-demo && ./build-images.sh && cd ../..
+scripts/run-baseline.sh
+```
