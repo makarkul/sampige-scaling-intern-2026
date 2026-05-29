@@ -169,6 +169,28 @@ wait_attached() {
   done
 }
 
+wait_mobile_vty() {
+  # MM_EVENT_CELL_SELECTED can appear very early (before osmo-mobile's VTY
+  # listener is bound), causing TC_26_2_3's VTY power-cycle to fail with
+  # "Connection refused" and the MSC stub to drop the connection mid-test.
+  # Probe port 4247 directly to confirm VTY is accepting before test launch.
+  local timeout=${1:-60}
+  info "Waiting up to ${timeout}s for osmo-mobile VTY (port 4247)..."
+  local deadline=$(( $(date +%s) + timeout ))
+  while true; do
+    if kubectl exec -n "$NS" deployment/osmo-mobile -- \
+        sh -c 'nc -z 127.0.0.1 4247' 2>/dev/null; then
+      info "osmo-mobile VTY ready."
+      return 0
+    fi
+    if [ "$(date +%s)" -ge "$deadline" ]; then
+      fail "Timeout waiting for osmo-mobile VTY in namespace $NS"
+      return 1
+    fi
+    sleep 3
+  done
+}
+
 run_test() {
   local TEST_NAME="$1"
   local JOB_NAME
@@ -287,6 +309,7 @@ event t_ready
 # ── Wait for MS attach → t_attached ───────────────────────────────────────────
 
 wait_attached 300
+wait_mobile_vty 60
 event t_attached
 
 # ── Run tests → t_test0 … t_testN ─────────────────────────────────────────────
