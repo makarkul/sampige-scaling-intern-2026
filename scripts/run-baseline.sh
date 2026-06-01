@@ -37,6 +37,16 @@ T0_UTC=$(date -u +%Y%m%d-%H%M%S)
 
 echo "[baseline] Start     : $T0_UTC"
 
+# Pre-flight: force-remove any stale test containers then their network.
+docker ps -aq --filter "name=TC_" | xargs -r docker rm -f 2>/dev/null || true
+(cd "$DEMO_DIR" && ./virtual-um-demo.sh stop) 2>/dev/null || true
+docker network rm compose_test-net 2>/dev/null || true
+
+# Fix hlr.db permissions: host UID may differ from container UID 1000.
+# Also make data/ world-writable so the container can create hlr.db-wal.
+chmod 777 "$DEMO_DIR/data"
+chmod 666 "$DEMO_DIR/data/hlr.db"
+
 # --- bring-up ---
 T_BRINGUP_START=$(date +%s.%N)
 (cd "$DEMO_DIR" && ./virtual-um-demo.sh start) 2>&1 | tee -a "$LOGFILE"
