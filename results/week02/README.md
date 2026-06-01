@@ -6,9 +6,9 @@ Results from the k8s lift phase (W2.1–W2.3).
 
 | Directory | Description | Outcome |
 |---|---|---|
-| `run20260528-115031-N1/` | TC_26_2_3 on k8s before fix — ISSUE-001 evidence | FAIL |
-| `run20260529-060205-N1/` | TC_26_2_3 post-fix verification (`gsm-fix-verify`) | PASS |
-| `serial-vs-parallel/` | 5-test serial (818 s) vs parallel (204 s) comparison | 4× speedup |
+| `../runs/run20260528-115031-N1/` | TC_26_2_3 on k8s before fix — ISSUE-001 evidence | FAIL |
+| `../runs/run20260529-060205-N1/` | TC_26_2_3 post-fix verification (`gsm-fix-verify`) | PASS |
+| `../runs/serial-vs-parallel/` | 5-test serial (818 s) vs parallel (204 s) comparison | 4× speedup |
 
 ## ISSUE-001
 
