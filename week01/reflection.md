@@ -9,6 +9,8 @@
   captured per-phase wall-clock timings.
 - Instrumented TC_26_2_3 (short) and the smoke campaign (long) with timestamps;
   results committed under `results/week01/`.
+- Got `scripts/run-baseline.sh` running end-to-end: TC_26_2_3 passes
+  (verdict: pass, 100%) with total wall-clock ~284 s.
 
 ## 2. Key findings
 
