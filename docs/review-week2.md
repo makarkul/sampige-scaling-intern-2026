@@ -43,6 +43,16 @@ tracker.
 `tracking.csv` shows W1.R/W2.1/W2.2/W2.3 Completed, but W2.R (Friday demo) is
 still Planned. Update once the demo happens.
 
+### 3. No top-level `week01/` journal
+
+`week00/` exists with the day-1 punch list, reflection, and `notes/`. By the
+same convention there should be a `week01/` with the week-1 journal entries —
+the work clearly happened (it shows up in commits and in `results/week01/` +
+`docs/baseline.md`) but the daily notes are missing. Either add a brief
+`week01/` (reflection + notes from the week) to keep the cadence, or
+explicitly drop the convention going forward. Don't leave it as an
+accidental gap.
+
 ## Minor gaps (not blocking, can ride into W4)
 
 - `host-samples.csv` is only collected by `run-n.sh`. Single-namespace baselines
