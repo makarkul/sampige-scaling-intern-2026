@@ -43,6 +43,11 @@ T_BRINGUP_START=$(date +%s.%N)
 T_BRINGUP_END=$(date +%s.%N)
 BRINGUP_S=$(echo "$T_BRINGUP_END - $T_BRINGUP_START" | bc)
 
+# run-ttcn3-tests.sh creates its own isolated test stack on the same subnet
+# (172.20.0.0/16) as compose_osmocom-net. Tear down the virtual-um-demo now
+# so the test runner can create compose_test-net without a subnet conflict.
+(cd "$DEMO_DIR" && ./virtual-um-demo.sh stop) 2>&1 | tee -a "$LOGFILE"
+
 # --- test execution ---
 T_TEST_START=$(date +%s.%N)
 (cd "$DEMO_DIR" && ./run-ttcn3-tests.sh "$TC") 2>&1 | tee -a "$LOGFILE"
@@ -51,6 +56,7 @@ T_TEST_END=$(date +%s.%N)
 TESTING_S=$(echo "$T_TEST_END - $T_TEST_START" | bc)
 
 # --- teardown ---
+# Stack was already torn down by run-ttcn3-tests.sh; just record elapsed time.
 T_TEARDOWN_START=$(date +%s.%N)
 (cd "$DEMO_DIR" && ./virtual-um-demo.sh stop) 2>&1 | tee -a "$LOGFILE"
 T_TEARDOWN_END=$(date +%s.%N)
