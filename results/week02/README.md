@@ -23,6 +23,11 @@ per test). Results in `serial-vs-parallel/` — see its README for the full tabl
 
 ## Week 02 Day 2 — Sharding + Parallel Run (2026-06-02)
 
+Full findings, timestamps, and speedup numbers are in
+[`serial-parallel-using-run-n/README.md`](serial-parallel-using-run-n/README.md).
+
+
+
 ### What changed
 
 `scripts/run-n.sh` was rewritten to shard tests across namespaces (1 test per

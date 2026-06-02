@@ -27,9 +27,35 @@
 
 ## 3. Surprises
 
-## 4. Carry-overs into week 3
+- Parallel efficiency came out slightly superlinear (>1) in an early run because
+  the serial baseline was flawed — the `&&` chain stopped at TC1 when it failed,
+  so only one test ran. Always use `;` to chain independent serial runs.
+- The virtphy socket collision was non-obvious: virtphy in gsm-1 was actively
+  processing L1CTL messages while its readiness probe was failing. The socket
+  existed on the host but had been deleted by gsm-2's init container from the
+  shared hostPath. Took inspecting the manifest volume spec to spot it.
+
+## 4. Day 2 additions (2026-06-02)
+
+- Rewrote `scripts/run-n.sh` to shard tests: 1 test per namespace, N derived
+  from the number of test names given. Old interface took an explicit N and
+  replicated the full suite — not sharding.
+- Added `--baseline SECONDS` flag to `run-n.sh`, passed through to
+  `summarize.py` to populate S(N) and E(N) in `summary.json`.
+- Fixed virtphy hostPath collision: `scripts/run-one.sh`'s `apply()` now
+  rewrites `/tmp/osmocom-l2` to `/tmp/osmocom-l2-<namespace>` so parallel
+  namespaces don't share the L1CTL socket directory on the node.
+- Measured serial vs parallel for TC_26_7_4_5_1/2/3:
+  - Serial: 746s (12m26s) — ~199s per test
+  - Parallel (N=3): 262s (4m22s)
+  - S(3) = 2.84×, E(3) = 0.947
+  - Near-linear scaling; gap from 3× is the per-namespace bringup/teardown
+    overhead (~100s) that can't be parallelised away.
+
+## 5. Carry-overs into week 3
 
 - Wrap `k8s/base/` in a Helm chart or kustomize overlay so namespaces can be
   parameterised without sed substitution.
 - Verify two namespaces run simultaneously without cross-talk.
 - Write `scripts/run-n.sh` to spin up N namespaces and aggregate results.
+- Push N higher (N=5, N=10) to see where scaling breaks down.
