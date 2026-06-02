@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Launch N namespaces in parallel, run the suite in each, aggregate results.
+# Launch one namespace per test in parallel (sharded: 1 test per namespace).
 #
 # Usage:
-#   scripts/run-n.sh <N> [--prefix gsm] [--keep]
+#   scripts/run-n.sh [--prefix gsm] [--keep] TC1 [TC2 ...]
 #
 # Writes to: results/weekNN/run<YYYYMMDD>-<HHMMSS>-N<N>/
 #   meta.json
@@ -13,23 +13,30 @@
 
 set -euo pipefail
 
-N="${1:?usage: run-n.sh <N> [--prefix gsm] [--keep]}"
 PREFIX="gsm"
 KEEP=""
+TESTS=()
 
-shift
 while (($#)); do
   case "$1" in
     --prefix) PREFIX="$2"; shift 2 ;;
     --keep)   KEEP="--keep"; shift ;;
-    *)        echo "unknown arg: $1" >&2; exit 2 ;;
+    -*)       echo "unknown flag: $1" >&2; exit 2 ;;
+    *)        TESTS+=("$1"); shift ;;
   esac
 done
+
+if [ ${#TESTS[@]} -eq 0 ]; then
+  echo "usage: run-n.sh [--prefix gsm] [--keep] TC1 [TC2 ...]" >&2
+  exit 2
+fi
+
+N=${#TESTS[@]}
 
 DEMO_REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/refs/osmocom-demo"
 BASE="${DEMO_REPO}/k8s/base"
 
-WEEK=${WEEK:-$(date -u +%V)}
+WEEK=${WEEK:-02}
 TS="$(date -u +%Y%m%d-%H%M%S)"
 OUT_DIR="results/week${WEEK}/run${TS}-N${N}"
 mkdir -p "${OUT_DIR}"
@@ -64,7 +71,8 @@ for i in $(seq 1 "${N}"); do
   ns="${PREFIX}-${i}"
   ns_dir="${OUT_DIR}/ns-${i}"
   mkdir -p "${ns_dir}"
-  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" > "${ns_dir}/run-one-outer.log" 2>&1
+  tc="${TESTS[$((i-1))]}"
+  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" "${tc}" > "${ns_dir}/run-one-outer.log" 2>&1
   ) &
   pids+=($!)
 done
