@@ -116,6 +116,7 @@ apply() {
   local f="$1"
   sed -e "s/namespace: osmocom/namespace: $NS/g" \
       -e "s/name: osmocom$/name: $NS/"           \
+      -e "s|path: /tmp/osmocom-l2$|path: /tmp/osmocom-l2-${NS}|" \
       "$f" | kubectl apply -f -
 }
 

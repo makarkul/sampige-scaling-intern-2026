@@ -15,14 +15,16 @@ set -euo pipefail
 
 PREFIX="gsm"
 KEEP=""
+BASELINE=""
 TESTS=()
 
 while (($#)); do
   case "$1" in
-    --prefix) PREFIX="$2"; shift 2 ;;
-    --keep)   KEEP="--keep"; shift ;;
-    -*)       echo "unknown flag: $1" >&2; exit 2 ;;
-    *)        TESTS+=("$1"); shift ;;
+    --prefix)   PREFIX="$2"; shift 2 ;;
+    --keep)     KEEP="--keep"; shift ;;
+    --baseline) BASELINE="$2"; shift 2 ;;
+    -*)         echo "unknown flag: $1" >&2; exit 2 ;;
+    *)          TESTS+=("$1"); shift ;;
   esac
 done
 
@@ -103,7 +105,9 @@ kill "${HOST_PID}" 2>/dev/null || true
 wait "${HOST_PID}" 2>/dev/null || true
 
 # Summarize
-python3 scripts/summarize.py "${OUT_DIR}"
+baseline_arg=""
+[ -n "${BASELINE}" ] && baseline_arg="--baseline ${BASELINE}"
+python3 scripts/summarize.py "${OUT_DIR}" ${baseline_arg}
 
 echo "done: ${OUT_DIR}  (failures=${fail})"
 exit "${fail}"
