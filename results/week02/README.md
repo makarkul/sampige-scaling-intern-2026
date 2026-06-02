@@ -51,12 +51,12 @@ isolated directory on the node.
 
 | Run | Tests | Total time | S(N) | E(N) |
 |---|---|---|---|---|
-| Serial (N=1×3, sequential) | TC_26_7_4_5_1/2/3 | 1017s (16m57s) | — | — |
-| Parallel (N=3, sharded) | TC_26_7_4_5_1/2/3 | 262s (4m22s) | 3.87× | 1.29 |
+| Serial (N=1×3, sequential) | TC_26_7_4_5_1/2/3 | 746s (12m26s) | — | — |
+| Parallel (N=3, sharded) | TC_26_7_4_5_1/2/3 | 262s (4m22s) | 2.84× | 0.947 |
 
-Run directories: `run20260602-101212-N1` (serial, TC1), adjacent N1 dirs for
-TC2/TC3, and `run20260602-113320-N3` (parallel sharded).
+Serial run directories: `run20260602-114415-N1` (TC1), `run20260602-114824-N1`
+(TC2), `run20260602-115231-N1` (TC3). Parallel: `run20260602-113320-N3`.
 
-Efficiency > 1 (superlinear) because each sharded namespace starts with a
-clean slate; the serial run accumulates bringup/teardown overhead across
-all three tests sequentially.
+Efficiency of 0.947 (just under 1) reflects the per-namespace bringup and
+teardown overhead (~100s each) that parallel runs cannot amortise across tests.
+Near-linear scaling at N=3 is the expected result.
