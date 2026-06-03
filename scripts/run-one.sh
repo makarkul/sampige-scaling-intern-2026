@@ -92,6 +92,8 @@ for pod in data.get('items', []):
 
 # Always delete the namespace on exit, even if the script fails mid-run.
 cleanup() {
+  kill "${HOST_PID}" 2>/dev/null || true
+  wait "${HOST_PID}" 2>/dev/null || true
   collect_pods
   # Delete the L1CTL socket from inside virtphy (runs as root) before the
   # namespace goes away — host path is root-owned so rm from userspace fails.
@@ -282,6 +284,11 @@ run_test() {
 # ── t0: launcher started ───────────────────────────────────────────────────────
 
 event t0
+
+# Start host metric collection in background (mirrors run-n.sh behaviour so
+# N=1 runs produce the same evidence bundle as N≥2 runs).
+"${META_ROOT}/scripts/collect-host.sh" "${RUN_DIR}/host-samples.csv" &
+HOST_PID=$!
 
 # ── Images ─────────────────────────────────────────────────────────────────────
 
