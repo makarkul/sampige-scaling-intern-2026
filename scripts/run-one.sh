@@ -54,6 +54,7 @@ EOF
 # ── Metrics contract ───────────────────────────────────────────────────────────
 
 echo "namespace,phase,unix_ts" > "${RUN_DIR}/events.csv"
+echo "namespace,tc_name,start_ts,end_ts,duration_s,verdict" > "${RUN_DIR}/test-durations.csv"
 
 event() {
   printf '%s,%s,%s\n' "${NS}" "$1" "$(date -u +%s.%N)" >> "${RUN_DIR}/events.csv"
@@ -196,9 +197,10 @@ wait_mobile_vty() {
 
 run_test() {
   local TEST_NAME="$1"
+  local RUN_IDX="${2:-1}"
   local JOB_NAME
-  JOB_NAME="ttcn3-$(echo "$TEST_NAME" | tr '[:upper:]' '[:lower:]' | tr '_' '-')"
-  local TEST_DIR="${RUN_DIR}/${TEST_NAME}"
+  JOB_NAME="ttcn3-$(echo "$TEST_NAME" | tr '[:upper:]' '[:lower:]' | tr '_' '-')-${RUN_IDX}"
+  local TEST_DIR="${RUN_DIR}/${TEST_NAME}-${RUN_IDX}"
   mkdir -p "$TEST_DIR"
 
   info "Running $TEST_NAME as Job $JOB_NAME..."
@@ -326,13 +328,21 @@ PASS=0; FAIL=0; INCONC=0
 declare -A VERDICTS
 
 event t_test0
+_tc_idx=0
 for TC in "${TESTS[@]}"; do
-  run_test "$TC" && VERDICTS[$TC]="PASS" || {
+  _tc_idx=$((_tc_idx + 1))
+  tc_start=$(date -u +%s.%N)
+  run_test "$TC" "${_tc_idx}" && VERDICTS[$TC]="PASS" || {
     ec=$?
     if [ $ec -eq 1 ]; then VERDICTS[$TC]="FAIL"
     else VERDICTS[$TC]="INCONCLUSIVE"
     fi
   }
+  tc_end=$(date -u +%s.%N)
+  tc_dur=$(awk -v s="${tc_start}" -v e="${tc_end}" 'BEGIN { printf "%.3f", e - s }')
+  printf '%s,%s,%s,%s,%s,%s\n' \
+    "${NS}" "${TC}" "${tc_start}" "${tc_end}" "${tc_dur}" "${VERDICTS[$TC]}" \
+    >> "${RUN_DIR}/test-durations.csv"
   case "${VERDICTS[$TC]}" in
     PASS) PASS=$((PASS+1)) ;;
     FAIL) FAIL=$((FAIL+1)) ;;

@@ -37,17 +37,25 @@ def _ns_name_from_dir(ns_dir: Path) -> str:
     return ns_dir.name
 
 
-def load_verdicts(run_dir: Path) -> dict[str, dict[str, str]]:
-    """Return {namespace: {tc_name: verdict}}."""
-    result: dict[str, dict[str, str]] = {}
+def _tc_name_from_dir(name: str) -> str:
+    """Strip trailing run index from directory names like TC_26_2_3-1 → TC_26_2_3."""
+    parts = name.rsplit("-", 1)
+    if len(parts) == 2 and parts[1].isdigit():
+        return parts[0]
+    return name
+
+
+def load_verdicts(run_dir: Path) -> dict[str, list[dict[str, str]]]:
+    """Return {namespace: [{tc_name, verdict}, ...]} — list preserves duplicate test runs."""
+    result: dict[str, list[dict[str, str]]] = {}
     ns_dirs = sorted(run_dir.glob("ns-*/"))
     if ns_dirs:
         for ns_dir in ns_dirs:
             ns_name = _ns_name_from_dir(ns_dir)
-            result[ns_name] = {
-                vf.parent.name: vf.read_text().strip()
+            result[ns_name] = [
+                {"tc_name": _tc_name_from_dir(vf.parent.name), "verdict": vf.read_text().strip()}
                 for vf in sorted(ns_dir.glob("*/verdict.txt"))
-            }
+            ]
     else:
         meta = run_dir / "meta.json"
         if meta.exists():
@@ -60,11 +68,25 @@ def load_verdicts(run_dir: Path) -> dict[str, dict[str, str]]:
                     row = next(csv.DictReader(fh), None)
                     if row:
                         ns_name = row["namespace"]
-        result[ns_name] = {
-            vf.parent.name: vf.read_text().strip()
+        result[ns_name] = [
+            {"tc_name": _tc_name_from_dir(vf.parent.name), "verdict": vf.read_text().strip()}
             for vf in sorted(run_dir.glob("*/verdict.txt"))
-        }
+        ]
     return result
+
+
+def load_test_durations(run_dir: Path) -> list[dict]:
+    csv_path = run_dir / "test-durations.csv"
+    if not csv_path.exists():
+        rows = []
+        for ns_dir in sorted(run_dir.glob("ns-*/")):
+            p = ns_dir / "test-durations.csv"
+            if p.exists():
+                with p.open() as fh:
+                    rows.extend(csv.DictReader(fh))
+        return rows
+    with csv_path.open() as fh:
+        return list(csv.DictReader(fh))
 
 
 def load_pods(pods_csv: Path) -> dict | None:
@@ -132,16 +154,29 @@ def main() -> int:
     # Verdicts — merge into per-namespace entries and roll up totals
     verdicts = load_verdicts(run_dir)
     for ns_entry in summary["namespaces"]:
-        ns_v = verdicts.get(ns_entry["namespace"], {})
+        ns_v = verdicts.get(ns_entry["namespace"], [])
         ns_entry["verdicts"] = ns_v
-        ns_entry["pass"]        = sum(1 for v in ns_v.values() if v == "PASS")
-        ns_entry["fail"]        = sum(1 for v in ns_v.values() if v == "FAIL")
-        ns_entry["inconclusive"] = sum(1 for v in ns_v.values() if v not in ("PASS", "FAIL"))
+        ns_entry["pass"]        = sum(1 for r in ns_v if r["verdict"] == "PASS")
+        ns_entry["fail"]        = sum(1 for r in ns_v if r["verdict"] == "FAIL")
+        ns_entry["inconclusive"] = sum(1 for r in ns_v if r["verdict"] not in ("PASS", "FAIL"))
 
-    all_v = [v for ns_v in verdicts.values() for v in ns_v.values()]
+    all_v = [r["verdict"] for ns_v in verdicts.values() for r in ns_v]
     summary["pass"]        = sum(1 for v in all_v if v == "PASS")
     summary["fail"]        = sum(1 for v in all_v if v == "FAIL")
     summary["inconclusive"] = sum(1 for v in all_v if v not in ("PASS", "FAIL"))
+
+    # Per-test durations
+    durations = load_test_durations(run_dir)
+    if durations:
+        summary["test_durations"] = [
+            {
+                "namespace": r["namespace"],
+                "tc_name":   r["tc_name"],
+                "duration_s": float(r["duration_s"]),
+                "verdict":   r["verdict"],
+            }
+            for r in durations
+        ]
 
     # Pod health
     pods = load_pods(run_dir / "pods.csv")

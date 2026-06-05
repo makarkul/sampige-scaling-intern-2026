@@ -124,6 +124,17 @@ All four are regenerated from raw CSVs by a committed script
 | `pod_count`         | int   | count   | Running pods via `crictl pods -q`                                             |
 | `inotify_watches`   | int   | count   | Active inotify watches across all processes via `/proc/*/fdinfo`              |
 
+### test-durations.csv
+
+| Column       | Type   | Description                                               |
+|--------------|--------|-----------------------------------------------------------|
+| `namespace`  | string | k8s namespace that ran this test                          |
+| `tc_name`    | string | Test case name (e.g. `TC_26_2_3`)                        |
+| `start_ts`   | float  | Unix timestamp when test job was submitted                |
+| `end_ts`     | float  | Unix timestamp when test job completed                    |
+| `duration_s` | float  | `end_ts - start_ts` in seconds                           |
+| `verdict`    | string | `PASS`, `FAIL`, or `INCONCLUSIVE`                        |
+
 ### pods.csv
 
 | Column       | Type   | Description                                               |

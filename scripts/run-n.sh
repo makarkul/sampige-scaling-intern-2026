@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
-# Launch one namespace per test in parallel (sharded: 1 test per namespace).
+# Launch N namespaces in parallel, sharding tests round-robin across them.
 #
 # Usage:
-#   scripts/run-n.sh [--prefix gsm] [--keep] TC1 [TC2 ...]
+#   scripts/run-n.sh [--prefix gsm] [--keep] [--baseline SECONDS] --workers N TC1 [TC2 ...]
+#
+# --workers N   number of parallel namespaces (defaults to number of tests)
 #
 # Writes to: results/weekNN/run<YYYYMMDD>-<HHMMSS>-N<N>/
 #   meta.json
-#   events.csv          (concatenated from per-namespace events)
-#   host-samples.csv    (collected by scripts/collect-host.sh in background)
-#   summary.json        (produced by scripts/summarize.py)
-#   ns-<i>/             (per-namespace outputs)
+#   events.csv           (concatenated from per-namespace events)
+#   host-samples.csv     (collected by scripts/collect-host.sh in background)
+#   test-durations.csv   (per-test start/end/duration/verdict)
+#   summary.json         (produced by scripts/summarize.py)
+#   ns-<i>/              (per-namespace outputs)
 
 set -euo pipefail
 
 PREFIX="gsm"
 KEEP=""
 BASELINE=""
+WORKERS=""
 TESTS=()
 
 while (($#)); do
@@ -23,17 +27,18 @@ while (($#)); do
     --prefix)   PREFIX="$2"; shift 2 ;;
     --keep)     KEEP="--keep"; shift ;;
     --baseline) BASELINE="$2"; shift 2 ;;
+    --workers)  WORKERS="$2"; shift 2 ;;
     -*)         echo "unknown flag: $1" >&2; exit 2 ;;
     *)          TESTS+=("$1"); shift ;;
   esac
 done
 
 if [ ${#TESTS[@]} -eq 0 ]; then
-  echo "usage: run-n.sh [--prefix gsm] [--keep] TC1 [TC2 ...]" >&2
+  echo "usage: run-n.sh [--prefix gsm] [--keep] [--baseline SECONDS] [--workers N] TC1 [TC2 ...]" >&2
   exit 2
 fi
 
-N=${#TESTS[@]}
+N=${WORKERS:-${#TESTS[@]}}
 
 DEMO_REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/refs/osmocom-demo"
 BASE="${DEMO_REPO}/k8s/base"
@@ -67,16 +72,36 @@ scripts/collect-host.sh "${OUT_DIR}/host-samples.csv" &
 HOST_PID=$!
 trap 'kill ${HOST_PID} 2>/dev/null || true' EXIT
 
-# Launch N namespaces in parallel
+# Build per-namespace test buckets via round-robin
+# test[i] → namespace (i % N) + 1  (deterministic for any test count)
+for i in $(seq 1 "$N"); do
+  declare -a "bucket_${i}=()"
+done
+for idx in "${!TESTS[@]}"; do
+  slot=$(( (idx % N) + 1 ))
+  declare -n _b="bucket_${slot}"
+  _b+=("${TESTS[$idx]}")
+  unset -n _b
+done
+
+# Launch namespaces in parallel — skip any bucket that ended up empty
+# (happens when --workers N > number of tests)
 pids=()
+active=0
 for i in $(seq 1 "${N}"); do
+  declare -n _b="bucket_${i}"
+  if [ ${#_b[@]} -eq 0 ]; then
+    unset -n _b
+    continue
+  fi
+  active=$((active + 1))
   ns="${PREFIX}-${i}"
   ns_dir="${OUT_DIR}/ns-${i}"
   mkdir -p "${ns_dir}"
-  tc="${TESTS[$((i-1))]}"
-  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" "${tc}" > "${ns_dir}/run-one-outer.log" 2>&1
+  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" "${_b[@]}" > "${ns_dir}/run-one-outer.log" 2>&1
   ) &
   pids+=($!)
+  unset -n _b
 done
 
 fail=0
@@ -99,6 +124,14 @@ done
     tail -n +2 "${OUT_DIR}/ns-${i}/pods.csv" 2>/dev/null || true
   done
 } > "${OUT_DIR}/pods.csv"
+
+# Aggregate per-test durations
+{
+  echo "namespace,tc_name,start_ts,end_ts,duration_s,verdict"
+  for i in $(seq 1 "${N}"); do
+    tail -n +2 "${OUT_DIR}/ns-${i}/test-durations.csv" 2>/dev/null || true
+  done
+} > "${OUT_DIR}/test-durations.csv"
 
 # Stop host collection
 kill "${HOST_PID}" 2>/dev/null || true
