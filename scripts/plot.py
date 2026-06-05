@@ -8,11 +8,12 @@ Reads summary.json from each run and produces:
     01-tsuite-vs-n.png          T_suite vs N (log-log)
     02-speedup.png               S(N) vs N with y=N ideal line
     03-phase-stacked.png         bringup / testing / teardown averaged per N
-    04-cpu-timeline-<run>.png    CPU% timeline for selected runs
+    04-cpu-timeline.png          CPU% timeline for best N=1 and best N=max run
 
-Requires: matplotlib, pandas (numpy is enough for everything except 04).
+Requires: matplotlib
 """
 import argparse
+import csv
 import json
 import sys
 from pathlib import Path
@@ -54,6 +55,17 @@ def median_by_n(runs: list[dict]) -> dict[int, dict]:
             "runs": len(group),
         }
     return out
+
+
+def best_runs_per_n(runs: list[dict], by_n: dict[int, dict]) -> dict[int, dict]:
+    """Return {N: run} — the run whose T_suite is closest to the median for that N."""
+    best = {}
+    for n, stats in by_n.items():
+        target = stats["T_suite"]
+        group = [r for r in runs if r.get("N") == n and r.get("T_suite_s")]
+        if group:
+            best[n] = min(group, key=lambda r: abs(r["T_suite_s"] - target))
+    return best
 
 
 def plot_tsuite(by_n: dict[int, dict], out: Path) -> None:
@@ -105,6 +117,53 @@ def plot_phase_stack(by_n: dict[int, dict], out: Path) -> None:
     plt.close()
 
 
+def plot_cpu_timeline(best: dict[int, dict], by_n: dict[int, dict], out: Path) -> None:
+    """Plot CPU% vs time for the N=1 representative run and the largest-N run."""
+    ns = sorted(best)
+    if len(ns) < 2:
+        return
+    n_small, n_large = ns[0], ns[-1]
+
+    fig, axes = plt.subplots(2, 1, figsize=(10, 6), sharey=True)
+    for ax, n in zip(axes, [n_small, n_large]):
+        run = best[n]
+        csv_path = run["_dir"] / "host-samples.csv"
+        if not csv_path.exists():
+            ax.text(0.5, 0.5, f"N={n}: no host-samples.csv",
+                    ha="center", va="center", transform=ax.transAxes)
+            ax.set_title(f"N={n}")
+            continue
+
+        times: list[float] = []
+        cpus: list[float] = []
+        with csv_path.open() as fh:
+            for row in csv.DictReader(fh):
+                try:
+                    times.append(float(row["unix_ts"]))
+                    cpus.append(float(row["cpu_pct"]))
+                except (KeyError, ValueError):
+                    pass
+
+        if not times:
+            ax.text(0.5, 0.5, f"N={n}: no samples",
+                    ha="center", va="center", transform=ax.transAxes)
+            ax.set_title(f"N={n}")
+            continue
+
+        t0 = times[0]
+        ax.plot([t - t0 for t in times], cpus, lw=1)
+        ax.set_title(f"N={n}  (T_suite={by_n[n]['T_suite']:.1f}s)")
+        ax.set_ylabel("CPU %")
+        ax.set_ylim(0, 100)
+        ax.grid(True, ls=":")
+
+    axes[-1].set_xlabel("seconds into run")
+    plt.suptitle("CPU utilization — representative runs")
+    plt.tight_layout()
+    plt.savefig(out / "04-cpu-timeline.png", dpi=150, bbox_inches="tight")
+    plt.close()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("runs", nargs="+", type=Path)
@@ -117,9 +176,11 @@ def main() -> int:
         print("no summary.json files found", file=sys.stderr)
         return 1
     by_n = median_by_n(runs)
+    best = best_runs_per_n(runs, by_n)
     plot_tsuite(by_n, args.out)
     plot_speedup(by_n, args.out)
     plot_phase_stack(by_n, args.out)
+    plot_cpu_timeline(best, by_n, args.out)
     print(f"wrote plots to {args.out}")
     return 0
 
