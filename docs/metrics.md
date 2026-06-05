@@ -93,3 +93,68 @@ All four are regenerated from raw CSVs by a committed script
   into the headline.
 - If a tuning change is applied, the before/after must be on the same hardware,
   same suite revision, same `N`.
+
+## Output file schemas
+
+### events.csv
+
+| Column      | Type   | Description                                                                         |
+|-------------|--------|-------------------------------------------------------------------------------------|
+| `namespace` | string | k8s namespace name (e.g. `gsm-1`)                                                  |
+| `phase`     | string | One of: `t0`, `t_apply`, `t_ready`, `t_attached`, `t_test0`, `t_testN`, `t_teardown` |
+| `unix_ts`   | float  | Unix timestamp (seconds since epoch, nanosecond resolution)                         |
+
+### host-samples.csv
+
+| Column              | Type  | Unit    | Source                                                                        |
+|---------------------|-------|---------|-------------------------------------------------------------------------------|
+| `unix_ts`           | int   | seconds | `date -u +%s`                                                                 |
+| `cpu_pct`           | float | %       | Delta of busy/total ticks from `/proc/stat`                                   |
+| `mem_used_kb`       | int   | KB      | `MemTotal - MemAvailable` from `/proc/meminfo`                                |
+| `load1`             | float | —       | 1-minute load average from `/proc/loadavg`                                    |
+| `conntrack_count`   | int   | count   | `/proc/sys/net/netfilter/nf_conntrack_count`                                  |
+| `conntrack_max`     | int   | count   | `/proc/sys/net/netfilter/nf_conntrack_max`                                    |
+| `fd_used`           | int   | count   | Allocated file descriptors from `/proc/sys/fs/file-nr`                        |
+| `tcp_tw`            | int   | count   | TCP sockets in TIME_WAIT via `ss -tan`                                        |
+| `net_rx_bytes`      | int   | bytes/s | Delta rx bytes on `cni0` from `/proc/net/dev`                                 |
+| `net_tx_bytes`      | int   | bytes/s | Delta tx bytes on `cni0` from `/proc/net/dev`                                 |
+| `disk_read_bytes`   | int   | bytes/s | Delta sectors read × 512 across all physical disks from `/proc/diskstats`    |
+| `disk_write_bytes`  | int   | bytes/s | Delta sectors written × 512 across all physical disks from `/proc/diskstats` |
+| `container_count`   | int   | count   | Running containers via `crictl ps -q`                                         |
+| `pod_count`         | int   | count   | Running pods via `crictl pods -q`                                             |
+| `inotify_watches`   | int   | count   | Active inotify watches across all processes via `/proc/*/fdinfo`              |
+
+### pods.csv
+
+| Column       | Type   | Description                                               |
+|--------------|--------|-----------------------------------------------------------|
+| `namespace`  | string | k8s namespace name                                        |
+| `pod`        | string | Pod name                                                  |
+| `container`  | string | Container name within the pod                             |
+| `restarts`   | int    | Cumulative restart count (`restartCount`)                 |
+| `oom_killed` | bool   | `true` if last termination reason was OOMKilled           |
+| `exit_code`  | int    | Exit code of last termination (empty if none)             |
+
+### summary.json
+
+| Field                        | Type        | Description                                              |
+|------------------------------|-------------|----------------------------------------------------------|
+| `N`                          | int         | Number of parallel namespaces                            |
+| `T_suite_s`                  | float       | Wall-clock seconds: `max(t_teardown) - min(t0)`         |
+| `T_baseline_s`               | float\|null | `--baseline` value passed to `summarize.py`              |
+| `S`                          | float\|null | Speedup: `T_baseline_s / T_suite_s`                      |
+| `E`                          | float\|null | Efficiency: `S / N`                                      |
+| `pass`                       | int         | Total PASS verdicts across all namespaces                |
+| `fail`                       | int         | Total FAIL verdicts across all namespaces                |
+| `inconclusive`               | int         | Total INCONCLUSIVE verdicts                              |
+| `pods.total_restarts`        | int         | Sum of all pod restart counts                            |
+| `pods.oom_kills`             | int         | Count of OOMKilled container terminations                |
+| `namespaces[i].namespace`    | string      | Namespace name                                           |
+| `namespaces[i].bringup_s`    | float       | `t_attached - t0`                                        |
+| `namespaces[i].testing_s`    | float       | `t_testN - t_test0`                                      |
+| `namespaces[i].teardown_s`   | float       | `t_teardown - t_testN`                                   |
+| `namespaces[i].total_s`      | float       | `t_teardown - t0`                                        |
+| `namespaces[i].verdicts`     | object      | Map of `{tc_name: verdict}` for this namespace           |
+| `namespaces[i].pass`         | int         | PASS count for this namespace                            |
+| `namespaces[i].fail`         | int         | FAIL count for this namespace                            |
+| `namespaces[i].inconclusive` | int         | INCONCLUSIVE count for this namespace                    |
