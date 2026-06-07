@@ -97,7 +97,7 @@ done
 
 # ── Phases 2-4: N=2,4,8 × REPS ───────────────────────────────────────────────
 
-for N in 2 4; do
+for N in 2 4 8; do
   log "===== N=${N} (${REPS} reps, baseline=${BASELINE}s) ====="
   for rep in $(seq 1 "${REPS}"); do
     log "  rep ${rep}/${REPS} ..."
