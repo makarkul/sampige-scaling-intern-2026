@@ -21,27 +21,32 @@
 - Completed `scripts/plot.py` with all four required plots: T_suite vs N (log-log),
   S(N) vs N with ideal line, stacked phase breakdown, and CPU timeline for the
   representative N=1 and N=max runs (W4.3).
-- Ran the N ∈ {1, 2, 4} × 3 matrix end-to-end: 9 runs, 72 tests, 72/72 PASS.
-  Results in `results/week04/`; plots in `results/week04/plots-20260605T091214Z/`.
+- Ran the N ∈ {1, 2, 4} × 3 pilot matrix: 9 runs, 72 tests, 72/72 PASS.
+- Ran the full N ∈ {1, 2, 4, 8} × 3 matrix: 12 runs, 96 tests, 96/96 PASS.
+  Results in `results/week04/matrix-run-1-2-4-8/`.
 
 ## 2. Key findings
 
-- **Near-ideal scaling through N=4.** S(2) = 2.51× and S(4) = 4.07× against a
-  1257 s N=1 baseline. E(4) = 1.02 — essentially perfect linear scaling.
+- **Strong scaling through N=8.** Full matrix results (baseline 1268 s):
+  S(2) = 2.55×, S(4) = 4.07×, S(8) = 7.53×. Efficiency E(4) = 1.02 (ideal);
+  E(8) = 0.94 — still 94% efficient at 8 parallel namespaces.
 - **Super-linear speedup at N=2 is real and explainable.** With N=1 and 8
-  sequential tests, the MSC stub pod restarts 7 times per run; tests 7 and 8 take
+  sequential tests, the MSC stub pod restarts 7–8 times per run; tests 7 and 8 take
   ~230 s and ~375 s respectively (3–5× longer than normal). With N=2, each
   namespace runs only 4 tests and the MSC stub never reaches the crash threshold —
   all per-test durations stay in the normal 52–155 s range. The parallelism removed
   a serial bottleneck that wasn't visible until we ran the full 8-test suite.
+- **At N=8 the bringup/teardown overhead becomes the limiting factor.** Each
+  namespace runs only 1 test (~55 s), but bringup is ~43 s and teardown ~65 s —
+  overhead is now larger than the test itself. This is the Amdahl serial fraction
+  in action: the fixed per-namespace cost sets a ceiling on S(N) around N=8–10.
 - **Bringup cost (~40 s) is fully amortised at N=4.** At N=4 the testing phase
-  dominates (~205 s) and bringup is only 16% of total per-namespace time, down
-  from ~4% at N=1.
-- **Variance across reps is low.** For all three N values, the spread between min
-  and max T_suite across 3 reps was under 4%. The 3-rep median is a stable
-  headline number.
-- **Pod restarts scale linearly with N** (7 at N=1, ~8 at N=2, 12 at N=4) but
-  do not affect verdict correctness — all tests pass despite the restarts.
+  dominates (~208 s) and bringup is 16% of total per-namespace time. At N=8 it
+  flips — bringup+teardown is ~108 s vs ~55 s of actual testing.
+- **Variance across reps is low.** Spread between min and max T_suite across 3 reps
+  was under 4% for N=1/4/8; N=2 had one fast outlier (435 s) but median held.
+- **Pod restarts scale with N** (8 at N=1, ~9 at N=2, 12 at N=4, 16–18 at N=8)
+  but do not affect verdict correctness — all 96 tests pass.
 
 ## 3. Surprises
 
@@ -60,13 +65,12 @@
 
 ## 4. Carry-overs into week 5
 
-- Run the full N ∈ {1, 2, 4, 8} matrix now that the pipeline is validated.
 - Investigate the MSC stub crash: what state accumulates across sequential test
   runs that causes it to restart? Could be a file descriptor leak, a socket that
   isn't cleaned up between jobs, or a memory limit.
-- Validate TC_26_2_3 stability at N=8 before treating 8-namespace runs as
-  comparable to lower-N runs (pod restarts will be 7×8 = 56+ across the cluster).
+- Reduce the fixed bringup/teardown cost (~108 s at N=8) to push S(8) closer to
+  ideal. The serial fraction is now the main bottleneck, not parallelism.
 - Add Amdahl's Law fit to `plot.py` — overlay `S(N) = 1 / (f + (1-f)/N)` on the
   speedup plot to extract the serial fraction `f` from the measured data.
-- Begin W5 work: profiling where the remaining serial fraction comes from
-  (bringup? teardown? TTCN-3 job scheduling overhead?).
+- Begin W5 work: profiling where the fixed overhead comes from (namespace creation,
+  pod scheduling, MS attach time) and identifying which parts can be reduced.
