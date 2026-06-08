@@ -16,10 +16,26 @@ Root cause: `MM_EVENT_CELL_SELECTED` fires before osmo-mobile's VTY port 4247
 is bound. Fix: added `wait_mobile_vty` in `scripts/run-one.sh` to probe port
 4247 before any test launches. See `docs/open-issues.md` for full details.
 
-## Serial vs Parallel
+## Serial vs Parallel — fresh namespace per test
 
 5 tests run sequentially (fresh namespace each) vs simultaneously (one namespace
 per test). Results in `serial-vs-parallel/` — see its README for the full table.
+
+## Serial vs Parallel — single shared namespace (2026-05-27)
+
+Fairer serial baseline: all 5 tests queued in **one namespace** (bringup paid
+once) vs 5 simultaneous namespaces. Results in
+[`serial-parallel-single-namespace/README.md`](serial-parallel-single-namespace/README.md).
+
+| Mode | Wall-clock | Verdicts |
+|------|-----------|---------|
+| Serial (1 namespace, 5 tests) | 352 s | 2 FAIL, 3 INCONCLUSIVE |
+| Parallel (5 namespaces, 1 test each) | 247 s | 5 FAIL, 0 INCONCLUSIVE |
+| **Speedup** | **1.42×** | |
+
+Notable: parallel mode eliminated all INCONCLUSIVE verdicts — each namespace
+starts with a fresh MSC stub, preventing state accumulation that caused timeouts
+in the serial run.
 
 ## Week 02 Day 2 — Sharding + Parallel Run (2026-06-02)
 
