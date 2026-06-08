@@ -70,10 +70,12 @@ while true; do
   disk_w=$(( dw_now - dw_prev ))
   prev_disk="${curr_disk}"
 
-  # Container and pod counts via crictl
-  # Use || : (not || echo 0) to avoid double output when crictl exits non-zero
-  container_count=$(crictl ps -q 2>/dev/null | wc -l || :)
-  pod_count=$(crictl pods -q 2>/dev/null | wc -l || :)
+  # Pod and container counts via kubectl (crictl requires root-only config on
+  # k3s and cannot be used unprivileged).  The READY column ("X/Y") gives
+  # ready/total containers per pod; sum Y across all pods for container_count.
+  pod_count=$(kubectl get pods --all-namespaces --no-headers 2>/dev/null | wc -l || :)
+  container_count=$(kubectl get pods --all-namespaces --no-headers 2>/dev/null \
+    | awk '{split($3,a,"/"); s+=a[2]} END {print s+0}' || :)
 
   # Inotify watches in use — use find+xargs to avoid ARG_MAX with large /proc
   inotify_watches=$(
