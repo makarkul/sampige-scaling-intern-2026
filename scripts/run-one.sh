@@ -21,18 +21,22 @@ fi
 
 BASE="${DEMO_REPO}/k8s/base"
 TTCN3_DIR="${DEMO_REPO}/ttcn3"
+NS_LOGS_DIR="${TTCN3_DIR}/logs/${NS}"
 WEEK=${WEEK:-$(date -u +%V)}
 TIMESTAMP=$(date -u +%Y%m%d-%H%M%S)
 RUN_DIR="${RUN_ONE_OUT:-${META_ROOT}/results/week${WEEK}/run${TIMESTAMP}-N1}"
 
 mkdir -p "${RUN_DIR}"
+mkdir -p "${NS_LOGS_DIR}"
 
 # ── meta.json ──────────────────────────────────────────────────────────────────
 
 SUITE_REV=$(git -C "${DEMO_REPO}" rev-parse --short HEAD 2>/dev/null || echo unknown)
 CPU_MODEL=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs 2>/dev/null || echo unknown)
 IMAGE_TAGS=$(grep -h 'image:' "${BASE}"/*.yaml 2>/dev/null \
-  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || echo unknown)
+  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || true)
+IMAGE_TAGS="${IMAGE_TAGS:-unknown}"
+IMAGE_TAGS="${IMAGE_TAGS//$'\n'/,}"
 
 cat > "${RUN_DIR}/meta.json" <<EOF
 {
@@ -207,10 +211,12 @@ run_test() {
 
   kubectl delete job "$JOB_NAME" -n "$NS" --ignore-not-found=true >/dev/null
 
-  sed -e "s/__JOB_NAME__/$JOB_NAME/g"    \
-      -e "s/__TEST_NAME__/$TEST_NAME/g"  \
-      -e "s/__NAMESPACE__/$NS/g"         \
-      "$BASE/ttcn3-job.yaml"             \
+  sed -e "s/__JOB_NAME__/$JOB_NAME/g"      \
+      -e "s/__TEST_NAME__/$TEST_NAME/g"    \
+      -e "s/__NAMESPACE__/$NS/g"           \
+      -e "s|__TTCN3_DIR__|${TTCN3_DIR}|g" \
+      -e "s|__LOGS_DIR__|${NS_LOGS_DIR}|g" \
+      "$BASE/ttcn3-job.yaml"               \
     | kubectl apply -f - >/dev/null
 
   local done=0
@@ -245,7 +251,7 @@ run_test() {
   fi
 
   local TITAN_DIR
-  TITAN_DIR=$(ls -td "$TTCN3_DIR/logs/$TEST_NAME"-* 2>/dev/null | head -1)
+  TITAN_DIR=$(ls -td "$NS_LOGS_DIR/$TEST_NAME"-* 2>/dev/null | head -1)
   if [ -n "$TITAN_DIR" ] && [ -d "$TITAN_DIR" ]; then
     if cp -r "$TITAN_DIR/." "$TEST_DIR/titan-logs/" 2>/dev/null || \
        cp -rp "$TITAN_DIR" "$TEST_DIR/titan-logs"   2>/dev/null; then
@@ -264,7 +270,7 @@ run_test() {
       return 1
     fi
   else
-    fail "$TEST_NAME: no TITAN report dir found under $TTCN3_DIR/logs/"
+    fail "$TEST_NAME: no TITAN report dir found under $NS_LOGS_DIR/"
     echo "WARN: no TITAN dir found" > "$TEST_DIR/REPORTS_MISSING"
   fi
 
