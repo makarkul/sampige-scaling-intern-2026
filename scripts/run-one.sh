@@ -100,6 +100,11 @@ cleanup() {
   kill "${HOST_PID}" 2>/dev/null || true
   wait "${HOST_PID}" 2>/dev/null || true
   collect_pods
+  # Save pod logs before the namespace is deleted.
+  for pod in $(kubectl get pods -n "$NS" -o jsonpath='{.items[*].metadata.name}' 2>/dev/null); do
+    kubectl logs -n "$NS" "$pod" --all-containers=true > "${RUN_DIR}/pod-logs-${pod}.log" 2>/dev/null || true
+    kubectl logs -n "$NS" "$pod" --all-containers=true --previous > "${RUN_DIR}/pod-logs-${pod}-prev.log" 2>/dev/null || true
+  done
   # Delete the L1CTL socket from inside virtphy (runs as root) before the
   # namespace goes away — host path is root-owned so rm from userspace fails.
   kubectl exec -n "$NS" deployment/virtphy -- rm -f /tmp/osmocom_l2 2>/dev/null || true

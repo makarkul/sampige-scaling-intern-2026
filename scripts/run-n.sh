@@ -50,7 +50,9 @@ mkdir -p "${OUT_DIR}"
 
 SUITE_REV=$(git -C "${DEMO_REPO}" rev-parse --short HEAD 2>/dev/null || echo unknown)
 IMAGE_TAGS=$(grep -h 'image:' "${BASE}"/*.yaml 2>/dev/null \
-  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || echo unknown)
+  | sed 's/.*image:[[:space:]]*//' | sort -u | paste -sd ',' - || true)
+IMAGE_TAGS="${IMAGE_TAGS:-unknown}"
+IMAGE_TAGS="${IMAGE_TAGS//$'\n'/,}"
 
 # Capture host facts up front
 cat > "${OUT_DIR}/meta.json" <<EOF
