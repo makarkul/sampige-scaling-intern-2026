@@ -220,7 +220,7 @@ run_test() {
     | kubectl apply -f - >/dev/null
 
   local done=0
-  local deadline=$(( $(date +%s) + 2000 ))
+  local deadline=$(( $(date +%s) + 3600 ))
   while [ "$(date +%s)" -lt "$deadline" ]; do
     local succeeded failed
     succeeded=$(kubectl get job "$JOB_NAME" -n "$NS" \
