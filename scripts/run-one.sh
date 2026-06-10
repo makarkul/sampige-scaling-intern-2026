@@ -122,6 +122,7 @@ if p.exists():
     p.write_text(json.dumps(d, indent=2) + '\n')
 " 2>/dev/null || true
   event t_teardown
+  python3 "${META_ROOT}/scripts/summarize.py" "${RUN_DIR}" 2>/dev/null || true
 }
 trap cleanup EXIT
 
@@ -372,8 +373,6 @@ event t_testN
   echo "  PASS: $PASS   FAIL: $FAIL   INCONCLUSIVE: $INCONC"
   echo "====================================================="
 } | tee "${RUN_DIR}/summary.txt"
-
-python3 "${META_ROOT}/scripts/summarize.py" "${RUN_DIR}"
 
 info "Done. Results: $RUN_DIR"
 
