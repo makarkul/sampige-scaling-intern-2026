@@ -20,6 +20,7 @@ fi
 # ── Paths ──────────────────────────────────────────────────────────────────────
 
 BASE="${DEMO_REPO}/k8s/base"
+CHART="${DEMO_REPO}/k8s/chart"
 TTCN3_DIR="${DEMO_REPO}/ttcn3"
 NS_LOGS_DIR="${TTCN3_DIR}/logs/${NS}"
 WEEK=${WEEK:-$(date -u +%V)}
@@ -108,6 +109,8 @@ cleanup() {
   # Delete the L1CTL socket from inside virtphy (runs as root) before the
   # namespace goes away — host path is root-owned so rm from userspace fails.
   kubectl exec -n "$NS" deployment/virtphy -- rm -f /tmp/osmocom_l2 2>/dev/null || true
+  info "Teardown: uninstalling Helm release $NS..."
+  helm uninstall "${NS}" --namespace "${NS}" 2>/dev/null || true
   info "Teardown: deleting namespace $NS..."
   kubectl delete namespace "$NS" --wait=true --timeout=300s 2>/dev/null || true
   python3 -c "
@@ -124,19 +127,15 @@ trap cleanup EXIT
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
-apply() {
-  local f="$1"
-  sed -e "s/namespace: osmocom/namespace: $NS/g" \
-      -e "s/name: osmocom$/name: $NS/"           \
-      -e "s|path: /tmp/osmocom-l2$|path: /tmp/osmocom-l2-${NS}|" \
-      "$f" | kubectl apply -f -
-}
-
-apply_dir() {
-  for f in "$1"/*.yaml; do
-    [[ "$f" == *ttcn3-job* ]] && continue
-    apply "$f"
-  done
+helm_install() {
+  helm upgrade --install "${NS}" "${CHART}" \
+    --namespace "${NS}" \
+    --create-namespace \
+    --set "l1ctlSocketDir=/tmp/osmocom-l2-${NS}" \
+    --set "ttcn3.workspacePath=${TTCN3_DIR}" \
+    --set "ttcn3.configPath=${TTCN3_DIR}/config" \
+    --set "ttcn3.logsPath=${NS_LOGS_DIR}" \
+    --set "ttcn3.dataPath=${DEMO_REPO}/data"
 }
 
 wait_deployments() {
@@ -314,12 +313,8 @@ fi
 
 # ── Namespace + Apply → t_apply ────────────────────────────────────────────────
 
-info "Creating namespace $NS..."
-kubectl get namespace "$NS" >/dev/null 2>&1 \
-  || kubectl create namespace "$NS"
-
-info "Applying manifests from $BASE/ ..."
-apply_dir "$BASE"
+info "Installing Helm release $NS from $CHART ..."
+helm_install
 event t_apply
 
 # ── Wait for Deployments → t_ready ────────────────────────────────────────────
