@@ -77,3 +77,52 @@ CPU is the binding constraint. RAM headroom is not exhausted until well past N=1
 ## Summary
 
 The Osmocom GSM stack is decisively I/O-bound rather than CPU-bound: at peak the entire nine-pod suite for one concurrent test instance consumes only ~60 millicores during bringup and ~45 millicores during steady-state test execution, while RAM never exceeds ~73 MiB per instance. The two heaviest consumers are `osmo-bts-virtual` (the only pod with sustained CPU load at ~16 m average during testing) and `osmo-mobile` (bursts to 17 m at startup, then drops to ~3 m); all other pods stay at single-digit millicores throughout. Recommended Kubernetes CPU requests/limits are 89 m / 167 m per instance and RAM request = limit = 142 Mi, sized to absorb 2.5× burst headroom without over-provisioning. On the 48-core / 187.6 GiB host (cn083), reserving 20% for k3s and system overhead leaves ~38,400 m usable CPU, which accommodates roughly **N_max ≈ 229 concurrent instances** before hitting CPU limits — RAM would not become a binding constraint until well past 1,000 instances (~31 GiB at N=229), so CPU scheduling is the only practical ceiling at this scale.
+
+## Batching when resources bound N
+
+| Constraint | N_max |
+|------------|-------|
+| CPU (binding) | **229** |
+| RAM | 1,082 |
+| Conntrack | ~1,500+ |
+| Inotify | not a concern |
+
+CPU is the only real ceiling. At N=229 conntrack is projected at ~15% of system maximum (237,000 of 1,572,864). RAM headroom extends to ~1,082 instances. Batching in waves of 229 is therefore CPU-driven, not memory or kernel driven.
+
+> **Caveat:** `inotify max_user_instances=128` is worth rechecking at N=50+ as each process using inotify consumes one instance.
+
+## Optimal execution order with known durations
+
+LPT implementation is deferred to Week 7 — per-test duration data is being accumulated from ongoing runs and will be used to build the lookup table once the full suite has sufficient samples.
+
+## Limiting CPU/RAM per namespace (Question 4)
+
+No `ResourceQuota` or `LimitRange` currently exists in `refs/osmocom-demo/k8s/chart/templates/`.
+
+Plan: add two new files to the Helm chart:
+- `resource-quota.yaml` — caps the whole namespace at CPU request=89m, limit=167m, RAM request=limit=142Mi (values from run-cal2 calibration)
+- `limit-range.yaml` — sets conservative per-pod defaults (CPU request=10m, limit=20m, RAM request=limit=16Mi) for any pod that doesn't specify its own limits
+
+Implementation deferred to a later week — not a blocker for current parallel runs.
+
+## Multi-node scheduling and placement (Question 5)
+
+Currently running on a single node (cn083) — default scheduler is sufficient for now.
+
+Three tweaks to implement when cluster grows beyond one node:
+- **Pod affinity:** keep all pods of one test instance on the same node — avoids cross-node signalling latency inside the GSM stack
+- **Topology spread constraints:** spread different test instances evenly across nodes so no single machine gets overloaded
+- **Taints and node affinity:** reserve certain nodes exclusively for test traffic so other workloads don't interfere
+
+Do not implement until the default scheduler measurably misplaces work.
+
+## Calibration run for CI/CD scheduling (Question 6)
+
+Data collection is already in place: `test-durations.csv` (per-TC timings) and `pod-resources.csv` (per-pod resource usage) are written after every run.
+
+Next step: wire this data into the pipeline automatically so it:
+- Uses per-test durations from `test-durations.csv` for LPT sharding
+- Uses `pod-resources.csv` to confirm N_max before each run
+- Updates a rolling median after each run so the schedule stays accurate as the suite evolves
+
+This is the natural bridge from Week 4 duration recording to a production-ready pipeline. Implementation planned for Week 7+.
