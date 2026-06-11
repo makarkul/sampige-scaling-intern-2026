@@ -1,0 +1,312 @@
+[run-one] Namespace : gsm-7
+[run-one] Tests     : TC_26_8_1_3_5_7 TC_26_8_1_3_4_7 TC_26_8_1_3_3_5 TC_26_8_1_2_6_3 TC_26_8_1_2_3_1 TC_26_8_1_3_2_1 TC_26_7_4_5_4_2 TC_26_6_1_5 TC_26_6_11_1 TC_26_7_1 TC_26_7_5_7_1 TC_26_7_4_2_2_1 TC_26_7_4_3_1 TC_26_6_3_4 TC_26_6_5_2_1
+[run-one] Results   : results/week04/run20260608-111159-N8/ns-7
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Creating namespace gsm-7...
+namespace/gsm-7 created
+[run-one] INFO  Applying manifests from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/base/ ...
+service/osmo-bsc created
+deployment.apps/osmo-bsc created
+deployment.apps/osmo-bts-virtual created
+configmap/osmo-stp-cfg created
+configmap/osmo-hlr-cfg created
+configmap/osmo-msc-cfg created
+configmap/osmo-mgw-cfg created
+configmap/osmo-bsc-cfg created
+configmap/osmo-bts-virtual-cfg created
+configmap/osmo-mobile-cfg created
+service/osmo-hlr created
+deployment.apps/osmo-hlr created
+service/osmo-mgw created
+deployment.apps/osmo-mgw created
+service/osmo-mobile created
+deployment.apps/osmo-mobile created
+service/msc-test-stub created
+deployment.apps/msc-test-stub created
+Warning: resource namespaces/gsm-7 is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+namespace/gsm-7 configured
+service/osmo-stp created
+deployment.apps/osmo-stp created
+deployment.apps/virtphy created
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mobile//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Running TC_26_8_1_3_5_7 as Job ttcn3-tc-26-8-1-3-5-7-1...
+[run-one] FAIL  TC_26_8_1_3_5_7: FAIL
+[run-one] INFO  Running TC_26_8_1_3_4_7 as Job ttcn3-tc-26-8-1-3-4-7-2...
+[run-one] FAIL  TC_26_8_1_3_4_7: FAIL
+[run-one] INFO  Running TC_26_8_1_3_3_5 as Job ttcn3-tc-26-8-1-3-3-5-3...
+[run-one] FAIL  TC_26_8_1_3_3_5: FAIL
+[run-one] INFO  Running TC_26_8_1_2_6_3 as Job ttcn3-tc-26-8-1-2-6-3-4...
+[run-one] FAIL  TC_26_8_1_2_6_3: FAIL
+[run-one] INFO  Running TC_26_8_1_2_3_1 as Job ttcn3-tc-26-8-1-2-3-1-5...
+[run-one] FAIL  TC_26_8_1_2_3_1: FAIL
+[run-one] INFO  Running TC_26_8_1_3_2_1 as Job ttcn3-tc-26-8-1-3-2-1-6...
+[run-one] FAIL  TC_26_8_1_3_2_1: FAIL
+[run-one] INFO  Running TC_26_7_4_5_4_2 as Job ttcn3-tc-26-7-4-5-4-2-7...
+[run-one] FAIL  TC_26_7_4_5_4_2: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_1_5 as Job ttcn3-tc-26-6-1-5-8...
+Error from server (Forbidden): error when creating "STDIN": jobs.batch "ttcn3-tc-26-6-1-5-8" is forbidden: unable to create new content in namespace gsm-7 because it is being terminated
+[run-one] FAIL  TC_26_6_1_5: no pod found for job ttcn3-tc-26-6-1-5-8 — cannot collect logs or reports
+[run-one] FAIL  TC_26_6_1_5: Job timed out
+[run-one] INFO  Running TC_26_6_11_1 as Job ttcn3-tc-26-6-11-1-9...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_6_11_1: no pod found for job ttcn3-tc-26-6-11-1-9 — cannot collect logs or reports
+[run-one] FAIL  TC_26_6_11_1: Job timed out
+[run-one] INFO  Running TC_26_7_1 as Job ttcn3-tc-26-7-1-10...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_7_1: no pod found for job ttcn3-tc-26-7-1-10 — cannot collect logs or reports
+[run-one] FAIL  TC_26_7_1: Job timed out
+[run-one] INFO  Running TC_26_7_5_7_1 as Job ttcn3-tc-26-7-5-7-1-11...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_7_5_7_1: no pod found for job ttcn3-tc-26-7-5-7-1-11 — cannot collect logs or reports
+[run-one] FAIL  TC_26_7_5_7_1: Job timed out
+[run-one] INFO  Running TC_26_7_4_2_2_1 as Job ttcn3-tc-26-7-4-2-2-1-12...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_7_4_2_2_1: no pod found for job ttcn3-tc-26-7-4-2-2-1-12 — cannot collect logs or reports
+[run-one] FAIL  TC_26_7_4_2_2_1: Job timed out
+[run-one] INFO  Running TC_26_7_4_3_1 as Job ttcn3-tc-26-7-4-3-1-13...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_7_4_3_1: no pod found for job ttcn3-tc-26-7-4-3-1-13 — cannot collect logs or reports
+[run-one] FAIL  TC_26_7_4_3_1: Job timed out
+[run-one] INFO  Running TC_26_6_3_4 as Job ttcn3-tc-26-6-3-4-14...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_6_3_4: no pod found for job ttcn3-tc-26-6-3-4-14 — cannot collect logs or reports
+[run-one] FAIL  TC_26_6_3_4: Job timed out
+[run-one] INFO  Running TC_26_6_5_2_1 as Job ttcn3-tc-26-6-5-2-1-15...
+Error from server (NotFound): error when creating "STDIN": namespaces "gsm-7" not found
+[run-one] FAIL  TC_26_6_5_2_1: no pod found for job ttcn3-tc-26-6-5-2-1-15 — cannot collect logs or reports
+[run-one] FAIL  TC_26_6_5_2_1: Job timed out
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-7
+ Timestamp : 20260608-111159
+=====================================================
+  TC_26_6_11_1                             INCONCLUSIVE
+  TC_26_6_1_5                              INCONCLUSIVE
+  TC_26_6_3_4                              INCONCLUSIVE
+  TC_26_6_5_2_1                            INCONCLUSIVE
+  TC_26_7_1                                INCONCLUSIVE
+  TC_26_7_4_2_2_1                          INCONCLUSIVE
+  TC_26_7_4_3_1                            INCONCLUSIVE
+  TC_26_7_4_5_4_2                          INCONCLUSIVE
+  TC_26_7_5_7_1                            INCONCLUSIVE
+  TC_26_8_1_2_3_1                          FAIL
+  TC_26_8_1_2_6_3                          FAIL
+  TC_26_8_1_3_2_1                          FAIL
+  TC_26_8_1_3_3_5                          FAIL
+  TC_26_8_1_3_4_7                          FAIL
+  TC_26_8_1_3_5_7                          FAIL
+-----------------------------------------------------
+  PASS: 0   FAIL: 6   INCONCLUSIVE: 9
+=====================================================
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-7",
+      "bringup_s": 47.534,
+      "testing_s": 17485.224,
+      "teardown_s": null,
+      "total_s": null,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_11_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_6_1_5",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_6_3_4",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_6_5_2_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_7_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_7_4_2_2_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_7_4_3_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_7_4_5_4_2",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_7_5_7_1",
+          "verdict": "INCONCLUSIVE (timeout)"
+        },
+        {
+          "tc_name": "TC_26_8_1_2_3_1",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_8_1_2_6_3",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_2_1",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_3_5",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_4_7",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_5_7",
+          "verdict": "FAIL"
+        }
+      ],
+      "pass": 0,
+      "fail": 6,
+      "inconclusive": 9
+    }
+  ],
+  "T_suite_s": 17532.76,
+  "N": 1,
+  "pass": 0,
+  "fail": 6,
+  "inconclusive": 9,
+  "test_durations": [
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_3_5_7",
+      "duration_s": 154.269,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_3_4_7",
+      "duration_s": 98.422,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_3_3_5",
+      "duration_s": 148.572,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_2_6_3",
+      "duration_s": 114.095,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_2_3_1",
+      "duration_s": 209.033,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_3_2_1",
+      "duration_s": 399.95,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_7_4_5_4_2",
+      "duration_s": 345.637,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_6_1_5",
+      "duration_s": 2003.337,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_6_11_1",
+      "duration_s": 2000.277,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_7_1",
+      "duration_s": 2001.658,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_7_5_7_1",
+      "duration_s": 2001.73,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_7_4_2_2_1",
+      "duration_s": 2002.189,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_7_4_3_1",
+      "duration_s": 2001.126,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_6_3_4",
+      "duration_s": 2002.629,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_6_5_2_1",
+      "duration_s": 2002.245,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "S": null,
+  "E": null
+}
+[run-one] INFO  Done. Results: results/week04/run20260608-111159-N8/ns-7
+[run-one] INFO  Teardown: deleting namespace gsm-7...

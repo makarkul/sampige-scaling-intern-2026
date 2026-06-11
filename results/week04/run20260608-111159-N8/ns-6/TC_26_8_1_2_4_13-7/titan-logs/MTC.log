@@ -1,0 +1,1909 @@
+11:32:44.769409 TTCN-3 Main Test Component started on ttcn3-tc-26-8-1-2-4-13-7-z7rww. Version: 11.1.0.
+11:32:44.769524 TTCN Logger v2.2 options: TimeStampFormat:=Time; LogEntityName:=No; LogEventTypes:=No; SourceInfoFormat:=None; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+11:32:44.769580 Connected to MC.
+11:32:44.769718 Executing control part of module TC_26_8_1_2_4_13.
+11:32:44.770010 Execution of control part in module TC_26_8_1_2_4_13 started.
+11:32:44.770106 Test case TC_26_8_1_2_4_13 started.
+11:32:44.770165 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_8_1_2_4_13.
+11:32:44.770383 MSC_Port: set_parameter msc_stub_host = 10.42.0.212
+11:32:44.770430 MSC_Port: set_parameter msc_stub_port = 5000
+11:32:44.770442 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+11:32:44.770455 L3_Port: set_parameter gsmtap_port = 4729
+11:32:44.770461 L3_Port: set_parameter local_port = 4729
+11:32:44.770465 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+11:32:44.770470 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+11:32:44.770474 L3_Port: set_parameter arfcn = 51
+11:32:44.770507 L3_Port: user_start called
+11:32:44.770516 Port L was started.
+11:32:44.770565 Port RR was started.
+11:32:44.770570 Port MM was started.
+11:32:44.770574 Port CC was started.
+11:32:44.770576 MSC_Port: user_start called
+11:32:44.770581 Port MSC was started.
+11:32:44.770585 Port BSC was started.
+11:32:44.770589 Port RSL was started.
+11:32:44.770598 VTY_PT: Starting
+11:32:44.770602 Port VTY was started.
+11:32:44.770607 Port COORD was started.
+11:32:44.770609 Component type GSM_Component_Definitions.GSM_CT was initialized.
+11:32:44.770629 Warning: Stopping inactive timer T_guard.
+11:32:44.770635 Warning: Stopping inactive timer T301.
+11:32:44.770639 Warning: Stopping inactive timer T303.
+11:32:44.770643 Warning: Stopping inactive timer T305.
+11:32:44.770647 Warning: Stopping inactive timer T308.
+11:32:44.770651 Warning: Stopping inactive timer T310.
+11:32:44.770656 Warning: Stopping inactive timer T313.
+11:32:44.770663 Component initialized
+11:32:44.770678 Mapping port mtc:L to system:L.
+11:32:44.770722 L3_Port: Mapping to L
+11:32:44.770789 L3_Port: Joined UL multicast group 239.193.23.2 for RACH capture
+11:32:44.770799 L3_Port: GSMTAP listening on port 4729
+11:32:44.770803 L3_Port: Mapped successfully (GSMTAP: 127.0.0.1:4729)
+11:32:44.770810 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "L")
+11:32:44.770841 Port L was mapped to system:L.
+11:32:44.770901 Map operation of mtc:L to system:L finished.
+11:32:44.770932 Mapping port mtc:RR to system:RR.
+11:32:44.770961 Port RR was mapped to system:RR.
+11:32:44.770980 Map operation of mtc:RR to system:RR finished.
+11:32:44.770985 Mapping port mtc:MM to system:MM.
+11:32:44.771002 Port MM was mapped to system:MM.
+11:32:44.771018 Map operation of mtc:MM to system:MM finished.
+11:32:44.771021 Mapping port mtc:CC to system:CC.
+11:32:44.771038 Port CC was mapped to system:CC.
+11:32:44.771054 Map operation of mtc:CC to system:CC finished.
+11:32:44.771057 Mapping port mtc:MSC to system:MSC.
+11:32:44.771074 MSC_Port: Mapping to MSC
+11:32:44.771556 MSC_Port: Registered socket for async events
+11:32:44.771572 MSC_Port: Connected to MSC stub at 10.42.0.212:5000
+11:32:44.771580 Port MSC was mapped to system:MSC.
+11:32:44.771601 Map operation of mtc:MSC to system:MSC finished.
+11:32:44.771608 Mapping port mtc:VTY to system:VTY.
+11:32:44.771625 VTY_PT: Mapping port to VTY interface
+11:32:44.771919 VTY_PT: Connected to VTY at 10.43.54.56:4247
+11:32:45.272331 VTY_PT: Initial banner received
+11:32:45.272403 Port VTY was mapped to system:VTY.
+11:32:45.272525 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+11:32:45.272622 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+11:32:45.272677 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 19, "msc_slr": 3, "cksn": 0, "lu_type": 7, "old_mcc": "901", "old_mnc": "70", "old_lac": 4242, "mi_type": "tmsi", "tmsi": 305419896}
+11:32:45.272693 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 19, \"msc_slr\": 3, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 4242, \"mi_type\": \"tmsi\", \"tmsi\": 305419896}" id 2
+11:32:45.272704 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 3}
+11:32:45.272713 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}" id 3
+11:32:45.272729 Map operation of mtc:VTY to system:VTY finished.
+11:32:45.272745 ==============================================================
+11:32:45.272751 *** TC_26_8_1_2_4_13: ALERTING in U3 -> Alerting Indication ***
+11:32:45.272755 *** Spec: Rel4_GSM_L3_MS_v440/CC/                           ***
+11:32:45.272759 ==============================================================
+11:32:45.272780 Start timer T_guard: 300 s
+11:32:45.272921 Sent on MSC to system charstring : "{\"command\": \"SET_AUTO_RESPOND\", \"params\": {\"enabled\": false}}"
+11:32:45.273043 MSC_Port: TX: {"command": "SET_AUTO_RESPOND", "params": {"enabled": false}}
+11:32:45.273053 *** Phase 1: Restarting mobile for clean state ***
+11:32:45.273106 docker.sock not found — using VTY power-cycle (k8s mode)
+11:32:45.273117 === k8s fallback: VTY power-cycle mobile at 10.43.54.56:4247 ===
+11:32:50.895014 Waiting 10 seconds (power off)...
+11:33:06.254904 VTY 'clear-loci' sent — LOCI erased
+11:33:12.910899 === VTY power-cycle complete — MS will send LU shortly ===
+11:33:12.911015 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+11:33:12.911056 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+11:33:12.911076 Start timer T_drain: 5 s
+11:33:12.911131 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+11:33:12.911164 Message with id 1 was extracted from the queue of MSC.
+11:33:12.911178 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"WELCOME\", \"status\": \"connected\"}"
+11:33:12.911210 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 19, \"msc_slr\": 3, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 4242, \"mi_type\": \"tmsi\", \"tmsi\": 305419896}" id 2
+11:33:12.911216 Message with id 2 was extracted from the queue of MSC.
+11:33:12.911219 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 19, \"msc_slr\": 3, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 4242, \"mi_type\": \"tmsi\", \"tmsi\": 305419896}"
+11:33:12.911234 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}" id 3
+11:33:12.911238 Message with id 3 was extracted from the queue of MSC.
+11:33:12.911241 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}"
+11:33:12.911268 VTY_PT: Received data (buffered): 162 bytes
+11:33:12.911281 MSC_Port: RX: {"status": "ok", "auto_respond": false}
+11:33:12.911289 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 4
+11:33:12.911294 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:12.911300 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+11:33:12.911304 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 20, "msc_slr": 4, "cksn": 0, "lu_type": 7, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+11:33:12.911314 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 20, \"msc_slr\": 4, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 6
+11:33:12.911326 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 4}
+11:33:12.911332 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}" id 7
+11:33:12.911335 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:12.911339 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+11:33:12.911342 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:12.911347 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+11:33:12.911350 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:12.911354 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+11:33:12.911358 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:12.911362 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+11:33:12.911374 L3_Port: Received 39 bytes
+11:33:12.911384 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911393 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911409 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 1
+11:33:12.911421 L3_Port: Message delivered to TTCN-3
+11:33:12.911428 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 4
+11:33:12.911432 Message with id 4 was extracted from the queue of MSC.
+11:33:12.911434 TC_26_8_1_2_4_13: (drain) discarding: "{\"status\": \"ok\", \"auto_respond\": false}"
+11:33:12.911442 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+11:33:12.911445 Message with id 5 was extracted from the queue of MSC.
+11:33:12.911447 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:12.911457 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 20, \"msc_slr\": 4, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 6
+11:33:12.911461 Message with id 6 was extracted from the queue of MSC.
+11:33:12.911463 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 20, \"msc_slr\": 4, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+11:33:12.911476 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}" id 7
+11:33:12.911479 Message with id 7 was extracted from the queue of MSC.
+11:33:12.911481 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}"
+11:33:12.911487 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+11:33:12.911490 Message with id 8 was extracted from the queue of MSC.
+11:33:12.911492 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:12.911498 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+11:33:12.911500 Message with id 9 was extracted from the queue of MSC.
+11:33:12.911502 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:12.911507 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+11:33:12.911510 Message with id 10 was extracted from the queue of MSC.
+11:33:12.911512 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:12.911517 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+11:33:12.911519 Message with id 11 was extracted from the queue of MSC.
+11:33:12.911522 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:12.911530 L3_Port: Received 39 bytes
+11:33:12.911535 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911540 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911549 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 2
+11:33:12.911552 L3_Port: Message delivered to TTCN-3
+11:33:12.911559 L3_Port: Received 17 bytes
+11:33:12.911563 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911566 L3_Port: RX: 0E 
+11:33:12.911570 Message enqueued on L from system octetstring : '0E0004083B'O id 3
+11:33:12.911573 L3_Port: Message delivered to TTCN-3
+11:33:12.911579 L3_Port: Received 17 bytes
+11:33:12.911582 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911586 L3_Port: RX: 09 
+11:33:12.911589 Message enqueued on L from system octetstring : '09000409AA'O id 4
+11:33:12.911592 L3_Port: Message delivered to TTCN-3
+11:33:12.911598 L3_Port: Received 39 bytes
+11:33:12.911602 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=7 Len=23
+11:33:12.911607 L3_Port: RX: 01 3F 3D 05 08 70 09 F1 07 10 92 33 05 F4 12 34 56 78 2B 2B 2B 2B 2B 
+11:33:12.911612 Message enqueued on L from system octetstring : '013F3D05087009F10710923305F4123456782B2B2B2B2B'O id 5
+11:33:12.911615 L3_Port: Message delivered to TTCN-3
+11:33:12.911621 L3_Port: Received 39 bytes
+11:33:12.911625 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.911631 L3_Port: RX: 0E 00 01 03 49 06 15 00 40 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911636 Message enqueued on L from system octetstring : '0E000103490615004001C0000000000000000000000000'O id 6
+11:33:12.911638 L3_Port: Message delivered to TTCN-3
+11:33:12.911644 L3_Port: Received 39 bytes
+11:33:12.911649 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911653 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911657 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 7
+11:33:12.911660 L3_Port: Message delivered to TTCN-3
+11:33:12.911667 L3_Port: Received 39 bytes
+11:33:12.911670 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.911676 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911681 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 8
+11:33:12.911684 L3_Port: Message delivered to TTCN-3
+11:33:12.911690 L3_Port: Received 39 bytes
+11:33:12.911694 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911700 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911705 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 9
+11:33:12.911707 L3_Port: Message delivered to TTCN-3
+11:33:12.911713 MSC_Port: RX: {"status": "ok"}
+11:33:12.911718 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 12
+11:33:12.911722 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 12
+11:33:12.911725 Message with id 12 was extracted from the queue of MSC.
+11:33:12.911727 TC_26_8_1_2_4_13: (drain) discarding: "{\"status\": \"ok\"}"
+11:33:12.911737 L3_Port: Received 39 bytes
+11:33:12.911741 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.911747 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911751 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 10
+11:33:12.911754 L3_Port: Message delivered to TTCN-3
+11:33:12.911761 L3_Port: Received 39 bytes
+11:33:12.911766 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911774 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911778 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 11
+11:33:12.911781 L3_Port: Message delivered to TTCN-3
+11:33:12.911791 L3_Port: Received 39 bytes
+11:33:12.911795 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.911800 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911805 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 12
+11:33:12.911808 L3_Port: Message delivered to TTCN-3
+11:33:12.911814 L3_Port: Received 39 bytes
+11:33:12.911819 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.911838 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911845 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 13
+11:33:12.911849 L3_Port: Message delivered to TTCN-3
+11:33:12.911855 L3_Port: Received 39 bytes
+11:33:12.911859 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.911865 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.911870 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 14
+11:33:12.911873 L3_Port: Message delivered to TTCN-3
+11:33:12.911880 L3_Port: Received 17 bytes
+11:33:12.911883 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911887 L3_Port: RX: 0C 
+11:33:12.911890 Message enqueued on L from system octetstring : '0C00040BD4'O id 15
+11:33:12.911893 L3_Port: Message delivered to TTCN-3
+11:33:12.911900 L3_Port: Received 17 bytes
+11:33:12.911905 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911909 L3_Port: RX: 00 
+11:33:12.911912 Message enqueued on L from system octetstring : '0000040CD2'O id 16
+11:33:12.911915 L3_Port: Message delivered to TTCN-3
+11:33:12.911921 L3_Port: Received 17 bytes
+11:33:12.911926 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911929 L3_Port: RX: 09 
+11:33:12.911933 Message enqueued on L from system octetstring : '0900040CD7'O id 17
+11:33:12.911936 L3_Port: Message delivered to TTCN-3
+11:33:12.911942 L3_Port: Received 17 bytes
+11:33:12.911947 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911950 L3_Port: RX: 0F 
+11:33:12.911954 Message enqueued on L from system octetstring : '0F00040C74'O id 18
+11:33:12.911956 L3_Port: Message delivered to TTCN-3
+11:33:12.911963 L3_Port: Received 17 bytes
+11:33:12.911967 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911971 L3_Port: RX: 03 
+11:33:12.911974 Message enqueued on L from system octetstring : '0300040CD3'O id 19
+11:33:12.911977 L3_Port: Message delivered to TTCN-3
+11:33:12.911984 L3_Port: Received 17 bytes
+11:33:12.911988 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.911991 L3_Port: RX: 03 
+11:33:12.911995 Message enqueued on L from system octetstring : '0300040C6F'O id 20
+11:33:12.911998 L3_Port: Message delivered to TTCN-3
+11:33:12.912003 L3_Port: Received 17 bytes
+11:33:12.912007 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912011 L3_Port: RX: 0F 
+11:33:12.912015 Message enqueued on L from system octetstring : '0F00040D65'O id 21
+11:33:12.912018 L3_Port: Message delivered to TTCN-3
+11:33:12.912024 L3_Port: Received 17 bytes
+11:33:12.912028 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912032 L3_Port: RX: 0A 
+11:33:12.912035 Message enqueued on L from system octetstring : '0A00040CDB'O id 22
+11:33:12.912038 L3_Port: Message delivered to TTCN-3
+11:33:12.912044 L3_Port: Received 17 bytes
+11:33:12.912049 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912052 L3_Port: RX: 0A 
+11:33:12.912055 Message enqueued on L from system octetstring : '0A00040C9C'O id 23
+11:33:12.912058 L3_Port: Message delivered to TTCN-3
+11:33:12.912064 L3_Port: Received 17 bytes
+11:33:12.912069 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912076 L3_Port: RX: 05 
+11:33:12.912080 Message enqueued on L from system octetstring : '0500040D04'O id 24
+11:33:12.912083 L3_Port: Message delivered to TTCN-3
+11:33:12.912089 L3_Port: Received 17 bytes
+11:33:12.912093 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912097 L3_Port: RX: 05 
+11:33:12.912100 Message enqueued on L from system octetstring : '0500040CF3'O id 25
+11:33:12.912103 L3_Port: Message delivered to TTCN-3
+11:33:12.912110 L3_Port: Received 17 bytes
+11:33:12.912114 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912118 L3_Port: RX: 08 
+11:33:12.912121 Message enqueued on L from system octetstring : '0800040CA5'O id 26
+11:33:12.912124 L3_Port: Message delivered to TTCN-3
+11:33:12.912130 L3_Port: Received 17 bytes
+11:33:12.912135 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912139 L3_Port: RX: 08 
+11:33:12.912142 Message enqueued on L from system octetstring : '0800040D0B'O id 27
+11:33:12.912145 L3_Port: Message delivered to TTCN-3
+11:33:12.912152 L3_Port: Received 17 bytes
+11:33:12.912156 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912160 L3_Port: RX: 0A 
+11:33:12.912163 Message enqueued on L from system octetstring : '0A00040CD4'O id 28
+11:33:12.912166 L3_Port: Message delivered to TTCN-3
+11:33:12.912173 L3_Port: Received 17 bytes
+11:33:12.912177 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912181 L3_Port: RX: 08 
+11:33:12.912185 Message enqueued on L from system octetstring : '0800040CD0'O id 29
+11:33:12.912190 L3_Port: Message delivered to TTCN-3
+11:33:12.912197 L3_Port: Received 17 bytes
+11:33:12.912201 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912205 L3_Port: RX: 01 
+11:33:12.912208 Message enqueued on L from system octetstring : '0100040D8C'O id 30
+11:33:12.912211 L3_Port: Message delivered to TTCN-3
+11:33:12.912218 L3_Port: Received 39 bytes
+11:33:12.912222 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912227 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912232 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 31
+11:33:12.912236 L3_Port: Message delivered to TTCN-3
+11:33:12.912243 L3_Port: Received 39 bytes
+11:33:12.912247 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.912252 L3_Port: RX: 01 3F 3D 05 08 70 09 F1 07 10 92 33 05 F4 12 34 56 78 2B 2B 2B 2B 2B 
+11:33:12.912258 Message enqueued on L from system octetstring : '013F3D05087009F10710923305F4123456782B2B2B2B2B'O id 32
+11:33:12.912261 L3_Port: Message delivered to TTCN-3
+11:33:12.912267 L3_Port: Received 39 bytes
+11:33:12.912272 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912277 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912282 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 33
+11:33:12.912285 L3_Port: Message delivered to TTCN-3
+11:33:12.912292 L3_Port: Received 39 bytes
+11:33:12.912296 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.912301 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.912306 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 34
+11:33:12.912309 L3_Port: Message delivered to TTCN-3
+11:33:12.912316 L3_Port: Received 39 bytes
+11:33:12.912320 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.912325 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912330 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 35
+11:33:12.912333 L3_Port: Message delivered to TTCN-3
+11:33:12.912339 L3_Port: Received 39 bytes
+11:33:12.912343 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:12.912352 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:12.912356 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 36
+11:33:12.912359 L3_Port: Message delivered to TTCN-3
+11:33:12.912365 L3_Port: Received 39 bytes
+11:33:12.912369 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912375 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912379 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 37
+11:33:12.912382 L3_Port: Message delivered to TTCN-3
+11:33:12.912389 L3_Port: Received 39 bytes
+11:33:12.912394 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:12.912399 L3_Port: RX: 03 21 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.912404 Message enqueued on L from system octetstring : '0321012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 38
+11:33:12.912407 L3_Port: Message delivered to TTCN-3
+11:33:12.912413 L3_Port: Received 39 bytes
+11:33:12.912418 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:12.912423 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.912429 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 39
+11:33:12.912432 L3_Port: Message delivered to TTCN-3
+11:33:12.912438 L3_Port: Received 39 bytes
+11:33:12.912443 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912448 L3_Port: RX: 0E 00 01 03 49 06 15 3F 3F 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912453 Message enqueued on L from system octetstring : '0E0001034906153F3F01C0000000000000000000000000'O id 40
+11:33:12.912456 L3_Port: Message delivered to TTCN-3
+11:33:12.912463 L3_Port: Received 39 bytes
+11:33:12.912467 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912472 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912476 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 41
+11:33:12.912479 L3_Port: Message delivered to TTCN-3
+11:33:12.912485 L3_Port: Received 39 bytes
+11:33:12.912490 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912496 L3_Port: RX: 0E 00 01 03 49 06 15 3F 3F 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912500 Message enqueued on L from system octetstring : '0E0001034906153F3F01C0000000000000000000000000'O id 42
+11:33:12.912503 L3_Port: Message delivered to TTCN-3
+11:33:12.912510 L3_Port: Received 39 bytes
+11:33:12.912514 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912519 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912524 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 43
+11:33:12.912527 L3_Port: Message delivered to TTCN-3
+11:33:12.912534 L3_Port: Received 39 bytes
+11:33:12.912539 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912544 L3_Port: RX: 0E 00 01 03 49 06 15 3F 3F 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912549 Message enqueued on L from system octetstring : '0E0001034906153F3F01C0000000000000000000000000'O id 44
+11:33:12.912552 L3_Port: Message delivered to TTCN-3
+11:33:12.912558 L3_Port: Received 39 bytes
+11:33:12.912563 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912568 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912572 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 45
+11:33:12.912575 L3_Port: Message delivered to TTCN-3
+11:33:12.912581 L3_Port: Received 39 bytes
+11:33:12.912586 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912594 L3_Port: RX: 0E 00 01 03 49 06 15 00 40 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912599 Message enqueued on L from system octetstring : '0E000103490615004001C0000000000000000000000000'O id 46
+11:33:12.912602 L3_Port: Message delivered to TTCN-3
+11:33:12.912608 L3_Port: Received 39 bytes
+11:33:12.912614 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912619 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912623 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 47
+11:33:12.912626 L3_Port: Message delivered to TTCN-3
+11:33:12.912633 L3_Port: Received 39 bytes
+11:33:12.912637 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912642 L3_Port: RX: 0E 00 01 03 49 06 15 00 40 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912647 Message enqueued on L from system octetstring : '0E000103490615004001C0000000000000000000000000'O id 48
+11:33:12.912650 L3_Port: Message delivered to TTCN-3
+11:33:12.912657 L3_Port: Received 39 bytes
+11:33:12.912661 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912666 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912671 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 49
+11:33:12.912674 L3_Port: Message delivered to TTCN-3
+11:33:12.912680 L3_Port: Received 39 bytes
+11:33:12.912684 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912690 L3_Port: RX: 0E 00 01 03 49 06 15 00 40 01 C0 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912695 Message enqueued on L from system octetstring : '0E000103490615004001C0000000000000000000000000'O id 50
+11:33:12.912698 L3_Port: Message delivered to TTCN-3
+11:33:12.912704 L3_Port: Received 39 bytes
+11:33:12.912709 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912714 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912719 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 51
+11:33:12.912722 L3_Port: Message delivered to TTCN-3
+11:33:12.912729 L3_Port: Received 17 bytes
+11:33:12.912733 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912736 L3_Port: RX: 0C 
+11:33:12.912740 Message enqueued on L from system octetstring : '0C00041261'O id 52
+11:33:12.912743 L3_Port: Message delivered to TTCN-3
+11:33:12.912749 L3_Port: Received 17 bytes
+11:33:12.912754 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912757 L3_Port: RX: 0C 
+11:33:12.912760 Message enqueued on L from system octetstring : '0C000412D0'O id 53
+11:33:12.912763 L3_Port: Message delivered to TTCN-3
+11:33:12.912770 L3_Port: Received 17 bytes
+11:33:12.912774 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912777 L3_Port: RX: 06 
+11:33:12.912781 Message enqueued on L from system octetstring : '06000412A0'O id 54
+11:33:12.912786 L3_Port: Message delivered to TTCN-3
+11:33:12.912793 L3_Port: Received 17 bytes
+11:33:12.912798 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912802 L3_Port: RX: 05 
+11:33:12.912805 Message enqueued on L from system octetstring : '0500041295'O id 55
+11:33:12.912808 L3_Port: Message delivered to TTCN-3
+11:33:12.912815 L3_Port: Received 17 bytes
+11:33:12.912819 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912829 L3_Port: RX: 0F 
+11:33:12.912833 Message enqueued on L from system octetstring : '0F00041264'O id 56
+11:33:12.912836 L3_Port: Message delivered to TTCN-3
+11:33:12.912842 L3_Port: Received 17 bytes
+11:33:12.912847 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912850 L3_Port: RX: 0E 
+11:33:12.912853 Message enqueued on L from system octetstring : '0E0004126C'O id 57
+11:33:12.912859 L3_Port: Message delivered to TTCN-3
+11:33:12.912866 L3_Port: Received 17 bytes
+11:33:12.912870 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912873 L3_Port: RX: 09 
+11:33:12.912877 Message enqueued on L from system octetstring : '090004129A'O id 58
+11:33:12.912880 L3_Port: Message delivered to TTCN-3
+11:33:12.912886 L3_Port: Received 17 bytes
+11:33:12.912891 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.912894 L3_Port: RX: 00 
+11:33:12.912898 Message enqueued on L from system octetstring : '000004129D'O id 59
+11:33:12.912901 L3_Port: Message delivered to TTCN-3
+11:33:12.912908 L3_Port: Received 39 bytes
+11:33:12.912912 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912917 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912921 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 60
+11:33:12.912925 L3_Port: Message delivered to TTCN-3
+11:33:12.912931 L3_Port: Received 39 bytes
+11:33:12.912935 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912940 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912945 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 61
+11:33:12.912948 L3_Port: Message delivered to TTCN-3
+11:33:12.912955 L3_Port: Received 39 bytes
+11:33:12.912959 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.912965 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912970 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 62
+11:33:12.912972 L3_Port: Message delivered to TTCN-3
+11:33:12.912979 L3_Port: Received 39 bytes
+11:33:12.912983 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.912988 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.912993 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 63
+11:33:12.912995 L3_Port: Message delivered to TTCN-3
+11:33:12.913024 L3_Port: Received 39 bytes
+11:33:12.913030 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913036 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913041 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 64
+11:33:12.913044 L3_Port: Message delivered to TTCN-3
+11:33:12.913050 L3_Port: Received 39 bytes
+11:33:12.913055 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913060 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913065 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 65
+11:33:12.913068 L3_Port: Message delivered to TTCN-3
+11:33:12.913075 L3_Port: Received 39 bytes
+11:33:12.913080 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913085 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913090 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 66
+11:33:12.913093 L3_Port: Message delivered to TTCN-3
+11:33:12.913099 L3_Port: Received 39 bytes
+11:33:12.913104 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913109 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913114 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 67
+11:33:12.913117 L3_Port: Message delivered to TTCN-3
+11:33:12.913123 L3_Port: Received 39 bytes
+11:33:12.913133 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913143 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913148 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 68
+11:33:12.913151 L3_Port: Message delivered to TTCN-3
+11:33:12.913158 L3_Port: Received 39 bytes
+11:33:12.913162 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913167 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913172 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 69
+11:33:12.913176 L3_Port: Message delivered to TTCN-3
+11:33:12.913182 L3_Port: Received 39 bytes
+11:33:12.913187 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913192 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913197 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 70
+11:33:12.913200 L3_Port: Message delivered to TTCN-3
+11:33:12.913207 L3_Port: Received 39 bytes
+11:33:12.913211 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913217 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913221 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 71
+11:33:12.913224 L3_Port: Message delivered to TTCN-3
+11:33:12.913231 L3_Port: Received 39 bytes
+11:33:12.913236 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913241 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913246 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 72
+11:33:12.913249 L3_Port: Message delivered to TTCN-3
+11:33:12.913255 L3_Port: Received 39 bytes
+11:33:12.913260 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913265 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913270 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 73
+11:33:12.913273 L3_Port: Message delivered to TTCN-3
+11:33:12.913280 L3_Port: Received 39 bytes
+11:33:12.913284 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913289 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913294 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 74
+11:33:12.913297 L3_Port: Message delivered to TTCN-3
+11:33:12.913304 L3_Port: Received 39 bytes
+11:33:12.913309 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913313 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913317 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 75
+11:33:12.913321 L3_Port: Message delivered to TTCN-3
+11:33:12.913327 L3_Port: Received 39 bytes
+11:33:12.913332 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913337 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913342 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 76
+11:33:12.913345 L3_Port: Message delivered to TTCN-3
+11:33:12.913352 L3_Port: Received 39 bytes
+11:33:12.913356 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=135 Len=23
+11:33:12.913361 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913366 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 77
+11:33:12.913372 L3_Port: Message delivered to TTCN-3
+11:33:12.913379 L3_Port: Received 39 bytes
+11:33:12.913383 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=7 Len=23
+11:33:12.913395 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913399 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 78
+11:33:12.913402 L3_Port: Message delivered to TTCN-3
+11:33:12.913409 L3_Port: Received 17 bytes
+11:33:12.913413 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913416 L3_Port: RX: 0C 
+11:33:12.913420 Message enqueued on L from system octetstring : '0C00041957'O id 79
+11:33:12.913423 L3_Port: Message delivered to TTCN-3
+11:33:12.913429 L3_Port: Received 17 bytes
+11:33:12.913434 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913437 L3_Port: RX: 03 
+11:33:12.913440 Message enqueued on L from system octetstring : '0300041A2E'O id 80
+11:33:12.913443 L3_Port: Message delivered to TTCN-3
+11:33:12.913449 L3_Port: Received 17 bytes
+11:33:12.913454 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913457 L3_Port: RX: 00 
+11:33:12.913460 Message enqueued on L from system octetstring : '0000041A60'O id 81
+11:33:12.913463 L3_Port: Message delivered to TTCN-3
+11:33:12.913469 L3_Port: Received 17 bytes
+11:33:12.913474 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913477 L3_Port: RX: 0A 
+11:33:12.913480 Message enqueued on L from system octetstring : '0A00041A63'O id 82
+11:33:12.913483 L3_Port: Message delivered to TTCN-3
+11:33:12.913490 L3_Port: Received 17 bytes
+11:33:12.913494 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913497 L3_Port: RX: 0B 
+11:33:12.913501 Message enqueued on L from system octetstring : '0B00041A2E'O id 83
+11:33:12.913503 L3_Port: Message delivered to TTCN-3
+11:33:12.913509 L3_Port: Received 17 bytes
+11:33:12.913512 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913515 L3_Port: RX: 07 
+11:33:12.913519 Message enqueued on L from system octetstring : '0700041A01'O id 84
+11:33:12.913521 L3_Port: Message delivered to TTCN-3
+11:33:12.913527 L3_Port: Received 17 bytes
+11:33:12.913531 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913536 L3_Port: RX: 0F 
+11:33:12.913539 Message enqueued on L from system octetstring : '0F00041ADC'O id 85
+11:33:12.913542 L3_Port: Message delivered to TTCN-3
+11:33:12.913548 L3_Port: Received 17 bytes
+11:33:12.913553 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913556 L3_Port: RX: 0F 
+11:33:12.913559 Message enqueued on L from system octetstring : '0F00041A63'O id 86
+11:33:12.913562 L3_Port: Message delivered to TTCN-3
+11:33:12.913569 L3_Port: Received 39 bytes
+11:33:12.913573 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913580 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913585 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 87
+11:33:12.913588 L3_Port: Message delivered to TTCN-3
+11:33:12.913595 L3_Port: Received 39 bytes
+11:33:12.913599 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913604 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:12.913608 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 88
+11:33:12.913611 L3_Port: Message delivered to TTCN-3
+11:33:12.913618 L3_Port: Received 39 bytes
+11:33:12.913622 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913627 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913632 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 89
+11:33:12.913634 L3_Port: Message delivered to TTCN-3
+11:33:12.913640 L3_Port: Received 17 bytes
+11:33:12.913645 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913649 L3_Port: RX: 05 
+11:33:12.913656 Message enqueued on L from system octetstring : '0500041A5D'O id 90
+11:33:12.913659 L3_Port: Message delivered to TTCN-3
+11:33:12.913665 L3_Port: Received 17 bytes
+11:33:12.913670 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913673 L3_Port: RX: 07 
+11:33:12.913677 Message enqueued on L from system octetstring : '0700041ABF'O id 91
+11:33:12.913679 L3_Port: Message delivered to TTCN-3
+11:33:12.913685 L3_Port: Received 17 bytes
+11:33:12.913689 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913693 L3_Port: RX: 0E 
+11:33:12.913696 Message enqueued on L from system octetstring : '0E00041A93'O id 92
+11:33:12.913699 L3_Port: Message delivered to TTCN-3
+11:33:12.913705 L3_Port: Received 17 bytes
+11:33:12.913708 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913713 L3_Port: RX: 01 
+11:33:12.913716 Message enqueued on L from system octetstring : '0100041A89'O id 93
+11:33:12.913719 L3_Port: Message delivered to TTCN-3
+11:33:12.913725 L3_Port: Received 17 bytes
+11:33:12.913730 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913733 L3_Port: RX: 0D 
+11:33:12.913737 Message enqueued on L from system octetstring : '0D00041A94'O id 94
+11:33:12.913739 L3_Port: Message delivered to TTCN-3
+11:33:12.913746 L3_Port: Received 17 bytes
+11:33:12.913750 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913753 L3_Port: RX: 04 
+11:33:12.913757 Message enqueued on L from system octetstring : '0400041A61'O id 95
+11:33:12.913759 L3_Port: Message delivered to TTCN-3
+11:33:12.913766 L3_Port: Received 17 bytes
+11:33:12.913770 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913776 L3_Port: RX: 0B 
+11:33:12.913779 Message enqueued on L from system octetstring : '0B00041A96'O id 96
+11:33:12.913782 L3_Port: Message delivered to TTCN-3
+11:33:12.913788 L3_Port: Received 17 bytes
+11:33:12.913792 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.913795 L3_Port: RX: 05 
+11:33:12.913798 Message enqueued on L from system octetstring : '0500041B2C'O id 97
+11:33:12.913801 L3_Port: Message delivered to TTCN-3
+11:33:12.913808 L3_Port: Received 39 bytes
+11:33:12.913812 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:12.913817 L3_Port: RX: 01 3F 3D 05 08 70 09 F1 07 10 92 33 05 F4 12 34 56 78 2B 2B 2B 2B 2B 
+11:33:12.913827 Message enqueued on L from system octetstring : '013F3D05087009F10710923305F4123456782B2B2B2B2B'O id 98
+11:33:12.913831 L3_Port: Message delivered to TTCN-3
+11:33:12.913838 L3_Port: Received 39 bytes
+11:33:12.913843 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.913848 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.913853 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 99
+11:33:12.913856 L3_Port: Message delivered to TTCN-3
+11:33:12.913862 L3_Port: Received 39 bytes
+11:33:12.913868 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913873 L3_Port: RX: 03 21 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913878 Message enqueued on L from system octetstring : '0321012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 100
+11:33:12.913881 L3_Port: Message delivered to TTCN-3
+11:33:12.913889 L3_Port: Received 39 bytes
+11:33:12.913893 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913898 L3_Port: RX: 01 20 09 05 5B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913903 Message enqueued on L from system octetstring : '012009055B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 101
+11:33:12.913906 L3_Port: Message delivered to TTCN-3
+11:33:12.913912 L3_Port: Received 39 bytes
+11:33:12.913917 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913922 L3_Port: RX: 03 29 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913929 Message enqueued on L from system octetstring : '0329012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 102
+11:33:12.913932 L3_Port: Message delivered to TTCN-3
+11:33:12.913939 L3_Port: Received 39 bytes
+11:33:12.913943 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913948 L3_Port: RX: 03 41 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913952 Message enqueued on L from system octetstring : '0341012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 103
+11:33:12.913955 L3_Port: Message delivered to TTCN-3
+11:33:12.913961 L3_Port: Received 39 bytes
+11:33:12.913966 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.913970 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.913978 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 104
+11:33:12.913981 L3_Port: Message delivered to TTCN-3
+11:33:12.913988 L3_Port: Received 39 bytes
+11:33:12.913992 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.913997 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914002 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 105
+11:33:12.914005 L3_Port: Message delivered to TTCN-3
+11:33:12.914011 L3_Port: Received 17 bytes
+11:33:12.914015 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914018 L3_Port: RX: E6 
+11:33:12.914022 Message enqueued on L from system octetstring : 'E600041A5E'O id 106
+11:33:12.914025 L3_Port: Message delivered to TTCN-3
+11:33:12.914031 L3_Port: Received 17 bytes
+11:33:12.914035 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914039 L3_Port: RX: FB 
+11:33:12.914042 Message enqueued on L from system octetstring : 'FB00041B34'O id 107
+11:33:12.914045 L3_Port: Message delivered to TTCN-3
+11:33:12.914051 L3_Port: Received 17 bytes
+11:33:12.914056 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914059 L3_Port: RX: FF 
+11:33:12.914063 Message enqueued on L from system octetstring : 'FF00041B5D'O id 108
+11:33:12.914065 L3_Port: Message delivered to TTCN-3
+11:33:12.914071 L3_Port: Received 17 bytes
+11:33:12.914075 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914079 L3_Port: RX: E5 
+11:33:12.914082 Message enqueued on L from system octetstring : 'E500041B34'O id 109
+11:33:12.914085 L3_Port: Message delivered to TTCN-3
+11:33:12.914091 L3_Port: Received 17 bytes
+11:33:12.914095 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914098 L3_Port: RX: EE 
+11:33:12.914102 Message enqueued on L from system octetstring : 'EE00041AFE'O id 110
+11:33:12.914105 L3_Port: Message delivered to TTCN-3
+11:33:12.914111 L3_Port: Received 17 bytes
+11:33:12.914116 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914119 L3_Port: RX: F7 
+11:33:12.914122 Message enqueued on L from system octetstring : 'F700041B5F'O id 111
+11:33:12.914125 L3_Port: Message delivered to TTCN-3
+11:33:12.914131 L3_Port: Received 17 bytes
+11:33:12.914136 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914139 L3_Port: RX: F1 
+11:33:12.914143 Message enqueued on L from system octetstring : 'F100041B2F'O id 112
+11:33:12.914145 L3_Port: Message delivered to TTCN-3
+11:33:12.914152 L3_Port: Received 17 bytes
+11:33:12.914157 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:12.914160 L3_Port: RX: E1 
+11:33:12.914163 Message enqueued on L from system octetstring : 'E100041B5C'O id 113
+11:33:12.914168 L3_Port: Message delivered to TTCN-3
+11:33:12.914175 L3_Port: Received 39 bytes
+11:33:12.914180 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.914185 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914193 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 114
+11:33:12.914196 L3_Port: Message delivered to TTCN-3
+11:33:12.914203 L3_Port: Received 39 bytes
+11:33:12.914207 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.914212 L3_Port: RX: 0F 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914217 Message enqueued on L from system octetstring : '0F000103490615BF3F0000000000000000000000000000'O id 115
+11:33:12.914220 L3_Port: Message delivered to TTCN-3
+11:33:12.914226 L3_Port: Received 39 bytes
+11:33:12.914230 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.914235 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914239 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 116
+11:33:12.914242 L3_Port: Message delivered to TTCN-3
+11:33:12.914248 L3_Port: Received 39 bytes
+11:33:12.914252 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.914258 L3_Port: RX: 0F 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914262 Message enqueued on L from system octetstring : '0F000103490615BF3F0000000000000000000000000000'O id 117
+11:33:12.914265 L3_Port: Message delivered to TTCN-3
+11:33:12.914271 L3_Port: Received 39 bytes
+11:33:12.914276 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.914281 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914285 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 118
+11:33:12.914288 L3_Port: Message delivered to TTCN-3
+11:33:12.914294 L3_Port: Received 39 bytes
+11:33:12.914300 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.914305 L3_Port: RX: 0F 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914309 Message enqueued on L from system octetstring : '0F000103490615BF3F0000000000000000000000000000'O id 119
+11:33:12.914311 L3_Port: Message delivered to TTCN-3
+11:33:12.914318 L3_Port: Received 39 bytes
+11:33:12.914322 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.914327 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914331 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 120
+11:33:12.914334 L3_Port: Message delivered to TTCN-3
+11:33:12.914340 L3_Port: Received 39 bytes
+11:33:12.914344 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.914349 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.914354 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 121
+11:33:12.914359 L3_Port: Message delivered to TTCN-3
+11:33:12.914365 L3_Port: Received 39 bytes
+11:33:12.914368 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.914375 L3_Port: RX: 0F 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914379 Message enqueued on L from system octetstring : '0F000103490615BF3F0000000000000000000000000000'O id 122
+11:33:12.914382 L3_Port: Message delivered to TTCN-3
+11:33:12.914388 L3_Port: Received 39 bytes
+11:33:12.914392 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:12.914397 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.914401 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 123
+11:33:12.914404 L3_Port: Message delivered to TTCN-3
+11:33:12.914410 L3_Port: Received 39 bytes
+11:33:12.914415 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:12.914420 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:12.914428 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 124
+11:33:12.914431 L3_Port: Message delivered to TTCN-3
+11:33:12.991315 L3_Port: Received 39 bytes
+11:33:12.991362 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:12.991371 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:12.991384 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 125
+11:33:12.991395 L3_Port: Message delivered to TTCN-3
+11:33:13.746133 L3_Port: Received 39 bytes
+11:33:13.746207 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:13.746227 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:13.746249 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 126
+11:33:13.746269 L3_Port: Message delivered to TTCN-3
+11:33:13.897468 L3_Port: Received 39 bytes
+11:33:13.897519 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:13.897527 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:13.897541 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 127
+11:33:13.897552 L3_Port: Message delivered to TTCN-3
+11:33:13.991771 L3_Port: Received 39 bytes
+11:33:13.991833 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:13.991844 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:13.991856 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 128
+11:33:13.991868 L3_Port: Message delivered to TTCN-3
+11:33:14.743771 L3_Port: Received 39 bytes
+11:33:14.743819 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:14.743843 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:14.743859 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 129
+11:33:14.743870 L3_Port: Message delivered to TTCN-3
+11:33:14.896531 L3_Port: Received 39 bytes
+11:33:14.896574 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:14.896582 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:14.896593 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 130
+11:33:14.896605 L3_Port: Message delivered to TTCN-3
+11:33:14.991492 L3_Port: Received 39 bytes
+11:33:14.991537 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:14.991545 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:14.991558 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 131
+11:33:14.991569 L3_Port: Message delivered to TTCN-3
+11:33:15.745494 L3_Port: Received 39 bytes
+11:33:15.745569 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:15.745589 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:15.745610 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 132
+11:33:15.745629 L3_Port: Message delivered to TTCN-3
+11:33:15.901501 L3_Port: Received 39 bytes
+11:33:15.901551 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:15.901559 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:15.901571 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 133
+11:33:15.901582 L3_Port: Message delivered to TTCN-3
+11:33:15.913979 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:15.914029 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+11:33:15.914046 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+11:33:15.914059 Message with id 13 was extracted from the queue of MSC.
+11:33:15.914063 TC_26_8_1_2_4_13: (drain) discarding: "{\"type\": \"HEARTBEAT\"}"
+11:33:15.991262 L3_Port: Received 39 bytes
+11:33:15.991312 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:15.991320 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:15.991331 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 134
+11:33:15.991343 L3_Port: Message delivered to TTCN-3
+11:33:16.745431 L3_Port: Received 39 bytes
+11:33:16.745483 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:16.745492 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:16.745504 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 135
+11:33:16.745515 L3_Port: Message delivered to TTCN-3
+11:33:16.898164 L3_Port: Received 39 bytes
+11:33:16.898212 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:16.898221 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:16.898234 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 136
+11:33:16.898245 L3_Port: Message delivered to TTCN-3
+11:33:16.991132 L3_Port: Received 39 bytes
+11:33:16.991179 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:16.991187 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:16.991199 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 137
+11:33:16.991211 L3_Port: Message delivered to TTCN-3
+11:33:17.746933 L3_Port: Received 39 bytes
+11:33:17.746991 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:17.747000 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:17.747011 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 138
+11:33:17.747023 L3_Port: Message delivered to TTCN-3
+11:33:17.911251 Timeout T_drain: 5 s
+11:33:17.911303 TC_26_8_1_2_4_13: drain complete
+11:33:17.911330 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+11:33:17.911389 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+11:33:17.911398 Start timer T_settle: 2 s
+11:33:17.911747 MSC_Port: RX: {"status": "ok"}
+11:33:17.911755 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 14
+11:33:17.993088 L3_Port: Received 39 bytes
+11:33:17.993134 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:17.993142 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:17.993154 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 139
+11:33:17.993165 L3_Port: Message delivered to TTCN-3
+11:33:18.992326 L3_Port: Received 39 bytes
+11:33:18.992381 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:18.992392 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:18.992404 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 140
+11:33:18.992415 L3_Port: Message delivered to TTCN-3
+11:33:19.911410 Timeout T_settle: 2 s
+11:33:19.911453 *** Phase 1: Waiting for LU REQUEST ***
+11:33:19.911473 Start timer T_lu_wait: 45 s
+11:33:19.911490 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 14
+11:33:19.911500 Message with id 14 was extracted from the queue of MSC.
+11:33:19.911677 TC_26_8_1_2_4_13: (LU wait) ignoring: "{\"status\": \"ok\"}"
+11:33:19.994109 L3_Port: Received 39 bytes
+11:33:19.994166 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:19.994177 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:19.994198 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 141
+11:33:19.994208 L3_Port: Message delivered to TTCN-3
+11:33:20.997119 L3_Port: Received 39 bytes
+11:33:20.997172 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=137 Len=23
+11:33:20.997181 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:20.997193 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 142
+11:33:20.997205 L3_Port: Message delivered to TTCN-3
+11:33:21.411021 L3_Port: Received 39 bytes
+11:33:21.411070 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:21.411079 L3_Port: RX: 03 21 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:21.411091 Message enqueued on L from system octetstring : '0321012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 143
+11:33:21.411103 L3_Port: Message delivered to TTCN-3
+11:33:21.411459 L3_Port: Received 39 bytes
+11:33:21.411466 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=9 Len=23
+11:33:21.411472 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:21.411477 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 144
+11:33:21.411482 L3_Port: Message delivered to TTCN-3
+11:33:21.445280 VTY_PT: Received data (buffered): 68 bytes
+11:33:21.915698 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:21.915754 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+11:33:21.915774 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+11:33:21.915781 Message with id 15 was extracted from the queue of MSC.
+11:33:22.364053 L3_Port: Received 17 bytes
+11:33:22.364117 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.364132 L3_Port: RX: 0A 
+11:33:22.364150 Message enqueued on L from system octetstring : '0A000425E4'O id 145
+11:33:22.364167 L3_Port: Message delivered to TTCN-3
+11:33:22.368885 L3_Port: Received 17 bytes
+11:33:22.368922 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.368936 L3_Port: RX: 0B 
+11:33:22.368951 Message enqueued on L from system octetstring : '0B000426BA'O id 146
+11:33:22.368966 L3_Port: Message delivered to TTCN-3
+11:33:22.382760 L3_Port: Received 17 bytes
+11:33:22.382802 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.382815 L3_Port: RX: 0C 
+11:33:22.382849 Message enqueued on L from system octetstring : '0C000426BD'O id 147
+11:33:22.382867 L3_Port: Message delivered to TTCN-3
+11:33:22.387713 L3_Port: Received 17 bytes
+11:33:22.387748 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.387762 L3_Port: RX: 00 
+11:33:22.387777 Message enqueued on L from system octetstring : '00000426F2'O id 148
+11:33:22.387790 L3_Port: Message delivered to TTCN-3
+11:33:22.392355 L3_Port: Received 17 bytes
+11:33:22.392395 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.392409 L3_Port: RX: 0C 
+11:33:22.392424 Message enqueued on L from system octetstring : '0C000426C0'O id 149
+11:33:22.392437 L3_Port: Message delivered to TTCN-3
+11:33:22.405277 L3_Port: Received 17 bytes
+11:33:22.405324 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.405336 L3_Port: RX: 07 
+11:33:22.405350 Message enqueued on L from system octetstring : '07000426BA'O id 150
+11:33:22.405366 L3_Port: Message delivered to TTCN-3
+11:33:22.410125 L3_Port: Received 17 bytes
+11:33:22.410163 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.410175 L3_Port: RX: 0B 
+11:33:22.410189 Message enqueued on L from system octetstring : '0B000426D0'O id 151
+11:33:22.410203 L3_Port: Message delivered to TTCN-3
+11:33:22.414367 L3_Port: Received 17 bytes
+11:33:22.414401 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:22.414435 L3_Port: RX: 08 
+11:33:22.414448 Message enqueued on L from system octetstring : '08000426F2'O id 152
+11:33:22.414462 L3_Port: Message delivered to TTCN-3
+11:33:22.502770 L3_Port: Received 39 bytes
+11:33:22.502848 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:22.502871 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:22.502892 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 153
+11:33:22.502912 L3_Port: Message delivered to TTCN-3
+11:33:22.503900 L3_Port: Received 39 bytes
+11:33:22.503940 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:22.503958 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:22.503973 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 154
+11:33:22.503986 L3_Port: Message delivered to TTCN-3
+11:33:22.504588 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 21, "msc_slr": 5, "cksn": 0, "lu_type": 7, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+11:33:22.504623 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 21, \"msc_slr\": 5, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 16
+11:33:22.504654 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 21, \"msc_slr\": 5, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 16
+11:33:22.504670 Message with id 16 was extracted from the queue of MSC.
+11:33:22.504976 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 21, \"msc_slr\": 5, \"cksn\": 0, \"lu_type\": 7, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+11:33:22.505138 f_extractJsonInt: Found key at position 29 (pattern: "\"bsc_slr\":")
+11:33:22.505256 f_extractJsonInt: Extracted number string '"21"' => integer 21
+11:33:22.505285 TC_26_8_1_2_4_13: LU REQUEST bsc_slr=21
+11:33:22.505322 Stop timer T_lu_wait: 45 s
+11:33:22.505350 TC_26_8_1_2_4_13: Sending LU ACCEPT (lac=4242, tmsi=305419896)
+11:33:22.505394 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 21, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+11:33:22.505464 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 21, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+11:33:22.505482 Start timer T_tmsi: 10 s
+11:33:23.006736 MSC_Port: RX: {"status": "ok", "sent": true}
+11:33:23.006785 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 17
+11:33:23.006805 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 17
+11:33:23.006812 Message with id 17 was extracted from the queue of MSC.
+11:33:23.006898 TC_26_8_1_2_4_13: (TMSI wait) ignoring: "{\"status\": \"ok\", \"sent\": true}"
+11:33:23.254061 L3_Port: Received 39 bytes
+11:33:23.254121 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:23.254131 L3_Port: RX: 03 21 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:23.254144 Message enqueued on L from system octetstring : '0321012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 155
+11:33:23.254155 L3_Port: Message delivered to TTCN-3
+11:33:23.254484 L3_Port: Received 39 bytes
+11:33:23.254493 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:23.254498 L3_Port: RX: 01 20 09 05 5B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:23.254503 Message enqueued on L from system octetstring : '012009055B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 156
+11:33:23.254508 L3_Port: Message delivered to TTCN-3
+11:33:23.255502 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 5, "pd": 5, "msg_type": 27}
+11:33:23.255527 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 27}" id 18
+11:33:23.255541 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 27}" id 18
+11:33:23.255549 Message with id 18 was extracted from the queue of MSC.
+11:33:23.255630 TC_26_8_1_2_4_13: (TMSI wait) ignoring: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 27}"
+11:33:23.255650 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 5}
+11:33:23.255657 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 5}" id 19
+11:33:23.255663 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 5}" id 19
+11:33:23.255666 Message with id 19 was extracted from the queue of MSC.
+11:33:23.255743 TC_26_8_1_2_4_13: (TMSI wait) ignoring: "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 5}"
+11:33:23.506335 L3_Port: Received 39 bytes
+11:33:23.506401 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:23.506418 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:23.506434 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 157
+11:33:23.506449 L3_Port: Message delivered to TTCN-3
+11:33:24.504564 L3_Port: Received 39 bytes
+11:33:24.504617 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:24.504627 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:24.504639 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 158
+11:33:24.504650 L3_Port: Message delivered to TTCN-3
+11:33:25.504898 L3_Port: Received 39 bytes
+11:33:25.504937 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:25.504947 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:25.504958 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 159
+11:33:25.504967 L3_Port: Message delivered to TTCN-3
+11:33:26.506178 L3_Port: Received 39 bytes
+11:33:26.506253 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:26.506279 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:26.506301 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 160
+11:33:26.506321 L3_Port: Message delivered to TTCN-3
+11:33:27.009985 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:27.010037 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+11:33:27.010060 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+11:33:27.010068 Message with id 20 was extracted from the queue of MSC.
+11:33:27.507876 L3_Port: Received 39 bytes
+11:33:27.507947 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:27.507959 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:27.507974 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 161
+11:33:27.507988 L3_Port: Message delivered to TTCN-3
+11:33:28.508895 L3_Port: Received 39 bytes
+11:33:28.508952 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:28.508961 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:28.508975 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 162
+11:33:28.508990 L3_Port: Message delivered to TTCN-3
+11:33:29.508613 L3_Port: Received 39 bytes
+11:33:29.508687 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:29.508725 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:29.508747 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 163
+11:33:29.508765 L3_Port: Message delivered to TTCN-3
+11:33:30.511603 L3_Port: Received 39 bytes
+11:33:30.511683 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:30.511701 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:30.511719 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 164
+11:33:30.511736 L3_Port: Message delivered to TTCN-3
+11:33:31.509362 L3_Port: Received 39 bytes
+11:33:31.509413 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:31.509423 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:31.509436 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 165
+11:33:31.509448 L3_Port: Message delivered to TTCN-3
+11:33:32.015027 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:32.015082 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 21
+11:33:32.015102 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 21
+11:33:32.015109 Message with id 21 was extracted from the queue of MSC.
+11:33:32.505716 Timeout T_tmsi: 10 s
+11:33:32.505789 TC_26_8_1_2_4_13: no TMSI REALLOC COMPLETE (continuing)
+11:33:32.505863 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 21, \"cause\": 0}}"
+11:33:32.505970 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 21, "cause": 0}}
+11:33:32.505993 Start timer T_lu_drain: 5 s
+11:33:32.506705 MSC_Port: RX: {"status": "ok"}
+11:33:32.506769 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 22
+11:33:32.506800 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 22
+11:33:32.506816 Message with id 22 was extracted from the queue of MSC.
+11:33:32.506903 TC_26_8_1_2_4_13: (post-LU drain) "{\"status\": \"ok\"}"
+11:33:32.508006 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 5}
+11:33:32.508045 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 5}" id 23
+11:33:32.508071 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 5}" id 23
+11:33:32.508084 Message with id 23 was extracted from the queue of MSC.
+11:33:32.508138 TC_26_8_1_2_4_13: (post-LU drain) "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 5}"
+11:33:32.531331 L3_Port: Received 39 bytes
+11:33:32.531409 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:32.531433 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:32.531459 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 166
+11:33:32.531482 L3_Port: Message delivered to TTCN-3
+11:33:32.674566 L3_Port: Received 39 bytes
+11:33:32.674638 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:32.674661 L3_Port: RX: 03 41 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:32.674683 Message enqueued on L from system octetstring : '0341012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 167
+11:33:32.674706 L3_Port: Message delivered to TTCN-3
+11:33:32.675704 L3_Port: Received 39 bytes
+11:33:32.675735 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:32.675754 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:32.675771 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 168
+11:33:32.675786 L3_Port: Message delivered to TTCN-3
+11:33:32.908957 L3_Port: Received 17 bytes
+11:33:32.909042 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:32.909058 L3_Port: RX: 07 
+11:33:32.909074 Message enqueued on L from system octetstring : '0700042ED2'O id 169
+11:33:32.909093 L3_Port: Message delivered to TTCN-3
+11:33:32.915712 L3_Port: Received 17 bytes
+11:33:32.915744 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:32.915750 L3_Port: RX: 0C 
+11:33:32.915757 Message enqueued on L from system octetstring : '0C00042FE2'O id 170
+11:33:32.915765 L3_Port: Message delivered to TTCN-3
+11:33:32.934883 L3_Port: Received 17 bytes
+11:33:32.934930 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:32.934937 L3_Port: RX: 05 
+11:33:32.934948 Message enqueued on L from system octetstring : '0500042F7B'O id 171
+11:33:32.934961 L3_Port: Message delivered to TTCN-3
+11:33:32.936704 L3_Port: Received 39 bytes
+11:33:32.936726 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:32.936733 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:32.936739 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 172
+11:33:32.936745 L3_Port: Message delivered to TTCN-3
+11:33:32.940286 L3_Port: Received 39 bytes
+11:33:32.940303 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:32.940310 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:32.940316 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 173
+11:33:32.940321 L3_Port: Message delivered to TTCN-3
+11:33:33.489912 L3_Port: Received 17 bytes
+11:33:33.489955 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:33.489961 L3_Port: RX: 01 
+11:33:33.489971 Message enqueued on L from system octetstring : '0100042F7A'O id 174
+11:33:33.489983 L3_Port: Message delivered to TTCN-3
+11:33:33.518251 L3_Port: Received 17 bytes
+11:33:33.518298 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:33.518304 L3_Port: RX: 01 
+11:33:33.518315 Message enqueued on L from system octetstring : '0100043023'O id 175
+11:33:33.518327 L3_Port: Message delivered to TTCN-3
+11:33:33.527075 L3_Port: Received 17 bytes
+11:33:33.527124 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:33.527130 L3_Port: RX: 06 
+11:33:33.527141 Message enqueued on L from system octetstring : '0600043048'O id 176
+11:33:33.527153 L3_Port: Message delivered to TTCN-3
+11:33:33.534572 L3_Port: Received 39 bytes
+11:33:33.534610 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:33.534619 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:33.534632 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 177
+11:33:33.534643 L3_Port: Message delivered to TTCN-3
+11:33:33.534983 L3_Port: Received 39 bytes
+11:33:33.534993 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:33.535001 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:33.535008 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 178
+11:33:33.535013 L3_Port: Message delivered to TTCN-3
+11:33:33.940736 L3_Port: Received 39 bytes
+11:33:33.940785 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:33.940793 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:33.940806 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 179
+11:33:33.940817 L3_Port: Message delivered to TTCN-3
+11:33:34.530785 L3_Port: Received 39 bytes
+11:33:34.530852 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:34.530861 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:34.530873 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 180
+11:33:34.530893 L3_Port: Message delivered to TTCN-3
+11:33:34.937773 L3_Port: Received 39 bytes
+11:33:34.937833 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:34.937844 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:34.937856 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 181
+11:33:34.937868 L3_Port: Message delivered to TTCN-3
+11:33:35.530399 L3_Port: Received 39 bytes
+11:33:35.530472 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:35.530493 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:35.530516 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 182
+11:33:35.530537 L3_Port: Message delivered to TTCN-3
+11:33:35.938972 L3_Port: Received 39 bytes
+11:33:35.939025 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:35.939034 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:35.939047 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 183
+11:33:35.939059 L3_Port: Message delivered to TTCN-3
+11:33:36.457652 L3_Port: Received 17 bytes
+11:33:36.457716 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.457728 L3_Port: RX: 00 
+11:33:36.457740 Message enqueued on L from system octetstring : '00000431E3'O id 184
+11:33:36.457752 L3_Port: Message delivered to TTCN-3
+11:33:36.460046 L3_Port: Received 17 bytes
+11:33:36.460072 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.460081 L3_Port: RX: 04 
+11:33:36.460091 Message enqueued on L from system octetstring : '04000432E5'O id 185
+11:33:36.460100 L3_Port: Message delivered to TTCN-3
+11:33:36.464358 L3_Port: Received 17 bytes
+11:33:36.464413 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.464428 L3_Port: RX: 0B 
+11:33:36.464444 Message enqueued on L from system octetstring : '0B00043283'O id 186
+11:33:36.464460 L3_Port: Message delivered to TTCN-3
+11:33:36.471123 L3_Port: Received 17 bytes
+11:33:36.471169 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.471184 L3_Port: RX: 05 
+11:33:36.471200 Message enqueued on L from system octetstring : '0500043282'O id 187
+11:33:36.471217 L3_Port: Message delivered to TTCN-3
+11:33:36.483520 L3_Port: Received 17 bytes
+11:33:36.483559 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.483572 L3_Port: RX: 0E 
+11:33:36.483585 Message enqueued on L from system octetstring : '0E000432E7'O id 188
+11:33:36.483598 L3_Port: Message delivered to TTCN-3
+11:33:36.486902 L3_Port: Received 17 bytes
+11:33:36.486974 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.486992 L3_Port: RX: 02 
+11:33:36.487011 Message enqueued on L from system octetstring : '0200043290'O id 189
+11:33:36.487032 L3_Port: Message delivered to TTCN-3
+11:33:36.488261 L3_Port: Received 17 bytes
+11:33:36.488289 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.488297 L3_Port: RX: 0D 
+11:33:36.488306 Message enqueued on L from system octetstring : '0D000432B6'O id 190
+11:33:36.488313 L3_Port: Message delivered to TTCN-3
+11:33:36.490107 L3_Port: Received 17 bytes
+11:33:36.490162 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=3 Len=1
+11:33:36.490181 L3_Port: RX: 02 
+11:33:36.490199 Message enqueued on L from system octetstring : '02000432E2'O id 191
+11:33:36.490216 L3_Port: Message delivered to TTCN-3
+11:33:36.532117 L3_Port: Received 39 bytes
+11:33:36.532187 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:36.532211 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:36.532234 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 192
+11:33:36.532267 L3_Port: Message delivered to TTCN-3
+11:33:36.650405 L3_Port: Received 39 bytes
+11:33:36.650478 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:36.650499 L3_Port: RX: 01 3F 49 05 08 70 09 F1 07 00 00 33 08 99 10 07 00 00 00 00 10 2B 2B 
+11:33:36.650520 Message enqueued on L from system octetstring : '013F4905087009F1070000330899100700000000102B2B'O id 193
+11:33:36.650539 L3_Port: Message delivered to TTCN-3
+11:33:36.650846 L3_Port: Received 39 bytes
+11:33:36.650907 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:36.650928 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:36.650954 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 194
+11:33:36.650971 L3_Port: Message delivered to TTCN-3
+11:33:36.940655 L3_Port: Received 39 bytes
+11:33:36.940703 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:36.940712 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:36.940724 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 195
+11:33:36.940734 L3_Port: Message delivered to TTCN-3
+11:33:37.506020 Timeout T_lu_drain: 5 s
+11:33:37.506069 TC_26_8_1_2_4_13: MS now in idle-updated state
+11:33:37.506088 *** Phase 2: Triggering MO speech call via VTY ***
+11:33:37.506102 VTY: Sending command: "enable"
+11:33:37.506142 Sent on VTY to system charstring : "enable"
+11:33:37.506172 VTY_PT: Sending command: "enable"
+11:33:37.706335 VTY_PT: Received response: 
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Power off!
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+enable
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+11:33:37.706454 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+11:33:37.706476 Start timer T_vty: 5 s
+11:33:37.706512 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+11:33:37.706520 Message with id 1 was extracted from the queue of VTY.
+11:33:37.706525 Stop timer T_vty: 5 s
+11:33:37.706530 VTY: Received response: "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:37.706549 TC_26_8_1_2_4_13: VTY enable(1): "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:37.706563 VTY: Sending command: "enable"
+11:33:37.706572 Sent on VTY to system charstring : "enable"
+11:33:37.706577 VTY_PT: Sending command: "enable"
+11:33:37.906731 VTY_PT: Received response: enable
+% Unknown command.
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+11:33:37.906801 Message enqueued on VTY from system charstring : "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+11:33:37.906818 Start timer T_vty: 5 s
+11:33:37.906860 Receive operation on port VTY succeeded, message from system(): charstring : "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+11:33:37.906867 Message with id 2 was extracted from the queue of VTY.
+11:33:37.906870 Stop timer T_vty: 5 s
+11:33:37.906874 VTY: Received response: "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:37.906885 TC_26_8_1_2_4_13: VTY enable(2): "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:37.906892 VTY: Sending command: "call 1 12345"
+11:33:37.906899 Sent on VTY to system charstring : "call 1 12345"
+11:33:37.906905 VTY_PT: Sending command: "call 1 12345"
+11:33:38.107042 VTY_PT: Received response: call 1 12345
+
+% (MS 1)
+% Please put active call on hold first!
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+11:33:38.107114 Message enqueued on VTY from system charstring : "call 1 12345\r\n\r\n% (MS 1)\r\n% Please put active call on hold first!\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+11:33:38.107130 Start timer T_vty: 5 s
+11:33:38.107150 Receive operation on port VTY succeeded, message from system(): charstring : "call 1 12345\r\n\r\n% (MS 1)\r\n% Please put active call on hold first!\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+11:33:38.107157 Message with id 3 was extracted from the queue of VTY.
+11:33:38.107161 Stop timer T_vty: 5 s
+11:33:38.107164 VTY: Received response: "call 1 12345\r\n\r\n% (MS 1)\r\n% Please put active call on hold first!\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:38.107178 TC_26_8_1_2_4_13: VTY call command: "call 1 12345\r\n\r\n% (MS 1)\r\n% Please put active call on hold first!\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+11:33:38.107188 TC_26_8_1_2_4_13: Waiting for CM SERVICE REQUEST...
+11:33:38.107193 Start timer T_cm: 20 s
+11:33:38.107215 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:38.107222 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+11:33:38.107231 L3_Port: Received 39 bytes
+11:33:38.107237 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.107244 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.107252 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 196
+11:33:38.107255 L3_Port: Message delivered to TTCN-3
+11:33:38.107262 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+11:33:38.107265 Message with id 24 was extracted from the queue of MSC.
+11:33:38.107358 L3_Port: Received 39 bytes
+11:33:38.107364 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.107370 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.107374 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 197
+11:33:38.107378 L3_Port: Message delivered to TTCN-3
+11:33:38.107384 L3_Port: Received 39 bytes
+11:33:38.107395 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.107400 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.107405 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 198
+11:33:38.107408 L3_Port: Message delivered to TTCN-3
+11:33:38.531890 L3_Port: Received 39 bytes
+11:33:38.531943 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.531953 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.531965 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 199
+11:33:38.531976 L3_Port: Message delivered to TTCN-3
+11:33:38.652794 L3_Port: Received 39 bytes
+11:33:38.652883 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.652904 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.652939 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 200
+11:33:38.652957 L3_Port: Message delivered to TTCN-3
+11:33:38.943985 L3_Port: Received 39 bytes
+11:33:38.944054 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:38.944075 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:38.944096 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 201
+11:33:38.944114 L3_Port: Message delivered to TTCN-3
+11:33:39.539153 L3_Port: Received 39 bytes
+11:33:39.539225 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:39.539247 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:39.539268 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 202
+11:33:39.539284 L3_Port: Message delivered to TTCN-3
+11:33:39.654108 L3_Port: Received 39 bytes
+11:33:39.654175 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:39.654195 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:39.654214 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 203
+11:33:39.654231 L3_Port: Message delivered to TTCN-3
+11:33:39.945087 L3_Port: Received 39 bytes
+11:33:39.945137 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:39.945146 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:39.945159 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 204
+11:33:39.945170 L3_Port: Message delivered to TTCN-3
+11:33:40.533498 L3_Port: Received 39 bytes
+11:33:40.533554 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:40.533564 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:40.533575 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 205
+11:33:40.533587 L3_Port: Message delivered to TTCN-3
+11:33:40.655201 L3_Port: Received 39 bytes
+11:33:40.655243 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:40.655251 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:40.655263 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 206
+11:33:40.655274 L3_Port: Message delivered to TTCN-3
+11:33:40.941890 L3_Port: Received 39 bytes
+11:33:40.941943 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:40.941951 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:40.941962 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 207
+11:33:40.941974 L3_Port: Message delivered to TTCN-3
+11:33:41.537210 L3_Port: Received 39 bytes
+11:33:41.537284 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:41.537305 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:41.537328 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 208
+11:33:41.537348 L3_Port: Message delivered to TTCN-3
+11:33:41.654982 L3_Port: Received 39 bytes
+11:33:41.655061 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:41.655084 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:41.655106 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 209
+11:33:41.655125 L3_Port: Message delivered to TTCN-3
+11:33:41.944573 L3_Port: Received 39 bytes
+11:33:41.944621 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:41.944631 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:41.944650 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 210
+11:33:41.944659 L3_Port: Message delivered to TTCN-3
+11:33:42.517012 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:42.517091 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+11:33:42.517126 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+11:33:42.517140 Message with id 25 was extracted from the queue of MSC.
+11:33:42.537137 L3_Port: Received 39 bytes
+11:33:42.537216 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:42.537237 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:42.537257 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 211
+11:33:42.537274 L3_Port: Message delivered to TTCN-3
+11:33:42.654815 L3_Port: Received 39 bytes
+11:33:42.654883 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:42.654900 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:42.654916 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 212
+11:33:42.654930 L3_Port: Message delivered to TTCN-3
+11:33:42.949474 L3_Port: Received 39 bytes
+11:33:42.949526 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:42.949535 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:42.949548 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 213
+11:33:42.949560 L3_Port: Message delivered to TTCN-3
+11:33:43.539543 L3_Port: Received 39 bytes
+11:33:43.539598 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:43.539609 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:43.539623 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 214
+11:33:43.539636 L3_Port: Message delivered to TTCN-3
+11:33:43.657317 L3_Port: Received 39 bytes
+11:33:43.657367 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:43.657376 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:43.657388 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 215
+11:33:43.657400 L3_Port: Message delivered to TTCN-3
+11:33:43.945456 L3_Port: Received 39 bytes
+11:33:43.945506 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:43.945514 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:43.945527 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 216
+11:33:43.945538 L3_Port: Message delivered to TTCN-3
+11:33:44.541896 L3_Port: Received 39 bytes
+11:33:44.541960 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:44.541979 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:44.541999 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 217
+11:33:44.542016 L3_Port: Message delivered to TTCN-3
+11:33:44.657575 L3_Port: Received 39 bytes
+11:33:44.657619 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:44.657629 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:44.657642 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 218
+11:33:44.657654 L3_Port: Message delivered to TTCN-3
+11:33:44.952007 L3_Port: Received 39 bytes
+11:33:44.952057 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:44.952066 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:44.952079 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 219
+11:33:44.952096 L3_Port: Message delivered to TTCN-3
+11:33:45.540425 L3_Port: Received 39 bytes
+11:33:45.540493 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:45.540513 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:45.540534 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 220
+11:33:45.540554 L3_Port: Message delivered to TTCN-3
+11:33:45.659007 L3_Port: Received 39 bytes
+11:33:45.659084 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:45.659106 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:45.659127 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 221
+11:33:45.659145 L3_Port: Message delivered to TTCN-3
+11:33:45.946345 L3_Port: Received 39 bytes
+11:33:45.946404 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:45.946412 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:45.946425 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 222
+11:33:45.946436 L3_Port: Message delivered to TTCN-3
+11:33:46.545893 L3_Port: Received 39 bytes
+11:33:46.545943 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:46.545951 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:46.545962 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 223
+11:33:46.545974 L3_Port: Message delivered to TTCN-3
+11:33:46.662567 L3_Port: Received 39 bytes
+11:33:46.662624 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:46.662635 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:46.662646 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 224
+11:33:46.662656 L3_Port: Message delivered to TTCN-3
+11:33:46.949744 L3_Port: Received 39 bytes
+11:33:46.949796 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:46.949806 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:46.949819 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 225
+11:33:46.949848 L3_Port: Message delivered to TTCN-3
+11:33:47.522001 MSC_Port: RX: {"type": "HEARTBEAT"}
+11:33:47.522057 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+11:33:47.522077 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+11:33:47.522085 Message with id 26 was extracted from the queue of MSC.
+11:33:47.548125 L3_Port: Received 39 bytes
+11:33:47.548179 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:47.548189 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:47.548203 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 226
+11:33:47.548215 L3_Port: Message delivered to TTCN-3
+11:33:47.665085 L3_Port: Received 39 bytes
+11:33:47.665141 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:47.665155 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:47.665170 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 227
+11:33:47.665183 L3_Port: Message delivered to TTCN-3
+11:33:47.951901 L3_Port: Received 39 bytes
+11:33:47.951951 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:47.951961 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:47.951975 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 228
+11:33:47.951995 L3_Port: Message delivered to TTCN-3
+11:33:48.581555 L3_Port: Received 39 bytes
+11:33:48.581628 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:48.581649 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:48.581668 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 229
+11:33:48.581686 L3_Port: Message delivered to TTCN-3
+11:33:48.663939 L3_Port: Received 39 bytes
+11:33:48.664021 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:48.664042 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:48.664065 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 230
+11:33:48.664088 L3_Port: Message delivered to TTCN-3
+11:33:48.960053 L3_Port: Received 39 bytes
+11:33:48.960122 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:48.960143 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:48.960165 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 231
+11:33:48.960186 L3_Port: Message delivered to TTCN-3
+11:33:49.483851 MSC_Port: Connection closed by stub
+11:33:49.550641 L3_Port: Received 39 bytes
+11:33:49.550696 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:49.550705 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:49.550719 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 232
+11:33:49.550731 L3_Port: Message delivered to TTCN-3
+11:33:49.666321 L3_Port: Received 39 bytes
+11:33:49.666372 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:49.666380 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:49.666393 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 233
+11:33:49.666405 L3_Port: Message delivered to TTCN-3
+11:33:49.957026 L3_Port: Received 39 bytes
+11:33:49.957073 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:49.957082 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:49.957093 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 234
+11:33:49.957104 L3_Port: Message delivered to TTCN-3
+11:33:50.545731 L3_Port: Received 39 bytes
+11:33:50.545785 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:50.545795 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:50.545807 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 235
+11:33:50.545819 L3_Port: Message delivered to TTCN-3
+11:33:50.698604 L3_Port: Received 39 bytes
+11:33:50.698655 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:50.698664 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:50.698677 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 236
+11:33:50.698688 L3_Port: Message delivered to TTCN-3
+11:33:50.951650 L3_Port: Received 39 bytes
+11:33:50.951699 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:50.951708 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:50.951722 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 237
+11:33:50.951733 L3_Port: Message delivered to TTCN-3
+11:33:51.549625 L3_Port: Received 39 bytes
+11:33:51.549696 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:51.549717 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:51.549739 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 238
+11:33:51.549773 L3_Port: Message delivered to TTCN-3
+11:33:51.670288 L3_Port: Received 39 bytes
+11:33:51.670335 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:51.670354 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:51.670371 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 239
+11:33:51.670387 L3_Port: Message delivered to TTCN-3
+11:33:51.948554 L3_Port: Received 39 bytes
+11:33:51.948604 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:51.948613 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:51.948626 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 240
+11:33:51.948638 L3_Port: Message delivered to TTCN-3
+11:33:52.581584 L3_Port: Received 39 bytes
+11:33:52.581639 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:52.581648 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:52.581661 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 241
+11:33:52.581673 L3_Port: Message delivered to TTCN-3
+11:33:52.664416 L3_Port: Received 39 bytes
+11:33:52.664479 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:52.664501 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:52.664523 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 242
+11:33:52.664544 L3_Port: Message delivered to TTCN-3
+11:33:52.961326 L3_Port: Received 39 bytes
+11:33:52.961408 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:52.961430 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:52.961452 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 243
+11:33:52.961474 L3_Port: Message delivered to TTCN-3
+11:33:53.069483 L3_Port: Received 39 bytes
+11:33:53.069543 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:53.069553 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:53.069568 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 244
+11:33:53.069581 L3_Port: Message delivered to TTCN-3
+11:33:53.552235 L3_Port: Received 39 bytes
+11:33:53.552288 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:53.552297 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:53.552310 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 245
+11:33:53.552332 L3_Port: Message delivered to TTCN-3
+11:33:53.628175 L3_Port: Received 39 bytes
+11:33:53.628226 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:53.628235 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:53.628248 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 246
+11:33:53.628259 L3_Port: Message delivered to TTCN-3
+11:33:53.667142 L3_Port: Received 39 bytes
+11:33:53.667186 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:53.667195 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:53.667207 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 247
+11:33:53.667218 L3_Port: Message delivered to TTCN-3
+11:33:54.563519 L3_Port: Received 39 bytes
+11:33:54.563591 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:54.563614 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:54.563640 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 248
+11:33:54.563676 L3_Port: Message delivered to TTCN-3
+11:33:54.636878 L3_Port: Received 39 bytes
+11:33:54.636930 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:54.636950 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:54.636968 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 249
+11:33:54.636985 L3_Port: Message delivered to TTCN-3
+11:33:54.664664 L3_Port: Received 39 bytes
+11:33:54.664689 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:54.664699 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:54.664708 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 250
+11:33:54.664716 L3_Port: Message delivered to TTCN-3
+11:33:55.554863 L3_Port: Received 39 bytes
+11:33:55.554932 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:55.554953 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:55.554973 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 251
+11:33:55.554992 L3_Port: Message delivered to TTCN-3
+11:33:55.640586 L3_Port: Received 39 bytes
+11:33:55.640637 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:55.640650 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:55.640665 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 252
+11:33:55.640678 L3_Port: Message delivered to TTCN-3
+11:33:55.667993 L3_Port: Received 39 bytes
+11:33:55.668039 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:55.668047 L3_Port: RX: 0E 00 01 03 49 06 15 BF 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:55.668059 Message enqueued on L from system octetstring : '0E000103490615BF3F0000000000000000000000000000'O id 253
+11:33:55.668070 L3_Port: Message delivered to TTCN-3
+11:33:56.565524 L3_Port: Received 39 bytes
+11:33:56.565595 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:56.565615 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:56.565635 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 254
+11:33:56.565653 L3_Port: Message delivered to TTCN-3
+11:33:56.629952 L3_Port: Received 39 bytes
+11:33:56.629999 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:56.630008 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:56.630023 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 255
+11:33:56.630037 L3_Port: Message delivered to TTCN-3
+11:33:56.666330 L3_Port: Received 39 bytes
+11:33:56.666391 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:56.666412 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:56.666431 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 256
+11:33:56.666450 L3_Port: Message delivered to TTCN-3
+11:33:56.836591 L3_Port: Received 39 bytes
+11:33:56.836641 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:56.836651 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:56.836663 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 257
+11:33:56.836675 L3_Port: Message delivered to TTCN-3
+11:33:57.570273 L3_Port: Received 39 bytes
+11:33:57.570323 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:57.570331 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:57.570343 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 258
+11:33:57.570369 L3_Port: Message delivered to TTCN-3
+11:33:57.641765 L3_Port: Received 39 bytes
+11:33:57.641864 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:57.641887 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:57.641907 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 259
+11:33:57.641925 L3_Port: Message delivered to TTCN-3
+11:33:57.669647 L3_Port: Received 39 bytes
+11:33:57.669691 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=136 Len=23
+11:33:57.669710 L3_Port: RX: 0E 00 01 03 49 06 15 80 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+11:33:57.669726 Message enqueued on L from system octetstring : '0E00010349061580400000000000000000000000000000'O id 260
+11:33:57.669741 L3_Port: Message delivered to TTCN-3
+11:33:57.837779 L3_Port: Received 39 bytes
+11:33:57.837852 L3_Port: RAW GSMTAP hdr->arfcn=0x4033 RxArfcn=0x4033 Uplink=1 Chan=8 Len=23
+11:33:57.837865 L3_Port: RX: 01 53 01 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+11:33:57.837876 Message enqueued on L from system octetstring : '0153012B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B2B'O id 261
+11:33:57.837888 L3_Port: Message delivered to TTCN-3
+11:33:58.107210 Timeout T_cm: 20 s
+11:33:58.107263 "TC_26_8_1_2_4_13: FAIL " & char(0, 0, 32, 20) & " timeout waiting for CM SERVICE REQUEST"
+11:33:58.107356 setverdict(fail): none -> fail
+11:33:58.107428 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+11:33:58.107445 MSC_Port: Not connected
+11:33:58.107460 Unmapping port mtc:L from system:L.
+11:33:58.107512 L3_Port: Unmapping from L
+11:33:58.107547 Port L was unmapped from system:L.
+11:33:58.107580 Unmap operation of mtc:L from system:L finished.
+11:33:58.107591 Unmapping port mtc:RR from system:RR.
+11:33:58.107615 Port RR was unmapped from system:RR.
+11:33:58.107637 Unmap operation of mtc:RR from system:RR finished.
+11:33:58.107645 Unmapping port mtc:MM from system:MM.
+11:33:58.107665 Port MM was unmapped from system:MM.
+11:33:58.107687 Unmap operation of mtc:MM from system:MM finished.
+11:33:58.107693 Unmapping port mtc:CC from system:CC.
+11:33:58.107713 Port CC was unmapped from system:CC.
+11:33:58.107735 Unmap operation of mtc:CC from system:CC finished.
+11:33:58.107742 Unmapping port mtc:MSC from system:MSC.
+11:33:58.107764 MSC_Port: Unmapping from MSC
+11:33:58.107771 Port MSC was unmapped from system:MSC.
+11:33:58.107791 Unmap operation of mtc:MSC from system:MSC finished.
+11:33:58.107798 Unmapping port mtc:VTY from system:VTY.
+11:33:58.107833 VTY_PT: Unmapping port from VTY interface
+11:33:58.107906 VTY_PT: Disconnected from VTY
+11:33:58.107916 Port VTY was unmapped from system:VTY.
+11:33:58.107952 Unmap operation of mtc:VTY from system:VTY finished.
+11:33:58.107967 Stopping test component execution.
+11:33:58.108125 Test case TC_26_8_1_2_4_13 was stopped.
+11:33:58.108148 Terminating component type GSM_Component_Definitions.GSM_CT.
+11:33:58.108161 Stop timer T_guard: 300 s
+11:33:58.108177 L3_Port: user_stop called
+11:33:58.108187 Message with id 1 was extracted from the queue of L.
+11:33:58.108195 Message with id 2 was extracted from the queue of L.
+11:33:58.108199 Message with id 3 was extracted from the queue of L.
+11:33:58.108203 Message with id 4 was extracted from the queue of L.
+11:33:58.108207 Message with id 5 was extracted from the queue of L.
+11:33:58.108211 Message with id 6 was extracted from the queue of L.
+11:33:58.108215 Message with id 7 was extracted from the queue of L.
+11:33:58.108219 Message with id 8 was extracted from the queue of L.
+11:33:58.108223 Message with id 9 was extracted from the queue of L.
+11:33:58.108227 Message with id 10 was extracted from the queue of L.
+11:33:58.108231 Message with id 11 was extracted from the queue of L.
+11:33:58.108234 Message with id 12 was extracted from the queue of L.
+11:33:58.108238 Message with id 13 was extracted from the queue of L.
+11:33:58.108241 Message with id 14 was extracted from the queue of L.
+11:33:58.108252 Message with id 15 was extracted from the queue of L.
+11:33:58.108256 Message with id 16 was extracted from the queue of L.
+11:33:58.108259 Message with id 17 was extracted from the queue of L.
+11:33:58.108261 Message with id 18 was extracted from the queue of L.
+11:33:58.108264 Message with id 19 was extracted from the queue of L.
+11:33:58.108267 Message with id 20 was extracted from the queue of L.
+11:33:58.108269 Message with id 21 was extracted from the queue of L.
+11:33:58.108272 Message with id 22 was extracted from the queue of L.
+11:33:58.108274 Message with id 23 was extracted from the queue of L.
+11:33:58.108277 Message with id 24 was extracted from the queue of L.
+11:33:58.108279 Message with id 25 was extracted from the queue of L.
+11:33:58.108282 Message with id 26 was extracted from the queue of L.
+11:33:58.108285 Message with id 27 was extracted from the queue of L.
+11:33:58.108287 Message with id 28 was extracted from the queue of L.
+11:33:58.108290 Message with id 29 was extracted from the queue of L.
+11:33:58.108293 Message with id 30 was extracted from the queue of L.
+11:33:58.108295 Message with id 31 was extracted from the queue of L.
+11:33:58.108298 Message with id 32 was extracted from the queue of L.
+11:33:58.108301 Message with id 33 was extracted from the queue of L.
+11:33:58.108303 Message with id 34 was extracted from the queue of L.
+11:33:58.108306 Message with id 35 was extracted from the queue of L.
+11:33:58.108309 Message with id 36 was extracted from the queue of L.
+11:33:58.108311 Message with id 37 was extracted from the queue of L.
+11:33:58.108314 Message with id 38 was extracted from the queue of L.
+11:33:58.108317 Message with id 39 was extracted from the queue of L.
+11:33:58.108319 Message with id 40 was extracted from the queue of L.
+11:33:58.108322 Message with id 41 was extracted from the queue of L.
+11:33:58.108324 Message with id 42 was extracted from the queue of L.
+11:33:58.108327 Message with id 43 was extracted from the queue of L.
+11:33:58.108330 Message with id 44 was extracted from the queue of L.
+11:33:58.108332 Message with id 45 was extracted from the queue of L.
+11:33:58.108335 Message with id 46 was extracted from the queue of L.
+11:33:58.108338 Message with id 47 was extracted from the queue of L.
+11:33:58.108340 Message with id 48 was extracted from the queue of L.
+11:33:58.108343 Message with id 49 was extracted from the queue of L.
+11:33:58.108346 Message with id 50 was extracted from the queue of L.
+11:33:58.108348 Message with id 51 was extracted from the queue of L.
+11:33:58.108351 Message with id 52 was extracted from the queue of L.
+11:33:58.108353 Message with id 53 was extracted from the queue of L.
+11:33:58.108356 Message with id 54 was extracted from the queue of L.
+11:33:58.108359 Message with id 55 was extracted from the queue of L.
+11:33:58.108361 Message with id 56 was extracted from the queue of L.
+11:33:58.108364 Message with id 57 was extracted from the queue of L.
+11:33:58.108366 Message with id 58 was extracted from the queue of L.
+11:33:58.108369 Message with id 59 was extracted from the queue of L.
+11:33:58.108372 Message with id 60 was extracted from the queue of L.
+11:33:58.108375 Message with id 61 was extracted from the queue of L.
+11:33:58.108377 Message with id 62 was extracted from the queue of L.
+11:33:58.108380 Message with id 63 was extracted from the queue of L.
+11:33:58.108383 Message with id 64 was extracted from the queue of L.
+11:33:58.108385 Message with id 65 was extracted from the queue of L.
+11:33:58.108388 Message with id 66 was extracted from the queue of L.
+11:33:58.108390 Message with id 67 was extracted from the queue of L.
+11:33:58.108393 Message with id 68 was extracted from the queue of L.
+11:33:58.108396 Message with id 69 was extracted from the queue of L.
+11:33:58.108398 Message with id 70 was extracted from the queue of L.
+11:33:58.108401 Message with id 71 was extracted from the queue of L.
+11:33:58.108403 Message with id 72 was extracted from the queue of L.
+11:33:58.108409 Message with id 73 was extracted from the queue of L.
+11:33:58.108412 Message with id 74 was extracted from the queue of L.
+11:33:58.108414 Message with id 75 was extracted from the queue of L.
+11:33:58.108417 Message with id 76 was extracted from the queue of L.
+11:33:58.108419 Message with id 77 was extracted from the queue of L.
+11:33:58.108422 Message with id 78 was extracted from the queue of L.
+11:33:58.108425 Message with id 79 was extracted from the queue of L.
+11:33:58.108427 Message with id 80 was extracted from the queue of L.
+11:33:58.108430 Message with id 81 was extracted from the queue of L.
+11:33:58.108433 Message with id 82 was extracted from the queue of L.
+11:33:58.108436 Message with id 83 was extracted from the queue of L.
+11:33:58.108438 Message with id 84 was extracted from the queue of L.
+11:33:58.108441 Message with id 85 was extracted from the queue of L.
+11:33:58.108444 Message with id 86 was extracted from the queue of L.
+11:33:58.108447 Message with id 87 was extracted from the queue of L.
+11:33:58.108450 Message with id 88 was extracted from the queue of L.
+11:33:58.108453 Message with id 89 was extracted from the queue of L.
+11:33:58.108456 Message with id 90 was extracted from the queue of L.
+11:33:58.108458 Message with id 91 was extracted from the queue of L.
+11:33:58.108461 Message with id 92 was extracted from the queue of L.
+11:33:58.108463 Message with id 93 was extracted from the queue of L.
+11:33:58.108466 Message with id 94 was extracted from the queue of L.
+11:33:58.108469 Message with id 95 was extracted from the queue of L.
+11:33:58.108471 Message with id 96 was extracted from the queue of L.
+11:33:58.108474 Message with id 97 was extracted from the queue of L.
+11:33:58.108477 Message with id 98 was extracted from the queue of L.
+11:33:58.108479 Message with id 99 was extracted from the queue of L.
+11:33:58.108482 Message with id 100 was extracted from the queue of L.
+11:33:58.108485 Message with id 101 was extracted from the queue of L.
+11:33:58.108488 Message with id 102 was extracted from the queue of L.
+11:33:58.108491 Message with id 103 was extracted from the queue of L.
+11:33:58.108494 Message with id 104 was extracted from the queue of L.
+11:33:58.108496 Message with id 105 was extracted from the queue of L.
+11:33:58.108500 Message with id 106 was extracted from the queue of L.
+11:33:58.108503 Message with id 107 was extracted from the queue of L.
+11:33:58.108505 Message with id 108 was extracted from the queue of L.
+11:33:58.108508 Message with id 109 was extracted from the queue of L.
+11:33:58.108510 Message with id 110 was extracted from the queue of L.
+11:33:58.108513 Message with id 111 was extracted from the queue of L.
+11:33:58.108515 Message with id 112 was extracted from the queue of L.
+11:33:58.108518 Message with id 113 was extracted from the queue of L.
+11:33:58.108521 Message with id 114 was extracted from the queue of L.
+11:33:58.108524 Message with id 115 was extracted from the queue of L.
+11:33:58.108527 Message with id 116 was extracted from the queue of L.
+11:33:58.108530 Message with id 117 was extracted from the queue of L.
+11:33:58.108532 Message with id 118 was extracted from the queue of L.
+11:33:58.108535 Message with id 119 was extracted from the queue of L.
+11:33:58.108537 Message with id 120 was extracted from the queue of L.
+11:33:58.108540 Message with id 121 was extracted from the queue of L.
+11:33:58.108543 Message with id 122 was extracted from the queue of L.
+11:33:58.108546 Message with id 123 was extracted from the queue of L.
+11:33:58.108549 Message with id 124 was extracted from the queue of L.
+11:33:58.108552 Message with id 125 was extracted from the queue of L.
+11:33:58.108555 Message with id 126 was extracted from the queue of L.
+11:33:58.108557 Message with id 127 was extracted from the queue of L.
+11:33:58.108560 Message with id 128 was extracted from the queue of L.
+11:33:58.108562 Message with id 129 was extracted from the queue of L.
+11:33:58.108565 Message with id 130 was extracted from the queue of L.
+11:33:58.108571 Message with id 131 was extracted from the queue of L.
+11:33:58.108574 Message with id 132 was extracted from the queue of L.
+11:33:58.108577 Message with id 133 was extracted from the queue of L.
+11:33:58.108580 Message with id 134 was extracted from the queue of L.
+11:33:58.108582 Message with id 135 was extracted from the queue of L.
+11:33:58.108585 Message with id 136 was extracted from the queue of L.
+11:33:58.108588 Message with id 137 was extracted from the queue of L.
+11:33:58.108590 Message with id 138 was extracted from the queue of L.
+11:33:58.108593 Message with id 139 was extracted from the queue of L.
+11:33:58.108596 Message with id 140 was extracted from the queue of L.
+11:33:58.108599 Message with id 141 was extracted from the queue of L.
+11:33:58.108602 Message with id 142 was extracted from the queue of L.
+11:33:58.108604 Message with id 143 was extracted from the queue of L.
+11:33:58.108607 Message with id 144 was extracted from the queue of L.
+11:33:58.108609 Message with id 145 was extracted from the queue of L.
+11:33:58.108612 Message with id 146 was extracted from the queue of L.
+11:33:58.108615 Message with id 147 was extracted from the queue of L.
+11:33:58.108618 Message with id 148 was extracted from the queue of L.
+11:33:58.108621 Message with id 149 was extracted from the queue of L.
+11:33:58.108623 Message with id 150 was extracted from the queue of L.
+11:33:58.108626 Message with id 151 was extracted from the queue of L.
+11:33:58.108628 Message with id 152 was extracted from the queue of L.
+11:33:58.108631 Message with id 153 was extracted from the queue of L.
+11:33:58.108634 Message with id 154 was extracted from the queue of L.
+11:33:58.108636 Message with id 155 was extracted from the queue of L.
+11:33:58.108639 Message with id 156 was extracted from the queue of L.
+11:33:58.108642 Message with id 157 was extracted from the queue of L.
+11:33:58.108644 Message with id 158 was extracted from the queue of L.
+11:33:58.108647 Message with id 159 was extracted from the queue of L.
+11:33:58.108649 Message with id 160 was extracted from the queue of L.
+11:33:58.108652 Message with id 161 was extracted from the queue of L.
+11:33:58.108654 Message with id 162 was extracted from the queue of L.
+11:33:58.108657 Message with id 163 was extracted from the queue of L.
+11:33:58.108660 Message with id 164 was extracted from the queue of L.
+11:33:58.108663 Message with id 165 was extracted from the queue of L.
+11:33:58.108665 Message with id 166 was extracted from the queue of L.
+11:33:58.108668 Message with id 167 was extracted from the queue of L.
+11:33:58.108670 Message with id 168 was extracted from the queue of L.
+11:33:58.108673 Message with id 169 was extracted from the queue of L.
+11:33:58.108675 Message with id 170 was extracted from the queue of L.
+11:33:58.108678 Message with id 171 was extracted from the queue of L.
+11:33:58.108681 Message with id 172 was extracted from the queue of L.
+11:33:58.108683 Message with id 173 was extracted from the queue of L.
+11:33:58.108686 Message with id 174 was extracted from the queue of L.
+11:33:58.108689 Message with id 175 was extracted from the queue of L.
+11:33:58.108691 Message with id 176 was extracted from the queue of L.
+11:33:58.108694 Message with id 177 was extracted from the queue of L.
+11:33:58.108696 Message with id 178 was extracted from the queue of L.
+11:33:58.108699 Message with id 179 was extracted from the queue of L.
+11:33:58.108702 Message with id 180 was extracted from the queue of L.
+11:33:58.108704 Message with id 181 was extracted from the queue of L.
+11:33:58.108707 Message with id 182 was extracted from the queue of L.
+11:33:58.108709 Message with id 183 was extracted from the queue of L.
+11:33:58.108712 Message with id 184 was extracted from the queue of L.
+11:33:58.108715 Message with id 185 was extracted from the queue of L.
+11:33:58.108718 Message with id 186 was extracted from the queue of L.
+11:33:58.108720 Message with id 187 was extracted from the queue of L.
+11:33:58.108723 Message with id 188 was extracted from the queue of L.
+11:33:58.108728 Message with id 189 was extracted from the queue of L.
+11:33:58.108731 Message with id 190 was extracted from the queue of L.
+11:33:58.108734 Message with id 191 was extracted from the queue of L.
+11:33:58.108736 Message with id 192 was extracted from the queue of L.
+11:33:58.108739 Message with id 193 was extracted from the queue of L.
+11:33:58.108741 Message with id 194 was extracted from the queue of L.
+11:33:58.108744 Message with id 195 was extracted from the queue of L.
+11:33:58.108747 Message with id 196 was extracted from the queue of L.
+11:33:58.108749 Message with id 197 was extracted from the queue of L.
+11:33:58.108752 Message with id 198 was extracted from the queue of L.
+11:33:58.108754 Message with id 199 was extracted from the queue of L.
+11:33:58.108757 Message with id 200 was extracted from the queue of L.
+11:33:58.108760 Message with id 201 was extracted from the queue of L.
+11:33:58.108762 Message with id 202 was extracted from the queue of L.
+11:33:58.108765 Message with id 203 was extracted from the queue of L.
+11:33:58.108768 Message with id 204 was extracted from the queue of L.
+11:33:58.108770 Message with id 205 was extracted from the queue of L.
+11:33:58.108773 Message with id 206 was extracted from the queue of L.
+11:33:58.108775 Message with id 207 was extracted from the queue of L.
+11:33:58.108778 Message with id 208 was extracted from the queue of L.
+11:33:58.108780 Message with id 209 was extracted from the queue of L.
+11:33:58.108783 Message with id 210 was extracted from the queue of L.
+11:33:58.108786 Message with id 211 was extracted from the queue of L.
+11:33:58.108788 Message with id 212 was extracted from the queue of L.
+11:33:58.108791 Message with id 213 was extracted from the queue of L.
+11:33:58.108793 Message with id 214 was extracted from the queue of L.
+11:33:58.108796 Message with id 215 was extracted from the queue of L.
+11:33:58.108798 Message with id 216 was extracted from the queue of L.
+11:33:58.108801 Message with id 217 was extracted from the queue of L.
+11:33:58.108804 Message with id 218 was extracted from the queue of L.
+11:33:58.108806 Message with id 219 was extracted from the queue of L.
+11:33:58.108809 Message with id 220 was extracted from the queue of L.
+11:33:58.108811 Message with id 221 was extracted from the queue of L.
+11:33:58.108814 Message with id 222 was extracted from the queue of L.
+11:33:58.108817 Message with id 223 was extracted from the queue of L.
+11:33:58.108819 Message with id 224 was extracted from the queue of L.
+11:33:58.108832 Message with id 225 was extracted from the queue of L.
+11:33:58.108835 Message with id 226 was extracted from the queue of L.
+11:33:58.108838 Message with id 227 was extracted from the queue of L.
+11:33:58.108841 Message with id 228 was extracted from the queue of L.
+11:33:58.108844 Message with id 229 was extracted from the queue of L.
+11:33:58.108846 Message with id 230 was extracted from the queue of L.
+11:33:58.108849 Message with id 231 was extracted from the queue of L.
+11:33:58.108851 Message with id 232 was extracted from the queue of L.
+11:33:58.108854 Message with id 233 was extracted from the queue of L.
+11:33:58.108857 Message with id 234 was extracted from the queue of L.
+11:33:58.108859 Message with id 235 was extracted from the queue of L.
+11:33:58.108862 Message with id 236 was extracted from the queue of L.
+11:33:58.108865 Message with id 237 was extracted from the queue of L.
+11:33:58.108868 Message with id 238 was extracted from the queue of L.
+11:33:58.108870 Message with id 239 was extracted from the queue of L.
+11:33:58.108873 Message with id 240 was extracted from the queue of L.
+11:33:58.108875 Message with id 241 was extracted from the queue of L.
+11:33:58.108878 Message with id 242 was extracted from the queue of L.
+11:33:58.108881 Message with id 243 was extracted from the queue of L.
+11:33:58.108883 Message with id 244 was extracted from the queue of L.
+11:33:58.108886 Message with id 245 was extracted from the queue of L.
+11:33:58.108889 Message with id 246 was extracted from the queue of L.
+11:33:58.108895 Message with id 247 was extracted from the queue of L.
+11:33:58.108898 Message with id 248 was extracted from the queue of L.
+11:33:58.108900 Message with id 249 was extracted from the queue of L.
+11:33:58.108903 Message with id 250 was extracted from the queue of L.
+11:33:58.108905 Message with id 251 was extracted from the queue of L.
+11:33:58.108908 Message with id 252 was extracted from the queue of L.
+11:33:58.108911 Message with id 253 was extracted from the queue of L.
+11:33:58.108913 Message with id 254 was extracted from the queue of L.
+11:33:58.108916 Message with id 255 was extracted from the queue of L.
+11:33:58.108918 Message with id 256 was extracted from the queue of L.
+11:33:58.108921 Message with id 257 was extracted from the queue of L.
+11:33:58.108924 Message with id 258 was extracted from the queue of L.
+11:33:58.108926 Message with id 259 was extracted from the queue of L.
+11:33:58.108929 Message with id 260 was extracted from the queue of L.
+11:33:58.108932 Message with id 261 was extracted from the queue of L.
+11:33:58.108934 Port L was stopped.
+11:33:58.108948 Port RR was stopped.
+11:33:58.108957 Port MM was stopped.
+11:33:58.108965 Port CC was stopped.
+11:33:58.108968 MSC_Port: user_stop called
+11:33:58.108973 Port MSC was stopped.
+11:33:58.108982 BSC_Port: user_stop called
+11:33:58.108987 Port BSC was stopped.
+11:33:58.108990 Port RSL was stopped.
+11:33:58.108993 VTY_PT: Stopping
+11:33:58.108998 Port VTY was stopped.
+11:33:58.109001 Port COORD was stopped.
+11:33:58.109004 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_8_1_2_4_13.
+11:33:58.109010 Waiting for PTCs to finish.
+11:33:58.109054 Setting final verdict of the test case.
+11:33:58.109094 Local verdict of MTC: fail
+11:33:58.109114 No PTCs were created.
+11:33:58.109124 Test case TC_26_8_1_2_4_13 finished. Verdict: fail
+11:33:58.109165 Execution of control part in module TC_26_8_1_2_4_13 finished.
+11:33:58.109346 Verdict statistics: 0 none (0.00 %), 0 pass (0.00 %), 0 inconc (0.00 %), 1 fail (100.00 %), 0 error (0.00 %).
+11:33:58.109426 Test execution summary: 1 test case was executed. Overall verdict: fail
+11:33:58.109438 Exit was requested from MC. Terminating MTC.

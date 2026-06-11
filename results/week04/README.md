@@ -168,3 +168,108 @@ The harness (sharding, per-test CSV, summary.json) worked correctly.
 | gsm-2 | TC_26_8_1_2_1_1 | 130.3 | FAIL |
 | gsm-2 | TC_26_8_1_2_2_2 | 127.3 | FAIL |
 | gsm-2 | TC_26_8_1_2_3_1 | 13.7 | INCONCLUSIVE |
+
+---
+
+## W4.4 — DNS Race Fix + Serial Baseline + Parallel Verification (2026-06-08 to 2026-06-10)
+
+These runs were done after the Week 3 Helm chart was confirmed active in the Week 4
+harness and the branch was brought to parity with upstream commit `9457a087`.
+
+**Known failures** (per `ci/baseline/known-failures.json`): `TC_26_7_4_2_4_4`, `TC_26_7_4_3_3`
+
+### Early N=8 Full-Suite Runs (2026-06-08) — DNS Race Era
+
+Before the init container fix, msc-test-stub crashed at pod start with
+`[Errno -2] Name or service not known` because it tried to connect to `osmo-stp:2905`
+before DNS was ready. This caused mass pod restarts and cascading test failures.
+
+| Run | N | Pass | Fail | Inconc | Restarts | Notes |
+|---|---|---|---|---|---|---|
+| `run20260608-100512-N8` | 8 | — | — | — | — | No summary — aborted before any test started |
+| `run20260608-100727-N8` | 8 | — | — | — | — | No summary — aborted early, pod crash-loop |
+| `run20260608-100850-N8` | 8 | 0 | 0 | 0 | 0 | Infra-only smoke test; no tests run |
+| `run20260608-101301-N8` | 8 | 1 | 8 | 110 | 25 | Full 119-test suite. 25 restarts from DNS race. Most tests INCONCLUSIVE (infra not ready). 8 FAILs from TC_26_7_4_5_* (T3212) and CC SLR bug. Results not usable as baseline. |
+| `run20260608-105918-N8` | 8 | — | — | — | — | No summary — aborted |
+| `run20260608-111159-N8` | 8 | 0 | 61 | 58 | 16 | Full 119-test suite. 16 restarts (partially mitigated). Broad CC family all FAIL with SLR tracking bug under parallel load. MM family mostly INCONCLUSIVE (timeout). Not usable as baseline. |
+
+**Root cause (DNS race):** msc-test-stub started before `osmo-stp` DNS resolved →
+`[Errno -2] Name or service not known` → pod exited → k8s restarted → 20–30s wasted
+per restart cycle → auth commands arrived past BSC SDCCH hold timer.
+
+**Fix applied:** added a `busybox:1.36` init container to `k8s/chart/templates/msc-stub.yaml`
+that polls `nc -z osmo-stp 2905` until the STP is reachable before the msc-test-stub
+container starts. Committed in submodule at `bad88c3`.
+
+### Debugging TC_26_8_1_3_4_7 Solo (2026-06-09)
+
+Targeted single-test runs to isolate why TC_26_8_1_3_4_7 kept failing. The msc-test-stub
+liveness probe was killing the pod mid-test between SDCCH assignment and CC SETUP, resetting
+SLR state and causing `No connection for BSC_SLR=0x000001`.
+
+| Run | TC | Verdict | Notes |
+|---|---|---|---|
+| `single-TC_26_8_1_3_4_7-20260609-115944` | `TC_26_8_1_3_4_7` | FAIL | Initial investigation; DNS crash then SLR mismatch |
+| `fix-restart-20260609-122440` | `TC_26_8_1_3_4_7` | FAIL | Tested run-one.sh retry logic — did not help |
+| `fix-msc-stub-20260609-130031` | `TC_26_8_1_3_4_7` | FAIL | Iteration on msc-test-stub.py reconnect logic |
+| `fix-msc-stub-20260609-131202` | `TC_26_8_1_3_4_7` | FAIL | Same iteration |
+| `fix-msc-stub-20260609-131531` | `TC_26_8_1_3_4_7` | FAIL | Same iteration |
+| `fix-msc-stub-20260609-132927` | `TC_26_8_1_3_4_7` | FAIL | Final msc-test-stub iteration |
+| `fix-liveness-20260609-140427` | `TC_26_8_1_3_4_7` | no summary | Run crashed during liveness probe investigation |
+| `fix-liveness-20260609-140446` | `TC_26_8_1_3_4_7` | **PASS** | Removing msc-test-stub livenessProbe fixed it — liveness probe was killing the stub between SDCCH and CC SETUP. LivenessProbe removed from Helm chart. |
+
+### Individual Serial N=1 Baseline Tests (2026-06-10)
+
+One test per run, using `run-one.sh` with Helm, after init container deployed.
+
+| Run | TC | Verdict | Restarts | Notes |
+|---|---|---|---|---|
+| `run20260610-044854-N1` | `TC_26_8_1_3_4_7` | FAIL | — | Pre-init-container image in k3s cache |
+| `run20260610-054231-N1` | — | no summary | — | Run aborted |
+| `run20260610-054344-N1` | `TC_26_8_1_3_4_7` | FAIL | — | Pre-init-container |
+| `run20260610-055250-N1` | `TC_26_7_4_5_1` | FAIL | — | T3212 — MS never sends periodic LU; MS stack issue, not infra |
+| `run20260610-061026-N1` | `TC_26_2_3` | PASS | — | Sanity baseline |
+| `run20260610-061511-N1` | `TC_26_2_3` | PASS | 2 | Sanity baseline post-init-container |
+| `run20260610-073006-N1` | `TC_26_2_3` | PASS | 0 | Clean run; init container active, 0 restarts |
+| `run20260610-073300-N1` | `TC_26_7_4_5_1` | FAIL | 3 | T3212 — consistent MS stack failure |
+| `run20260610-073301-N1` | `TC_26_8_1_3_4_7` | FAIL | 2 | SLR stale connection; flaky in serial |
+| `run20260610-075034-N1` | `TC_26_8_1_3_4_7` | **PASS** | 2 | Confirmed TC_26_8_1_3_4_7 passes serial |
+| `run20260610-075438-N1` | `TC_26_7_4_5_1` | FAIL | 3 | T3212 — consistent |
+| `run20260610-084919-N1` | `TC_26_7_4_2_1` | FAIL | 3 | MM — LU rejection; MS does not respond correctly |
+| `run20260610-091431-N1` | `TC_26_8_1_3_4_1` | **PASS** | 2 | CC serial baseline |
+| `run20260610-091826-N1` | `TC_26_8_1_3_4_2` | **PASS** | 2 | CC serial baseline |
+| `run20260610-092233-N1` | `TC_26_7_3_1` | FAIL | 2 | MM — CM SERVICE REQUEST not received; MS stack |
+| `run20260610-092950-N1` | `TC_26_6_1_1` | **PASS** | 3 | RR serial baseline |
+| `run20260610-093906-N1` | `TC_34_2_2` | **PASS** | 2 | SS serial baseline |
+| `run20260610-095723-N1` | `TC_26_2_1_3` | **PASS** | 2 | Basic serial baseline |
+| `run20260610-100226-N1` | `TC_26_2_2` | INCONCLUSIVE | 2 | ATT flag switching not implemented in test infra; expected |
+| `run20260610-101415-N1` | `TC_26_8_1_2_1_1` | **PASS** | 2 | CC serial baseline |
+
+**Serial baseline (Jun 10, after init container fix):**
+- PASS: `TC_26_2_3`, `TC_26_2_1_3`, `TC_26_6_1_1`, `TC_26_8_1_3_4_7` (flaky — 1/3 pass),
+  `TC_26_8_1_3_4_1`, `TC_26_8_1_3_4_2`, `TC_26_8_1_2_1_1`, `TC_34_2_2`
+- FAIL (MM family / MS stack issue): `TC_26_7_4_5_1`, `TC_26_7_4_2_1`, `TC_26_7_3_1`
+- INCONCLUSIVE (infra limitation): `TC_26_2_2` (ATT flag not implemented in osmo-mobile)
+
+### Parallel N=3 CC Runs (2026-06-10) — SLR Bug Investigation
+
+Three previously-passing CC tests run simultaneously to verify init container fix at N>1.
+
+#### `run20260610-101905-N3`
+- **N:** 3 | **TC:** `TC_26_8_1_3_4_1`, `TC_26_8_1_3_4_2`, `TC_26_8_1_3_4_7`
+- **Result:** 0 pass / 3 fail | **Restarts:** 6
+- **Failure:** init container not yet in k3s image cache (`imagePullPolicy: IfNotPresent`
+  served old image). 6 restarts confirm DNS race still present. All 3 fail with
+  `No connection for BSC_SLR=0x000003`.
+
+#### `run20260610-102557-N3`
+- **N:** 3 | **TC:** `TC_26_8_1_3_4_1`, `TC_26_8_1_3_4_2`, `TC_26_8_1_3_4_7`
+- **Result:** 0 pass / 3 fail | **Restarts:** 0
+- **Init container active:** 0 restarts — DNS race fully eliminated.
+- **Remaining failure (open bug):** SLR tracking bug in `msc-test-stub.py`. Under parallel
+  load, extra Location Update rounds happen before paging (from concurrent namespaces sharing
+  the physical network stack). This increments the SLR counter on the stub. The TTCN-3 test
+  sends CC SETUP targeting BSC_SLR=0x000001 (the first LU's SLR), but the stub has already
+  released that connection and assigned a higher SLR to the paging-response connection.
+  **Fix needed:** stub must use the SLR from the paging-response connection dynamically,
+  not from the prior LU. This is the main open blocker for parallel CC test verification.

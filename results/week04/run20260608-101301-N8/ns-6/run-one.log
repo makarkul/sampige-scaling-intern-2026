@@ -1,0 +1,312 @@
+[run-one] Namespace : gsm-6
+[run-one] Tests     : TC_26_8_1_3_5_6 TC_26_8_1_3_4_6 TC_26_8_1_3_3_4 TC_26_8_1_2_6_2 TC_26_8_1_2_4_5 TC_26_7_4_5_3 TC_26_8_1_2_4_13 TC_26_6_1_4 TC_26_6_8_2 TC_26_6_13_10 TC_26_7_5_5 TC_26_7_4_2_1 TC_26_7_2_2 TC_26_6_3_1 TC_26_6_5_1
+[run-one] Results   : results/week04/run20260608-101301-N8/ns-6
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Creating namespace gsm-6...
+namespace/gsm-6 created
+[run-one] INFO  Applying manifests from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/base/ ...
+service/osmo-bsc created
+deployment.apps/osmo-bsc created
+deployment.apps/osmo-bts-virtual created
+configmap/osmo-stp-cfg created
+configmap/osmo-hlr-cfg created
+configmap/osmo-msc-cfg created
+configmap/osmo-mgw-cfg created
+configmap/osmo-bsc-cfg created
+configmap/osmo-bts-virtual-cfg created
+configmap/osmo-mobile-cfg created
+service/osmo-hlr created
+deployment.apps/osmo-hlr created
+service/osmo-mgw created
+deployment.apps/osmo-mgw created
+service/osmo-mobile created
+deployment.apps/osmo-mobile created
+service/msc-test-stub created
+deployment.apps/msc-test-stub created
+Warning: resource namespaces/gsm-6 is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+namespace/gsm-6 configured
+service/osmo-stp created
+deployment.apps/osmo-stp created
+deployment.apps/virtphy created
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mobile//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Running TC_26_8_1_3_5_6 as Job ttcn3-tc-26-8-1-3-5-6-1...
+[run-one] FAIL  TC_26_8_1_3_5_6: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_3_5_6: INCONCLUSIVE
+[run-one] INFO  Running TC_26_8_1_3_4_6 as Job ttcn3-tc-26-8-1-3-4-6-2...
+[run-one] FAIL  TC_26_8_1_3_4_6: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_3_4_6: INCONCLUSIVE
+[run-one] INFO  Running TC_26_8_1_3_3_4 as Job ttcn3-tc-26-8-1-3-3-4-3...
+[run-one] FAIL  TC_26_8_1_3_3_4: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_3_3_4: INCONCLUSIVE
+[run-one] INFO  Running TC_26_8_1_2_6_2 as Job ttcn3-tc-26-8-1-2-6-2-4...
+[run-one] FAIL  TC_26_8_1_2_6_2: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_2_6_2: INCONCLUSIVE
+[run-one] INFO  Running TC_26_8_1_2_4_5 as Job ttcn3-tc-26-8-1-2-4-5-5...
+[run-one] FAIL  TC_26_8_1_2_4_5: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_2_4_5: INCONCLUSIVE
+[run-one] INFO  Running TC_26_7_4_5_3 as Job ttcn3-tc-26-7-4-5-3-6...
+[run-one] FAIL  TC_26_7_4_5_3: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_7_4_5_3: FAIL
+[run-one] INFO  Running TC_26_8_1_2_4_13 as Job ttcn3-tc-26-8-1-2-4-13-7...
+[run-one] FAIL  TC_26_8_1_2_4_13: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_8_1_2_4_13: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_1_4 as Job ttcn3-tc-26-6-1-4-8...
+[run-one] FAIL  TC_26_6_1_4: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_6_1_4: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_8_2 as Job ttcn3-tc-26-6-8-2-9...
+[run-one] FAIL  TC_26_6_8_2: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_6_8_2: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_13_10 as Job ttcn3-tc-26-6-13-10-10...
+[run-one] FAIL  TC_26_6_13_10: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_6_13_10: INCONCLUSIVE
+[run-one] INFO  Running TC_26_7_5_5 as Job ttcn3-tc-26-7-5-5-11...
+[run-one] FAIL  TC_26_7_5_5: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_7_5_5: INCONCLUSIVE
+[run-one] INFO  Running TC_26_7_4_2_1 as Job ttcn3-tc-26-7-4-2-1-12...
+[run-one] FAIL  TC_26_7_4_2_1: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_7_4_2_1: INCONCLUSIVE
+[run-one] INFO  Running TC_26_7_2_2 as Job ttcn3-tc-26-7-2-2-13...
+[run-one] FAIL  TC_26_7_2_2: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_7_2_2: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_3_1 as Job ttcn3-tc-26-6-3-1-14...
+[run-one] FAIL  TC_26_6_3_1: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_6_3_1: INCONCLUSIVE
+[run-one] INFO  Running TC_26_6_5_1 as Job ttcn3-tc-26-6-5-1-15...
+[run-one] FAIL  TC_26_6_5_1: no TITAN report dir found under /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/ttcn3/logs/
+[run-one] FAIL  TC_26_6_5_1: INCONCLUSIVE
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-6
+ Timestamp : 20260608-101301
+=====================================================
+  TC_26_6_13_10                            INCONCLUSIVE
+  TC_26_6_1_4                              INCONCLUSIVE
+  TC_26_6_3_1                              INCONCLUSIVE
+  TC_26_6_5_1                              INCONCLUSIVE
+  TC_26_6_8_2                              INCONCLUSIVE
+  TC_26_7_2_2                              INCONCLUSIVE
+  TC_26_7_4_2_1                            INCONCLUSIVE
+  TC_26_7_4_5_3                            FAIL
+  TC_26_7_5_5                              INCONCLUSIVE
+  TC_26_8_1_2_4_13                         INCONCLUSIVE
+  TC_26_8_1_2_4_5                          INCONCLUSIVE
+  TC_26_8_1_2_6_2                          INCONCLUSIVE
+  TC_26_8_1_3_3_4                          INCONCLUSIVE
+  TC_26_8_1_3_4_6                          INCONCLUSIVE
+  TC_26_8_1_3_5_6                          INCONCLUSIVE
+-----------------------------------------------------
+  PASS: 0   FAIL: 1   INCONCLUSIVE: 14
+=====================================================
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-6",
+      "bringup_s": 46.989,
+      "testing_s": 443.595,
+      "teardown_s": null,
+      "total_s": null,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_13_10",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_6_1_4",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_6_3_1",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_6_5_1",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_6_8_2",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_7_2_2",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_7_4_2_1",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_7_4_5_3",
+          "verdict": "FAIL"
+        },
+        {
+          "tc_name": "TC_26_7_5_5",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_2_4_13",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_2_4_5",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_2_6_2",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_3_4",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_4_6",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "tc_name": "TC_26_8_1_3_5_6",
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "pass": 0,
+      "fail": 1,
+      "inconclusive": 14
+    }
+  ],
+  "T_suite_s": 490.585,
+  "N": 1,
+  "pass": 0,
+  "fail": 1,
+  "inconclusive": 14,
+  "test_durations": [
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_3_5_6",
+      "duration_s": 14.443,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_3_4_6",
+      "duration_s": 13.082,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_3_3_4",
+      "duration_s": 11.054,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_2_6_2",
+      "duration_s": 15.295,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_2_4_5",
+      "duration_s": 15.454,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_7_4_5_3",
+      "duration_s": 271.278,
+      "verdict": "FAIL"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_8_1_2_4_13",
+      "duration_s": 10.73,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_6_1_4",
+      "duration_s": 10.522,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_6_8_2",
+      "duration_s": 10.702,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_6_13_10",
+      "duration_s": 13.776,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_7_5_5",
+      "duration_s": 10.655,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_7_4_2_1",
+      "duration_s": 13.744,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_7_2_2",
+      "duration_s": 10.583,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_6_3_1",
+      "duration_s": 11.225,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_6_5_1",
+      "duration_s": 11.0,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "S": null,
+  "E": null
+}
+[run-one] INFO  Done. Results: results/week04/run20260608-101301-N8/ns-6
+[run-one] INFO  Teardown: deleting namespace gsm-6...
+namespace "gsm-6" deleted
