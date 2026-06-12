@@ -12,6 +12,9 @@
 set -euo pipefail
 
 OUT="${1:?usage: collect-host.sh <out.csv>}"
+NAMESPACE="${NAMESPACE:?NAMESPACE env var must be set}"
+POD_OUT="$(dirname "${OUT}")/pod-resources.csv"
+echo "unix_ts,namespace,pod,cpu_m,mem_mib" > "${POD_OUT}"
 
 # k3s CNI bridge interface
 BRIDGE="${COLLECT_BRIDGE:-cni0}"
@@ -90,6 +93,19 @@ while true; do
     "${ct_count}" "${ct_max}" "${fd_used}" "${tcp_tw}" \
     "${net_rx}" "${net_tx}" "${disk_r}" "${disk_w}" \
     "${container_count}" "${pod_count}" "${inotify_watches}" >> "${OUT}"
+
+  ts_now=$(date -u +%s)
+  kubectl top pods -n "${NAMESPACE}" --no-headers 2>/dev/null \
+    | awk -v ts="${ts_now}" -v ns="${NAMESPACE}" '
+        {
+          pod=$1; cpu=$2; mem=$3
+          if (sub(/m$/, "", cpu) == 0) cpu = cpu * 1000
+          if      (sub(/Gi$/, "", mem)) mem = mem * 1024
+          else if (sub(/Mi$/, "", mem)) mem = mem + 0
+          else if (sub(/Ki$/, "", mem)) mem = int(mem / 1024)
+          printf "%s,%s,%s,%s,%s\n", ts, ns, pod, cpu, mem
+        }
+      ' >> "${POD_OUT}" || :
 
   sleep 1
 done

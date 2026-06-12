@@ -129,10 +129,21 @@ trap cleanup EXIT
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 helm_install() {
+  # Derive per-namespace GSMTAP multicast groups from the trailing integer in
+  # the namespace name (gsm-1→23, gsm-2→24, …).  All pods on a single-node
+  # cluster share the same bridge, so namespaces on the same host must use
+  # distinct groups or their virtual radio stacks interfere (T3101 storm).
+  local _ns_idx
+  _ns_idx=$(echo "$NS" | grep -oE '[0-9]+$' || echo 0)
+  local _dl_group="239.193.$((22 + _ns_idx)).1"
+  local _ul_group="239.193.$((22 + _ns_idx)).2"
+
   helm upgrade --install "${NS}" "${CHART}" \
     --namespace "${NS}" \
     --create-namespace \
     --set "l1ctlSocketDir=/tmp/osmocom-l2-${NS}" \
+    --set "virtphy.dlGroup=${_dl_group}" \
+    --set "virtphy.ulGroup=${_ul_group}" \
     --set "ttcn3.workspacePath=${TTCN3_DIR}" \
     --set "ttcn3.configPath=${TTCN3_DIR}/config" \
     --set "ttcn3.logsPath=${NS_LOGS_DIR}" \
