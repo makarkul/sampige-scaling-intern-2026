@@ -273,3 +273,82 @@ Three previously-passing CC tests run simultaneously to verify init container fi
   released that connection and assigned a higher SLR to the paging-response connection.
   **Fix needed:** stub must use the SLR from the paging-response connection dynamically,
   not from the prior LU. This is the main open blocker for parallel CC test verification.
+
+---
+
+## W4.5 — Virtual Radio Isolation Fix (2026-06-12)
+
+**Root cause identified and fixed.** Parallel namespaces on the single-node k3s cluster
+(`cn083`) shared the same GSMTAP UDP multicast groups for the virtual radio channel
+(`239.193.23.1` DL / `239.193.23.2` UL). Because all pods run on the same Linux bridge,
+multicast is effectively broadcast: every `osmo-bts-virtual` received RACH bursts from
+every `osmo-mobile`, not just its own. This caused a RACH retransmission storm — each
+stray RACH got a new Immediate Assignment with its own T3101 timer, exhausting the BSC's
+radio resource table before the intended mobile could camp. The symptom was 47–61 T3101
+timeouts per parallel run versus 0 in serial.
+
+### Fix
+
+Three files changed (all in `refs/osmocom-demo`, commit `af41788` on
+`feature/k3s-execution-scaling`):
+
+| File | Change |
+|---|---|
+| `k8s/chart/values.yaml` | Added `virtphy.dlGroup` / `virtphy.ulGroup` Helm values (default `239.193.23.1` / `.2` — backward compatible with N=1) |
+| `k8s/chart/templates/virtphy.yaml` | `--dl-rx-grp` / `--ul-tx-grp` CLI flags now use `{{ .Values.virtphy.dlGroup \| quote }}` instead of hardcoded strings |
+| `k8s/chart/templates/configmaps.yaml` | Added `virtual-um ms-multicast-group` / `virtual-um bts-multicast-group` lines directly under `phy 0` in the `osmo-bts-virtual-cfg` ConfigMap |
+
+`scripts/run-one.sh` derives per-namespace groups from the trailing integer in the
+namespace name: `gsm-N → 239.193.(22+N).1` (DL) and `239.193.(22+N).2` (UL). `gsm-1`
+gets `239.193.23.x` — the same as the original defaults — so existing single-namespace
+runs are unaffected.
+
+**Two bugs encountered during fix development:**
+
+1. `virtual-um` lines placed under `instance 0` (phy-inst VTY node) instead of directly
+   under `phy 0` (phy VTY node) — osmo-bts-virtual silently ignored them and kept using
+   the binary defaults. Fix: move lines above `instance 0`.
+
+2. `ms-multicast-group` / `bts-multicast-group` assignments swapped — `ms` is the DL
+   group (MS receives from BTS), `bts` is the UL group (BTS receives from MS). The swap
+   was confirmed by cross-referencing `refs/osmocom-demo/configs/osmo-bts-virtual-2.cfg`
+   and `refs/osmocom-demo/compose/virtual-um.yml`.
+
+### Serial baselines (2026-06-12)
+
+One test per run, N=1, 0 pod restarts each.
+
+| Run bundle | TC | bringup_s | testing_s | teardown_s | T_suite_s | Verdict |
+|---|---|---|---|---|---|---|
+| `serial-TC_26_8_1_3_4_1-N1` | `TC_26_8_1_3_4_1` | 38.2 | 109.2 | 52.3 | 199.6 | **PASS** |
+| `serial-TC_26_8_1_3_4_2-N1` | `TC_26_8_1_3_4_2` | 38.2 | 98.4 | 52.1 | 188.7 | **PASS** |
+| `serial-TC_26_8_1_3_4_7-N1` | `TC_26_8_1_3_4_7` | 37.8 | 124.3 | 53.3 | 215.5 | **PASS** |
+
+### Parallel N=3 run after fix (2026-06-12)
+
+All three CC tests in separate namespaces simultaneously. Each namespace uses a distinct
+multicast group pair: gsm-1 `239.193.23.x`, gsm-2 `239.193.24.x`, gsm-3 `239.193.25.x`.
+
+| Namespace | TC | bringup_s | testing_s | teardown_s | T_suite_s | Verdict |
+|---|---|---|---|---|---|---|
+| gsm-1 | `TC_26_8_1_3_4_1` | 38.5 | 99.3 | 55.6 | 193.3 | **PASS** |
+| gsm-2 | `TC_26_8_1_3_4_2` | 37.6 | 101.3 | 57.8 | 196.7 | **PASS** |
+| gsm-3 | `TC_26_8_1_3_4_7` | 37.6 | 127.9 | 52.4 | 217.9 | **PASS** |
+
+**Wall-clock T_suite: 217.9 s** (bounded by the slowest namespace). 0 pod restarts,
+0 OOM kills.
+
+Run bundle: `parallel-N3-fixed/` (`run20260612-070405-N3`).
+
+### Before / after comparison
+
+| Mode | Run | T3101 timeouts | Pass | Fail |
+|---|---|---|---|---|
+| Parallel N=3 (before fix) | `run20260612-063000-N3` | 47–61 per namespace | 0 | 3 |
+| Parallel N=3 (after fix) | `parallel-N3-fixed` | 0 | **3** | 0 |
+
+The SLR bug that blocked parallel CC tests on 2026-06-10 was a symptom of the radio
+interference: extra RACH storms triggered additional Location Update rounds in the same
+namespace, advancing the BSC_SLR counter before paging. Once radio is isolated, each
+namespace runs exactly one LU before the test, the SLR is stable, and the CC SETUP
+targets the correct connection.
