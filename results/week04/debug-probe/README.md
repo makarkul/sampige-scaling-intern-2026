@@ -192,7 +192,7 @@ Both fixes are in the infra layer and do not touch test source files.
 
 | Run | Directory |
 |-----|-----------|
-| Serial (per-test) | `results/week04/debug-probe/TC_<name>/` |
+| Serial (per-test) | `results/week04/debug-probe/serial-baseline/TC_<name>/` |
 | Parallel N=8 | `results/week04/run20260615-053525-N8/` |
 | N=2 shared-ns (pre-fix reference) | `results/week04/debug-probe/run-n-shared-ns/` |
 | N=2 fresh-ns runs | `results/week04/debug-probe/run-n-fresh-ns/` |
