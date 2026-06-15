@@ -1,18 +1,22 @@
 #!/usr/bin/env bash
-# Launch N namespaces in parallel, sharding tests round-robin across them.
+# Launch N workers in parallel, sharding tests round-robin across them.
+# Each worker runs its assigned tests serially, spinning up a fresh namespace
+# per test (bring up → run → tear down → next test).  This gives clean state
+# per test (same as a serial run) while still reducing wall time by N×.
 #
 # Usage:
 #   scripts/run-n.sh [--prefix gsm] [--keep] [--baseline SECONDS] --workers N TC1 [TC2 ...]
 #
-# --workers N   number of parallel namespaces (defaults to number of tests)
+# --workers N   number of parallel workers (defaults to number of tests)
 #
 # Writes to: results/weekNN/run<YYYYMMDD>-<HHMMSS>-N<N>/
 #   meta.json
-#   events.csv           (concatenated from per-namespace events)
+#   events.csv           (concatenated from per-test events)
 #   host-samples.csv     (collected by scripts/collect-host.sh in background)
 #   test-durations.csv   (per-test start/end/duration/verdict)
 #   summary.json         (produced by scripts/summarize.py)
-#   ns-<i>/              (per-namespace outputs)
+#   ns-<i>/              (per-worker outputs)
+#     <TC_name>/         (per-test outputs from run-one.sh)
 
 set -euo pipefail
 
@@ -86,7 +90,7 @@ for idx in "${!TESTS[@]}"; do
   unset -n _b
 done
 
-# Launch namespaces in parallel — skip any bucket that ended up empty
+# Launch workers in parallel — skip any bucket that ended up empty
 # (happens when --workers N > number of tests)
 pids=()
 active=0
@@ -100,7 +104,18 @@ for i in $(seq 1 "${N}"); do
   ns="${PREFIX}-${i}"
   ns_dir="${OUT_DIR}/ns-${i}"
   mkdir -p "${ns_dir}"
-  ( RUN_ONE_OUT="${ns_dir}" scripts/run-one.sh "${ns}" "${_b[@]}" > "${ns_dir}/run-one-outer.log" 2>&1
+  # Copy bucket into a plain array so the subshell can iterate it
+  _bucket=("${_b[@]}")
+  (
+    for TC in "${_bucket[@]}"; do
+      tc_dir="${ns_dir}/${TC}"
+      mkdir -p "${tc_dir}"
+      # Fresh namespace per test: run-one.sh brings up ns, runs TC, tears down.
+      # Reuses the same namespace name so the index stays stable, but each
+      # invocation gets a clean cluster state.
+      RUN_ONE_OUT="${tc_dir}" scripts/run-one.sh "${ns}" "${TC}" \
+        >> "${ns_dir}/run-one-outer.log" 2>&1 || true
+    done
   ) &
   pids+=($!)
   unset -n _b
@@ -111,11 +126,13 @@ for pid in "${pids[@]}"; do
   wait "${pid}" || fail=$((fail+1))
 done
 
-# Aggregate events
+# Aggregate events (one subdir per test under each ns-i/)
 {
   echo "namespace,phase,unix_ts"
   for i in $(seq 1 "${N}"); do
-    tail -n +2 "${OUT_DIR}/ns-${i}/events.csv" 2>/dev/null || true
+    for f in "${OUT_DIR}/ns-${i}"/*/events.csv; do
+      [ -f "$f" ] && tail -n +2 "$f" || true
+    done
   done
 } > "${OUT_DIR}/events.csv"
 
@@ -123,7 +140,9 @@ done
 {
   echo "namespace,pod,container,restarts,oom_killed,exit_code"
   for i in $(seq 1 "${N}"); do
-    tail -n +2 "${OUT_DIR}/ns-${i}/pods.csv" 2>/dev/null || true
+    for f in "${OUT_DIR}/ns-${i}"/*/pods.csv; do
+      [ -f "$f" ] && tail -n +2 "$f" || true
+    done
   done
 } > "${OUT_DIR}/pods.csv"
 
@@ -131,7 +150,9 @@ done
 {
   echo "namespace,tc_name,start_ts,end_ts,duration_s,verdict"
   for i in $(seq 1 "${N}"); do
-    tail -n +2 "${OUT_DIR}/ns-${i}/test-durations.csv" 2>/dev/null || true
+    for f in "${OUT_DIR}/ns-${i}"/*/test-durations.csv; do
+      [ -f "$f" ] && tail -n +2 "$f" || true
+    done
   done
 } > "${OUT_DIR}/test-durations.csv"
 
