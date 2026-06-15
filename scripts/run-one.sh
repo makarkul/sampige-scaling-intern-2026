@@ -215,6 +215,62 @@ wait_mobile_vty() {
   done
 }
 
+wait_boot_lu_clear() {
+  # The msc-stub buffers the initial boot LU (bsc_slr=1) that osmo-mobile
+  # sends as soon as it camps on the cell — before any TTCN-3 client connects.
+  # If the TTCN-3 job connects while these events are still buffered they are
+  # replayed, shifting every subsequent bsc_slr by one and causing failures
+  # like TC_26_7_2_1 (MS used wrong CKSN).
+  #
+  # Fix: wait until the BSC has released the boot LU channel (CLEAR REQUEST
+  # for BSC_SLR=0x000001 in the msc-stub log), then drain the stub's event
+  # buffer by connecting with SO_LINGER=0 so the server receives ECONNRESET
+  # and clears its internal queue before the TTCN-3 job connects.
+  #
+  # BSC_SLR=0x000001 is always the boot LU: it is the first BSC connection
+  # in every fresh namespace, so this string is structurally guaranteed.
+  local timeout=${1:-120}
+  info "Waiting up to ${timeout}s for boot LU (BSC_SLR=0x000001) to clear..."
+  local deadline=$(( $(date +%s) + timeout ))
+
+  while true; do
+    if kubectl logs -n "$NS" deployment/msc-test-stub 2>/dev/null \
+        | grep -q "CLEAR REQUEST for BSC_SLR=0x000001"; then
+      info "Boot LU CLEAR REQUEST seen — draining msc-stub event buffer..."
+      break
+    fi
+    if [ "$(date +%s)" -ge "$deadline" ]; then
+      info "Timeout waiting for boot LU clear — proceeding anyway"
+      return 0
+    fi
+    sleep 3
+  done
+
+  # Connect to the msc-stub control port from inside its own pod with
+  # SO_LINGER=0 (RST on close).  The server sees ECONNRESET and clears its
+  # buffered-event queue, so the next real TTCN-3 client starts clean.
+  kubectl exec -n "$NS" deployment/msc-test-stub -- python3 -c "
+import socket, struct, time
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_LINGER, struct.pack('ii', 1, 0))
+s.settimeout(5)
+try:
+    s.connect(('127.0.0.1', 5000))
+    time.sleep(0.2)
+    s.setblocking(False)
+    try:
+        while True: s.recv(4096)
+    except BlockingIOError:
+        pass
+except Exception as e:
+    print('drain connect error:', e)
+finally:
+    s.close()
+print('msc-stub buffer drained')
+" 2>/dev/null || true
+  info "MSC stub buffer drained — namespace ready for test."
+}
+
 run_test() {
   local TEST_NAME="$1"
   local RUN_IDX="${2:-1}"
@@ -338,6 +394,7 @@ event t_ready
 
 wait_attached 300
 wait_mobile_vty 60
+wait_boot_lu_clear 120
 event t_attached
 
 # ── Run tests → t_test0 … t_testN ─────────────────────────────────────────────
