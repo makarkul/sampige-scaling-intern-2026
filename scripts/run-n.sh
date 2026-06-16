@@ -78,15 +78,17 @@ scripts/collect-host.sh "${OUT_DIR}/host-samples.csv" &
 HOST_PID=$!
 trap 'kill ${HOST_PID} 2>/dev/null || true' EXIT
 
-# Build per-namespace test buckets via round-robin
-# test[i] → namespace (i % N) + 1  (deterministic for any test count)
+# Build per-worker buckets via round-robin.
+# Each test slot gets a globally unique namespace: gsm-1, gsm-2, ..., gsm-T
+# so that events.csv has distinct namespace keys and logs are easy to trace.
 for i in $(seq 1 "$N"); do
   declare -a "bucket_${i}=()"
 done
 for idx in "${!TESTS[@]}"; do
   slot=$(( (idx % N) + 1 ))
   declare -n _b="bucket_${slot}"
-  _b+=("${TESTS[$idx]}")
+  # Store "namespace:TC" so each test carries its unique namespace name
+  _b+=("${PREFIX}-$(( idx + 1 )):${TESTS[$idx]}")
   unset -n _b
 done
 
@@ -101,18 +103,15 @@ for i in $(seq 1 "${N}"); do
     continue
   fi
   active=$((active + 1))
-  ns="${PREFIX}-${i}"
   ns_dir="${OUT_DIR}/ns-${i}"
   mkdir -p "${ns_dir}"
-  # Copy bucket into a plain array so the subshell can iterate it
   _bucket=("${_b[@]}")
   (
-    for TC in "${_bucket[@]}"; do
+    for entry in "${_bucket[@]}"; do
+      ns="${entry%%:*}"
+      TC="${entry#*:}"
       tc_dir="${ns_dir}/${TC}"
       mkdir -p "${tc_dir}"
-      # Fresh namespace per test: run-one.sh brings up ns, runs TC, tears down.
-      # Reuses the same namespace name so the index stays stable, but each
-      # invocation gets a clean cluster state.
       RUN_ONE_OUT="${tc_dir}" scripts/run-one.sh "${ns}" "${TC}" \
         >> "${ns_dir}/run-one-outer.log" 2>&1 || true
     done

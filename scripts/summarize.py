@@ -177,6 +177,14 @@ def main() -> int:
             }
             for r in durations
         ]
+        # Recompute T_suite_s from actual test timestamps.
+        # The events-based value is wrong when the same namespace name is reused
+        # across tests (fresh-ns-per-test): load_events() overwrites earlier
+        # phases with later ones, collapsing T_suite_s to the last test only.
+        starts = [float(r["start_ts"]) for r in durations if r.get("start_ts")]
+        ends   = [float(r["end_ts"])   for r in durations if r.get("end_ts")]
+        if starts and ends:
+            summary["T_suite_s"] = round(max(ends) - min(starts), 3)
 
     # Pod health
     pods = load_pods(run_dir / "pods.csv")
