@@ -1,0 +1,1203 @@
+Starting pcscd...
+Waiting for pcscd socket...
+pcscd ready
+Starting jcardsim GSM SIM...
+Installed applet: com.osmo.gsm.GsmSimApplet [A0000000871002]
+Auto-selected default applet
+Starting jcardsim server on port 35963
+Ready for APDU commands.
+jcardsim connected to vpcd, SIM ready
+Starting mobile process...
+<001e> at_interface_socket.c:287 AT transport started on port 5123
+[1;33m<0006> gsm48_cc.c:62 init Call Control[0;m
+[1;34m<0001> gsm48_rr.c:6989 init Radio Ressource process[0;m
+[1;32m<0005> gsm48_mm.c:1664 init Mobility Management process[0;m
+[1;32m<0005> gsm48_mm.c:1204 Selecting PLMN SEARCH state, because no SIM.[0;m
+[1;35m<0013> app_mobile.c:328 ***
+Warning: Mobile '1' has default IMEI: 000000000000000[0;m
+[1;35m<0013> app_mobile.c:330 This could relate your identitiy to other users with default IMEI.
+***[0;m
+[1;35m<0013> app_mobile.c:353 Mobile '1' initialized, please start phone now![0;m
+<001e> telnet_interface.c:88 Available via telnet 0.0.0.0 4247
+[1;32m<0005> subscriber.c:637 (ms 1) Inserting test card (IMSI=901700000000001, International, Unknown)[0;m
+[1;32m<0005> subscriber.c:642 -> Test card registered to 901-70-65534 (International, 70)[0;m
+[1;32m<0005> subscriber.c:657 -> Test card not GPRS registered[0;m
+[1;32m<0005> gsm48_mm.c:5696 (ms 1) Received 'MMR_REG_REQ' event[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, PLMN search[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state PLMN search -> location updating needed[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state location updating needed -> attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:523 starting T3212 (periodic loc. upd. delay) with 360 seconds[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=2, cs->state=3, imsi_attached=0[0;m
+[1;32m<0005> gsm48_mm.c:2868 Do normal Loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-65534[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x08)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x0d)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x08 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 08 matches (fn=0,7,15)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_CNF' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:499 starting T3210 (loc. upd. timeout) with 20.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state wait for RR connection (location updating) -> location updating initiated[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;32m<0005> gsm48_mm.c:435 timer T3210 (loc. upd. timeout) has fired[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_TIMEOUT_T3210' event in state location updating initiated[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_ABORT_REQ' received in state dedicated (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:6317 Abort in dedicated state, send release to layer 2.[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state location updating initiated (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:3360 RR link released after loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:3311 LU attempt counter now 1[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U2_NOT_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=0[0;m
+[1;32m<0005> gsm48_mm.c:1274 Starting T3211 after RR release.[0;m
+[1;32m<0005> gsm48_mm.c:509 starting T3211 (loc. upd. retry delay) with 15.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1323 T3211 running/scheduled - LU retry pending, staying in service state[0;m
+[1;32m<0005> gsm48_mm.c:1381 Location update pending but T3211 running - entering ATTEMPT_UPDATE to wait for T3211 retry[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state location updating initiated -> MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=2, cs->state=3, imsi_attached=0[0;m
+[1;32m<0005> gsm48_mm.c:2754 Loc. upd. already pending.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_IMSI_DETACH' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2207 IMSI has been detached.[0;m
+[1;32m<0005> gsm48_mm.c:2237 Clearing imsi_attached flag after IMSI detach[0;m
+[1;32m<0005> gsm48_mm.c:1686 exit Mobility Management process[0;m
+[1;32m<0005> gsm48_mm.c:583 stopping pending (loc. upd. retry delay) timer T3211[0;m
+[1;32m<0005> gsm48_mm.c:592 stopping pending (periodic loc. upd. delay) timer T3212[0;m
+[1;34m<0001> gsm48_rr.c:7013 exit Radio Ressource process[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;33m<0006> gsm48_cc.c:75 exit Call Control processes for 1[0;m
+[1;35m<0013> app_mobile.c:273 Power off! (MS 1)[0;m
+[1;35m<0013> app_mobile.c:205 MS '1' has been reset[0;m
+[1;34m<0001> gsm48_rr.c:6989 init Radio Ressource process[0;m
+[1;32m<0005> gsm48_mm.c:1664 init Mobility Management process[0;m
+[1;32m<0005> gsm48_mm.c:1204 Selecting PLMN SEARCH state, because no SIM.[0;m
+[1;35m<0013> app_mobile.c:328 ***
+Warning: Mobile '1' has default IMEI: 000000000000000[0;m
+[1;35m<0013> app_mobile.c:330 This could relate your identitiy to other users with default IMEI.
+***[0;m
+[1;35m<0013> app_mobile.c:353 Mobile '1' initialized, please start phone now![0;m
+[1;32m<0005> subscriber.c:637 (ms 1) Inserting test card (IMSI=901700000000001, International, Unknown)[0;m
+[1;32m<0005> subscriber.c:642 -> Test card registered to 901-70-0 (International, 70)[0;m
+[1;32m<0005> subscriber.c:657 -> Test card not GPRS registered[0;m
+[1;32m<0005> gsm48_mm.c:5696 (ms 1) Received 'MMR_REG_REQ' event[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, PLMN search[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state PLMN search -> location updating needed[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state location updating needed -> attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:523 starting T3212 (periodic loc. upd. delay) with 360 seconds[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=2, cs->state=3, imsi_attached=0[0;m
+[1;32m<0005> gsm48_mm.c:2868 Do normal Loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-0[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x0f)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x04)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x0f chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 0f matches (fn=8,18,16)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[38;5;12m<001f> lapd_core.c:479 (dl=0x57aeb437f298) sending MDL-ERROR-IND cause 1 from state LAPD_STATE_IDLE[0;m
+[38;5;12m<001f> lapdm.c:683 (dl=0x57aeb437f298) sending MDL-ERROR-IND 1[0;m
+[1;35m<0000> gsm48_rr.c:6780 RSLms message 'ERROR_IND' unhandled[0;m
+[1;34m<0001> gsm48_rr.c:977 starting T_rel_wait with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> release pending[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:3360 RR link released after loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:3311 LU attempt counter now 1[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U2_NOT_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=0[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:879 L2 release timer has fired, done waiting[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for RR connection (location updating)[0;m
+[1;32m<0005> gsm48_mm.c:1274 Starting T3211 after RR release.[0;m
+[1;32m<0005> gsm48_mm.c:509 starting T3211 (loc. upd. retry delay) with 15.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1323 T3211 running/scheduled - LU retry pending, staying in service state[0;m
+[1;32m<0005> gsm48_mm.c:1381 Location update pending but T3211 running - entering ATTEMPT_UPDATE to wait for T3211 retry[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for RR connection (location updating) -> MM IDLE, attempting to update[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;32m<0005> gsm48_mm.c:443 timer T3211 (loc. upd. retry delay) has fired[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_TIMEOUT_T3211' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-0[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x0b)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x0f)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x0b chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 0b matches (fn=12,24,15)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[38;5;12m<001f> lapd_core.c:479 (dl=0x57aeb437f298) sending MDL-ERROR-IND cause 1 from state LAPD_STATE_IDLE[0;m
+[38;5;12m<001f> lapdm.c:683 (dl=0x57aeb437f298) sending MDL-ERROR-IND 1[0;m
+[1;35m<0000> gsm48_rr.c:6780 RSLms message 'ERROR_IND' unhandled[0;m
+[1;34m<0001> gsm48_rr.c:977 starting T_rel_wait with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> release pending[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:3360 RR link released after loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:3311 LU attempt counter now 2[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U2_NOT_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=0[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: no cell info[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:879 L2 release timer has fired, done waiting[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for RR connection (location updating)[0;m
+[1;32m<0005> gsm48_mm.c:1274 Starting T3211 after RR release.[0;m
+[1;32m<0005> gsm48_mm.c:509 starting T3211 (loc. upd. retry delay) with 15.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1323 T3211 running/scheduled - LU retry pending, staying in service state[0;m
+[1;32m<0005> gsm48_mm.c:1381 Location update pending but T3211 running - entering ATTEMPT_UPDATE to wait for T3211 retry[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for RR connection (location updating) -> MM IDLE, attempting to update[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;32m<0005> gsm48_mm.c:443 timer T3211 (loc. upd. retry delay) has fired[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_TIMEOUT_T3211' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-0[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x00)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x05)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x00 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 00 matches (fn=16,14,24)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3913 using last SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_CNF' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:499 starting T3210 (loc. upd. timeout) with 20.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state wait for RR connection (location updating) -> location updating initiated[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_DATA_IND' from RR in state location updating initiated (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:5373 (ms 1) Received 'MT_MM_LOC_UPD_ACCEPT' in MM state location updating initiated[0;m
+[1;32m<0005> gsm48_mm.c:592 stopping pending (periodic loc. upd. delay) timer T3212[0;m
+[1;32m<0005> gsm48_mm.c:574 stopping pending (loc. upd. timeout) timer T3210[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U1_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=4242[0;m
+[1;32m<0005> gsm48_mm.c:3030 LOCATION UPDATING ACCEPT (lai=901-70-4242)[0;m
+[1;32m<0005> gsm48_mm.c:563 starting T3240 (RR release timeout) with 10.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state location updating initiated -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:628 stopping pending (RR release timeout) timer T3240[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;32m<0005> gsm48_mm.c:523 starting T3212 (periodic loc. upd. delay) with 360 seconds[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, normal service[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=1, cs->state=3, imsi_attached=1[0;m
+[1;32m<0005> gsm48_mm.c:2828 Loc. upd. not required (same LAI, already updated).[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state normal service -> normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x90)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x90)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x90 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 90 matches (fn=18,9,17)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4202 sending paging response with IMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3913 using last SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x99)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x95)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x99 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 99 matches (fn=18,21,18)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4202 sending paging response with IMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x80)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x9c)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x80 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 80 matches (fn=19,7,19)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4202 sending paging response with IMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x88)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x8c)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x88 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 88 matches (fn=20,18,19)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4202 sending paging response with IMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_IMSI_DETACH' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1826 Release any MM Connection (sapi = 0)[0;m
+[1;32m<0005> gsm48_mm.c:2353 IMSI detach not required.[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state wait for network command -> wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1686 exit Mobility Management process[0;m
+[1;32m<0005> gsm48_mm.c:592 stopping pending (periodic loc. upd. delay) timer T3212[0;m
+[1;34m<0001> gsm48_rr.c:7013 exit Radio Ressource process[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;33m<0006> gsm48_cc.c:75 exit Call Control processes for 1[0;m
+[1;35m<0013> app_mobile.c:273 Power off! (MS 1)[0;m
+[1;35m<0013> app_mobile.c:205 MS '1' has been reset[0;m
+[1;34m<0001> gsm48_rr.c:6989 init Radio Ressource process[0;m
+[1;32m<0005> gsm48_mm.c:1664 init Mobility Management process[0;m
+[1;32m<0005> gsm48_mm.c:1204 Selecting PLMN SEARCH state, because no SIM.[0;m
+[1;35m<0013> app_mobile.c:328 ***
+Warning: Mobile '1' has default IMEI: 000000000000000[0;m
+[1;35m<0013> app_mobile.c:330 This could relate your identitiy to other users with default IMEI.
+***[0;m
+[1;35m<0013> app_mobile.c:353 Mobile '1' initialized, please start phone now![0;m
+[1;32m<0005> subscriber.c:637 (ms 1) Inserting test card (IMSI=901700000000001, International, Unknown)[0;m
+[1;32m<0005> subscriber.c:642 -> Test card registered to 901-70-4242 (International, 70)[0;m
+[1;32m<0005> subscriber.c:649 -> Test card attached[0;m
+[1;32m<0005> subscriber.c:657 -> Test card not GPRS registered[0;m
+[1;32m<0005> gsm48_mm.c:5696 (ms 1) Received 'MMR_REG_REQ' event[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, PLMN search[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state PLMN search -> location updating needed[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state location updating needed -> attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:523 starting T3212 (periodic loc. upd. delay) with 360 seconds[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=2, cs->state=3, imsi_attached=1[0;m
+[1;32m<0005> gsm48_mm.c:2868 Do normal Loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-4242[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x00)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x07)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x00 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 00 matches (fn=24,25,25)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_CNF' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:499 starting T3210 (loc. upd. timeout) with 20.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state wait for RR connection (location updating) -> location updating initiated[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state location updating initiated (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:3360 RR link released after loc. upd.[0;m
+[1;32m<0005> gsm48_mm.c:574 stopping pending (loc. upd. timeout) timer T3210[0;m
+[1;32m<0005> gsm48_mm.c:3311 LU attempt counter now 1[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U2_NOT_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=0[0;m
+[1;32m<0005> gsm48_mm.c:1274 Starting T3211 after RR release.[0;m
+[1;32m<0005> gsm48_mm.c:509 starting T3211 (loc. upd. retry delay) with 15.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1381 Location update pending but T3211 running - entering ATTEMPT_UPDATE to wait for T3211 retry[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state location updating initiated -> MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=2, cs->state=3, imsi_attached=1[0;m
+[1;32m<0005> gsm48_mm.c:2754 Loc. upd. already pending.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;32m<0005> gsm48_mm.c:443 timer T3211 (loc. upd. retry delay) has fired[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_TIMEOUT_T3211' event in state MM IDLE, attempting to update[0;m
+[1;32m<0005> gsm48_mm.c:2918 LOCATION UPDATING REQUEST[0;m
+[1;32m<0005> gsm48_mm.c:2942  using LAI=901-70-0[0;m
+[1;32m<0005> gsm48_mm.c:2953  using IMSI 901700000000001[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, attempting to update -> wait for RR connection (location updating)[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_EST_REQ' received in state idle (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2330 CHANNEL REQUEST: 00 (Location Update with NECI)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x04)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x09)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x04 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 04 matches (fn=27,10,20)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4171 sending establish message[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 0 (pdisc 5)[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3913 using last SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_CNF' from RR in state wait for RR connection (location updating) (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:499 starting T3210 (loc. upd. timeout) with 20.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state wait for RR connection (location updating) -> location updating initiated[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_DATA_IND' from RR in state location updating initiated (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:5373 (ms 1) Received 'MT_MM_LOC_UPD_ACCEPT' in MM state location updating initiated[0;m
+[1;32m<0005> gsm48_mm.c:592 stopping pending (periodic loc. upd. delay) timer T3212[0;m
+[1;32m<0005> gsm48_mm.c:574 stopping pending (loc. upd. timeout) timer T3210[0;m
+[1;32m<0005> subscriber.c:251 (ms 1) new state U2_NOT_UPDATED -> U1_UPDATED[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0xffffffff lac=4242[0;m
+[1;32m<0005> gsm48_mm.c:3030 LOCATION UPDATING ACCEPT (lai=901-70-4242)[0;m
+[1;32m<0005> gsm48_mm.c:3052 got TMSI 0x12345678 (305419896)[0;m
+[1;32m<0005> subscriber.c:325 Updating LOCI on SIM[0;m
+[1;32m<0005> subscriber.c:339 Updating LOCI on test SIM: tmsi=0x12345678 lac=4242[0;m
+[1;32m<0005> gsm48_mm.c:1916 TMSI REALLOCATION COMPLETE[0;m
+[1;34m<0001> gsm48_rr.c:6936 (ms 1) Message 'RR_DATA_REQ' received in state dedicated (sapi 0)[0;m
+[1;34m<0001> gsm48_rr.c:289 Using and incrementing V(SD) = 1 (pdisc 5)[0;m
+[1;32m<0005> gsm48_mm.c:563 starting T3240 (RR release timeout) with 10.0 seconds[0;m
+[1;32m<0005> gsm48_mm.c:1044 new state location updating initiated -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242 TA=0 pwr=14 TS=0/0[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=0 rxlev-full=-47 rxlev-sub=-47 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:628 stopping pending (RR release timeout) timer T3240[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;32m<0005> gsm48_mm.c:523 starting T3212 (periodic loc. upd. delay) with 360 seconds[0;m
+[1;32m<0005> gsm48_mm.c:5610 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state MM IDLE, normal service[0;m
+[1;32m<0005> gsm48_mm.c:2748     mm->state=19, mm->substate=1, cs->state=3, imsi_attached=1[0;m
+[1;32m<0005> gsm48_mm.c:2828 Loc. upd. not required (same LAI, already updated).[0;m
+[1;32m<0005> gsm48_mm.c:1031 new MM IDLE state normal service -> normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x90)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x88)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x90 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 90 matches (fn=28,5,18)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4198 sending paging response with TMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3913 using last SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 1 no-ncell-n 0[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x9d)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x98)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x9d chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 9d matches (fn=29,12,14)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4198 sending paging response with TMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3913 using last SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x82)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x89)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x82 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 82 matches (fn=29,25,16)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4198 sending paging response with TMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x8b)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x80)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x8b chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 8b matches (fn=30,11,17)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4198 sending paging response with TMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2850 New SYSTEM INFORMATION 5[0;m
+[1;34m<0001> gsm48_rr.c:2598 Complete set of SI5* for BA(1)[0;m
+[1;34m<0001> gsm48_rr.c:2613 SI5/SI5bis report arfcn 71 (index 0)[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:3086 PAGING ignored, we are not camping.[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:475 new state idle -> connection pending[0;m
+[1;34m<0001> gsm48_rr.c:2274 CHANNEL REQUEST: 80 (PAGING Any channel)[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 8)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 0 ra 0x81)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:2467 RANDOM ACCESS (requests left 7)[0;m
+[1;34m<0001> gsm48_rr.c:2523 RANDOM ACCESS (Tx-integer 12 combined yes S(lots) 115 ra 0x97)[0;m
+[1;34m<0001> gsm48_rr.c:2559 Use MS-TXPWR-MAX-CCH power value 14 (15 dBm)[0;m
+[1;34m<0001> gsm48_rr.c:3353 IMMEDIATE ASSIGNMENT:[0;m
+[1;34m<0001> gsm48_rr.c:3375  (ta 0/0m ra 0x81 chan_nr 0x20 ARFCN 51 TS 0 SS 0 TSC 7)[0;m
+[1;34m<0001> gsm48_rr.c:3287 request 81 matches (fn=30,4,25)[0;m
+[1;34m<0001> gsm48_rr.c:3405 resetting scheduler[0;m
+[1;34m<0001> gsm48_rr.c:4198 sending paging response with TMSI[0;m
+[1;34m<0001> gsm48_rr.c:3902 setting indicated TA 0 (actual TA 0)[0;m
+[1;34m<0001> gsm48_rr.c:3917 using last BCCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:1050 stopping pending timer T_meas[0;m
+[1;34m<0001> gsm48_rr.c:3795 MEAS REP: pwr=14 TA=0 meas-invalid=1 rxlev-full=-110 rxlev-sub=-110 rxqual-full=0 rxqual-sub=0 dtx 0 ba 0 no-ncell-n 7[0;m
+[1;34m<0001> gsm48_rr.c:3936 establishing channel in dedicated/group mode[0;m
+[1;34m<0001> gsm48_rr.c:3945  Channel type 32, subch 0, ts 0, mode 0, audio-mode 0, flags 0x00, cipher 1[0;m
+[1;34m<0001> gsm48_rr.c:6227 DL SACCH indicates ta 0 (actual ta 0)[0;m
+[1;34m<0001> gsm48_rr.c:6231 DL SACCH indicates tx_power 14[0;m
+[1;34m<0001> gsm48_rr.c:2943 New SYSTEM INFORMATION 6 (lai=901-70-4242 SACCH-timeout 32)[0;m
+[1;34m<0001> gsm48_rr.c:2947 using (new) SACCH timeout 32[0;m
+[1;34m<0001> gsm48_rr.c:475 new state connection pending -> dedicated[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_EST_IND' from RR in state MM idle (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1036 new state MM IDLE, normal service -> wait for network command[0;m
+[1;34m<0001> gsm48_rr.c:4342 channel release request with cause 0x6f[0;m
+[1;34m<0001> gsm48_rr.c:475 new state dedicated -> release pending[0;m
+[1;34m<0001> gsm48_rr.c:995 starting T3110 with 1.500 seconds[0;m
+[1;34m<0001> gsm48_rr.c:1074 stopping pending timer T3110[0;m
+[1;34m<0001> gsm48_rr.c:475 new state release pending -> idle[0;m
+[1;34m<0001> gsm48_rr.c:498 Returning to IDLE mode.[0;m
+[1;32m<0005> gsm48_mm.c:5158 (ms 1) Received 'RR_REL_IND' from RR in state wait for network command (sapi 0)[0;m
+[1;32m<0005> gsm48_mm.c:1266 Not camping, wait for CS process to camp, it sends us CELL_SELECTED then.[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:2697 New SYSTEM INFORMATION 2[0;m
+[1;34m<0001> sysinfo.c:948 New SYSTEM INFORMATION 3 (lai=901-70-4242)[0;m
+[1;34m<0001> gsm48_rr.c:2788 Changing CCCH_MODE to 2[0;m
+[1;34m<0001> gsm48_rr.c:2820 New SYSTEM INFORMATION 4 (lai=901-70-4242)[0;m
+[1;34m<0001> sysinfo.c:861 Now updating previously received SYSTEM INFORMATION 4[0;m
+[1;34m<0001> gsm48_rr.c:2668 New SYSTEM INFORMATION 1[0;m
+[1;32m<0005> gsm48_mm.c:5616 (ms 1) Received 'MM_EVENT_CELL_SELECTED' event in state wait for network command[0;m
+[1;32m<0005> gsm48_mm.c:1396 We are in registered LAI as returning to MM IDLE[0;m
+[1;32m<0005> gsm48_mm.c:1040 new state wait for network command -> MM IDLE, normal service[0;m
+[1;34m<0001> gsm322.c:3061 using DSC of 90[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
+[1;34m<0001> gsm48_rr.c:835 MON: f=51 lev=>=-47 snr=63 ber=  0 CGI=901-70-4242-4242[0;m
