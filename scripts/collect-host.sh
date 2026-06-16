@@ -12,7 +12,6 @@
 set -euo pipefail
 
 OUT="${1:?usage: collect-host.sh <out.csv>}"
-NAMESPACE="${NAMESPACE:?NAMESPACE env var must be set}"
 POD_OUT="$(dirname "${OUT}")/pod-resources.csv"
 echo "unix_ts,namespace,pod,cpu_m,mem_mib" > "${POD_OUT}"
 
@@ -95,15 +94,20 @@ while true; do
     "${container_count}" "${pod_count}" "${inotify_watches}" >> "${OUT}"
 
   ts_now=$(date -u +%s)
-  kubectl top pods -n "${NAMESPACE}" --no-headers 2>/dev/null \
-    | awk -v ts="${ts_now}" -v ns="${NAMESPACE}" '
+  if [[ -n "${NAMESPACE:-}" ]]; then
+    ns_flag="-n ${NAMESPACE}"
+  else
+    ns_flag="--all-namespaces"
+  fi
+  kubectl top pods ${ns_flag} --no-headers 2>/dev/null \
+    | awk -v ts="${ts_now}" -v ns="${NAMESPACE:-}" '
         {
-          pod=$1; cpu=$2; mem=$3
+          if (ns == "") { pod=$2; cpu=$3; mem=$4; ns_col=$1 } else { pod=$1; cpu=$2; mem=$3; ns_col=ns }
           if (sub(/m$/, "", cpu) == 0) cpu = cpu * 1000
           if      (sub(/Gi$/, "", mem)) mem = mem * 1024
           else if (sub(/Mi$/, "", mem)) mem = mem + 0
           else if (sub(/Ki$/, "", mem)) mem = int(mem / 1024)
-          printf "%s,%s,%s,%s,%s\n", ts, ns, pod, cpu, mem
+          printf "%s,%s,%s,%s,%s\n", ts, ns_col, pod, cpu, mem
         }
       ' >> "${POD_OUT}" || :
 

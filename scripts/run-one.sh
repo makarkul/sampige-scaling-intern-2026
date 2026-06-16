@@ -367,7 +367,7 @@ event t0
 
 # Start host metric collection in background (mirrors run-n.sh behaviour so
 # N=1 runs produce the same evidence bundle as N≥2 runs).
-"${META_ROOT}/scripts/collect-host.sh" "${RUN_DIR}/host-samples.csv" &
+NAMESPACE="$NS" "${META_ROOT}/scripts/collect-host.sh" "${RUN_DIR}/host-samples.csv" &
 HOST_PID=$!
 
 # ── Images ─────────────────────────────────────────────────────────────────────
