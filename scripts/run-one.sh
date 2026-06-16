@@ -147,7 +147,8 @@ helm_install() {
     --set "ttcn3.workspacePath=${TTCN3_DIR}" \
     --set "ttcn3.configPath=${TTCN3_DIR}/config" \
     --set "ttcn3.logsPath=${NS_LOGS_DIR}" \
-    --set "ttcn3.dataPath=${DEMO_REPO}/data"
+    --set "ttcn3.dataPath=${DEMO_REPO}/data" \
+    ${CPU_LIMIT:+--set "cpuLimit=${CPU_LIMIT}"}
 }
 
 wait_deployments() {

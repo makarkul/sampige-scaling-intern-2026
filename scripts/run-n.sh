@@ -30,8 +30,9 @@ while (($#)); do
   case "$1" in
     --prefix)   PREFIX="$2"; shift 2 ;;
     --keep)     KEEP="--keep"; shift ;;
-    --baseline) BASELINE="$2"; shift 2 ;;
-    --workers)  WORKERS="$2"; shift 2 ;;
+    --baseline)  BASELINE="$2"; shift 2 ;;
+    --workers)   WORKERS="$2"; shift 2 ;;
+    --cpu-limit) export CPU_LIMIT="$2"; shift 2 ;;
     -*)         echo "unknown flag: $1" >&2; exit 2 ;;
     *)          TESTS+=("$1"); shift ;;
   esac
