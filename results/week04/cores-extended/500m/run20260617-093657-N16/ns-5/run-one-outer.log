@@ -1,0 +1,127 @@
+[run-one] Namespace : gsm-5
+[run-one] Tests     : TC_26_8_1_3_4_6
+[run-one] Results   : results/week04/cores-sweep/run20260617-093657-N16/ns-5/TC_26_8_1_3_4_6
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-5 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-5" does not exist. Installing it now.
+NAME: gsm-5
+LAST DEPLOYED: Wed Jun 17 15:06:57 2026
+NAMESPACE: gsm-5
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mobile//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_8_1_3_4_6 as Job ttcn3-tc-26-8-1-3-4-6-1...
+[run-one] PASS  TC_26_8_1_3_4_6: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-5
+ Timestamp : 20260617-093657
+=====================================================
+  TC_26_8_1_3_4_6                          PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week04/cores-sweep/run20260617-093657-N16/ns-5/TC_26_8_1_3_4_6
+[run-one] INFO  Teardown: uninstalling Helm release gsm-5...
+release "gsm-5" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-5...
+namespace "gsm-5" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-5",
+      "bringup_s": 87.129,
+      "testing_s": 584.578,
+      "teardown_s": 59.543,
+      "total_s": 731.252,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_8_1_3_4_6",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 584.574,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-5",
+      "tc_name": "TC_26_8_1_3_4_6",
+      "duration_s": 584.574,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}

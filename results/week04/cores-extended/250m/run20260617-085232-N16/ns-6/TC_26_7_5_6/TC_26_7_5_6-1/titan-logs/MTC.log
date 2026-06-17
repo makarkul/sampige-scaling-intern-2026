@@ -1,0 +1,450 @@
+2026/Jun/17 09:02:46.164160 EXECUTOR - TTCN-3 Main Test Component started on ttcn3-tc-26-7-5-6-1-g2mdd. Version: 11.1.0.
+2026/Jun/17 09:02:46.164316 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/17 09:02:46.164386 EXECUTOR - Connected to MC.
+2026/Jun/17 09:02:46.164541 EXECUTOR - Executing test case TC_26_7_5_6 in module TC_26_7_5_6.
+2026/Jun/17 09:02:46.164853 TESTCASE TC_26_7_5_6.ttcn3:25 Test case TC_26_7_5_6 started.
+2026/Jun/17 09:02:46.164925 PARALLEL TC_26_7_5_6.ttcn3:25 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_7_5_6.
+2026/Jun/17 09:02:46.165194 USER TC_26_7_5_6.ttcn3:25 MSC_Port: set_parameter msc_stub_host = 10.42.0.123
+2026/Jun/17 09:02:46.165240 USER TC_26_7_5_6.ttcn3:25 MSC_Port: set_parameter msc_stub_port = 5000
+2026/Jun/17 09:02:46.165254 USER TC_26_7_5_6.ttcn3:25 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+2026/Jun/17 09:02:46.165266 USER TC_26_7_5_6.ttcn3:25 L3_Port: set_parameter gsmtap_port = 4729
+2026/Jun/17 09:02:46.165272 USER TC_26_7_5_6.ttcn3:25 L3_Port: set_parameter local_port = 4729
+2026/Jun/17 09:02:46.165276 USER TC_26_7_5_6.ttcn3:25 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+2026/Jun/17 09:02:46.165280 USER TC_26_7_5_6.ttcn3:25 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/17 09:02:46.165285 USER TC_26_7_5_6.ttcn3:25 L3_Port: set_parameter arfcn = 51
+2026/Jun/17 09:02:46.165326 USER TC_26_7_5_6.ttcn3:25 L3_Port: user_start called
+2026/Jun/17 09:02:46.165336 PORTEVENT TC_26_7_5_6.ttcn3:25 Port L was started.
+2026/Jun/17 09:02:46.165391 PORTEVENT TC_26_7_5_6.ttcn3:25 Port RR was started.
+2026/Jun/17 09:02:46.165396 PORTEVENT TC_26_7_5_6.ttcn3:25 Port MM was started.
+2026/Jun/17 09:02:46.165401 PORTEVENT TC_26_7_5_6.ttcn3:25 Port CC was started.
+2026/Jun/17 09:02:46.165404 USER TC_26_7_5_6.ttcn3:25 MSC_Port: user_start called
+2026/Jun/17 09:02:46.165407 PORTEVENT TC_26_7_5_6.ttcn3:25 Port MSC was started.
+2026/Jun/17 09:02:46.165412 PORTEVENT TC_26_7_5_6.ttcn3:25 Port BSC was started.
+2026/Jun/17 09:02:46.165417 PORTEVENT TC_26_7_5_6.ttcn3:25 Port RSL was started.
+2026/Jun/17 09:02:46.165423 USER TC_26_7_5_6.ttcn3:25 VTY_PT: Starting
+2026/Jun/17 09:02:46.165427 PORTEVENT TC_26_7_5_6.ttcn3:25 Port VTY was started.
+2026/Jun/17 09:02:46.165431 PORTEVENT TC_26_7_5_6.ttcn3:25 Port COORD was started.
+2026/Jun/17 09:02:46.165434 PARALLEL TC_26_7_5_6.ttcn3:25 Component type GSM_Component_Definitions.GSM_CT was initialized.
+2026/Jun/17 09:02:46.165455 USER TC_26_7_5_6.ttcn3:33 =========================================================
+2026/Jun/17 09:02:46.165460 USER TC_26_7_5_6.ttcn3:34 *** TC_26_7_5_6: MM Connection Abort on T3230 Expiry ***
+2026/Jun/17 09:02:46.165463 USER TC_26_7_5_6.ttcn3:35 =========================================================
+2026/Jun/17 09:02:46.165467 USER TC_26_7_5_6.ttcn3:36 Test Purpose: Verify MS aborts MM-connection establishment when T3230 expires
+2026/Jun/17 09:02:46.165471 USER TC_26_7_5_6.ttcn3:37 Expected: MS sends CM SERVICE REQUEST, waits for T3230 expiry, then sends MM STATUS
+2026/Jun/17 09:02:46.165474 USER TC_26_7_5_6.ttcn3:38 =========================================================
+2026/Jun/17 09:02:46.165478 USER TC_26_7_5_6.ttcn3:41 *** Step 0: Initializing test component ***
+2026/Jun/17 09:02:46.165494 PARALLEL TC_26_7_5_6.ttcn3:44 Mapping port mtc:MSC to system:MSC.
+2026/Jun/17 09:02:46.211250 USER TC_26_7_5_6.ttcn3:44 MSC_Port: Mapping to MSC
+2026/Jun/17 09:02:46.264586 WARNING TC_26_7_5_6.ttcn3:44 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "MSC")
+2026/Jun/17 09:02:46.264685 USER TC_26_7_5_6.ttcn3:44 MSC_Port: Registered socket for async events
+2026/Jun/17 09:02:46.264702 USER TC_26_7_5_6.ttcn3:44 MSC_Port: Connected to MSC stub at 10.42.0.123:5000
+2026/Jun/17 09:02:46.264713 PORTEVENT TC_26_7_5_6.ttcn3:44 Port MSC was mapped to system:MSC.
+2026/Jun/17 09:02:46.264865 USER TC_26_7_5_6.ttcn3:44 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+2026/Jun/17 09:02:46.264937 PORTEVENT TC_26_7_5_6.ttcn3:44 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/17 09:02:46.264985 PARALLEL TC_26_7_5_6.ttcn3:44 Map operation of mtc:MSC to system:MSC finished.
+2026/Jun/17 09:02:46.265026 PARALLEL TC_26_7_5_6.ttcn3:45 Mapping port mtc:VTY to system:VTY.
+2026/Jun/17 09:02:46.265065 USER TC_26_7_5_6.ttcn3:45 VTY_PT: Mapping port to VTY interface
+2026/Jun/17 09:02:46.265657 USER TC_26_7_5_6.ttcn3:45 VTY_PT: Connected to VTY at 10.43.254.30:4247
+2026/Jun/17 09:02:46.765908 USER TC_26_7_5_6.ttcn3:45 VTY_PT: Initial banner received
+2026/Jun/17 09:02:46.765972 PORTEVENT TC_26_7_5_6.ttcn3:45 Port VTY was mapped to system:VTY.
+2026/Jun/17 09:02:46.766063 PARALLEL TC_26_7_5_6.ttcn3:45 Map operation of mtc:VTY to system:VTY finished.
+2026/Jun/17 09:02:46.766124 TIMEROP TC_26_7_5_6.ttcn3:48 Start timer T_guard: 1800 s
+2026/Jun/17 09:02:46.766187 USER TC_26_7_5_6.ttcn3:51 =========================================================
+2026/Jun/17 09:02:46.766197 USER TC_26_7_5_6.ttcn3:52 *** Pre-test: Verifying mobile state via VTY ***
+2026/Jun/17 09:02:46.766202 USER TC_26_7_5_6.ttcn3:53 =========================================================
+2026/Jun/17 09:02:46.766214 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/17 09:02:46.766255 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/17 09:02:46.766291 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/17 09:02:46.966463 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U2_NOT_UPDATED  IMSI detached  LAI: invalid
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/17 09:02:46.966585 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI detached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/17 09:02:46.966614 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/17 09:02:46.966681 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI detached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/17 09:02:46.966716 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 1 was extracted from the queue of VTY.
+2026/Jun/17 09:02:46.966732 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/17 09:02:46.966745 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI detached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/17 09:02:46.966781 USER TC_26_7_5_6.ttcn3:56 Initial subscriber state: "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI detached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/17 09:02:46.967036 USER TC_26_7_5_6.ttcn3:59 char(0, 0, 39, 5) & " Correct IMSI configured: 901700000000001"
+2026/Jun/17 09:02:46.967108 USER TC_26_7_5_6.ttcn3:65 char(0, 0, 39, 5) & " Mobile in unregistered state (U2_NOT_UPDATED)"
+2026/Jun/17 09:02:46.967117 USER TC_26_7_5_6.ttcn3:70 =========================================================
+2026/Jun/17 09:02:46.967122 USER TC_26_7_5_6.ttcn3:73 *** Step 1: Checking for buffered Location Update Request ***
+2026/Jun/17 09:02:46.967130 TIMEROP TC_26_7_5_6.ttcn3:77 Start timer T_init: 3 s
+2026/Jun/17 09:02:46.967143 PORTEVENT TC_26_7_5_6.ttcn3:80 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/17 09:02:46.967149 PORTEVENT TC_26_7_5_6.ttcn3:80 Message with id 1 was extracted from the queue of MSC.
+2026/Jun/17 09:02:49.968883 TIMEROP TC_26_7_5_6.ttcn3:94 Timeout T_init: 3 s
+2026/Jun/17 09:02:49.968947 USER TC_26_7_5_6.ttcn3:95 No buffered LU Request - will wait for fresh one
+2026/Jun/17 09:02:49.968975 USER TC_26_7_5_6.ttcn3:101 *** Step 2: Waiting for fresh Location Update Request ***
+2026/Jun/17 09:02:49.968981 TIMEROP TC_26_7_5_6.ttcn3:104 Start timer T_lu_wait: 60 s
+2026/Jun/17 09:02:51.217009 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:02:51.217106 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/17 09:02:51.217144 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/17 09:02:51.217161 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 2 was extracted from the queue of MSC.
+2026/Jun/17 09:02:56.222016 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:02:56.222096 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/17 09:02:56.222118 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/17 09:02:56.222127 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 3 was extracted from the queue of MSC.
+2026/Jun/17 09:03:01.227037 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:01.227111 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/17 09:03:01.227135 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/17 09:03:01.227144 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 4 was extracted from the queue of MSC.
+2026/Jun/17 09:03:06.231999 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:06.232074 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/17 09:03:06.232097 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/17 09:03:06.232113 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 5 was extracted from the queue of MSC.
+2026/Jun/17 09:03:11.237116 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:11.237194 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/17 09:03:11.237215 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/17 09:03:11.237222 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 6 was extracted from the queue of MSC.
+2026/Jun/17 09:03:16.243282 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:16.243362 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/17 09:03:16.243384 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/17 09:03:16.243393 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 7 was extracted from the queue of MSC.
+2026/Jun/17 09:03:21.248056 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:21.248130 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/17 09:03:21.248156 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/17 09:03:21.248165 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 8 was extracted from the queue of MSC.
+2026/Jun/17 09:03:26.253380 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:26.253455 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/17 09:03:26.253476 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/17 09:03:26.253485 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 9 was extracted from the queue of MSC.
+2026/Jun/17 09:03:31.258043 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:31.258116 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/17 09:03:31.258142 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/17 09:03:31.258151 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 10 was extracted from the queue of MSC.
+2026/Jun/17 09:03:36.263121 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:36.263200 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/17 09:03:36.263223 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/17 09:03:36.263232 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 11 was extracted from the queue of MSC.
+2026/Jun/17 09:03:41.269048 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:41.269132 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/17 09:03:41.269155 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/17 09:03:41.269165 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 12 was extracted from the queue of MSC.
+2026/Jun/17 09:03:46.274029 USER TC_26_7_5_6.ttcn3:106 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:03:46.274108 PORTEVENT TC_26_7_5_6.ttcn3:106 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/17 09:03:46.274140 PORTEVENT TC_26_7_5_6.ttcn3:107 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/17 09:03:46.274149 PORTEVENT TC_26_7_5_6.ttcn3:107 Message with id 13 was extracted from the queue of MSC.
+2026/Jun/17 09:03:49.971856 TIMEROP TC_26_7_5_6.ttcn3:120 Timeout T_lu_wait: 60 s
+2026/Jun/17 09:03:49.971917 USER TC_26_7_5_6.ttcn3:121 WARNING: No Location Update Request within 60 seconds
+2026/Jun/17 09:03:49.971940 USER TC_26_7_5_6.ttcn3:122 *** MS may not have sent automatic LU Request on startup ***
+2026/Jun/17 09:03:49.971945 USER TC_26_7_5_6.ttcn3:123 *** Restarting mobile container to trigger initial LU Request ***
+2026/Jun/17 09:03:49.972010 USER TC_26_7_5_6.ttcn3:126 docker.sock not found — using VTY power-cycle (k8s mode)
+2026/Jun/17 09:03:49.972020 USER TC_26_7_5_6.ttcn3:126 === k8s fallback: VTY power-cycle mobile at 10.43.254.30:4247 ===
+2026/Jun/17 09:03:55.469962 USER TC_26_7_5_6.ttcn3:126 Waiting 10 seconds (power off)...
+2026/Jun/17 09:04:10.830935 USER TC_26_7_5_6.ttcn3:126 VTY 'clear-loci' sent — LOCI erased
+2026/Jun/17 09:04:18.509931 USER TC_26_7_5_6.ttcn3:126 === VTY power-cycle complete — MS will send LU shortly ===
+2026/Jun/17 09:04:18.510025 USER TC_26_7_5_6.ttcn3:128 *** Mobile container restarted - waiting for initial LU Request ***
+2026/Jun/17 09:04:18.510035 TIMEROP TC_26_7_5_6.ttcn3:132 Start timer T_lu_wait_restart: 30 s
+2026/Jun/17 09:04:18.510068 USER TC_26_7_5_6.ttcn3:133 VTY_PT: Received data (buffered): 94 bytes
+2026/Jun/17 09:04:18.510107 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510119 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/17 09:04:18.510131 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510137 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/17 09:04:18.510142 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510148 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/17 09:04:18.510153 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510158 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+2026/Jun/17 09:04:18.510162 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510168 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/17 09:04:18.510173 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 4, "msc_slr": 4, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/17 09:04:18.510184 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 4, \"msc_slr\": 4, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 19
+2026/Jun/17 09:04:18.510189 USER TC_26_7_5_6.ttcn3:133 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:18.510195 PORTEVENT TC_26_7_5_6.ttcn3:133 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/17 09:04:18.510203 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/17 09:04:18.510211 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 14 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510284 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/17 09:04:18.510289 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 15 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510331 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/17 09:04:18.510344 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 16 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510383 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+2026/Jun/17 09:04:18.510387 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 17 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510424 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/17 09:04:18.510428 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 18 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510468 PORTEVENT TC_26_7_5_6.ttcn3:134 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 4, \"msc_slr\": 4, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 19
+2026/Jun/17 09:04:18.510472 PORTEVENT TC_26_7_5_6.ttcn3:134 Message with id 19 was extracted from the queue of MSC.
+2026/Jun/17 09:04:18.510514 USER TC_26_7_5_6.ttcn3:136 *** Received Location Update Request after mobile restart! ***
+2026/Jun/17 09:04:18.510776 USER TC_26_7_5_6.ttcn3:21 Extracted bsc_slr = 4 from event
+2026/Jun/17 09:04:18.510800 TIMEROP TC_26_7_5_6.ttcn3:139 Stop timer T_lu_wait_restart: 30 s
+2026/Jun/17 09:04:18.510810 USER TC_26_7_5_6.ttcn3:171 *** Step 3: Sending Location Update Accept with TMSI ***
+2026/Jun/17 09:04:18.510860 PORTEVENT TC_26_7_5_6.ttcn3:173 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 4, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/17 09:04:18.510939 USER TC_26_7_5_6.ttcn3:173 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 4, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+2026/Jun/17 09:04:18.510947 USER TC_26_7_5_6.ttcn3:176 *** Step 4: Waiting for TMSI Reallocation Complete ***
+2026/Jun/17 09:04:18.510951 TIMEROP TC_26_7_5_6.ttcn3:178 Start timer T_tmsi_complete: 10 s
+2026/Jun/17 09:04:18.510959 PORTEVENT TC_26_7_5_6.ttcn3:182 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/17 09:04:18.510964 PORTEVENT TC_26_7_5_6.ttcn3:182 Message with id 20 was extracted from the queue of MSC.
+2026/Jun/17 09:04:19.012272 USER TC_26_7_5_6.ttcn3:181 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/17 09:04:19.012341 PORTEVENT TC_26_7_5_6.ttcn3:181 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 21
+2026/Jun/17 09:04:19.012365 PORTEVENT TC_26_7_5_6.ttcn3:182 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 21
+2026/Jun/17 09:04:19.012373 PORTEVENT TC_26_7_5_6.ttcn3:182 Message with id 21 was extracted from the queue of MSC.
+2026/Jun/17 09:04:19.012472 USER TC_26_7_5_6.ttcn3:191 Event during TMSI wait (not TMSI complete): "{\"status\": \"ok\", \"sent\": true}"
+2026/Jun/17 09:04:19.314216 USER TC_26_7_5_6.ttcn3:181 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 4, "pd": 5, "msg_type": 27}
+2026/Jun/17 09:04:19.314291 PORTEVENT TC_26_7_5_6.ttcn3:181 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 4, \"pd\": 5, \"msg_type\": 27}" id 22
+2026/Jun/17 09:04:19.314315 PORTEVENT TC_26_7_5_6.ttcn3:182 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 4, \"pd\": 5, \"msg_type\": 27}" id 22
+2026/Jun/17 09:04:19.314324 PORTEVENT TC_26_7_5_6.ttcn3:182 Message with id 22 was extracted from the queue of MSC.
+2026/Jun/17 09:04:19.314422 USER TC_26_7_5_6.ttcn3:191 Event during TMSI wait (not TMSI complete): "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 4, \"pd\": 5, \"msg_type\": 27}"
+2026/Jun/17 09:04:19.314454 USER TC_26_7_5_6.ttcn3:181 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 4}
+2026/Jun/17 09:04:19.314462 PORTEVENT TC_26_7_5_6.ttcn3:181 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 4}" id 23
+2026/Jun/17 09:04:19.314469 PORTEVENT TC_26_7_5_6.ttcn3:182 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 4}" id 23
+2026/Jun/17 09:04:19.314473 PORTEVENT TC_26_7_5_6.ttcn3:182 Message with id 23 was extracted from the queue of MSC.
+2026/Jun/17 09:04:19.314566 USER TC_26_7_5_6.ttcn3:185 *** Received TMSI Reallocation Complete ***
+2026/Jun/17 09:04:19.314574 TIMEROP TC_26_7_5_6.ttcn3:187 Stop timer T_tmsi_complete: 10 s
+2026/Jun/17 09:04:19.314585 USER TC_26_7_5_6.ttcn3:268 *** Step 5: Releasing connection ***
+2026/Jun/17 09:04:19.314590 TIMEROP TC_26_7_5_6.ttcn3:270 Start timer T_wait_release: 2 s
+2026/Jun/17 09:04:21.314858 TIMEROP TC_26_7_5_6.ttcn3:271 Timeout T_wait_release: 2 s
+2026/Jun/17 09:04:21.314943 PORTEVENT TC_26_7_5_6.ttcn3:274 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 4, \"cause\": 0}}"
+2026/Jun/17 09:04:21.315045 USER TC_26_7_5_6.ttcn3:274 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 4, "cause": 0}}
+2026/Jun/17 09:04:21.315070 TIMEROP TC_26_7_5_6.ttcn3:277 Start timer T_wait_rel: 3 s
+2026/Jun/17 09:04:21.315666 USER TC_26_7_5_6.ttcn3:278 MSC_Port: RX: {"status": "ok"}
+2026/Jun/17 09:04:21.315690 PORTEVENT TC_26_7_5_6.ttcn3:278 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 24
+2026/Jun/17 09:04:21.317245 USER TC_26_7_5_6.ttcn3:278 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 4}
+2026/Jun/17 09:04:21.317282 PORTEVENT TC_26_7_5_6.ttcn3:278 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 4}" id 25
+2026/Jun/17 09:04:22.001560 USER TC_26_7_5_6.ttcn3:278 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/17 09:04:22.316740 USER TC_26_7_5_6.ttcn3:278 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:22.316811 PORTEVENT TC_26_7_5_6.ttcn3:278 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/17 09:04:24.316873 TIMEROP TC_26_7_5_6.ttcn3:278 Timeout T_wait_rel: 3 s
+2026/Jun/17 09:04:24.316943 USER TC_26_7_5_6.ttcn3:281 *** Step 6: Waiting for mobile to reach idle updated state ***
+2026/Jun/17 09:04:24.316968 TIMEROP TC_26_7_5_6.ttcn3:286 Start timer T_settle: 25 s
+2026/Jun/17 09:04:24.316989 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 24
+2026/Jun/17 09:04:24.317002 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 24 was extracted from the queue of MSC.
+2026/Jun/17 09:04:24.317008 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"status\": \"ok\"}"
+2026/Jun/17 09:04:24.317022 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 4}" id 25
+2026/Jun/17 09:04:24.317027 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 25 was extracted from the queue of MSC.
+2026/Jun/17 09:04:24.317030 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 4}"
+2026/Jun/17 09:04:24.317039 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/17 09:04:24.317044 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 26 was extracted from the queue of MSC.
+2026/Jun/17 09:04:24.317047 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:27.322044 USER TC_26_7_5_6.ttcn3:288 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:27.322115 PORTEVENT TC_26_7_5_6.ttcn3:288 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/17 09:04:27.322146 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/17 09:04:27.322154 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 27 was extracted from the queue of MSC.
+2026/Jun/17 09:04:27.322158 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:32.327071 USER TC_26_7_5_6.ttcn3:288 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:32.327143 PORTEVENT TC_26_7_5_6.ttcn3:288 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/17 09:04:32.327165 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/17 09:04:32.327174 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 28 was extracted from the queue of MSC.
+2026/Jun/17 09:04:32.327179 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:37.332016 USER TC_26_7_5_6.ttcn3:288 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:37.332107 PORTEVENT TC_26_7_5_6.ttcn3:288 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/17 09:04:37.332147 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/17 09:04:37.332177 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 29 was extracted from the queue of MSC.
+2026/Jun/17 09:04:37.332189 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:42.337074 USER TC_26_7_5_6.ttcn3:288 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:42.337142 PORTEVENT TC_26_7_5_6.ttcn3:288 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 30
+2026/Jun/17 09:04:42.337167 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 30
+2026/Jun/17 09:04:42.337176 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 30 was extracted from the queue of MSC.
+2026/Jun/17 09:04:42.337181 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:47.342021 USER TC_26_7_5_6.ttcn3:288 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:47.342116 PORTEVENT TC_26_7_5_6.ttcn3:288 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/17 09:04:47.342156 PORTEVENT TC_26_7_5_6.ttcn3:289 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/17 09:04:47.342176 PORTEVENT TC_26_7_5_6.ttcn3:289 Message with id 31 was extracted from the queue of MSC.
+2026/Jun/17 09:04:47.342188 USER TC_26_7_5_6.ttcn3:290 Event during settle: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/17 09:04:49.317869 TIMEROP TC_26_7_5_6.ttcn3:293 Timeout T_settle: 25 s
+2026/Jun/17 09:04:49.317971 USER TC_26_7_5_6.ttcn3:294 Mobile should now be in idle updated state with TMSI
+2026/Jun/17 09:04:49.318012 USER TC_26_7_5_6.ttcn3:299 *** VTY Verification: Checking TMSI assignment ***
+2026/Jun/17 09:04:49.318029 TIMEROP TC_26_7_5_6.ttcn3:302 Start timer T_tmsi_settle: 2 s
+2026/Jun/17 09:04:51.318867 TIMEROP TC_26_7_5_6.ttcn3:303 Timeout T_tmsi_settle: 2 s
+2026/Jun/17 09:04:51.318931 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/17 09:04:51.318968 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/17 09:04:51.318986 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/17 09:04:51.519139 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: 
+% (MS 1)
+% Power off!
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% On Network, normal service: International, 70
+show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U1_UPDATED  IMSI attached  TMSI 0x12345678
+         LAI: 901-70-4242  (International, 70)
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/17 09:04:51.519251 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 2
+2026/Jun/17 09:04:51.519273 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/17 09:04:51.519318 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 2
+2026/Jun/17 09:04:51.519329 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 2 was extracted from the queue of VTY.
+2026/Jun/17 09:04:51.519336 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/17 09:04:51.519341 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/17 09:04:51.519378 USER TC_26_7_5_6.ttcn3:306 Subscriber state after LU Accept: "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/17 09:04:51.519489 USER TC_26_7_5_6.ttcn3:309 char(0, 0, 39, 5) & " TMSI assigned and stored in mobile"
+2026/Jun/17 09:04:51.519583 USER TC_26_7_5_6.ttcn3:313 char(0, 0, 39, 5) & " Correct TMSI value: 0x12345678 (305419896)"
+2026/Jun/17 09:04:51.519649 USER TC_26_7_5_6.ttcn3:322 char(0, 0, 39, 5) & " Mobile successfully registered (U1_UPDATED)"
+2026/Jun/17 09:04:51.519666 USER TC_26_7_5_6.ttcn3:328 *** Step 7: Triggering mobile to initiate MO call ***
+2026/Jun/17 09:04:51.519673 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "enable"
+2026/Jun/17 09:04:51.519682 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "enable"
+2026/Jun/17 09:04:51.519692 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "enable"
+2026/Jun/17 09:04:51.719861 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: enable
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+2026/Jun/17 09:04:51.719937 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "enable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+2026/Jun/17 09:04:51.719956 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/17 09:04:51.719977 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "enable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+2026/Jun/17 09:04:51.719986 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 3 was extracted from the queue of VTY.
+2026/Jun/17 09:04:51.719992 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/17 09:04:51.719997 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "enable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:04:51.720011 USER TC_26_7_5_6.ttcn3:332 VTY enable sent, response: "enable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:04:51.720020 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "call 1 12345"
+2026/Jun/17 09:04:51.720030 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "call 1 12345"
+2026/Jun/17 09:04:51.720037 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "call 1 12345"
+2026/Jun/17 09:04:51.920182 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: call 1 12345
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+2026/Jun/17 09:04:51.920260 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 4
+2026/Jun/17 09:04:51.920281 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/17 09:04:51.920303 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 4
+2026/Jun/17 09:04:51.920313 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 4 was extracted from the queue of VTY.
+2026/Jun/17 09:04:51.920320 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/17 09:04:51.920326 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:04:51.920341 USER TC_26_7_5_6.ttcn3:336 VTY call command sent, response: "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:04:51.920352 TIMEROP TC_26_7_5_6.ttcn3:340 Start timer T_call_setup: 2 s
+2026/Jun/17 09:04:52.266184 USER TC_26_7_5_6.ttcn3:341 MSC_Port: RX: {"type": "EVENT_CM_SERVICE_REQUEST", "bsc_slr": 5, "cm_service_type": 1, "cm_service_type_name": "MO call / Packet"}
+2026/Jun/17 09:04:52.266279 PORTEVENT TC_26_7_5_6.ttcn3:341 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 5, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 32
+2026/Jun/17 09:04:52.346017 USER TC_26_7_5_6.ttcn3:341 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:52.346094 PORTEVENT TC_26_7_5_6.ttcn3:341 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+2026/Jun/17 09:04:53.920861 TIMEROP TC_26_7_5_6.ttcn3:341 Timeout T_call_setup: 2 s
+2026/Jun/17 09:04:53.920937 USER TC_26_7_5_6.ttcn3:343 MO call triggered - mobile should send CM SERVICE REQUEST or CHANNEL REQUEST
+2026/Jun/17 09:04:53.920985 USER TC_26_7_5_6.ttcn3:346 *** Step 8: Waiting for mobile to send connection request ***
+2026/Jun/17 09:04:53.921000 TIMEROP TC_26_7_5_6.ttcn3:349 Start timer T_channel_req: 60 s
+2026/Jun/17 09:04:53.921042 PORTEVENT TC_26_7_5_6.ttcn3:352 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 5, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 32
+2026/Jun/17 09:04:53.921064 PORTEVENT TC_26_7_5_6.ttcn3:352 Message with id 32 was extracted from the queue of MSC.
+2026/Jun/17 09:04:53.921292 USER TC_26_7_5_6.ttcn3:355 *** Received CM SERVICE REQUEST from mobile (MO call) ***
+2026/Jun/17 09:04:53.922137 USER TC_26_7_5_6.ttcn3:21 Extracted bsc_slr = 5 from event
+2026/Jun/17 09:04:53.922174 TIMEROP TC_26_7_5_6.ttcn3:358 Stop timer T_channel_req: 60 s
+2026/Jun/17 09:04:53.922188 USER TC_26_7_5_6.ttcn3:423 *** Step 9-10: Skipped (CM SERVICE REQUEST already received in Step 8) ***
+2026/Jun/17 09:04:53.922202 USER TC_26_7_5_6.ttcn3:427 *** Step 11: Waiting for T3230 to expire (minimum 15 seconds) ***
+2026/Jun/17 09:04:53.922212 USER TC_26_7_5_6.ttcn3:428 *** Network intentionally not responding to CM SERVICE REQUEST ***
+2026/Jun/17 09:04:53.922222 TIMEROP TC_26_7_5_6.ttcn3:432 Start timer T_t3230_wait: 20 s
+2026/Jun/17 09:04:53.922239 PORTEVENT TC_26_7_5_6.ttcn3:435 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+2026/Jun/17 09:04:53.922252 PORTEVENT TC_26_7_5_6.ttcn3:435 Message with id 33 was extracted from the queue of MSC.
+2026/Jun/17 09:04:57.351002 USER TC_26_7_5_6.ttcn3:434 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:04:57.351068 PORTEVENT TC_26_7_5_6.ttcn3:434 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/17 09:04:57.351092 PORTEVENT TC_26_7_5_6.ttcn3:435 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/17 09:04:57.351102 PORTEVENT TC_26_7_5_6.ttcn3:435 Message with id 34 was extracted from the queue of MSC.
+2026/Jun/17 09:05:02.356037 USER TC_26_7_5_6.ttcn3:434 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:05:02.356105 PORTEVENT TC_26_7_5_6.ttcn3:434 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/17 09:05:02.356128 PORTEVENT TC_26_7_5_6.ttcn3:435 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/17 09:05:02.356137 PORTEVENT TC_26_7_5_6.ttcn3:435 Message with id 35 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.356232 USER TC_26_7_5_6.ttcn3:434 VTY_PT: Received data (buffered): 38 bytes
+2026/Jun/17 09:05:07.361073 USER TC_26_7_5_6.ttcn3:434 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/17 09:05:07.361121 PORTEVENT TC_26_7_5_6.ttcn3:434 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+2026/Jun/17 09:05:07.361154 PORTEVENT TC_26_7_5_6.ttcn3:435 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+2026/Jun/17 09:05:07.361172 PORTEVENT TC_26_7_5_6.ttcn3:435 Message with id 36 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.513588 USER TC_26_7_5_6.ttcn3:434 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 5, "pd": 5, "msg_type": 49}
+2026/Jun/17 09:05:07.513687 PORTEVENT TC_26_7_5_6.ttcn3:434 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 49}" id 37
+2026/Jun/17 09:05:07.513729 PORTEVENT TC_26_7_5_6.ttcn3:435 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 49}" id 37
+2026/Jun/17 09:05:07.513747 PORTEVENT TC_26_7_5_6.ttcn3:435 Message with id 37 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.514138 USER TC_26_7_5_6.ttcn3:441 *** Received MM STATUS from mobile (T3230 expired) ***
+2026/Jun/17 09:05:07.514177 USER TC_26_7_5_6.ttcn3:442 Event: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 5, \"pd\": 5, \"msg_type\": 49}"
+2026/Jun/17 09:05:07.514209 TIMEROP TC_26_7_5_6.ttcn3:445 Stop timer T_t3230_wait: 20 s
+2026/Jun/17 09:05:07.514228 USER TC_26_7_5_6.ttcn3:502 *** Step 13: Sending Channel Release ***
+2026/Jun/17 09:05:07.514255 PORTEVENT TC_26_7_5_6.ttcn3:504 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CHANNEL_RELEASE\", \"params\": {\"bsc_slr\": 5}}"
+2026/Jun/17 09:05:07.514323 USER TC_26_7_5_6.ttcn3:504 MSC_Port: TX: {"command": "CMD_SEND_CHANNEL_RELEASE", "params": {"bsc_slr": 5}}
+2026/Jun/17 09:05:07.514342 TIMEROP TC_26_7_5_6.ttcn3:507 Start timer T_final_wait: 3 s
+2026/Jun/17 09:05:07.514371 USER TC_26_7_5_6.ttcn3:509 MSC_Port: RX: {"type": "EVENT_MM_STATUS", "bsc_slr": 5, "cause": 17}
+2026/Jun/17 09:05:07.514391 PORTEVENT TC_26_7_5_6.ttcn3:509 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_MM_STATUS\", \"bsc_slr\": 5, \"cause\": 17}" id 38
+2026/Jun/17 09:05:07.514413 PORTEVENT TC_26_7_5_6.ttcn3:510 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_MM_STATUS\", \"bsc_slr\": 5, \"cause\": 17}" id 38
+2026/Jun/17 09:05:07.514426 PORTEVENT TC_26_7_5_6.ttcn3:510 Message with id 38 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.514434 USER TC_26_7_5_6.ttcn3:511 Final event: "{\"type\": \"EVENT_MM_STATUS\", \"bsc_slr\": 5, \"cause\": 17}"
+2026/Jun/17 09:05:07.514766 USER TC_26_7_5_6.ttcn3:509 MSC_Port: RX: {"status": "ok"}
+2026/Jun/17 09:05:07.514786 PORTEVENT TC_26_7_5_6.ttcn3:509 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 39
+2026/Jun/17 09:05:07.514800 PORTEVENT TC_26_7_5_6.ttcn3:510 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 39
+2026/Jun/17 09:05:07.514810 PORTEVENT TC_26_7_5_6.ttcn3:510 Message with id 39 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.514818 USER TC_26_7_5_6.ttcn3:511 Final event: "{\"status\": \"ok\"}"
+2026/Jun/17 09:05:07.985504 USER TC_26_7_5_6.ttcn3:509 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 5}
+2026/Jun/17 09:05:07.985596 PORTEVENT TC_26_7_5_6.ttcn3:509 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}" id 40
+2026/Jun/17 09:05:07.985634 PORTEVENT TC_26_7_5_6.ttcn3:510 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}" id 40
+2026/Jun/17 09:05:07.985651 PORTEVENT TC_26_7_5_6.ttcn3:510 Message with id 40 was extracted from the queue of MSC.
+2026/Jun/17 09:05:07.985660 USER TC_26_7_5_6.ttcn3:511 Final event: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}"
+2026/Jun/17 09:05:09.680513 USER TC_26_7_5_6.ttcn3:509 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/17 09:05:10.514369 TIMEROP TC_26_7_5_6.ttcn3:514 Timeout T_final_wait: 3 s
+2026/Jun/17 09:05:10.514425 USER TC_26_7_5_6.ttcn3:515 Channel release complete
+2026/Jun/17 09:05:10.514445 USER TC_26_7_5_6.ttcn3:520 =========================================================
+2026/Jun/17 09:05:10.514450 USER TC_26_7_5_6.ttcn3:521 *** Post-test: Final mobile state ***
+2026/Jun/17 09:05:10.514454 USER TC_26_7_5_6.ttcn3:522 =========================================================
+2026/Jun/17 09:05:10.514460 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/17 09:05:10.514480 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/17 09:05:10.514495 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/17 09:05:10.714649 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: 
+% (MS 1)
+% Call has been released
+
+% (MS 1)
+% On Network, normal service: International, 70
+show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U1_UPDATED  IMSI attached  TMSI 0x12345678
+         LAI: 901-70-4242  (International, 70)
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+2026/Jun/17 09:05:10.714857 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 5
+2026/Jun/17 09:05:10.714897 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/17 09:05:10.714974 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 5
+2026/Jun/17 09:05:10.714995 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 5 was extracted from the queue of VTY.
+2026/Jun/17 09:05:10.715007 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/17 09:05:10.715018 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:05:10.715091 USER TC_26_7_5_6.ttcn3:525 Final subscriber state: "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached  TMSI 0x12345678\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0x12345678  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/17 09:05:10.715313 USER TC_26_7_5_6.ttcn3:528 char(0, 0, 39, 5) & " Mobile remains registered"
+2026/Jun/17 09:05:10.715337 USER TC_26_7_5_6.ttcn3:533 =========================================================
+2026/Jun/17 09:05:10.715350 USER TC_26_7_5_6.ttcn3:536 =========================================================
+2026/Jun/17 09:05:10.715362 USER TC_26_7_5_6.ttcn3:537 *** Test Summary ***
+2026/Jun/17 09:05:10.715373 USER TC_26_7_5_6.ttcn3:538 =========================================================
+2026/Jun/17 09:05:10.715385 USER TC_26_7_5_6.ttcn3:539 CM SERVICE REQUEST received: true
+2026/Jun/17 09:05:10.715437 USER TC_26_7_5_6.ttcn3:540 MM STATUS received: true
+2026/Jun/17 09:05:10.715450 USER TC_26_7_5_6.ttcn3:541 =========================================================
+2026/Jun/17 09:05:10.715470 USER TC_26_7_5_6.ttcn3:544 *** VERDICT: PASS ***
+2026/Jun/17 09:05:10.715482 USER TC_26_7_5_6.ttcn3:545 char(0, 0, 39, 5) & " MS correctly sent MM STATUS after T3230 expiry"
+2026/Jun/17 09:05:10.715542 VERDICTOP TC_26_7_5_6.ttcn3:546 setverdict(pass): none -> pass
+2026/Jun/17 09:05:10.715653 TIMEROP TC_26_7_5_6.ttcn3:558 Stop timer T_guard: 1800 s
+2026/Jun/17 09:05:10.715682 PARALLEL TC_26_7_5_6.ttcn3:559 Unmapping port mtc:MSC from system:MSC.
+2026/Jun/17 09:05:10.715766 USER TC_26_7_5_6.ttcn3:559 MSC_Port: Unmapping from MSC
+2026/Jun/17 09:05:10.715904 PORTEVENT TC_26_7_5_6.ttcn3:559 Port MSC was unmapped from system:MSC.
+2026/Jun/17 09:05:10.716009 PARALLEL TC_26_7_5_6.ttcn3:559 Unmap operation of mtc:MSC from system:MSC finished.
+2026/Jun/17 09:05:10.716028 PARALLEL TC_26_7_5_6.ttcn3:560 Unmapping port mtc:VTY from system:VTY.
+2026/Jun/17 09:05:10.716071 USER TC_26_7_5_6.ttcn3:560 VTY_PT: Unmapping port from VTY interface
+2026/Jun/17 09:05:10.716162 USER TC_26_7_5_6.ttcn3:560 VTY_PT: Disconnected from VTY
+2026/Jun/17 09:05:10.716182 PORTEVENT TC_26_7_5_6.ttcn3:560 Port VTY was unmapped from system:VTY.
+2026/Jun/17 09:05:10.716260 PARALLEL TC_26_7_5_6.ttcn3:560 Unmap operation of mtc:VTY from system:VTY finished.
+2026/Jun/17 09:05:10.716291 PARALLEL TC_26_7_5_6.ttcn3:560 Terminating component type GSM_Component_Definitions.GSM_CT.
+2026/Jun/17 09:05:10.716330 USER TC_26_7_5_6.ttcn3:560 L3_Port: user_stop called
+2026/Jun/17 09:05:10.716344 PORTEVENT TC_26_7_5_6.ttcn3:560 Port L was stopped.
+2026/Jun/17 09:05:10.716366 PORTEVENT TC_26_7_5_6.ttcn3:560 Port RR was stopped.
+2026/Jun/17 09:05:10.716388 PORTEVENT TC_26_7_5_6.ttcn3:560 Port MM was stopped.
+2026/Jun/17 09:05:10.716406 PORTEVENT TC_26_7_5_6.ttcn3:560 Port CC was stopped.
+2026/Jun/17 09:05:10.716414 USER TC_26_7_5_6.ttcn3:560 MSC_Port: user_stop called
+2026/Jun/17 09:05:10.716428 PORTEVENT TC_26_7_5_6.ttcn3:560 Port MSC was stopped.
+2026/Jun/17 09:05:10.716448 USER TC_26_7_5_6.ttcn3:560 BSC_Port: user_stop called
+2026/Jun/17 09:05:10.716460 PORTEVENT TC_26_7_5_6.ttcn3:560 Port BSC was stopped.
+2026/Jun/17 09:05:10.716469 PORTEVENT TC_26_7_5_6.ttcn3:560 Port RSL was stopped.
+2026/Jun/17 09:05:10.716477 USER TC_26_7_5_6.ttcn3:560 VTY_PT: Stopping
+2026/Jun/17 09:05:10.716488 PORTEVENT TC_26_7_5_6.ttcn3:560 Port VTY was stopped.
+2026/Jun/17 09:05:10.716496 PORTEVENT TC_26_7_5_6.ttcn3:560 Port COORD was stopped.
+2026/Jun/17 09:05:10.716503 PARALLEL TC_26_7_5_6.ttcn3:560 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_7_5_6.
+2026/Jun/17 09:05:10.716517 EXECUTOR TC_26_7_5_6.ttcn3:560 Waiting for PTCs to finish.
+2026/Jun/17 09:05:10.716594 VERDICTOP TC_26_7_5_6.ttcn3:560 Setting final verdict of the test case.
+2026/Jun/17 09:05:10.716675 VERDICTOP TC_26_7_5_6.ttcn3:560 Local verdict of MTC: pass
+2026/Jun/17 09:05:10.716719 VERDICTOP TC_26_7_5_6.ttcn3:560 No PTCs were created.
+2026/Jun/17 09:05:10.716741 TESTCASE TC_26_7_5_6.ttcn3:560 Test case TC_26_7_5_6 finished. Verdict: pass
+2026/Jun/17 09:05:10.716919 STATISTICS - Verdict statistics: 0 none (0.00 %), 1 pass (100.00 %), 0 inconc (0.00 %), 0 fail (0.00 %), 0 error (0.00 %).
+2026/Jun/17 09:05:10.717009 STATISTICS - Test execution summary: 1 test case was executed. Overall verdict: pass
+2026/Jun/17 09:05:10.717017 EXECUTOR - Exit was requested from MC. Terminating MTC.
