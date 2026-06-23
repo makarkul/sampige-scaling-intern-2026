@@ -1,0 +1,1567 @@
+2026/Jun/23 08:34:01.593669 EXECUTOR - TTCN-3 Main Test Component started on ttcn3-tc-26-6-1-1-1-g882d. Version: 11.1.0.
+2026/Jun/23 08:34:01.593907 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/23 08:34:01.594006 EXECUTOR - Connected to MC.
+2026/Jun/23 08:34:01.594119 EXECUTOR - Executing test case TC_26_6_1_1 in module TC_26_6_1_1.
+2026/Jun/23 08:34:01.594337 TESTCASE TC_26_6_1_1.ttcn3:599 Test case TC_26_6_1_1 started.
+2026/Jun/23 08:34:01.594444 PARALLEL TC_26_6_1_1.ttcn3:599 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_6_1_1.
+2026/Jun/23 08:34:01.594702 USER TC_26_6_1_1.ttcn3:599 MSC_Port: set_parameter msc_stub_host = 10.42.0.213
+2026/Jun/23 08:34:01.594752 USER TC_26_6_1_1.ttcn3:599 MSC_Port: set_parameter msc_stub_port = 5000
+2026/Jun/23 08:34:01.594772 USER TC_26_6_1_1.ttcn3:599 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+2026/Jun/23 08:34:01.594789 USER TC_26_6_1_1.ttcn3:599 L3_Port: set_parameter gsmtap_port = 4729
+2026/Jun/23 08:34:01.594797 USER TC_26_6_1_1.ttcn3:599 L3_Port: set_parameter local_port = 4730
+2026/Jun/23 08:34:01.594803 USER TC_26_6_1_1.ttcn3:599 L3_Port: set_parameter arfcn = 51
+2026/Jun/23 08:34:01.594860 USER TC_26_6_1_1.ttcn3:599 L3_Port: user_start called
+2026/Jun/23 08:34:01.594876 PORTEVENT TC_26_6_1_1.ttcn3:599 Port L was started.
+2026/Jun/23 08:34:01.594937 PORTEVENT TC_26_6_1_1.ttcn3:599 Port RR was started.
+2026/Jun/23 08:34:01.594944 PORTEVENT TC_26_6_1_1.ttcn3:599 Port MM was started.
+2026/Jun/23 08:34:01.594950 PORTEVENT TC_26_6_1_1.ttcn3:599 Port CC was started.
+2026/Jun/23 08:34:01.594954 USER TC_26_6_1_1.ttcn3:599 MSC_Port: user_start called
+2026/Jun/23 08:34:01.594961 PORTEVENT TC_26_6_1_1.ttcn3:599 Port MSC was started.
+2026/Jun/23 08:34:01.594967 PORTEVENT TC_26_6_1_1.ttcn3:599 Port BSC was started.
+2026/Jun/23 08:34:01.594974 PORTEVENT TC_26_6_1_1.ttcn3:599 Port RSL was started.
+2026/Jun/23 08:34:01.594981 USER TC_26_6_1_1.ttcn3:599 VTY_PT: Starting
+2026/Jun/23 08:34:01.594987 PORTEVENT TC_26_6_1_1.ttcn3:599 Port VTY was started.
+2026/Jun/23 08:34:01.594993 PORTEVENT TC_26_6_1_1.ttcn3:599 Port COORD was started.
+2026/Jun/23 08:34:01.594997 PARALLEL TC_26_6_1_1.ttcn3:599 Component type GSM_Component_Definitions.GSM_CT was initialized.
+2026/Jun/23 08:34:01.595024 WARNING GSM_Component_Definitions.ttcn3:364 Warning: Stopping inactive timer T_guard.
+2026/Jun/23 08:34:01.595034 WARNING GSM_Component_Definitions.ttcn3:365 Warning: Stopping inactive timer T301.
+2026/Jun/23 08:34:01.595041 WARNING GSM_Component_Definitions.ttcn3:366 Warning: Stopping inactive timer T303.
+2026/Jun/23 08:34:01.595047 WARNING GSM_Component_Definitions.ttcn3:367 Warning: Stopping inactive timer T305.
+2026/Jun/23 08:34:01.595052 WARNING GSM_Component_Definitions.ttcn3:368 Warning: Stopping inactive timer T308.
+2026/Jun/23 08:34:01.595058 WARNING GSM_Component_Definitions.ttcn3:369 Warning: Stopping inactive timer T310.
+2026/Jun/23 08:34:01.595064 WARNING GSM_Component_Definitions.ttcn3:370 Warning: Stopping inactive timer T313.
+2026/Jun/23 08:34:01.595073 USER GSM_Component_Definitions.ttcn3:386 Component initialized
+2026/Jun/23 08:34:01.595094 PARALLEL GSM_Component_Definitions.ttcn3:334 Mapping port mtc:L to system:L.
+2026/Jun/23 08:34:01.595157 USER GSM_Component_Definitions.ttcn3:334 L3_Port: Mapping to L
+2026/Jun/23 08:34:01.595214 USER GSM_Component_Definitions.ttcn3:334 L3_Port: GSMTAP listening on port 4730
+2026/Jun/23 08:34:01.595222 USER GSM_Component_Definitions.ttcn3:334 L3_Port: Mapped successfully (GSMTAP: 127.0.0.1:4729)
+2026/Jun/23 08:34:01.595231 WARNING GSM_Component_Definitions.ttcn3:334 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "L")
+2026/Jun/23 08:34:01.595271 PORTEVENT GSM_Component_Definitions.ttcn3:334 Port L was mapped to system:L.
+2026/Jun/23 08:34:01.595355 PARALLEL GSM_Component_Definitions.ttcn3:334 Map operation of mtc:L to system:L finished.
+2026/Jun/23 08:34:01.595389 PARALLEL GSM_Component_Definitions.ttcn3:335 Mapping port mtc:RR to system:RR.
+2026/Jun/23 08:34:01.595420 PORTEVENT GSM_Component_Definitions.ttcn3:335 Port RR was mapped to system:RR.
+2026/Jun/23 08:34:01.595450 PARALLEL GSM_Component_Definitions.ttcn3:335 Map operation of mtc:RR to system:RR finished.
+2026/Jun/23 08:34:01.595457 PARALLEL GSM_Component_Definitions.ttcn3:336 Mapping port mtc:MM to system:MM.
+2026/Jun/23 08:34:01.595486 PORTEVENT GSM_Component_Definitions.ttcn3:336 Port MM was mapped to system:MM.
+2026/Jun/23 08:34:01.595515 PARALLEL GSM_Component_Definitions.ttcn3:336 Map operation of mtc:MM to system:MM finished.
+2026/Jun/23 08:34:01.595522 PARALLEL GSM_Component_Definitions.ttcn3:337 Mapping port mtc:CC to system:CC.
+2026/Jun/23 08:34:01.595550 PORTEVENT GSM_Component_Definitions.ttcn3:337 Port CC was mapped to system:CC.
+2026/Jun/23 08:34:01.595579 PARALLEL GSM_Component_Definitions.ttcn3:337 Map operation of mtc:CC to system:CC finished.
+2026/Jun/23 08:34:01.595585 PARALLEL GSM_Component_Definitions.ttcn3:338 Mapping port mtc:MSC to system:MSC.
+2026/Jun/23 08:34:01.595614 USER GSM_Component_Definitions.ttcn3:338 MSC_Port: Mapping to MSC
+2026/Jun/23 08:34:01.595858 USER GSM_Component_Definitions.ttcn3:338 MSC_Port: Registered socket for async events
+2026/Jun/23 08:34:01.595877 USER GSM_Component_Definitions.ttcn3:338 MSC_Port: Connected to MSC stub at 10.42.0.213:5000
+2026/Jun/23 08:34:01.595883 PORTEVENT GSM_Component_Definitions.ttcn3:338 Port MSC was mapped to system:MSC.
+2026/Jun/23 08:34:01.595920 PARALLEL GSM_Component_Definitions.ttcn3:338 Map operation of mtc:MSC to system:MSC finished.
+2026/Jun/23 08:34:01.595928 PARALLEL GSM_Component_Definitions.ttcn3:339 Mapping port mtc:VTY to system:VTY.
+2026/Jun/23 08:34:01.595963 USER GSM_Component_Definitions.ttcn3:339 VTY_PT: Mapping port to VTY interface
+2026/Jun/23 08:34:01.596125 USER GSM_Component_Definitions.ttcn3:339 VTY_PT: Connected to VTY at 10.43.140.104:4247
+2026/Jun/23 08:34:02.096444 USER GSM_Component_Definitions.ttcn3:339 VTY_PT: Initial banner received
+2026/Jun/23 08:34:02.096521 PORTEVENT GSM_Component_Definitions.ttcn3:339 Port VTY was mapped to system:VTY.
+2026/Jun/23 08:34:02.096605 USER GSM_Component_Definitions.ttcn3:339 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+2026/Jun/23 08:34:02.096707 PORTEVENT GSM_Component_Definitions.ttcn3:339 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/23 08:34:02.096786 PARALLEL GSM_Component_Definitions.ttcn3:339 Map operation of mtc:VTY to system:VTY finished.
+2026/Jun/23 08:34:02.096843 TIMEROP TC_26_6_1_1.ttcn3:618 Start timer T_guard: 300 s
+2026/Jun/23 08:34:02.096949 USER TC_26_6_1_1.ttcn3:620 ==========================================================
+2026/Jun/23 08:34:02.096962 USER TC_26_6_1_1.ttcn3:621 *** TC_26_6_1_1: Immediate Assignment / SDCCH or TCH assignment ***
+2026/Jun/23 08:34:02.096970 USER TC_26_6_1_1.ttcn3:622 ==========================================================
+2026/Jun/23 08:34:02.096978 USER TC_26_6_1_1.ttcn3:623 *** Test Purpose: Verify MS can set up SDCCH and TCH channels ***
+2026/Jun/23 08:34:02.096987 USER TC_26_6_1_1.ttcn3:626 *** Step 1: Disabling MSC stub auto_respond mode ***
+2026/Jun/23 08:34:02.097031 PORTEVENT TC_26_6_1_1.ttcn3:627 Sent on MSC to system charstring : "{\"command\": \"SET_AUTO_RESPOND\", \"params\": {\"enabled\": false}}"
+2026/Jun/23 08:34:02.097167 USER TC_26_6_1_1.ttcn3:627 MSC_Port: TX: {"command": "SET_AUTO_RESPOND", "params": {"enabled": false}}
+2026/Jun/23 08:34:02.097197 TIMEROP TC_26_6_1_1.ttcn3:629 Start timer T_ack: 3 s
+2026/Jun/23 08:34:02.097267 PORTEVENT TC_26_6_1_1.ttcn3:631 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/23 08:34:02.097334 PORTEVENT TC_26_6_1_1.ttcn3:631 Message with id 1 was extracted from the queue of MSC.
+2026/Jun/23 08:34:02.097594 USER TC_26_6_1_1.ttcn3:630 MSC_Port: RX: {"status": "ok", "auto_respond": false}
+2026/Jun/23 08:34:02.097615 PORTEVENT TC_26_6_1_1.ttcn3:630 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 2
+2026/Jun/23 08:34:02.097631 PORTEVENT TC_26_6_1_1.ttcn3:631 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 2
+2026/Jun/23 08:34:02.097641 PORTEVENT TC_26_6_1_1.ttcn3:631 Message with id 2 was extracted from the queue of MSC.
+2026/Jun/23 08:34:02.097784 USER TC_26_6_1_1.ttcn3:633 Auto_respond disabled
+2026/Jun/23 08:34:02.097810 TIMEROP TC_26_6_1_1.ttcn3:634 Stop timer T_ack: 3 s
+2026/Jun/23 08:34:02.097851 USER TC_26_6_1_1.ttcn3:645 *** Step 2: Waiting for initial Location Update ***
+2026/Jun/23 08:34:02.097862 TIMEROP TC_26_6_1_1.ttcn3:647 Start timer T_lu_wait: 60 s
+2026/Jun/23 08:34:07.102031 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:07.102114 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/23 08:34:07.102145 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/23 08:34:07.102160 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 3 was extracted from the queue of MSC.
+2026/Jun/23 08:34:07.102193 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:12.107057 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:12.107166 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/23 08:34:12.107201 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/23 08:34:12.107217 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 4 was extracted from the queue of MSC.
+2026/Jun/23 08:34:12.107227 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:15.390684 USER TC_26_6_1_1.ttcn3:649 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:34:17.112065 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:17.112162 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/23 08:34:17.112202 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/23 08:34:17.112221 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 5 was extracted from the queue of MSC.
+2026/Jun/23 08:34:17.112233 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:22.117070 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:22.117175 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/23 08:34:22.117213 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/23 08:34:22.117232 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 6 was extracted from the queue of MSC.
+2026/Jun/23 08:34:22.117243 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:27.122065 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:27.122159 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/23 08:34:27.122198 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/23 08:34:27.122229 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 7 was extracted from the queue of MSC.
+2026/Jun/23 08:34:27.122239 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:32.127076 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:32.127184 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/23 08:34:32.127225 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/23 08:34:32.127243 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 8 was extracted from the queue of MSC.
+2026/Jun/23 08:34:32.127254 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:37.132120 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:37.132221 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/23 08:34:37.132262 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/23 08:34:37.132282 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 9 was extracted from the queue of MSC.
+2026/Jun/23 08:34:37.132293 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:38.220027 USER TC_26_6_1_1.ttcn3:649 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:34:42.137087 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:42.137185 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/23 08:34:42.137224 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/23 08:34:42.137243 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 10 was extracted from the queue of MSC.
+2026/Jun/23 08:34:42.137255 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:47.142200 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:47.142308 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/23 08:34:47.142347 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/23 08:34:47.142366 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 11 was extracted from the queue of MSC.
+2026/Jun/23 08:34:47.142377 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:52.147184 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:52.147284 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/23 08:34:52.147323 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/23 08:34:52.147343 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 12 was extracted from the queue of MSC.
+2026/Jun/23 08:34:52.147355 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:34:53.734594 USER TC_26_6_1_1.ttcn3:649 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 2, "msc_slr": 2, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/23 08:34:53.734697 PORTEVENT TC_26_6_1_1.ttcn3:649 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 13
+2026/Jun/23 08:34:53.734749 PORTEVENT TC_26_6_1_1.ttcn3:650 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 13
+2026/Jun/23 08:34:53.734780 PORTEVENT TC_26_6_1_1.ttcn3:650 Message with id 13 was extracted from the queue of MSC.
+2026/Jun/23 08:34:53.734790 USER TC_26_6_1_1.ttcn3:651 MSC Event: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+2026/Jun/23 08:34:53.735032 USER TC_26_6_1_1.ttcn3:653 *** Received initial Location Update Request ***
+2026/Jun/23 08:34:53.735166 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+2026/Jun/23 08:34:53.735311 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 29 (pattern: "\"bsc_slr\":")
+2026/Jun/23 08:34:53.735423 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"2"' => integer 2
+2026/Jun/23 08:34:53.735460 USER TC_26_6_1_1.ttcn3:655 *** Extracted bsc_slr = "2" ***
+2026/Jun/23 08:34:53.735509 PORTEVENT TC_26_6_1_1.ttcn3:659 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 2, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/23 08:34:53.735579 USER TC_26_6_1_1.ttcn3:659 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 2, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+2026/Jun/23 08:34:53.735599 TIMEROP TC_26_6_1_1.ttcn3:662 Start timer T_wait_lu: 5 s
+2026/Jun/23 08:34:54.237082 USER TC_26_6_1_1.ttcn3:663 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/23 08:34:54.237171 PORTEVENT TC_26_6_1_1.ttcn3:663 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 14
+2026/Jun/23 08:34:54.237208 PORTEVENT TC_26_6_1_1.ttcn3:664 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 14
+2026/Jun/23 08:34:54.237225 PORTEVENT TC_26_6_1_1.ttcn3:664 Message with id 14 was extracted from the queue of MSC.
+2026/Jun/23 08:34:54.237317 USER TC_26_6_1_1.ttcn3:666 Location Update completed: "{\"status\": \"ok\", \"sent\": true}"
+2026/Jun/23 08:34:54.237344 TIMEROP TC_26_6_1_1.ttcn3:667 Stop timer T_wait_lu: 5 s
+2026/Jun/23 08:34:54.237376 PORTEVENT TC_26_6_1_1.ttcn3:679 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 2, \"cause\": 0}}"
+2026/Jun/23 08:34:54.237459 USER TC_26_6_1_1.ttcn3:679 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 2, "cause": 0}}
+2026/Jun/23 08:34:54.237479 TIMEROP TC_26_6_1_1.ttcn3:681 Start timer T_wait_clear: 5 s
+2026/Jun/23 08:34:54.237913 USER TC_26_6_1_1.ttcn3:682 MSC_Port: RX: {"status": "ok"}
+2026/Jun/23 08:34:54.237942 PORTEVENT TC_26_6_1_1.ttcn3:682 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 15
+2026/Jun/23 08:34:54.237960 PORTEVENT TC_26_6_1_1.ttcn3:683 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 15
+2026/Jun/23 08:34:54.237972 PORTEVENT TC_26_6_1_1.ttcn3:683 Message with id 15 was extracted from the queue of MSC.
+2026/Jun/23 08:34:54.238067 USER TC_26_6_1_1.ttcn3:685 Connection released: "{\"status\": \"ok\"}"
+2026/Jun/23 08:34:54.238089 TIMEROP TC_26_6_1_1.ttcn3:686 Stop timer T_wait_clear: 5 s
+2026/Jun/23 08:34:54.238101 TIMEROP TC_26_6_1_1.ttcn3:697 Stop timer T_lu_wait: 60 s
+2026/Jun/23 08:34:54.238139 TIMEROP TC_26_6_1_1.ttcn3:713 Start timer T_settle: 3 s
+2026/Jun/23 08:34:54.390497 USER TC_26_6_1_1.ttcn3:714 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 2, "pd": 5, "msg_type": 27}
+2026/Jun/23 08:34:54.390584 PORTEVENT TC_26_6_1_1.ttcn3:714 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 16
+2026/Jun/23 08:34:54.390623 USER TC_26_6_1_1.ttcn3:714 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 2}
+2026/Jun/23 08:34:54.390657 PORTEVENT TC_26_6_1_1.ttcn3:714 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 17
+2026/Jun/23 08:34:54.390964 USER TC_26_6_1_1.ttcn3:714 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 2}
+2026/Jun/23 08:34:54.390990 PORTEVENT TC_26_6_1_1.ttcn3:714 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 18
+2026/Jun/23 08:34:55.001964 USER TC_26_6_1_1.ttcn3:714 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/23 08:34:57.239901 TIMEROP TC_26_6_1_1.ttcn3:714 Timeout T_settle: 3 s
+2026/Jun/23 08:34:57.239996 USER TC_26_6_1_1.ttcn3:715 *** MS should now be in idle state ***
+2026/Jun/23 08:34:57.240031 USER TC_26_6_1_1.ttcn3:721 ==========================================================
+2026/Jun/23 08:34:57.240042 USER TC_26_6_1_1.ttcn3:722 *** Step 3: Testing SDCCH8 Assignment (testSdcch8) ***
+2026/Jun/23 08:34:57.240052 USER TC_26_6_1_1.ttcn3:723 ==========================================================
+2026/Jun/23 08:34:57.240068 USER TC_26_6_1_1.ttcn3:46 ==========================================================
+2026/Jun/23 08:34:57.240080 USER TC_26_6_1_1.ttcn3:47 *** "SDCCH8 Assignment Test" ***
+2026/Jun/23 08:34:57.240109 USER TC_26_6_1_1.ttcn3:48 ==========================================================
+2026/Jun/23 08:34:57.240119 USER TC_26_6_1_1.ttcn3:52 *** Brief wait before restart (draining HEARTBEAT only) ***
+2026/Jun/23 08:34:57.240131 TIMEROP TC_26_6_1_1.ttcn3:54 Start timer T_drain: 2 s
+2026/Jun/23 08:34:57.240161 PORTEVENT TC_26_6_1_1.ttcn3:56 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 16
+2026/Jun/23 08:34:57.240180 PORTEVENT TC_26_6_1_1.ttcn3:56 Message with id 16 was extracted from the queue of MSC.
+2026/Jun/23 08:34:57.240259 USER TC_26_6_1_1.ttcn3:63 Event before restart (not draining): "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}"
+2026/Jun/23 08:34:57.240288 WARNING TC_26_6_1_1.ttcn3:64 Warning: Re-starting timer T_drain, which is already active (running or expired).
+2026/Jun/23 08:34:57.240305 TIMEROP TC_26_6_1_1.ttcn3:64 Start timer T_drain: 2 s
+2026/Jun/23 08:34:57.240324 PORTEVENT TC_26_6_1_1.ttcn3:56 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 17
+2026/Jun/23 08:34:57.240336 PORTEVENT TC_26_6_1_1.ttcn3:56 Message with id 17 was extracted from the queue of MSC.
+2026/Jun/23 08:34:57.240378 USER TC_26_6_1_1.ttcn3:63 Event before restart (not draining): "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}"
+2026/Jun/23 08:34:57.240402 WARNING TC_26_6_1_1.ttcn3:64 Warning: Re-starting timer T_drain, which is already active (running or expired).
+2026/Jun/23 08:34:57.240415 TIMEROP TC_26_6_1_1.ttcn3:64 Start timer T_drain: 2 s
+2026/Jun/23 08:34:57.240432 PORTEVENT TC_26_6_1_1.ttcn3:56 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 18
+2026/Jun/23 08:34:57.240443 PORTEVENT TC_26_6_1_1.ttcn3:56 Message with id 18 was extracted from the queue of MSC.
+2026/Jun/23 08:34:57.240480 USER TC_26_6_1_1.ttcn3:63 Event before restart (not draining): "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}"
+2026/Jun/23 08:34:57.240502 WARNING TC_26_6_1_1.ttcn3:64 Warning: Re-starting timer T_drain, which is already active (running or expired).
+2026/Jun/23 08:34:57.240515 TIMEROP TC_26_6_1_1.ttcn3:64 Start timer T_drain: 2 s
+2026/Jun/23 08:34:57.241045 USER TC_26_6_1_1.ttcn3:55 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:34:57.241077 PORTEVENT TC_26_6_1_1.ttcn3:55 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 19
+2026/Jun/23 08:34:57.241098 PORTEVENT TC_26_6_1_1.ttcn3:56 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 19
+2026/Jun/23 08:34:57.241123 PORTEVENT TC_26_6_1_1.ttcn3:56 Message with id 19 was extracted from the queue of MSC.
+2026/Jun/23 08:34:57.241213 WARNING TC_26_6_1_1.ttcn3:59 Warning: Re-starting timer T_drain, which is already active (running or expired).
+2026/Jun/23 08:34:57.241231 TIMEROP TC_26_6_1_1.ttcn3:59 Start timer T_drain: 2 s
+2026/Jun/23 08:34:59.242291 TIMEROP TC_26_6_1_1.ttcn3:68 Timeout T_drain: 2 s
+2026/Jun/23 08:34:59.242377 USER TC_26_6_1_1.ttcn3:69 Finished brief drain
+2026/Jun/23 08:34:59.242409 USER TC_26_6_1_1.ttcn3:74 *** Restarting mobile to force unregistration before paging ***
+2026/Jun/23 08:34:59.242423 USER TC_26_6_1_1.ttcn3:75 *** Test type: "SDCCH8 Assignment Test" ***
+2026/Jun/23 08:34:59.242540 USER TC_26_6_1_1.ttcn3:76 docker.sock not found — using VTY power-cycle (k8s mode)
+2026/Jun/23 08:34:59.242567 USER TC_26_6_1_1.ttcn3:76 === k8s fallback: VTY power-cycle mobile at 10.43.140.104:4247 ===
+2026/Jun/23 08:35:04.909989 USER TC_26_6_1_1.ttcn3:76 Waiting 10 seconds (power off)...
+2026/Jun/23 08:35:20.269943 USER TC_26_6_1_1.ttcn3:76 VTY 'clear-loci' sent — LOCI erased
+2026/Jun/23 08:35:27.949892 USER TC_26_6_1_1.ttcn3:76 === VTY power-cycle complete — MS will send LU shortly ===
+2026/Jun/23 08:35:27.949975 USER TC_26_6_1_1.ttcn3:77 *** Mobile restart result: 0 (0 = success) ***
+2026/Jun/23 08:35:27.949996 USER TC_26_6_1_1.ttcn3:81 *** Waiting 8 seconds after restart command for container to fully restart ***
+2026/Jun/23 08:35:27.950005 TIMEROP TC_26_6_1_1.ttcn3:83 Start timer T_post_restart_wait: 8 s
+2026/Jun/23 08:35:27.950033 USER TC_26_6_1_1.ttcn3:84 VTY_PT: Received data (buffered): 94 bytes
+2026/Jun/23 08:35:27.950068 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950082 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/23 08:35:27.950094 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 3}
+2026/Jun/23 08:35:27.950102 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}" id 21
+2026/Jun/23 08:35:27.950107 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950113 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 22
+2026/Jun/23 08:35:27.950118 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950128 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 23
+2026/Jun/23 08:35:27.950132 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950138 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+2026/Jun/23 08:35:27.950143 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950150 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+2026/Jun/23 08:35:27.950154 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:27.950160 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/23 08:35:30.706094 USER TC_26_6_1_1.ttcn3:84 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:35:32.276099 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:32.276206 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/23 08:35:35.952948 TIMEROP TC_26_6_1_1.ttcn3:84 Timeout T_post_restart_wait: 8 s
+2026/Jun/23 08:35:35.953081 USER TC_26_6_1_1.ttcn3:87 *** Mobile container restart command succeeded - waiting for initial LU ***
+2026/Jun/23 08:35:35.953122 TIMEROP TC_26_6_1_1.ttcn3:90 Start timer T_restart_lu: 60 s
+2026/Jun/23 08:35:35.953156 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/23 08:35:35.953194 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 20 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.953208 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.953393 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}" id 21
+2026/Jun/23 08:35:35.953407 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 21 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.953417 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}"
+2026/Jun/23 08:35:35.953528 USER TC_26_6_1_1.ttcn3:107 Unexpected event after restart: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 3}"
+2026/Jun/23 08:35:35.953554 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 22
+2026/Jun/23 08:35:35.953566 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 22 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.953575 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.953696 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 23
+2026/Jun/23 08:35:35.953708 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 23 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.953717 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.953856 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+2026/Jun/23 08:35:35.953873 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 24 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.953881 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.953998 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+2026/Jun/23 08:35:35.954010 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 25 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.954018 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.954131 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/23 08:35:35.954143 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 26 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.954151 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:35.954264 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/23 08:35:35.954275 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 27 was extracted from the queue of MSC.
+2026/Jun/23 08:35:35.954283 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:37.281226 USER TC_26_6_1_1.ttcn3:93 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:37.281325 PORTEVENT TC_26_6_1_1.ttcn3:93 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/23 08:35:37.281363 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/23 08:35:37.281380 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 28 was extracted from the queue of MSC.
+2026/Jun/23 08:35:37.281389 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:42.286143 USER TC_26_6_1_1.ttcn3:93 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:42.286245 PORTEVENT TC_26_6_1_1.ttcn3:93 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/23 08:35:42.286298 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/23 08:35:42.286316 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 29 was extracted from the queue of MSC.
+2026/Jun/23 08:35:42.286326 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:35:46.171305 USER TC_26_6_1_1.ttcn3:93 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 4, "msc_slr": 4, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/23 08:35:46.171414 PORTEVENT TC_26_6_1_1.ttcn3:93 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 4, \"msc_slr\": 4, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 30
+2026/Jun/23 08:35:46.171465 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 4, \"msc_slr\": 4, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 30
+2026/Jun/23 08:35:46.171484 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 30 was extracted from the queue of MSC.
+2026/Jun/23 08:35:46.171495 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 4, \"msc_slr\": 4, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+2026/Jun/23 08:35:46.171715 USER TC_26_6_1_1.ttcn3:97 *** Received initial LU Request after restart - NOT completing it to avoid TMSI assignment ***
+2026/Jun/23 08:35:46.171733 USER TC_26_6_1_1.ttcn3:98 *** Mobile will stay unregistered and respond to IMSI paging ***
+2026/Jun/23 08:35:46.171773 USER TC_26_6_1_1.ttcn3:102 *** Draining LU Request event (not sending LU Accept) ***
+2026/Jun/23 08:35:46.171787 TIMEROP TC_26_6_1_1.ttcn3:103 Stop timer T_restart_lu: 60 s
+2026/Jun/23 08:35:46.171844 USER TC_26_6_1_1.ttcn3:132 *** Waiting 8.000000 seconds for MS to fully settle in idle state after restart LU ***
+2026/Jun/23 08:35:46.171909 TIMEROP TC_26_6_1_1.ttcn3:144 Start timer T_idle_wait: 8 s
+2026/Jun/23 08:35:47.291050 USER TC_26_6_1_1.ttcn3:145 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:47.291131 PORTEVENT TC_26_6_1_1.ttcn3:145 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/23 08:35:52.296023 USER TC_26_6_1_1.ttcn3:145 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:52.296126 PORTEVENT TC_26_6_1_1.ttcn3:145 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+2026/Jun/23 08:35:54.172858 TIMEROP TC_26_6_1_1.ttcn3:145 Timeout T_idle_wait: 8 s
+2026/Jun/23 08:35:54.172951 USER TC_26_6_1_1.ttcn3:159 *** Mobile should now be in idle state and ready for paging ***
+2026/Jun/23 08:35:54.172988 USER TC_26_6_1_1.ttcn3:170 *** Step 1: Sending PAGING REQUEST for channel type: SDCCH8 (1) ***
+2026/Jun/23 08:35:54.173067 PORTEVENT TC_26_6_1_1.ttcn3:172 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_PAGING\", \"params\": {\"imsi\": \"901700000000001\", \"lac\": 4242, \"cell_id\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/23 08:35:54.173184 USER TC_26_6_1_1.ttcn3:172 MSC_Port: TX: {"command": "CMD_SEND_PAGING", "params": {"imsi": "901700000000001", "lac": 4242, "cell_id": 4242, "tmsi": 305419896}}
+2026/Jun/23 08:35:54.173261 USER TC_26_6_1_1.ttcn3:188 *** Sending PAGING REQUEST via GSMTAP (10 times) ***
+2026/Jun/23 08:35:54.173301 USER GSM_Functions.ttcn3:1335 *** Sending PAGING REQUEST TYPE 1 ***
+2026/Jun/23 08:35:54.173318 USER GSM_Functions.ttcn3:1336   Channel: PCH (4)
+2026/Jun/23 08:35:54.173346 USER GSM_Functions.ttcn3:1337   Paging Group: '00'O
+2026/Jun/23 08:35:54.173373 USER GSM_Functions.ttcn3:1338   Page Mode: '00'O
+2026/Jun/23 08:35:54.173395 USER GSM_Functions.ttcn3:1339   Mobile Identity 1: '901700000000001F'O
+2026/Jun/23 08:35:54.173446 USER GSM_Functions.ttcn3:1340   Count: 10 (reduced from 500 for faster execution)
+2026/Jun/23 08:35:54.173535 USER GSM_Functions.ttcn3:1343 Encoded PAGING REQUEST TYPE 1: 23 bytes (PseudoLen=12)
+2026/Jun/23 08:35:54.173572 USER GSM_Functions.ttcn3:1353 === Sending PAGING REQUEST (10 times) via GSMTAP ===
+2026/Jun/23 08:35:54.173605 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.173631 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.173667 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.173682 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.173694 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.173780 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.173802 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.173814 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.173856 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.173873 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.173891 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.173920 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.173939 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.173950 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.173968 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.173980 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.173992 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174016 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174034 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174045 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174063 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174075 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174087 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174118 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174136 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174146 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174164 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174175 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174186 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174210 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174228 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174238 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174262 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174274 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174298 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174323 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174341 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174351 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174369 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174380 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174392 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174415 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174433 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174443 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174461 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174476 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174488 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174515 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174533 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174543 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174560 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174575 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174586 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174610 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174627 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:35:54.174637 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:35:54.174655 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:35:54.174670 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:35:54.174681 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:35:54.174705 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:35:54.174719 USER GSM_Functions.ttcn3:1358 === PAGING REQUEST send complete ===
+2026/Jun/23 08:35:54.174731 USER TC_26_6_1_1.ttcn3:196 *** Waiting 3.000000 seconds for paging to be processed by MS ***
+2026/Jun/23 08:35:54.174756 TIMEROP TC_26_6_1_1.ttcn3:198 Start timer T_paging_delay: 3 s
+2026/Jun/23 08:35:54.174794 USER TC_26_6_1_1.ttcn3:199 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/23 08:35:54.174816 PORTEVENT TC_26_6_1_1.ttcn3:199 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 33
+2026/Jun/23 08:35:57.176856 TIMEROP TC_26_6_1_1.ttcn3:199 Timeout T_paging_delay: 3 s
+2026/Jun/23 08:35:57.176932 USER TC_26_6_1_1.ttcn3:202 *** Step 2: Waiting for CHANNEL REQUEST (timeout: 60 seconds) ***
+2026/Jun/23 08:35:57.176958 USER TC_26_6_1_1.ttcn3:203 *** Note: MS may respond with Location Update if unregistered, which is expected ***
+2026/Jun/23 08:35:57.176969 TIMEROP TC_26_6_1_1.ttcn3:205 Start timer T_ch_req: 60 s
+2026/Jun/23 08:35:57.176992 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/23 08:35:57.177018 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 31 was extracted from the queue of MSC.
+2026/Jun/23 08:35:57.177159 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+2026/Jun/23 08:35:57.177167 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 32 was extracted from the queue of MSC.
+2026/Jun/23 08:35:57.177259 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 33
+2026/Jun/23 08:35:57.177267 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 33 was extracted from the queue of MSC.
+2026/Jun/23 08:35:57.177325 USER TC_26_6_1_1.ttcn3:285 Event during CHANNEL REQUEST wait: "{\"status\": \"ok\", \"sent\": true}"
+2026/Jun/23 08:35:58.177026 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:35:58.177113 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/23 08:35:58.177152 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/23 08:35:58.177172 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 34 was extracted from the queue of MSC.
+2026/Jun/23 08:36:03.182120 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:03.182226 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/23 08:36:03.182267 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/23 08:36:03.182286 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 35 was extracted from the queue of MSC.
+2026/Jun/23 08:36:06.411890 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 4}
+2026/Jun/23 08:36:06.411996 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}" id 36
+2026/Jun/23 08:36:06.412039 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}" id 36
+2026/Jun/23 08:36:06.412058 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 36 was extracted from the queue of MSC.
+2026/Jun/23 08:36:06.412268 USER TC_26_6_1_1.ttcn3:285 Event during CHANNEL REQUEST wait: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 4}"
+2026/Jun/23 08:36:06.553653 USER TC_26_6_1_1.ttcn3:207 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:36:08.187129 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:08.187229 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 37
+2026/Jun/23 08:36:08.187268 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 37
+2026/Jun/23 08:36:08.187289 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 37 was extracted from the queue of MSC.
+2026/Jun/23 08:36:13.192055 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:13.192124 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 38
+2026/Jun/23 08:36:13.192145 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 38
+2026/Jun/23 08:36:13.192155 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 38 was extracted from the queue of MSC.
+2026/Jun/23 08:36:18.197069 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:18.197168 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 39
+2026/Jun/23 08:36:18.197208 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 39
+2026/Jun/23 08:36:18.197244 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 39 was extracted from the queue of MSC.
+2026/Jun/23 08:36:23.202078 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:23.202185 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 40
+2026/Jun/23 08:36:23.202226 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 40
+2026/Jun/23 08:36:23.202246 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 40 was extracted from the queue of MSC.
+2026/Jun/23 08:36:28.207081 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:28.207181 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 41
+2026/Jun/23 08:36:28.207221 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 41
+2026/Jun/23 08:36:28.207241 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 41 was extracted from the queue of MSC.
+2026/Jun/23 08:36:29.312668 USER TC_26_6_1_1.ttcn3:207 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:36:33.212360 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:33.212460 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 42
+2026/Jun/23 08:36:33.212500 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 42
+2026/Jun/23 08:36:33.212520 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 42 was extracted from the queue of MSC.
+2026/Jun/23 08:36:38.217869 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:38.217969 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 43
+2026/Jun/23 08:36:38.218008 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 43
+2026/Jun/23 08:36:38.218028 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 43 was extracted from the queue of MSC.
+2026/Jun/23 08:36:43.222139 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:43.222236 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 44
+2026/Jun/23 08:36:43.222275 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 44
+2026/Jun/23 08:36:43.222296 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 44 was extracted from the queue of MSC.
+2026/Jun/23 08:36:48.227646 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:48.227749 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 45
+2026/Jun/23 08:36:48.227790 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 45
+2026/Jun/23 08:36:48.227810 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 45 was extracted from the queue of MSC.
+2026/Jun/23 08:36:52.144548 USER TC_26_6_1_1.ttcn3:207 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:36:53.232028 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:53.232098 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 46
+2026/Jun/23 08:36:53.232121 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 46
+2026/Jun/23 08:36:53.232130 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 46 was extracted from the queue of MSC.
+2026/Jun/23 08:36:57.179861 TIMEROP TC_26_6_1_1.ttcn3:289 Timeout T_ch_req: 60 s
+2026/Jun/23 08:36:57.179946 USER TC_26_6_1_1.ttcn3:290 WARNING: No CHANNEL REQUEST received within 60 seconds
+2026/Jun/23 08:36:57.179965 USER TC_26_6_1_1.ttcn3:291 *** MS may have responded to paging with Location Update instead ***
+2026/Jun/23 08:36:57.179971 USER TC_26_6_1_1.ttcn3:292 *** This is expected behavior - MS responds to paging with LU when unregistered ***
+2026/Jun/23 08:36:57.179978 USER TC_26_6_1_1.ttcn3:293 *** Checking if MS responded with Location Update (v_bsc_slr = 0) ***
+2026/Jun/23 08:36:57.179992 USER TC_26_6_1_1.ttcn3:295 *** VTY Debug: Checking mobile state after paging timeout ***
+2026/Jun/23 08:36:57.180003 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/23 08:36:57.180040 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/23 08:36:57.180070 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/23 08:36:57.380279 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: 
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% On Network, normal service: International, 70
+
+% (MS 1)
+% Power off!
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:57.380522 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/23 08:36:57.380572 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:57.380698 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/23 08:36:57.380743 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 1 was extracted from the queue of VTY.
+2026/Jun/23 08:36:57.380761 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:57.380772 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.380911 USER TC_26_6_1_1.ttcn3:297 Mobile subscriber state at timeout: "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\n\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.381013 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show ms"
+2026/Jun/23 08:36:57.381035 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show ms"
+2026/Jun/23 08:36:57.381051 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show ms"
+2026/Jun/23 08:36:57.581900 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show ms
+MS '1' is up, service is limited (pending)
+  IMEI: 000000000000000
+     IMEISV: 0000000000000000
+     IMEI generation: fixed
+  automatic network selection state: A1 trying RPLMN
+                                     MCC=901 MNC=70 (International, 70)
+  cell selection state: C3 camped normally
+                        ARFCN=51 CGI=901-70-4242-4242
+                        (International, 70)
+  radio resource layer state: idle
+  mobility management layer state: MM idle, attempting to update
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:57.582005 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 2
+2026/Jun/23 08:36:57.582032 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:57.582066 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 2
+2026/Jun/23 08:36:57.582076 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 2 was extracted from the queue of VTY.
+2026/Jun/23 08:36:57.582080 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:57.582085 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.582111 USER TC_26_6_1_1.ttcn3:299 Mobile station state at timeout: "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.582133 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show cell 1"
+2026/Jun/23 08:36:57.582141 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show cell 1"
+2026/Jun/23 08:36:57.582148 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show cell 1"
+2026/Jun/23 08:36:57.782316 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show cell 1
+ARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------
+  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:57.782413 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 3
+2026/Jun/23 08:36:57.782442 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:57.782472 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 3
+2026/Jun/23 08:36:57.782482 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 3 was extracted from the queue of VTY.
+2026/Jun/23 08:36:57.782488 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:57.782494 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.782516 USER TC_26_6_1_1.ttcn3:301 Mobile cell information: "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.782560 USER TC_26_6_1_1.ttcn3:307 *** CHANNEL REQUEST not received, but MS may have responded with Location Update ***
+2026/Jun/23 08:36:57.782568 USER TC_26_6_1_1.ttcn3:308 *** Current bsc_slr value: 0 ***
+2026/Jun/23 08:36:57.782586 USER TC_26_6_1_1.ttcn3:314 *** WARNING: No response to paging at all - MS may not have received paging ***
+2026/Jun/23 08:36:57.782592 USER TC_26_6_1_1.ttcn3:315 *** This could indicate: ***
+2026/Jun/23 08:36:57.782597 USER TC_26_6_1_1.ttcn3:316 ***   1. MS is still processing restart ***
+2026/Jun/23 08:36:57.782602 USER TC_26_6_1_1.ttcn3:317 ***   2. MS did not receive paging message ***
+2026/Jun/23 08:36:57.782607 USER TC_26_6_1_1.ttcn3:318 ***   3. MS is in an unexpected state ***
+2026/Jun/23 08:36:57.782612 USER TC_26_6_1_1.ttcn3:319 ***   4. MS is still registered and ignoring paging ***
+2026/Jun/23 08:36:57.782617 USER TC_26_6_1_1.ttcn3:321 *** VTY Debug: Checking mobile state when no paging response ***
+2026/Jun/23 08:36:57.782624 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/23 08:36:57.782634 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/23 08:36:57.782643 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/23 08:36:57.982813 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:57.982917 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 4
+2026/Jun/23 08:36:57.982944 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:57.982973 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 4
+2026/Jun/23 08:36:57.982981 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 4 was extracted from the queue of VTY.
+2026/Jun/23 08:36:57.982985 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:57.982990 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.983011 USER TC_26_6_1_1.ttcn3:323 Mobile subscriber state (no response): "show subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U2_NOT_UPDATED  IMSI attached  LAI: invalid\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:57.983030 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show ms"
+2026/Jun/23 08:36:57.983037 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show ms"
+2026/Jun/23 08:36:57.983044 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show ms"
+2026/Jun/23 08:36:58.183199 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show ms
+MS '1' is up, service is limited (pending)
+  IMEI: 000000000000000
+     IMEISV: 0000000000000000
+     IMEI generation: fixed
+  automatic network selection state: A1 trying RPLMN
+                                     MCC=901 MNC=70 (International, 70)
+  cell selection state: C3 camped normally
+                        ARFCN=51 CGI=901-70-4242-4242
+                        (International, 70)
+  radio resource layer state: idle
+  mobility management layer state: MM idle, attempting to update
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:58.183305 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 5
+2026/Jun/23 08:36:58.183328 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:58.183366 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 5
+2026/Jun/23 08:36:58.183387 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 5 was extracted from the queue of VTY.
+2026/Jun/23 08:36:58.183393 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:58.183399 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:58.183430 USER TC_26_6_1_1.ttcn3:325 Mobile station state (no response): "show ms\r\nMS '1' is up, service is limited (pending)\r\n  IMEI: 000000000000000\r\n     IMEISV: 0000000000000000\r\n     IMEI generation: fixed\r\n  automatic network selection state: A1 trying RPLMN\r\n                                     MCC=901 MNC=70 (International, 70)\r\n  cell selection state: C3 camped normally\r\n                        ARFCN=51 CGI=901-70-4242-4242\r\n                        (International, 70)\r\n  radio resource layer state: idle\r\n  mobility management layer state: MM idle, attempting to update\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:58.183458 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show cell 1"
+2026/Jun/23 08:36:58.183468 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show cell 1"
+2026/Jun/23 08:36:58.183476 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show cell 1"
+2026/Jun/23 08:36:58.383648 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: show cell 1
+ARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------
+  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/23 08:36:58.383784 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 6
+2026/Jun/23 08:36:58.383816 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/23 08:36:58.383891 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 6
+2026/Jun/23 08:36:58.383910 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 6 was extracted from the queue of VTY.
+2026/Jun/23 08:36:58.383922 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/23 08:36:58.383933 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:58.383994 USER TC_26_6_1_1.ttcn3:327 Mobile cell information (no response): "show cell 1\r\nARFCN  |MCC    |MNC    |LAC    |cell ID|forb.LA|prio   |min-db |max-pwr|rx-lev\r\n-------+-------+-------+-------+-------+-------+-------+-------+-------+-------\r\n  51   |901    |70     |0x1092 |0x1092 |no     |normal |-110   |  14   |-63\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/23 08:36:58.384035 USER TC_26_6_1_1.ttcn3:475 *** Returning false - test failed ***
+2026/Jun/23 08:36:58.384084 USER TC_26_6_1_1.ttcn3:728 *** Waiting 20 seconds between tests to ensure MS is fully idle ***
+2026/Jun/23 08:36:58.384099 TIMEROP TC_26_6_1_1.ttcn3:730 Start timer T_between_tests: 20 s
+2026/Jun/23 08:36:58.384136 USER TC_26_6_1_1.ttcn3:733 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:36:58.384154 PORTEVENT TC_26_6_1_1.ttcn3:733 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 47
+2026/Jun/23 08:36:58.384170 PORTEVENT TC_26_6_1_1.ttcn3:734 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 47
+2026/Jun/23 08:36:58.384182 PORTEVENT TC_26_6_1_1.ttcn3:734 Message with id 47 was extracted from the queue of MSC.
+2026/Jun/23 08:37:03.242144 USER TC_26_6_1_1.ttcn3:733 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:03.242254 PORTEVENT TC_26_6_1_1.ttcn3:733 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 48
+2026/Jun/23 08:37:03.242294 PORTEVENT TC_26_6_1_1.ttcn3:734 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 48
+2026/Jun/23 08:37:03.242313 PORTEVENT TC_26_6_1_1.ttcn3:734 Message with id 48 was extracted from the queue of MSC.
+2026/Jun/23 08:37:08.247041 USER TC_26_6_1_1.ttcn3:733 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:08.247145 PORTEVENT TC_26_6_1_1.ttcn3:733 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 49
+2026/Jun/23 08:37:08.247186 PORTEVENT TC_26_6_1_1.ttcn3:734 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 49
+2026/Jun/23 08:37:08.247204 PORTEVENT TC_26_6_1_1.ttcn3:734 Message with id 49 was extracted from the queue of MSC.
+2026/Jun/23 08:37:13.251990 USER TC_26_6_1_1.ttcn3:733 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:13.252064 PORTEVENT TC_26_6_1_1.ttcn3:733 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 50
+2026/Jun/23 08:37:13.252086 PORTEVENT TC_26_6_1_1.ttcn3:734 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 50
+2026/Jun/23 08:37:13.252096 PORTEVENT TC_26_6_1_1.ttcn3:734 Message with id 50 was extracted from the queue of MSC.
+2026/Jun/23 08:37:18.257131 USER TC_26_6_1_1.ttcn3:733 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:18.257238 PORTEVENT TC_26_6_1_1.ttcn3:733 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 51
+2026/Jun/23 08:37:18.257278 PORTEVENT TC_26_6_1_1.ttcn3:734 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 51
+2026/Jun/23 08:37:18.257298 PORTEVENT TC_26_6_1_1.ttcn3:734 Message with id 51 was extracted from the queue of MSC.
+2026/Jun/23 08:37:18.384128 TIMEROP TC_26_6_1_1.ttcn3:744 Timeout T_between_tests: 20 s
+2026/Jun/23 08:37:18.384215 USER TC_26_6_1_1.ttcn3:745 Finished waiting between tests
+2026/Jun/23 08:37:18.384248 USER TC_26_6_1_1.ttcn3:749 *** MS should now be fully idle and ready for second test ***
+2026/Jun/23 08:37:18.384263 USER TC_26_6_1_1.ttcn3:755 ==========================================================
+2026/Jun/23 08:37:18.384275 USER TC_26_6_1_1.ttcn3:756 *** Step 4: Testing TCH/F Assignment (testTchf) ***
+2026/Jun/23 08:37:18.384304 USER TC_26_6_1_1.ttcn3:757 ==========================================================
+2026/Jun/23 08:37:18.384316 USER TC_26_6_1_1.ttcn3:46 ==========================================================
+2026/Jun/23 08:37:18.384328 USER TC_26_6_1_1.ttcn3:47 *** "TCH/F Assignment Test" ***
+2026/Jun/23 08:37:18.384354 USER TC_26_6_1_1.ttcn3:48 ==========================================================
+2026/Jun/23 08:37:18.384365 USER TC_26_6_1_1.ttcn3:52 *** Brief wait before restart (draining HEARTBEAT only) ***
+2026/Jun/23 08:37:18.384376 TIMEROP TC_26_6_1_1.ttcn3:54 Start timer T_drain: 2 s
+2026/Jun/23 08:37:20.384863 TIMEROP TC_26_6_1_1.ttcn3:68 Timeout T_drain: 2 s
+2026/Jun/23 08:37:20.384959 USER TC_26_6_1_1.ttcn3:69 Finished brief drain
+2026/Jun/23 08:37:20.384993 USER TC_26_6_1_1.ttcn3:74 *** Restarting mobile to force unregistration before paging ***
+2026/Jun/23 08:37:20.385009 USER TC_26_6_1_1.ttcn3:75 *** Test type: "TCH/F Assignment Test" ***
+2026/Jun/23 08:37:20.385059 USER TC_26_6_1_1.ttcn3:76 docker.sock not found — using VTY power-cycle (k8s mode)
+2026/Jun/23 08:37:20.385076 USER TC_26_6_1_1.ttcn3:76 === k8s fallback: VTY power-cycle mobile at 10.43.140.104:4247 ===
+2026/Jun/23 08:37:25.709971 USER TC_26_6_1_1.ttcn3:76 Waiting 10 seconds (power off)...
+2026/Jun/23 08:37:41.069980 USER TC_26_6_1_1.ttcn3:76 VTY 'clear-loci' sent — LOCI erased
+2026/Jun/23 08:37:47.725917 USER TC_26_6_1_1.ttcn3:76 === VTY power-cycle complete — MS will send LU shortly ===
+2026/Jun/23 08:37:47.725984 USER TC_26_6_1_1.ttcn3:77 *** Mobile restart result: 0 (0 = success) ***
+2026/Jun/23 08:37:47.726003 USER TC_26_6_1_1.ttcn3:81 *** Waiting 8 seconds after restart command for container to fully restart ***
+2026/Jun/23 08:37:47.726013 TIMEROP TC_26_6_1_1.ttcn3:83 Start timer T_post_restart_wait: 8 s
+2026/Jun/23 08:37:47.726043 USER TC_26_6_1_1.ttcn3:84 VTY_PT: Received data (buffered): 94 bytes
+2026/Jun/23 08:37:47.726065 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:47.726079 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 52
+2026/Jun/23 08:37:47.726093 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:47.726101 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 53
+2026/Jun/23 08:37:47.726107 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:47.726114 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 54
+2026/Jun/23 08:37:47.726120 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:47.726127 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 55
+2026/Jun/23 08:37:47.726133 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 5, "msc_slr": 5, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/23 08:37:47.726160 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 5, \"msc_slr\": 5, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 56
+2026/Jun/23 08:37:47.726192 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:47.726201 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 57
+2026/Jun/23 08:37:48.286217 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:48.286323 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 58
+2026/Jun/23 08:37:53.291290 USER TC_26_6_1_1.ttcn3:84 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:53.291401 PORTEVENT TC_26_6_1_1.ttcn3:84 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 59
+2026/Jun/23 08:37:55.727852 TIMEROP TC_26_6_1_1.ttcn3:84 Timeout T_post_restart_wait: 8 s
+2026/Jun/23 08:37:55.727932 USER TC_26_6_1_1.ttcn3:87 *** Mobile container restart command succeeded - waiting for initial LU ***
+2026/Jun/23 08:37:55.727964 TIMEROP TC_26_6_1_1.ttcn3:90 Start timer T_restart_lu: 60 s
+2026/Jun/23 08:37:55.727988 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 52
+2026/Jun/23 08:37:55.728002 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 52 was extracted from the queue of MSC.
+2026/Jun/23 08:37:55.728012 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:37:55.728158 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 53
+2026/Jun/23 08:37:55.728167 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 53 was extracted from the queue of MSC.
+2026/Jun/23 08:37:55.728174 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:37:55.728264 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 54
+2026/Jun/23 08:37:55.728276 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 54 was extracted from the queue of MSC.
+2026/Jun/23 08:37:55.728282 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:37:55.728367 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 55
+2026/Jun/23 08:37:55.728376 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 55 was extracted from the queue of MSC.
+2026/Jun/23 08:37:55.728382 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:37:55.728473 PORTEVENT TC_26_6_1_1.ttcn3:94 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 5, \"msc_slr\": 5, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 56
+2026/Jun/23 08:37:55.728482 PORTEVENT TC_26_6_1_1.ttcn3:94 Message with id 56 was extracted from the queue of MSC.
+2026/Jun/23 08:37:55.728488 USER TC_26_6_1_1.ttcn3:95 MSC Event after restart: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 5, \"msc_slr\": 5, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+2026/Jun/23 08:37:55.728606 USER TC_26_6_1_1.ttcn3:97 *** Received initial LU Request after restart - NOT completing it to avoid TMSI assignment ***
+2026/Jun/23 08:37:55.728618 USER TC_26_6_1_1.ttcn3:98 *** Mobile will stay unregistered and respond to IMSI paging ***
+2026/Jun/23 08:37:55.728625 USER TC_26_6_1_1.ttcn3:102 *** Draining LU Request event (not sending LU Accept) ***
+2026/Jun/23 08:37:55.728634 TIMEROP TC_26_6_1_1.ttcn3:103 Stop timer T_restart_lu: 60 s
+2026/Jun/23 08:37:55.728668 USER TC_26_6_1_1.ttcn3:130 *** Waiting 12.000000 seconds for MS to fully settle (TCH/F test, restart LU received) ***
+2026/Jun/23 08:37:55.728685 TIMEROP TC_26_6_1_1.ttcn3:144 Start timer T_idle_wait: 12 s
+2026/Jun/23 08:37:58.296207 USER TC_26_6_1_1.ttcn3:145 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:37:58.296314 PORTEVENT TC_26_6_1_1.ttcn3:145 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 60
+2026/Jun/23 08:38:03.300010 USER TC_26_6_1_1.ttcn3:145 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:03.300094 PORTEVENT TC_26_6_1_1.ttcn3:145 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 61
+2026/Jun/23 08:38:03.438677 USER TC_26_6_1_1.ttcn3:145 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 5}
+2026/Jun/23 08:38:03.438775 PORTEVENT TC_26_6_1_1.ttcn3:145 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}" id 62
+2026/Jun/23 08:38:03.529476 USER TC_26_6_1_1.ttcn3:145 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:38:07.731856 TIMEROP TC_26_6_1_1.ttcn3:145 Timeout T_idle_wait: 12 s
+2026/Jun/23 08:38:07.731948 USER TC_26_6_1_1.ttcn3:159 *** Mobile should now be in idle state and ready for paging ***
+2026/Jun/23 08:38:07.731981 USER TC_26_6_1_1.ttcn3:170 *** Step 1: Sending PAGING REQUEST for channel type: TCH_F (2) ***
+2026/Jun/23 08:38:07.732035 PORTEVENT TC_26_6_1_1.ttcn3:172 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_PAGING\", \"params\": {\"imsi\": \"901700000000001\", \"lac\": 4242, \"cell_id\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/23 08:38:07.732124 USER TC_26_6_1_1.ttcn3:172 MSC_Port: TX: {"command": "CMD_SEND_PAGING", "params": {"imsi": "901700000000001", "lac": 4242, "cell_id": 4242, "tmsi": 305419896}}
+2026/Jun/23 08:38:07.732176 USER TC_26_6_1_1.ttcn3:185 *** Using increased paging flood count (100) for TCH/F test ***
+2026/Jun/23 08:38:07.732188 USER TC_26_6_1_1.ttcn3:188 *** Sending PAGING REQUEST via GSMTAP (100 times) ***
+2026/Jun/23 08:38:07.732208 USER GSM_Functions.ttcn3:1335 *** Sending PAGING REQUEST TYPE 1 ***
+2026/Jun/23 08:38:07.732222 USER GSM_Functions.ttcn3:1336   Channel: PCH (4)
+2026/Jun/23 08:38:07.732239 USER GSM_Functions.ttcn3:1337   Paging Group: '00'O
+2026/Jun/23 08:38:07.732257 USER GSM_Functions.ttcn3:1338   Page Mode: '00'O
+2026/Jun/23 08:38:07.732274 USER GSM_Functions.ttcn3:1339   Mobile Identity 1: '901700000000001F'O
+2026/Jun/23 08:38:07.732304 USER GSM_Functions.ttcn3:1340   Count: 100 (reduced from 500 for faster execution)
+2026/Jun/23 08:38:07.732326 USER GSM_Functions.ttcn3:1343 Encoded PAGING REQUEST TYPE 1: 23 bytes (PseudoLen=12)
+2026/Jun/23 08:38:07.732339 USER GSM_Functions.ttcn3:1353 === Sending PAGING REQUEST (100 times) via GSMTAP ===
+2026/Jun/23 08:38:07.732361 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732376 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732396 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732410 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732424 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.732473 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.732493 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732505 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732523 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732536 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732549 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.732576 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.732594 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732605 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732623 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732635 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732648 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.732673 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.732691 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732702 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732719 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732745 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732759 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.732785 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.732802 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732813 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732851 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732870 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732882 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.732909 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.732926 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.732937 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.732954 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.732967 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.732978 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733003 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733020 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733031 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733048 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733060 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733072 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733096 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733113 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733123 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733140 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733153 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733165 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733189 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733206 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733217 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733234 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733247 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733259 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733284 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733301 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733312 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733329 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733350 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733362 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733388 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733405 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733416 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733433 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733444 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733456 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733481 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733498 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733508 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733525 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733537 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733549 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733573 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733590 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733601 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733618 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733630 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733642 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733666 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733683 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733694 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733711 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733723 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733735 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733759 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733776 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733787 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733804 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733816 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733841 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733867 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733884 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733895 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.733912 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.733924 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.733943 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.733969 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.733986 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.733997 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734014 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734026 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734038 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734061 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734078 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734088 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734105 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734118 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734129 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734153 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734170 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734181 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734198 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734211 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734222 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734245 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734262 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734273 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734290 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734303 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734315 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734339 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734356 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734366 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734384 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734396 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734408 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734432 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734449 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734460 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734477 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734489 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734501 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734532 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734550 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734561 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734579 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734591 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734603 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734627 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734645 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734655 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734672 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734684 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734696 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734720 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734737 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734748 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734765 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734777 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734789 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734813 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734887 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734902 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.734920 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.734933 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.734945 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.734971 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.734988 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.734999 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735016 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735028 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735040 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735065 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735082 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735093 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735110 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735122 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735134 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735166 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735184 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735194 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735212 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735224 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735236 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735260 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735277 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735287 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735304 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735317 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735328 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735353 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735370 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735380 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735397 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735410 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735422 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735446 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735463 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735473 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735490 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735503 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735515 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735539 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735555 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735566 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735583 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735595 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735608 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735631 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735650 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735661 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735677 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735689 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735701 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735725 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735748 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735759 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735777 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735788 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735800 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735852 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735875 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735886 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735903 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.735915 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.735927 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.735952 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.735970 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.735980 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.735997 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736009 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736021 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736045 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736062 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736073 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736090 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736102 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736114 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736137 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736154 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736164 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736182 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736194 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736206 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736230 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736247 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736257 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736275 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736287 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736299 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736323 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736341 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736358 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736384 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736396 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736408 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736433 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736450 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736460 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736477 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736489 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736501 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736525 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736542 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736552 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736569 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736582 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736594 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736618 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736635 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736645 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736662 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736674 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736686 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736710 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736727 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736738 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736755 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736767 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736779 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736803 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736829 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736844 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736861 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736873 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736884 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.736909 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.736927 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.736944 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.736961 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.736973 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.736985 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737010 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737028 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737039 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737056 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737068 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737079 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737103 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737120 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737130 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737147 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737159 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737171 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737194 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737212 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737223 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737240 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737252 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737263 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737287 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737304 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737315 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737332 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737344 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737356 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737380 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737396 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737407 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737424 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737437 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737448 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737472 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737489 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737499 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737522 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737535 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737547 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737571 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737588 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737599 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737617 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737629 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737641 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737665 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737681 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737692 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737709 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737721 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737734 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737757 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737774 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737785 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737802 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737814 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737835 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737864 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737881 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737892 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.737908 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.737921 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.737933 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.737956 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.737974 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.737984 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738001 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738013 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738025 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738049 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738066 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738076 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738100 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738113 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738125 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738149 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738166 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738177 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738194 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738206 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738218 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738242 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738259 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738270 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738287 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738299 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738315 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738338 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738355 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738366 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738383 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738395 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738407 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738431 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738447 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738458 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738474 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738487 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738499 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738523 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738539 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738550 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738567 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738579 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738590 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738615 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738631 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738642 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738659 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738677 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738690 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738714 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738731 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738742 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738759 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738771 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738782 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738806 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738833 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738848 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738865 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738878 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738889 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.738915 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.738932 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.738942 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.738959 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.738975 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.738987 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739011 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739028 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739039 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739056 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739067 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739079 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739103 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739120 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739130 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739147 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739159 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739171 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739195 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739212 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739222 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739240 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739258 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739270 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739295 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739312 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739323 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739340 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739352 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739364 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739388 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739405 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739415 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739432 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739444 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739456 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739480 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739497 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739508 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739525 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739537 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739549 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739573 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739590 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739601 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739618 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739630 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739642 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739665 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739683 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739693 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739710 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739722 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739734 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739758 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739775 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739785 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739803 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739815 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739841 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739871 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739888 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739899 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.739916 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.739929 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.739941 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.739965 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.739982 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.739992 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740009 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740022 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740033 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740057 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740074 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740084 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740101 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740113 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740125 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740148 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740165 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740175 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740192 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740205 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740216 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740240 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740257 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740267 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740285 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740297 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740309 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740333 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740349 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740360 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740377 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740390 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740402 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740439 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740457 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740467 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740485 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740497 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740508 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740532 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740549 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740559 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740576 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740589 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740600 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740624 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740641 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740651 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740668 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740681 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740693 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740716 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740734 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740744 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740761 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740773 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740785 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740809 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740832 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740846 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740863 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740876 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740888 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.740915 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.740932 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.740943 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.740960 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.740972 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.740984 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741015 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741033 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741043 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741060 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741072 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741084 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741108 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741125 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741136 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741153 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741165 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741177 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741201 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741218 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741228 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741245 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741257 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741269 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741293 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741310 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741321 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741338 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741350 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741362 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741392 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741409 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741420 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741437 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741449 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741461 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741485 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741502 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741512 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741529 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741542 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741553 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741577 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741601 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741612 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741629 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741641 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741653 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741677 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741694 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741705 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741721 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741733 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741745 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741769 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741786 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741797 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741814 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741838 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741854 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741879 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741897 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.741907 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.741924 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.741936 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.741948 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.741972 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.741989 PORTEVENT GSM_Functions.ttcn3:1355 Sent on L to system octetstring : '310621000899100700000000102B2B2B2B2B2B2B2B2B2B'O
+2026/Jun/23 08:38:07.742000 USER GSM_Functions.ttcn3:1355 L3_Port: TX OCTETSTRING 23 bytes
+2026/Jun/23 08:38:07.742017 USER GSM_Functions.ttcn3:1355 L3_Port: Data: 31 06 21 00 08 99 10 07 00 00 00 00 10 2B 2B 2B 2B 2B 2B 2B 2B 2B 2B 
+2026/Jun/23 08:38:07.742029 USER GSM_Functions.ttcn3:1355 L3_Port: TX CCCH 23 bytes
+2026/Jun/23 08:38:07.742041 USER GSM_Functions.ttcn3:1355 L3_Port: Detected Paging Request -> Use PCH (5)
+2026/Jun/23 08:38:07.742065 USER GSM_Functions.ttcn3:1355 L3_Port: Sent 39 bytes via GSMTAP (chan=5)
+2026/Jun/23 08:38:07.742079 USER GSM_Functions.ttcn3:1358 === PAGING REQUEST send complete ===
+2026/Jun/23 08:38:07.742093 USER TC_26_6_1_1.ttcn3:196 *** Waiting 5.000000 seconds for paging to be processed by MS ***
+2026/Jun/23 08:38:07.742121 TIMEROP TC_26_6_1_1.ttcn3:198 Start timer T_paging_delay: 5 s
+2026/Jun/23 08:38:07.742160 USER TC_26_6_1_1.ttcn3:199 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/23 08:38:07.742181 PORTEVENT TC_26_6_1_1.ttcn3:199 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 63
+2026/Jun/23 08:38:08.734183 USER TC_26_6_1_1.ttcn3:199 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:08.734271 PORTEVENT TC_26_6_1_1.ttcn3:199 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 64
+2026/Jun/23 08:38:12.744853 TIMEROP TC_26_6_1_1.ttcn3:199 Timeout T_paging_delay: 5 s
+2026/Jun/23 08:38:12.786067 USER TC_26_6_1_1.ttcn3:202 *** Step 2: Waiting for CHANNEL REQUEST (timeout: 60 seconds) ***
+2026/Jun/23 08:38:12.786133 USER TC_26_6_1_1.ttcn3:203 *** Note: MS may respond with Location Update if unregistered, which is expected ***
+2026/Jun/23 08:38:12.786150 TIMEROP TC_26_6_1_1.ttcn3:205 Start timer T_ch_req: 60 s
+2026/Jun/23 08:38:12.786187 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 57
+2026/Jun/23 08:38:12.786207 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 57 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.786423 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 58
+2026/Jun/23 08:38:12.786437 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 58 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.786589 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 59
+2026/Jun/23 08:38:12.786602 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 59 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.786743 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 60
+2026/Jun/23 08:38:12.786754 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 60 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.786910 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 61
+2026/Jun/23 08:38:12.786928 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 61 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.787068 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}" id 62
+2026/Jun/23 08:38:12.787082 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 62 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.787244 USER TC_26_6_1_1.ttcn3:285 Event during CHANNEL REQUEST wait: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 5}"
+2026/Jun/23 08:38:12.787278 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 63
+2026/Jun/23 08:38:12.787290 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 63 was extracted from the queue of MSC.
+2026/Jun/23 08:38:12.787382 USER TC_26_6_1_1.ttcn3:285 Event during CHANNEL REQUEST wait: "{\"status\": \"ok\", \"sent\": true}"
+2026/Jun/23 08:38:12.787407 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 64
+2026/Jun/23 08:38:12.787418 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 64 was extracted from the queue of MSC.
+2026/Jun/23 08:38:13.739663 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:13.739725 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 65
+2026/Jun/23 08:38:13.739745 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 65
+2026/Jun/23 08:38:13.739754 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 65 was extracted from the queue of MSC.
+2026/Jun/23 08:38:18.745236 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:18.745343 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 66
+2026/Jun/23 08:38:18.745389 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 66
+2026/Jun/23 08:38:18.745422 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 66 was extracted from the queue of MSC.
+2026/Jun/23 08:38:23.750093 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:23.750186 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 67
+2026/Jun/23 08:38:23.750226 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 67
+2026/Jun/23 08:38:23.750248 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 67 was extracted from the queue of MSC.
+2026/Jun/23 08:38:26.290649 USER TC_26_6_1_1.ttcn3:207 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:38:28.755104 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:28.755203 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 68
+2026/Jun/23 08:38:28.755243 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 68
+2026/Jun/23 08:38:28.755262 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 68 was extracted from the queue of MSC.
+2026/Jun/23 08:38:33.759756 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:33.759883 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 69
+2026/Jun/23 08:38:33.759926 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 69
+2026/Jun/23 08:38:33.759946 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 69 was extracted from the queue of MSC.
+2026/Jun/23 08:38:38.765057 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:38.765155 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 70
+2026/Jun/23 08:38:38.765199 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 70
+2026/Jun/23 08:38:38.765219 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 70 was extracted from the queue of MSC.
+2026/Jun/23 08:38:43.770092 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:43.770202 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 71
+2026/Jun/23 08:38:43.770243 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 71
+2026/Jun/23 08:38:43.770262 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 71 was extracted from the queue of MSC.
+2026/Jun/23 08:38:48.775087 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:48.775185 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 72
+2026/Jun/23 08:38:48.806929 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 72
+2026/Jun/23 08:38:48.806966 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 72 was extracted from the queue of MSC.
+2026/Jun/23 08:38:49.121094 USER TC_26_6_1_1.ttcn3:207 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/23 08:38:53.780388 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:53.794926 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 73
+2026/Jun/23 08:38:53.794970 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 73
+2026/Jun/23 08:38:53.794989 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 73 was extracted from the queue of MSC.
+2026/Jun/23 08:38:58.785020 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:38:58.785101 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 74
+2026/Jun/23 08:38:58.804514 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 74
+2026/Jun/23 08:38:58.804541 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 74 was extracted from the queue of MSC.
+2026/Jun/23 08:39:03.790094 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:03.802977 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 75
+2026/Jun/23 08:39:03.803016 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 75
+2026/Jun/23 08:39:03.803030 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 75 was extracted from the queue of MSC.
+2026/Jun/23 08:39:04.634383 USER TC_26_6_1_1.ttcn3:207 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 6, "msc_slr": 6, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/23 08:39:04.634504 PORTEVENT TC_26_6_1_1.ttcn3:207 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 6, \"msc_slr\": 6, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 76
+2026/Jun/23 08:39:04.634558 PORTEVENT TC_26_6_1_1.ttcn3:208 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 6, \"msc_slr\": 6, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 76
+2026/Jun/23 08:39:04.634579 PORTEVENT TC_26_6_1_1.ttcn3:208 Message with id 76 was extracted from the queue of MSC.
+2026/Jun/23 08:39:04.634847 USER TC_26_6_1_1.ttcn3:216 *** MS responded to paging with Location Update Request (expected after restart) ***
+2026/Jun/23 08:39:04.634873 USER TC_26_6_1_1.ttcn3:217 *** Completing Location Update, then waiting for CHANNEL REQUEST ***
+2026/Jun/23 08:39:04.634892 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 6, \"msc_slr\": 6, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+2026/Jun/23 08:39:04.634951 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 29 (pattern: "\"bsc_slr\":")
+2026/Jun/23 08:39:04.634987 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"6"' => integer 6
+2026/Jun/23 08:39:04.635029 PORTEVENT TC_26_6_1_1.ttcn3:224 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 6, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/23 08:39:04.635108 USER TC_26_6_1_1.ttcn3:224 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 6, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+2026/Jun/23 08:39:04.635133 TIMEROP TC_26_6_1_1.ttcn3:226 Start timer T_temp: 2 s
+2026/Jun/23 08:39:05.136567 USER TC_26_6_1_1.ttcn3:227 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/23 08:39:05.136660 PORTEVENT TC_26_6_1_1.ttcn3:227 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 77
+2026/Jun/23 08:39:05.136701 PORTEVENT TC_26_6_1_1.ttcn3:228 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 77
+2026/Jun/23 08:39:05.136721 PORTEVENT TC_26_6_1_1.ttcn3:228 Message with id 77 was extracted from the queue of MSC.
+2026/Jun/23 08:39:05.136814 TIMEROP TC_26_6_1_1.ttcn3:230 Stop timer T_temp: 2 s
+2026/Jun/23 08:39:05.136874 PORTEVENT TC_26_6_1_1.ttcn3:240 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 6, \"cause\": 0}}"
+2026/Jun/23 08:39:05.136965 USER TC_26_6_1_1.ttcn3:240 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 6, "cause": 0}}
+2026/Jun/23 08:39:05.137005 TIMEROP TC_26_6_1_1.ttcn3:241 Start timer T_temp: 2 s
+2026/Jun/23 08:39:05.137371 USER TC_26_6_1_1.ttcn3:242 MSC_Port: RX: {"status": "ok"}
+2026/Jun/23 08:39:05.137393 PORTEVENT TC_26_6_1_1.ttcn3:242 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 78
+2026/Jun/23 08:39:05.137411 PORTEVENT TC_26_6_1_1.ttcn3:243 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 78
+2026/Jun/23 08:39:05.137423 PORTEVENT TC_26_6_1_1.ttcn3:243 Message with id 78 was extracted from the queue of MSC.
+2026/Jun/23 08:39:05.137513 TIMEROP TC_26_6_1_1.ttcn3:245 Stop timer T_temp: 2 s
+2026/Jun/23 08:39:05.137526 USER TC_26_6_1_1.ttcn3:254 *** Location Update completed - MS is now registered ***
+2026/Jun/23 08:39:05.137540 USER TC_26_6_1_1.ttcn3:255 *** Waiting for MS to send CHANNEL REQUEST (may take time for MS to initiate call) ***
+2026/Jun/23 08:39:05.137551 TIMEROP TC_26_6_1_1.ttcn3:257 Stop timer T_ch_req: 60 s
+2026/Jun/23 08:39:05.137565 TIMEROP TC_26_6_1_1.ttcn3:259 Start timer T_ch_req_after_lu: 30 s
+2026/Jun/23 08:39:05.289490 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 6, "pd": 5, "msg_type": 27}
+2026/Jun/23 08:39:05.289589 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 6, \"pd\": 5, \"msg_type\": 27}" id 79
+2026/Jun/23 08:39:05.289631 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 6, \"pd\": 5, \"msg_type\": 27}" id 79
+2026/Jun/23 08:39:05.289649 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 79 was extracted from the queue of MSC.
+2026/Jun/23 08:39:05.289659 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 6, \"pd\": 5, \"msg_type\": 27}"
+2026/Jun/23 08:39:05.289853 USER TC_26_6_1_1.ttcn3:272 Event after LU completion: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 6, \"pd\": 5, \"msg_type\": 27}"
+2026/Jun/23 08:39:05.289901 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 6}
+2026/Jun/23 08:39:05.289923 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 6}" id 80
+2026/Jun/23 08:39:05.289943 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 6}" id 80
+2026/Jun/23 08:39:05.289955 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 80 was extracted from the queue of MSC.
+2026/Jun/23 08:39:05.289964 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 6}"
+2026/Jun/23 08:39:05.290084 USER TC_26_6_1_1.ttcn3:272 Event after LU completion: "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 6}"
+2026/Jun/23 08:39:05.290117 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 6}
+2026/Jun/23 08:39:05.290139 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 6}" id 81
+2026/Jun/23 08:39:05.290158 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 6}" id 81
+2026/Jun/23 08:39:05.290169 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 81 was extracted from the queue of MSC.
+2026/Jun/23 08:39:05.290178 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 6}"
+2026/Jun/23 08:39:05.290290 USER TC_26_6_1_1.ttcn3:272 Event after LU completion: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 6}"
+2026/Jun/23 08:39:05.901431 USER TC_26_6_1_1.ttcn3:260 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/23 08:39:09.141185 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:09.141310 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 82
+2026/Jun/23 08:39:09.141350 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 82
+2026/Jun/23 08:39:09.141368 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 82 was extracted from the queue of MSC.
+2026/Jun/23 08:39:09.141378 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:14.146060 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:14.146151 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 83
+2026/Jun/23 08:39:14.146192 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 83
+2026/Jun/23 08:39:14.146210 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 83 was extracted from the queue of MSC.
+2026/Jun/23 08:39:14.146220 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:19.151088 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:19.151196 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 84
+2026/Jun/23 08:39:19.151235 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 84
+2026/Jun/23 08:39:19.151255 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 84 was extracted from the queue of MSC.
+2026/Jun/23 08:39:19.151266 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:24.154985 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:24.155066 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 85
+2026/Jun/23 08:39:24.155102 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 85
+2026/Jun/23 08:39:24.155118 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 85 was extracted from the queue of MSC.
+2026/Jun/23 08:39:24.155127 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:29.160086 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:29.160196 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 86
+2026/Jun/23 08:39:29.160236 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 86
+2026/Jun/23 08:39:29.160256 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 86 was extracted from the queue of MSC.
+2026/Jun/23 08:39:29.160268 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:34.165267 USER TC_26_6_1_1.ttcn3:260 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:34.165370 PORTEVENT TC_26_6_1_1.ttcn3:260 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 87
+2026/Jun/23 08:39:34.165414 PORTEVENT TC_26_6_1_1.ttcn3:261 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 87
+2026/Jun/23 08:39:34.165434 PORTEVENT TC_26_6_1_1.ttcn3:261 Message with id 87 was extracted from the queue of MSC.
+2026/Jun/23 08:39:34.165446 USER TC_26_6_1_1.ttcn3:262 MSC Event after LU completion: "{\"type\": \"HEARTBEAT\"}"
+2026/Jun/23 08:39:35.137594 TIMEROP TC_26_6_1_1.ttcn3:276 Timeout T_ch_req_after_lu: 30 s
+2026/Jun/23 08:39:35.137677 USER TC_26_6_1_1.ttcn3:277 WARNING: No CHANNEL REQUEST received after Location Update completion
+2026/Jun/23 08:39:35.137720 USER TC_26_6_1_1.ttcn3:278 *** MS responded to paging with LU (expected), but did not send CHANNEL REQUEST ***
+2026/Jun/23 08:39:35.137735 USER TC_26_6_1_1.ttcn3:279 *** This indicates MS stack limitation: does not automatically initiate MO calls ***
+2026/Jun/23 08:39:35.137764 USER TC_26_6_1_1.ttcn3:307 *** CHANNEL REQUEST not received, but MS may have responded with Location Update ***
+2026/Jun/23 08:39:35.137776 USER TC_26_6_1_1.ttcn3:308 *** Current bsc_slr value: 6 ***
+2026/Jun/23 08:39:35.137802 USER TC_26_6_1_1.ttcn3:310 *** MS responded to paging (with LU Request) - marking as paging response received ***
+2026/Jun/23 08:39:35.137813 USER TC_26_6_1_1.ttcn3:312 *** Note: MS responded to paging with Location Update (valid behavior) ***
+2026/Jun/23 08:39:35.137843 USER TC_26_6_1_1.ttcn3:484 *** Step 3: IMMEDIATE ASSIGNMENT should be sent by BSC automatically ***
+2026/Jun/23 08:39:35.137857 USER TC_26_6_1_1.ttcn3:485 *** Channel type: TCH_F (2) (SDCCH8=1, TCH/F=2, TCH/H=3) ***
+2026/Jun/23 08:39:35.137878 TIMEROP TC_26_6_1_1.ttcn3:487 Start timer T_immass: 3 s
+2026/Jun/23 08:39:38.139852 TIMEROP TC_26_6_1_1.ttcn3:488 Timeout T_immass: 3 s
+2026/Jun/23 08:39:38.139934 USER TC_26_6_1_1.ttcn3:491 *** Step 4: Waiting for PAGING RESPONSE (timeout: 60 seconds) ***
+2026/Jun/23 08:39:38.139970 TIMEROP TC_26_6_1_1.ttcn3:493 Start timer T_paging_resp: 60 s
+2026/Jun/23 08:39:39.170050 USER TC_26_6_1_1.ttcn3:495 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:39.181507 PORTEVENT TC_26_6_1_1.ttcn3:495 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 88
+2026/Jun/23 08:39:39.181562 PORTEVENT TC_26_6_1_1.ttcn3:496 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 88
+2026/Jun/23 08:39:39.181580 PORTEVENT TC_26_6_1_1.ttcn3:496 Message with id 88 was extracted from the queue of MSC.
+2026/Jun/23 08:39:44.175121 USER TC_26_6_1_1.ttcn3:495 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:44.175218 PORTEVENT TC_26_6_1_1.ttcn3:495 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 89
+2026/Jun/23 08:39:44.195861 PORTEVENT TC_26_6_1_1.ttcn3:496 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 89
+2026/Jun/23 08:39:44.195890 PORTEVENT TC_26_6_1_1.ttcn3:496 Message with id 89 was extracted from the queue of MSC.
+2026/Jun/23 08:39:49.180133 USER TC_26_6_1_1.ttcn3:495 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:49.180229 PORTEVENT TC_26_6_1_1.ttcn3:495 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 90
+2026/Jun/23 08:39:49.180360 PORTEVENT TC_26_6_1_1.ttcn3:496 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 90
+2026/Jun/23 08:39:49.180384 PORTEVENT TC_26_6_1_1.ttcn3:496 Message with id 90 was extracted from the queue of MSC.
+2026/Jun/23 08:39:54.184861 USER TC_26_6_1_1.ttcn3:495 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/23 08:39:54.211289 PORTEVENT TC_26_6_1_1.ttcn3:495 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 91
+2026/Jun/23 08:39:54.211361 PORTEVENT TC_26_6_1_1.ttcn3:496 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 91
+2026/Jun/23 08:39:54.211382 PORTEVENT TC_26_6_1_1.ttcn3:496 Message with id 91 was extracted from the queue of MSC.
+2026/Jun/23 08:39:58.298062 USER TC_26_6_1_1.ttcn3:495 MSC_Port: Connection closed by stub
+2026/Jun/23 08:40:38.178864 TIMEROP TC_26_6_1_1.ttcn3:518 Timeout T_paging_resp: 60 s
+2026/Jun/23 08:40:38.178961 USER TC_26_6_1_1.ttcn3:519 WARNING: No PAGING RESPONSE received within 60 seconds
+2026/Jun/23 08:40:38.178995 USER TC_26_6_1_1.ttcn3:520 *** This may indicate MS did not complete the connection setup ***
+2026/Jun/23 08:40:38.179009 USER TC_26_6_1_1.ttcn3:521 *** Continuing with connection release anyway... ***
+2026/Jun/23 08:40:38.179022 USER TC_26_6_1_1.ttcn3:526 *** Step 5: Releasing connection ***
+2026/Jun/23 08:40:38.179057 PORTEVENT TC_26_6_1_1.ttcn3:529 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 6, \"cause\": 0}}"
+2026/Jun/23 08:40:38.179102 WARNING TC_26_6_1_1.ttcn3:529 MSC_Port: Not connected
+2026/Jun/23 08:40:38.179118 TIMEROP TC_26_6_1_1.ttcn3:531 Start timer T_clear_wait: 2 s
+2026/Jun/23 08:40:40.180177 TIMEROP TC_26_6_1_1.ttcn3:542 Timeout T_clear_wait: 2 s
+2026/Jun/23 08:40:40.180259 USER TC_26_6_1_1.ttcn3:544 *** Connection released ***
+2026/Jun/23 08:40:40.180295 USER TC_26_6_1_1.ttcn3:551 *** Test result summary for "TCH/F Assignment Test" ***
+2026/Jun/23 08:40:40.180326 USER TC_26_6_1_1.ttcn3:552 ***   CHANNEL REQUEST received: false ***
+2026/Jun/23 08:40:40.180370 USER TC_26_6_1_1.ttcn3:553 ***   PAGING RESPONSE received: true ***
+2026/Jun/23 08:40:40.180383 USER TC_26_6_1_1.ttcn3:554 ***   bsc_slr: 6 ***
+2026/Jun/23 08:40:40.180406 USER TC_26_6_1_1.ttcn3:561 *** "TCH/F Assignment Test": PASS (with note) - MS responded to paging with LU ***
+2026/Jun/23 08:40:40.180427 USER TC_26_6_1_1.ttcn3:562 *** Note: MS responded to paging with Location Update (valid), not CHANNEL REQUEST ***
+2026/Jun/23 08:40:40.180439 USER TC_26_6_1_1.ttcn3:563 *** This is expected behavior when MS is unregistered ***
+2026/Jun/23 08:40:40.180465 USER TC_26_6_1_1.ttcn3:768 ==========================================================
+2026/Jun/23 08:40:40.180476 USER TC_26_6_1_1.ttcn3:769 *** TC_26_6_1_1: TEST SUMMARY ***
+2026/Jun/23 08:40:40.180486 USER TC_26_6_1_1.ttcn3:770 ==========================================================
+2026/Jun/23 08:40:40.180496 USER TC_26_6_1_1.ttcn3:771 *** SDCCH8 assignment test: false
+2026/Jun/23 08:40:40.180509 USER TC_26_6_1_1.ttcn3:772 *** TCH/F assignment test: true
+2026/Jun/23 08:40:40.180526 USER TC_26_6_1_1.ttcn3:780 *** VERDICT: PASS (with note) ***
+2026/Jun/23 08:40:40.180538 USER TC_26_6_1_1.ttcn3:781 *** MS correctly set up at least one channel type ***
+2026/Jun/23 08:40:40.180548 USER TC_26_6_1_1.ttcn3:783 *** Note: SDCCH8 assignment test did not pass ***
+2026/Jun/23 08:40:40.180599 VERDICTOP TC_26_6_1_1.ttcn3:788 setverdict(pass): none -> pass
+2026/Jun/23 08:40:40.180722 USER TC_26_6_1_1.ttcn3:795 ==========================================================
+2026/Jun/23 08:40:40.180733 USER TC_26_6_1_1.ttcn3:796 *** TC_26_6_1_1: Test Complete ***
+2026/Jun/23 08:40:40.180743 USER TC_26_6_1_1.ttcn3:797 ==========================================================
+2026/Jun/23 08:40:40.180753 TIMEROP TC_26_6_1_1.ttcn3:799 Stop timer T_guard: 300 s
+2026/Jun/23 08:40:40.180781 PARALLEL GSM_Component_Definitions.ttcn3:346 Unmapping port mtc:L from system:L.
+2026/Jun/23 08:40:40.180900 USER GSM_Component_Definitions.ttcn3:346 L3_Port: Unmapping from L
+2026/Jun/23 08:40:40.180951 PORTEVENT GSM_Component_Definitions.ttcn3:346 Port L was unmapped from system:L.
+2026/Jun/23 08:40:40.181021 PARALLEL GSM_Component_Definitions.ttcn3:346 Unmap operation of mtc:L from system:L finished.
+2026/Jun/23 08:40:40.181042 PARALLEL GSM_Component_Definitions.ttcn3:347 Unmapping port mtc:RR from system:RR.
+2026/Jun/23 08:40:40.181090 PORTEVENT GSM_Component_Definitions.ttcn3:347 Port RR was unmapped from system:RR.
+2026/Jun/23 08:40:40.181138 PARALLEL GSM_Component_Definitions.ttcn3:347 Unmap operation of mtc:RR from system:RR finished.
+2026/Jun/23 08:40:40.181152 PARALLEL GSM_Component_Definitions.ttcn3:348 Unmapping port mtc:MM from system:MM.
+2026/Jun/23 08:40:40.181198 PORTEVENT GSM_Component_Definitions.ttcn3:348 Port MM was unmapped from system:MM.
+2026/Jun/23 08:40:40.181241 PARALLEL GSM_Component_Definitions.ttcn3:348 Unmap operation of mtc:MM from system:MM finished.
+2026/Jun/23 08:40:40.181254 PARALLEL GSM_Component_Definitions.ttcn3:349 Unmapping port mtc:CC from system:CC.
+2026/Jun/23 08:40:40.181296 PORTEVENT GSM_Component_Definitions.ttcn3:349 Port CC was unmapped from system:CC.
+2026/Jun/23 08:40:40.181338 PARALLEL GSM_Component_Definitions.ttcn3:349 Unmap operation of mtc:CC from system:CC finished.
+2026/Jun/23 08:40:40.181351 PARALLEL GSM_Component_Definitions.ttcn3:350 Unmapping port mtc:MSC from system:MSC.
+2026/Jun/23 08:40:40.181395 USER GSM_Component_Definitions.ttcn3:350 MSC_Port: Unmapping from MSC
+2026/Jun/23 08:40:40.181424 PORTEVENT GSM_Component_Definitions.ttcn3:350 Port MSC was unmapped from system:MSC.
+2026/Jun/23 08:40:40.181461 PARALLEL GSM_Component_Definitions.ttcn3:350 Unmap operation of mtc:MSC from system:MSC finished.
+2026/Jun/23 08:40:40.181474 PARALLEL GSM_Component_Definitions.ttcn3:351 Unmapping port mtc:VTY from system:VTY.
+2026/Jun/23 08:40:40.181517 USER GSM_Component_Definitions.ttcn3:351 VTY_PT: Unmapping port from VTY interface
+2026/Jun/23 08:40:40.181635 USER GSM_Component_Definitions.ttcn3:351 VTY_PT: Disconnected from VTY
+2026/Jun/23 08:40:40.181656 PORTEVENT GSM_Component_Definitions.ttcn3:351 Port VTY was unmapped from system:VTY.
+2026/Jun/23 08:40:40.181701 PARALLEL GSM_Component_Definitions.ttcn3:351 Unmap operation of mtc:VTY from system:VTY finished.
+2026/Jun/23 08:40:40.181731 PARALLEL TC_26_6_1_1.ttcn3:800 Terminating component type GSM_Component_Definitions.GSM_CT.
+2026/Jun/23 08:40:40.181767 USER TC_26_6_1_1.ttcn3:800 L3_Port: user_stop called
+2026/Jun/23 08:40:40.181781 PORTEVENT TC_26_6_1_1.ttcn3:800 Port L was stopped.
+2026/Jun/23 08:40:40.181808 PORTEVENT TC_26_6_1_1.ttcn3:800 Port RR was stopped.
+2026/Jun/23 08:40:40.181847 PORTEVENT TC_26_6_1_1.ttcn3:800 Port MM was stopped.
+2026/Jun/23 08:40:40.181872 PORTEVENT TC_26_6_1_1.ttcn3:800 Port CC was stopped.
+2026/Jun/23 08:40:40.181881 USER TC_26_6_1_1.ttcn3:800 MSC_Port: user_stop called
+2026/Jun/23 08:40:40.181893 PORTEVENT TC_26_6_1_1.ttcn3:800 Port MSC was stopped.
+2026/Jun/23 08:40:40.181912 USER TC_26_6_1_1.ttcn3:800 BSC_Port: user_stop called
+2026/Jun/23 08:40:40.181923 PORTEVENT TC_26_6_1_1.ttcn3:800 Port BSC was stopped.
+2026/Jun/23 08:40:40.181932 PORTEVENT TC_26_6_1_1.ttcn3:800 Port RSL was stopped.
+2026/Jun/23 08:40:40.181940 USER TC_26_6_1_1.ttcn3:800 VTY_PT: Stopping
+2026/Jun/23 08:40:40.181953 PORTEVENT TC_26_6_1_1.ttcn3:800 Port VTY was stopped.
+2026/Jun/23 08:40:40.181961 PORTEVENT TC_26_6_1_1.ttcn3:800 Port COORD was stopped.
+2026/Jun/23 08:40:40.181969 PARALLEL TC_26_6_1_1.ttcn3:800 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_6_1_1.
+2026/Jun/23 08:40:40.181984 EXECUTOR TC_26_6_1_1.ttcn3:800 Waiting for PTCs to finish.
+2026/Jun/23 08:40:40.182065 VERDICTOP TC_26_6_1_1.ttcn3:800 Setting final verdict of the test case.
+2026/Jun/23 08:40:40.182143 VERDICTOP TC_26_6_1_1.ttcn3:800 Local verdict of MTC: pass
+2026/Jun/23 08:40:40.182185 VERDICTOP TC_26_6_1_1.ttcn3:800 No PTCs were created.
+2026/Jun/23 08:40:40.182207 TESTCASE TC_26_6_1_1.ttcn3:800 Test case TC_26_6_1_1 finished. Verdict: pass
+2026/Jun/23 08:40:40.182469 STATISTICS - Verdict statistics: 0 none (0.00 %), 1 pass (100.00 %), 0 inconc (0.00 %), 0 fail (0.00 %), 0 error (0.00 %).
+2026/Jun/23 08:40:40.182609 STATISTICS - Test execution summary: 1 test case was executed. Overall verdict: pass
+2026/Jun/23 08:40:40.182625 EXECUTOR - Exit was requested from MC. Terminating MTC.

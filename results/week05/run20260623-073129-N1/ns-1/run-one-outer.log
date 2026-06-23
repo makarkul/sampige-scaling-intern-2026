@@ -1,0 +1,1566 @@
+[run-one] Namespace : gsm-1
+[run-one] Tests     : TC_26_6_8_2
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_8_2
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-1 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-1" does not exist. Installing it now.
+NAME: gsm-1
+LAST DEPLOYED: Tue Jun 23 13:01:29 2026
+NAMESPACE: gsm-1
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_8_2 as Job ttcn3-tc-26-6-8-2-1...
+[run-one] PASS  TC_26_6_8_2: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-1
+ Timestamp : 20260623-073129
+=====================================================
+  TC_26_6_8_2                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_8_2
+[run-one] INFO  Teardown: uninstalling Helm release gsm-1...
+release "gsm-1" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-1...
+namespace "gsm-1" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-1",
+      "bringup_s": 38.692,
+      "testing_s": 94.98,
+      "teardown_s": 52.426,
+      "total_s": 186.1,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_8_2",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 94.974,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-1",
+      "tc_name": "TC_26_6_8_2",
+      "duration_s": 94.974,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-2
+[run-one] Tests     : TC_26_8_1_2_1_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_2_1_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-2 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-2" does not exist. Installing it now.
+NAME: gsm-2
+LAST DEPLOYED: Tue Jun 23 13:04:35 2026
+NAMESPACE: gsm-2
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_8_1_2_1_1 as Job ttcn3-tc-26-8-1-2-1-1-1...
+[run-one] PASS  TC_26_8_1_2_1_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-2
+ Timestamp : 20260623-073435
+=====================================================
+  TC_26_8_1_2_1_1                          PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_2_1_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-2...
+release "gsm-2" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-2...
+namespace "gsm-2" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-2",
+      "bringup_s": 38.273,
+      "testing_s": 92.082,
+      "teardown_s": 52.978,
+      "total_s": 183.335,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_8_1_2_1_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 92.076,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-2",
+      "tc_name": "TC_26_8_1_2_1_1",
+      "duration_s": 92.076,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-3
+[run-one] Tests     : TC_26_7_2_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_2_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-3 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-3" does not exist. Installing it now.
+NAME: gsm-3
+LAST DEPLOYED: Tue Jun 23 13:07:39 2026
+NAMESPACE: gsm-3
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_2_1 as Job ttcn3-tc-26-7-2-1-1...
+[run-one] PASS  TC_26_7_2_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-3
+ Timestamp : 20260623-073739
+=====================================================
+  TC_26_7_2_1                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_2_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-3...
+release "gsm-3" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-3...
+namespace "gsm-3" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-3",
+      "bringup_s": 38.259,
+      "testing_s": 98.127,
+      "teardown_s": 52.772,
+      "total_s": 189.161,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_2_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 98.121,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-3",
+      "tc_name": "TC_26_7_2_1",
+      "duration_s": 98.121,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-4
+[run-one] Tests     : TC_26_7_2_2
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_2_2
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-4 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-4" does not exist. Installing it now.
+NAME: gsm-4
+LAST DEPLOYED: Tue Jun 23 13:10:48 2026
+NAMESPACE: gsm-4
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_2_2 as Job ttcn3-tc-26-7-2-2-1...
+[run-one] PASS  TC_26_7_2_2: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-4
+ Timestamp : 20260623-074048
+=====================================================
+  TC_26_7_2_2                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_2_2
+[run-one] INFO  Teardown: uninstalling Helm release gsm-4...
+release "gsm-4" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-4...
+namespace "gsm-4" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-4",
+      "bringup_s": 38.817,
+      "testing_s": 95.265,
+      "teardown_s": 53.386,
+      "total_s": 187.47,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_2_2",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 95.257,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-4",
+      "tc_name": "TC_26_7_2_2",
+      "duration_s": 95.257,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-5
+[run-one] Tests     : TC_26_8_1_3_4_6
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_3_4_6
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-5 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-5" does not exist. Installing it now.
+NAME: gsm-5
+LAST DEPLOYED: Tue Jun 23 13:13:56 2026
+NAMESPACE: gsm-5
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_8_1_3_4_6 as Job ttcn3-tc-26-8-1-3-4-6-1...
+[run-one] PASS  TC_26_8_1_3_4_6: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-5
+ Timestamp : 20260623-074356
+=====================================================
+  TC_26_8_1_3_4_6                          PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_3_4_6
+[run-one] INFO  Teardown: uninstalling Helm release gsm-5...
+release "gsm-5" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-5...
+namespace "gsm-5" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-5",
+      "bringup_s": 38.895,
+      "testing_s": 101.751,
+      "teardown_s": 54.309,
+      "total_s": 194.956,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_8_1_3_4_6",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 101.745,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-5",
+      "tc_name": "TC_26_8_1_3_4_6",
+      "duration_s": 101.745,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-6
+[run-one] Tests     : TC_26_7_5_6
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_5_6
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-6 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-6" does not exist. Installing it now.
+NAME: gsm-6
+LAST DEPLOYED: Tue Jun 23 13:17:11 2026
+NAMESPACE: gsm-6
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_5_6 as Job ttcn3-tc-26-7-5-6-1...
+[run-one] PASS  TC_26_7_5_6: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-6
+ Timestamp : 20260623-074711
+=====================================================
+  TC_26_7_5_6                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_5_6
+[run-one] INFO  Teardown: uninstalling Helm release gsm-6...
+release "gsm-6" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-6...
+namespace "gsm-6" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-6",
+      "bringup_s": 39.107,
+      "testing_s": 117.728,
+      "teardown_s": 53.664,
+      "total_s": 210.502,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_5_6",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 117.721,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-6",
+      "tc_name": "TC_26_7_5_6",
+      "duration_s": 117.721,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-7
+[run-one] Tests     : TC_26_8_1_3_3_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_3_3_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-7 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-7" does not exist. Installing it now.
+NAME: gsm-7
+LAST DEPLOYED: Tue Jun 23 13:20:41 2026
+NAMESPACE: gsm-7
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_8_1_3_3_1 as Job ttcn3-tc-26-8-1-3-3-1-1...
+[run-one] PASS  TC_26_8_1_3_3_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-7
+ Timestamp : 20260623-075041
+=====================================================
+  TC_26_8_1_3_3_1                          PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_8_1_3_3_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-7...
+release "gsm-7" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-7...
+namespace "gsm-7" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-7",
+      "bringup_s": 38.281,
+      "testing_s": 114.475,
+      "teardown_s": 51.219,
+      "total_s": 203.979,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_8_1_3_3_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 114.469,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-7",
+      "tc_name": "TC_26_8_1_3_3_1",
+      "duration_s": 114.469,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-8
+[run-one] Tests     : TC_26_6_2_4
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_4
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-8 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-8" does not exist. Installing it now.
+NAME: gsm-8
+LAST DEPLOYED: Tue Jun 23 13:24:05 2026
+NAMESPACE: gsm-8
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_2_4 as Job ttcn3-tc-26-6-2-4-1...
+[run-one] PASS  TC_26_6_2_4: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-8
+ Timestamp : 20260623-075405
+=====================================================
+  TC_26_6_2_4                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_4
+[run-one] INFO  Teardown: uninstalling Helm release gsm-8...
+release "gsm-8" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-8...
+namespace "gsm-8" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-8",
+      "bringup_s": 38.884,
+      "testing_s": 179.648,
+      "teardown_s": 52.864,
+      "total_s": 271.399,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_2_4",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 179.642,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-8",
+      "tc_name": "TC_26_6_2_4",
+      "duration_s": 179.642,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-9
+[run-one] Tests     : TC_26_6_11_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_11_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-9 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-9" does not exist. Installing it now.
+NAME: gsm-9
+LAST DEPLOYED: Tue Jun 23 13:28:37 2026
+NAMESPACE: gsm-9
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_11_1 as Job ttcn3-tc-26-6-11-1-1...
+[run-one] PASS  TC_26_6_11_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-9
+ Timestamp : 20260623-075837
+=====================================================
+  TC_26_6_11_1                             PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_11_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-9...
+release "gsm-9" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-9...
+namespace "gsm-9" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-9",
+      "bringup_s": 38.382,
+      "testing_s": 192.612,
+      "teardown_s": 52.542,
+      "total_s": 283.539,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_11_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 192.606,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-9",
+      "tc_name": "TC_26_6_11_1",
+      "duration_s": 192.606,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-10
+[run-one] Tests     : TC_26_6_2_1_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_1_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-10 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-10" does not exist. Installing it now.
+NAME: gsm-10
+LAST DEPLOYED: Tue Jun 23 13:33:20 2026
+NAMESPACE: gsm-10
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_2_1_1 as Job ttcn3-tc-26-6-2-1-1-1...
+[run-one] PASS  TC_26_6_2_1_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-10
+ Timestamp : 20260623-080320
+=====================================================
+  TC_26_6_2_1_1                            PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_1_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-10...
+release "gsm-10" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-10...
+namespace "gsm-10" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-10",
+      "bringup_s": 38.274,
+      "testing_s": 195.507,
+      "teardown_s": 52.453,
+      "total_s": 286.236,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_2_1_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 195.502,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-10",
+      "tc_name": "TC_26_6_2_1_1",
+      "duration_s": 195.502,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-11
+[run-one] Tests     : TC_26_7_4_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_4_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-11 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-11" does not exist. Installing it now.
+NAME: gsm-11
+LAST DEPLOYED: Tue Jun 23 13:38:07 2026
+NAMESPACE: gsm-11
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_4_1 as Job ttcn3-tc-26-7-4-1-1...
+[run-one] PASS  TC_26_7_4_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-11
+ Timestamp : 20260623-080807
+=====================================================
+  TC_26_7_4_1                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_4_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-11...
+release "gsm-11" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-11...
+namespace "gsm-11" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-11",
+      "bringup_s": 38.841,
+      "testing_s": 199.024,
+      "teardown_s": 52.372,
+      "total_s": 290.239,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_4_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 199.017,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-11",
+      "tc_name": "TC_26_7_4_1",
+      "duration_s": 199.017,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-12
+[run-one] Tests     : TC_26_7_5_3
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_5_3
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-12 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-12" does not exist. Installing it now.
+NAME: gsm-12
+LAST DEPLOYED: Tue Jun 23 13:42:57 2026
+NAMESPACE: gsm-12
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_5_3 as Job ttcn3-tc-26-7-5-3-1...
+[run-one] PASS  TC_26_7_5_3: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-12
+ Timestamp : 20260623-081257
+=====================================================
+  TC_26_7_5_3                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_5_3
+[run-one] INFO  Teardown: uninstalling Helm release gsm-12...
+release "gsm-12" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-12...
+namespace "gsm-12" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-12",
+      "bringup_s": 38.806,
+      "testing_s": 211.618,
+      "teardown_s": 52.202,
+      "total_s": 302.627,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_5_3",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 211.613,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-12",
+      "tc_name": "TC_26_7_5_3",
+      "duration_s": 211.613,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-13
+[run-one] Tests     : TC_26_6_2_3_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_3_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-13 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-13" does not exist. Installing it now.
+NAME: gsm-13
+LAST DEPLOYED: Tue Jun 23 13:48:00 2026
+NAMESPACE: gsm-13
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_2_3_1 as Job ttcn3-tc-26-6-2-3-1-1...
+[run-one] FAIL  TC_26_6_2_3_1: FAIL
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-13
+ Timestamp : 20260623-081800
+=====================================================
+  TC_26_6_2_3_1                            FAIL
+-----------------------------------------------------
+  PASS: 0   FAIL: 1   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_2_3_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-13...
+release "gsm-13" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-13...
+namespace "gsm-13" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-13",
+      "bringup_s": 38.381,
+      "testing_s": 75.264,
+      "teardown_s": 53.933,
+      "total_s": 167.58,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_2_3_1",
+          "verdict": "FAIL"
+        }
+      ],
+      "pass": 0,
+      "fail": 1,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 75.258,
+  "N": 1,
+  "pass": 0,
+  "fail": 1,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-13",
+      "tc_name": "TC_26_6_2_3_1",
+      "duration_s": 75.258,
+      "verdict": "FAIL"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-14
+[run-one] Tests     : TC_26_7_3_2
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_7_3_2
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-14 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-14" does not exist. Installing it now.
+NAME: gsm-14
+LAST DEPLOYED: Tue Jun 23 13:50:48 2026
+NAMESPACE: gsm-14
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_7_3_2 as Job ttcn3-tc-26-7-3-2-1...
+[run-one] PASS  TC_26_7_3_2: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-14
+ Timestamp : 20260623-082047
+=====================================================
+  TC_26_7_3_2                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_7_3_2
+[run-one] INFO  Teardown: uninstalling Helm release gsm-14...
+release "gsm-14" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-14...
+namespace "gsm-14" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-14",
+      "bringup_s": 39.275,
+      "testing_s": 230.911,
+      "teardown_s": 50.923,
+      "total_s": 321.111,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_7_3_2",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 230.904,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-14",
+      "tc_name": "TC_26_7_3_2",
+      "duration_s": 230.904,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-15
+[run-one] Tests     : TC_34_2_2
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_34_2_2
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-15 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-15" does not exist. Installing it now.
+NAME: gsm-15
+LAST DEPLOYED: Tue Jun 23 13:56:09 2026
+NAMESPACE: gsm-15
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_34_2_2 as Job ttcn3-tc-34-2-2-1...
+[run-one] PASS  TC_34_2_2: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-15
+ Timestamp : 20260623-082609
+=====================================================
+  TC_34_2_2                                PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_34_2_2
+[run-one] INFO  Teardown: uninstalling Helm release gsm-15...
+release "gsm-15" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-15...
+namespace "gsm-15" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-15",
+      "bringup_s": 38.728,
+      "testing_s": 334.353,
+      "teardown_s": 53.759,
+      "total_s": 426.841,
+      "verdicts": [
+        {
+          "tc_name": "TC_34_2_2",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 334.348,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-15",
+      "tc_name": "TC_34_2_2",
+      "duration_s": 334.348,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 0,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
+[run-one] Namespace : gsm-16
+[run-one] Tests     : TC_26_6_1_1
+[run-one] Results   : results/week05/run20260623-073129-N1/ns-1/TC_26_6_1_1
+[run-one] INFO  Images already in local registry.
+[run-one] INFO  Installing Helm release gsm-16 from /work/gouri.naik/sampige-scaling-intern-2026/refs/osmocom-demo/k8s/chart ...
+Release "gsm-16" does not exist. Installing it now.
+NAME: gsm-16
+LAST DEPLOYED: Tue Jun 23 14:03:16 2026
+NAMESPACE: gsm-16
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+[run-one] INFO  Waiting up to 240s for Deployments to be Ready...
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+virtphy//1
+  Not ready: msc-test-stub//1
+osmo-bsc//1
+osmo-bts-virtual//1
+osmo-hlr//1
+osmo-mgw//1
+osmo-mobile//1
+osmo-stp//1
+  Not ready: msc-test-stub//1
+osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+  Not ready: osmo-mobile//1
+[run-one] INFO  All Deployments ready.
+[run-one] INFO  Waiting up to 300s for MS to camp on cell (MM_EVENT_CELL_SELECTED)...
+[run-one] INFO  MS camped on cell.
+[run-one] INFO  Waiting up to 60s for osmo-mobile VTY (port 4247)...
+[run-one] INFO  osmo-mobile VTY ready.
+[run-one] INFO  Waiting up to 120s for boot LU (BSC_SLR=0x000001) to clear...
+[run-one] INFO  Boot LU CLEAR REQUEST seen — draining msc-stub event buffer...
+msc-stub buffer drained
+[run-one] INFO  MSC stub buffer drained — namespace ready for test.
+[run-one] INFO  Running TC_26_6_1_1 as Job ttcn3-tc-26-6-1-1-1...
+[run-one] PASS  TC_26_6_1_1: PASS
+=====================================================
+ TTCN-3 k8s Run Summary
+ Namespace : gsm-16
+ Timestamp : 20260623-083315
+=====================================================
+  TC_26_6_1_1                              PASS
+-----------------------------------------------------
+  PASS: 1   FAIL: 0   INCONCLUSIVE: 0
+=====================================================
+[run-one] INFO  Done. Results: results/week05/run20260623-073129-N1/ns-1/TC_26_6_1_1
+[run-one] INFO  Teardown: uninstalling Helm release gsm-16...
+release "gsm-16" uninstalled
+[run-one] INFO  Teardown: deleting namespace gsm-16...
+namespace "gsm-16" deleted
+{
+  "namespaces": [
+    {
+      "namespace": "gsm-16",
+      "bringup_s": 39.303,
+      "testing_s": 412.036,
+      "teardown_s": 53.133,
+      "total_s": 504.474,
+      "verdicts": [
+        {
+          "tc_name": "TC_26_6_1_1",
+          "verdict": "PASS"
+        }
+      ],
+      "pass": 1,
+      "fail": 0,
+      "inconclusive": 0
+    }
+  ],
+  "T_suite_s": 412.028,
+  "N": 1,
+  "pass": 1,
+  "fail": 0,
+  "inconclusive": 0,
+  "test_durations": [
+    {
+      "namespace": "gsm-16",
+      "tc_name": "TC_26_6_1_1",
+      "duration_s": 412.028,
+      "verdict": "PASS"
+    }
+  ],
+  "pods": {
+    "total_restarts": 1,
+    "oom_kills": 0
+  },
+  "S": null,
+  "E": null
+}
