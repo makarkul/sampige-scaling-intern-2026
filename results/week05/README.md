@@ -11,17 +11,19 @@
 
 ## Results
 
+T_suite is defined per metrics.md: `max(t_teardown) - min(t0)` from events.csv
+(full lifecycle — bringup + testing + teardown).
+
 | | Serial (N=1) | Sliding Window (N=8) |
 |---|---|---|
 | Run directory | `run20260623-073129-N1` | `run20260623-071306-N8` |
-| T_suite (first start → last end) | 4119 s | 671 s |
+| T_suite | 4210.927 s | 765.817 s |
 | Wall clock (script start → finish) | 4211 s (70m 11s) | 766 s (12m 46s) |
 | Pass / Fail | 15 / 1 | 16 / 0 |
-| Speedup S(8) | — | **6.14×** |
-| Parallel efficiency E(8) | — | **76.8%** |
+| Speedup S(8) | — | **5.50×** |
+| Parallel efficiency E(8) | — | **68.7%** |
 
-Speedup computed as T_suite_serial / T_suite_parallel = 4119 / 671.
-
+Speedup computed as T_suite(1) / T_suite(8) = 4210.927 / 765.817.
 ---
 
 ## Per-test durations
@@ -49,7 +51,8 @@ Speedup computed as T_suite_serial / T_suite_parallel = 4119 / 671.
 
 ## Key observations
 
-1. **6.14× speedup at N=8**, vs theoretical max of 8×. Parallel efficiency is 76.8%.
+1. **5.50× speedup at N=8**, vs theoretical max of 8×. Parallel efficiency is 68.7%.
+   T_suite measured per metrics.md (full lifecycle including bringup and teardown).
 
 2. **Bottleneck: TC_26_6_1_1 (412s)**. It ran in the second wave of the sliding window and
    was the last test to finish, holding all other slots idle for ~150s at the end.
