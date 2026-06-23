@@ -177,14 +177,27 @@ def main() -> int:
             }
             for r in durations
         ]
-        # Recompute T_suite_s from actual test timestamps.
-        # The events-based value is wrong when the same namespace name is reused
-        # across tests (fresh-ns-per-test): load_events() overwrites earlier
-        # phases with later ones, collapsing T_suite_s to the last test only.
-        starts = [float(r["start_ts"]) for r in durations if r.get("start_ts")]
-        ends   = [float(r["end_ts"])   for r in durations if r.get("end_ts")]
-        if starts and ends:
-            summary["T_suite_s"] = round(max(ends) - min(starts), 3)
+        # Use test-durations.csv as the verdict source when available.
+        # It is keyed by the actual k8s namespace name (matching events.csv),
+        # so it correctly populates per-namespace counts regardless of how
+        # deep the verdict.txt files sit in the output tree.
+        td_verdicts: dict[str, list[dict]] = {}
+        for r in durations:
+            if r.get("verdict"):
+                td_verdicts.setdefault(r["namespace"], []).append(
+                    {"tc_name": r["tc_name"], "verdict": r["verdict"]}
+                )
+        if td_verdicts:
+            for ns_entry in summary["namespaces"]:
+                ns_v = td_verdicts.get(ns_entry["namespace"], [])
+                ns_entry["verdicts"]     = ns_v
+                ns_entry["pass"]         = sum(1 for x in ns_v if x["verdict"] == "PASS")
+                ns_entry["fail"]         = sum(1 for x in ns_v if x["verdict"] == "FAIL")
+                ns_entry["inconclusive"] = sum(1 for x in ns_v if x["verdict"] not in ("PASS", "FAIL"))
+            all_v = [x["verdict"] for ns_v in td_verdicts.values() for x in ns_v]
+            summary["pass"]         = sum(1 for v in all_v if v == "PASS")
+            summary["fail"]         = sum(1 for v in all_v if v == "FAIL")
+            summary["inconclusive"] = sum(1 for v in all_v if v not in ("PASS", "FAIL"))
 
     # Pod health
     pods = load_pods(run_dir / "pods.csv")
