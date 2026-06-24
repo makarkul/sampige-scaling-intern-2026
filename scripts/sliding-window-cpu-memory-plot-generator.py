@@ -74,18 +74,25 @@ def make_plot(metric: str, ylabel: str, unit: str,
 
     colors = {"N=1": "#58a6ff", "N=8": "#3fb950", "N=11": "#f78166"}
     markers = {"N=1": "o", "N=8": "s", "N=11": "^"}
+    # plot N=1 last so its single point renders on top of the others
+    plot_order = ["N=8", "N=11", "N=1"]
 
     all_xs, all_ys = [], []
 
-    for label, run_data in data_per_run.items():
+    for label in plot_order:
+        run_data = data_per_run[label]
         xs = sorted(run_data.keys())
         ys = [run_data[x][idx] for x in xs]
         all_xs.extend(xs)
         all_ys.extend(ys)
 
+        is_n1 = label == "N=1"
         ax.plot(xs, ys,
                 color=colors[label], marker=markers[label],
-                linewidth=1.5, markersize=6, label=label, alpha=0.9)
+                linewidth=1.5, markersize=10 if is_n1 else 6,
+                markeredgewidth=1.5 if is_n1 else 0,
+                markeredgecolor="#e6edf3" if is_n1 else colors[label],
+                label=label, alpha=0.9, zorder=5 if is_n1 else 3)
 
     # linear fit across all data
     slope, intercept = linear_fit(all_xs, all_ys)
