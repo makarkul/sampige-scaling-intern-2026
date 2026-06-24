@@ -14,20 +14,25 @@
 T_suite is defined per metrics.md: `max(t_teardown) - min(t0)` from events.csv
 (full lifecycle — bringup + testing + teardown).
 
-| | Serial (N=1) | Sliding Window (N=8) | Sliding Window (N=11) |
-|---|---|---|---|
-| Run directory | `run20260623-073129-N1` | `run20260623-071306-N8` | `run20260623-105203-N11` |
-| T_suite | 4210.927 s | 765.817 s | 730.602 s |
-| Wall clock (script start → finish) | 4211 s (70m 11s) | 766 s (12m 46s) | 731 s (12m 11s) |
-| Pass / Fail | 15 / 1 | 16 / 0 | 16 / 0 |
-| Speedup S(N) | — | **5.50×** | **5.76×** |
-| Parallel efficiency E(N) | — | **68.7%** | **52.4%** |
+| | Serial (N=1) | Sliding Window (N=8) | Sliding Window (N=11) | Sliding Window (N=12) |
+|---|---|---|---|---|
+| Run directory | `run20260623-073129-N1` | `run20260623-071306-N8` | `run20260623-105203-N11` | `run20260624-063610-N12` |
+| T_suite | 4210.927 s | 765.817 s | 730.602 s | 723.629 s |
+| Wall clock (script start → finish) | 4211 s (70m 11s) | 766 s (12m 46s) | 731 s (12m 11s) | 724 s (12m 4s) |
+| Pass / Fail | 15 / 1 | 16 / 0 | 16 / 0 | **14 / 2** |
+| Speedup S(N) | — | **5.50×** | **5.76×** | 5.82× |
+| Parallel efficiency E(N) | — | **68.7%** | **52.4%** | 48.5% |
 
 Speedup computed as T_suite(1) / T_suite(N). Baseline = 4210.927 s (run20260623-073129-N1).
 
 ### Maximum safe N
 
-The k8s node hard limit is 110 pods. Each test namespace peaks at 9 pods (8 stack + 1 TTCN-3 job pod); ~5 system pods are always present. Safe max N = floor((110 − 5) / 9) = **11**. N=12 would require 113 pods and was confirmed to stall with Pending TTCN-3 pods.
+The k8s node hard limit is 110 pods. Each test namespace peaks at 9 pods (8 stack + 1 TTCN-3 job pod); ~5 system pods are always present. Safe max N = floor((110 − 5) / 9) = **11**. N=12 requires 113 pods, briefly stalled with 3 Pending TTCN-3 pods, and produced 2 failures:
+
+- **TC_26_6_2_3_1** — known flaky test (LU timeout, fails in serial too)
+- **TC_26_7_2_1** — new failure at N=12 (ran for 160s vs 96–97s at N=8/N=11, likely delayed by pod scheduling stall)
+
+TC_26_7_2_1 passing at N=8 and N=11 but failing at N=12 is consistent with CPU starvation caused by the pod limit stall. **N=11 is the confirmed safe maximum.**
 ---
 
 ## Per-test durations
