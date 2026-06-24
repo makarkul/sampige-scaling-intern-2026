@@ -148,10 +148,6 @@ helm_install() {
     --set "ttcn3.configPath=${TTCN3_DIR}/config" \
     --set "ttcn3.logsPath=${NS_LOGS_DIR}" \
     --set "ttcn3.dataPath=${DEMO_REPO}/data" \
-    --set "tolerations[0].key=dedicated" \
-    --set "tolerations[0].operator=Equal" \
-    --set "tolerations[0].value=gouri-gsm-scaling" \
-    --set "tolerations[0].effect=NoSchedule" \
     ${CPU_LIMIT:+--set "cpuLimit=${CPU_LIMIT}"}
 }
 
