@@ -33,6 +33,33 @@ The k8s node hard limit is 110 pods. Each test namespace peaks at 9 pods (8 stac
 - **TC_26_7_2_1** — new failure at N=12 (ran for 160s vs 96–97s at N=8/N=11, likely delayed by pod scheduling stall)
 
 TC_26_7_2_1 passing at N=8 and N=11 but failing at N=12 is consistent with CPU starvation caused by the pod limit stall. **N=11 is the confirmed safe maximum.**
+
+---
+
+### CPU resource isolation (LimitRange + ResourceQuota)
+
+To bound per-namespace CPU consumption without kernel-level pinning, a `LimitRange` and `ResourceQuota` were applied via the Helm chart (`cpuLimit` value):
+
+| Setting | Value | Derivation |
+|---|---|---|
+| `cpuLimit` | `370m` | 34m peak (osmo-bts-virtual) × 1.2 headroom × 9 pods |
+| LimitRange per container | `41m` | 370m / 9 pods |
+| ResourceQuota per namespace | `370m` | = `cpuLimit` |
+
+Peak pod CPU from `pod-resources.csv` across N=1/8/11 runs: `osmo-bts-virtual` reached 34m, all other pods ≤ 14m.
+
+**Validation run** (`run20260625-054317-N11`, N=11, `CPU_LIMIT=370m`):
+
+| | N=11 (no limit) | N=11 (cpu-limit=370m) |
+|---|---|---|
+| Run directory | `run20260623-105203-N11` | `run20260625-054317-N11` |
+| T_suite | 730.602 s | 773.861 s |
+| Pass / Fail | 16 / 0 | **16 / 0** |
+| Speedup S(11) | 5.76× | 5.44× |
+| Parallel efficiency E(11) | 52.4% | 49.5% |
+
+All 16 tests pass with the limit applied. The ~43s increase in T_suite (6%) is within run-to-run variance (no throttle events observed). The LimitRange divisor fix (10 → 9, commit `107696b` in `refs/osmocom-demo`) ensures the per-container value is computed correctly.
+
 ---
 
 ## Per-test durations
