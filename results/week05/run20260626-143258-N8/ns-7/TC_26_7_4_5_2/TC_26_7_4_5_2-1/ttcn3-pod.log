@@ -1,0 +1,835 @@
+Defaulted container "ttcn3" out of: ttcn3, setup-mobile-vty-dnat (init)
+======================================================
+Waiting for mobile to register (5 seconds)...
+======================================================
+======================================================
+Starting TC_26_7_4_5_2 Test Case
+======================================================
+Resolved: msc=10.42.0.74 mobile=10.43.26.255 bsc=10.42.0.69
+DEBUG: [EXECUTE] section:
+[EXECUTE]
+TC_26_7_4_5_2.TC_26_7_4_5_2
+  Waiting for MC... (1/30)
+Main Controller ready (attempt 2)
+Starting Host Controller...
+TTCN-3 Host Controller (parallel mode), version 11.1.0
+The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+Result dir: /results/TC_26_7_4_5_2-2026-06-26-145552
+Waiting for log files...
+2026/Jun/26 14:55:53.739798 EXECUTOR - TTCN-3 Host Controller started on ttcn3-tc-26-7-4-5-2-1-4dfv5. Version: 11.1.0.
+2026/Jun/26 14:55:53.739970 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/26 14:55:53.739982 EXECUTOR - Maximum number of open file descriptors: 1048576,   FD_SETSIZE = 1024
+2026/Jun/26 14:55:53.740121 WARNING - Warning: The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+2026/Jun/26 14:55:53.740159 EXECUTOR - The address of MC was set to 127.0.0.1:0.
+2026/Jun/26 14:55:53.740284 EXECUTOR - Connected to MC.
+2026/Jun/26 14:55:53.740383 EXECUTOR - This host supports UNIX domain sockets for local communication.
+2026/Jun/26 14:55:53.740565 EXECUTOR - Processing configuration data received from MC.
+2026/Jun/26 14:55:53.740780 WARNING - Warning: Skeleton `/results/TC_26_7_4_5_2-2026-06-26-145552/%n.log' does not guarantee unique log file name for every test system process. It may cause unpredictable results if several test components try to write into the same log file.
+2026/Jun/26 14:55:53.741094 EXECUTOR - Module GSM_Constants has the following parameters: { TSPC_Serv_TS11 := true, TSPC_Serv_TS61 := false, TSPC_Serv_TS62 := false, TSPC_Serv_BS21 := false, TSPC_Serv_BS22 := false, TSPC_Serv_BS24 := false, TSPC_Serv_BS25 := false, TSPC_Serv_BS26 := false, TSPC_Serv_BS31 := false, TSPC_Serv_BS32 := false, TSPC_Serv_BS33 := false, TSPC_Serv_BS34 := false, TSPC_Serv_BS41 := false, TSPC_Serv_BS42 := false, TSPC_Serv_BS43 := false, TSPC_Serv_BS44 := false, TSPC_Serv_BS45 := false, TSPC_Serv_BS51 := false, TSPC_Serv_BS61 := false, TSPC_Serv_BS81 := false, TSPC_DualRate := false, TSPC_MTsvc := true, TSPX_IMSI := '901700000000001F'O, TSPX_TMSI := '1914D97F'O, TSPX_CKSNDef := 0, TSPX_RANDDef := '00112233445566778899AABBCCDDEEFF'O, TSPX_SRES := '12345678'O, TSPX_Kc := '0000000000000000'O, TSPX_SDCCH4SubDef := 0, TSPX_TmSltDef := 0, TSPX_TscDef := 7, TSPX_TCHHSubDef := 0, TCV_CC := true, TSPX_Telephony_Rate := C_Full (0), TSPX_MOBscSvcA := C_Telephony (0), TSPX_MOBscSvcB := C_Telephony (0), TSPX_MOBscSvcC := C_Telephony (0), TSPX_MOBscSvcD := C_Telephony (0), TSPX_MOBscSvcE := C_Telephony (0), TSPX_MOBscSvcF := C_Telephony (0), TSPX_MOBscSvcG := C_Telephony (0), TSPX_MOChRateA := C_Full (0), TSPX_MOChRateB := C_Full (0), TSPX_MOChRateC := C_Full (0), TSPX_MOChRateD := C_Full (0), TSPX_MOChRateE := C_Full (0), TSPX_MOChRateF := C_Full (0), TSPX_MOChRateG := C_Full (0), TSPX_MTBscSvcA := C_Telephony (0), TSPX_MTBscSvcB := C_Telephony (0), TSPX_MTBscSvcC := C_Telephony (0), TSPX_MTBscSvcD := C_Telephony (0), TSPX_MTBscSvcE := C_Telephony (0), TSPX_MTBscSvcF := C_Telephony (0), TSPX_MTBscSvcG := C_Telephony (0), TSPX_MTBscSvcH := C_Telephony (0), TSPX_MTBscSvcI := C_Telephony (0), TSPX_MTBscSvcJ := C_Telephony (0), TSPX_MTChRateA := C_Full (0), TSPX_MTChRateB := C_Full (0), TSPX_MTChRateC := C_Full (0), TSPX_MTChRateD := C_Full (0), TSPX_MTChRateE := C_Full (0), TSPX_MTChRateF := C_Full (0), TSPX_MTChRateG := C_Full (0), TSPX_MTChRateH := C_Full (0), TSPX_MTChRateI := C_Full (0), TSPX_MTChRateJ := C_Full (0), C_arfcnA := 100 }
+2026/Jun/26 14:55:53.741174 EXECUTOR - Module TC_26_6_1_2 has the following parameters: { TSPX_nPara := 3, TSPX_i1Para := 3, TSPX_kPara := 5, TSPX_i2Para := 1, TSPX_rPara := 4, TSPX_i3Para := 4 }
+2026/Jun/26 14:55:53.741204 EXECUTOR - Initializing module GSM_Component_Definitions.
+2026/Jun/26 14:55:53.741211 EXECUTOR GSM_Component_Definitions.ttcn3:0 Initializing module GSM_Templates.
+2026/Jun/26 14:55:53.741228 EXECUTOR GSM_Templates.ttcn3:0 Initializing module GSM_Constants.
+2026/Jun/26 14:55:53.741234 EXECUTOR GSM_Constants.ttcn3:0 Initializing module GSM_Types.
+2026/Jun/26 14:55:53.741236 EXECUTOR GSM_Constants.ttcn3:0 Initialization of module GSM_Types finished.
+2026/Jun/26 14:55:53.741239 EXECUTOR GSM_Templates.ttcn3:0 Initialization of module GSM_Constants finished.
+2026/Jun/26 14:55:53.741319 EXECUTOR GSM_Component_Definitions.ttcn3:0 Initialization of module GSM_Templates finished.
+2026/Jun/26 14:55:53.741322 EXECUTOR - Initialization of module GSM_Component_Definitions finished.
+2026/Jun/26 14:55:53.741325 EXECUTOR - Initializing module GSM_Functions.
+2026/Jun/26 14:55:53.741351 EXECUTOR - Initialization of module GSM_Functions finished.
+2026/Jun/26 14:55:53.741353 EXECUTOR - Initializing module PreGenRecordOf.
+2026/Jun/26 14:55:53.741355 EXECUTOR - Initialization of module PreGenRecordOf finished.
+2026/Jun/26 14:55:53.741357 EXECUTOR - Initializing module TC_26_2_1_3.
+2026/Jun/26 14:55:53.741362 EXECUTOR - Initialization of module TC_26_2_1_3 finished.
+2026/Jun/26 14:55:53.741364 EXECUTOR - Initializing module TC_26_2_2.
+2026/Jun/26 14:55:53.741369 EXECUTOR - Initialization of module TC_26_2_2 finished.
+2026/Jun/26 14:55:53.741371 EXECUTOR - Initializing module TC_26_2_3.
+2026/Jun/26 14:55:53.741376 EXECUTOR - Initialization of module TC_26_2_3 finished.
+2026/Jun/26 14:55:53.741378 EXECUTOR - Initializing module TC_26_6_11_1.
+2026/Jun/26 14:55:53.741383 EXECUTOR - Initialization of module TC_26_6_11_1 finished.
+2026/Jun/26 14:55:53.741385 EXECUTOR - Initializing module TC_26_6_11_2.
+2026/Jun/26 14:55:53.741389 EXECUTOR - Initialization of module TC_26_6_11_2 finished.
+2026/Jun/26 14:55:53.741391 EXECUTOR - Initializing module TC_26_6_12_1.
+2026/Jun/26 14:55:53.741396 EXECUTOR - Initialization of module TC_26_6_12_1 finished.
+2026/Jun/26 14:55:53.741398 EXECUTOR - Initializing module TC_26_6_12_2.
+2026/Jun/26 14:55:53.741403 EXECUTOR - Initialization of module TC_26_6_12_2 finished.
+2026/Jun/26 14:55:53.741405 EXECUTOR - Initializing module TC_26_6_12_3.
+2026/Jun/26 14:55:53.741409 EXECUTOR - Initialization of module TC_26_6_12_3 finished.
+2026/Jun/26 14:55:53.741411 EXECUTOR - Initializing module TC_26_6_12_4.
+2026/Jun/26 14:55:53.741416 EXECUTOR - Initialization of module TC_26_6_12_4 finished.
+2026/Jun/26 14:55:53.741418 EXECUTOR - Initializing module TC_26_6_13_10.
+2026/Jun/26 14:55:53.741422 EXECUTOR - Initialization of module TC_26_6_13_10 finished.
+2026/Jun/26 14:55:53.741424 EXECUTOR - Initializing module TC_26_6_13_9.
+2026/Jun/26 14:55:53.741429 EXECUTOR - Initialization of module TC_26_6_13_9 finished.
+2026/Jun/26 14:55:53.741431 EXECUTOR - Initializing module TC_26_6_1_1.
+2026/Jun/26 14:55:53.741435 EXECUTOR - Initialization of module TC_26_6_1_1 finished.
+2026/Jun/26 14:55:53.741437 EXECUTOR - Initializing module TC_26_6_1_2.
+2026/Jun/26 14:55:53.741442 EXECUTOR - Initialization of module TC_26_6_1_2 finished.
+2026/Jun/26 14:55:53.741444 EXECUTOR - Initializing module TC_26_6_1_3.
+2026/Jun/26 14:55:53.741448 EXECUTOR - Initialization of module TC_26_6_1_3 finished.
+2026/Jun/26 14:55:53.741450 EXECUTOR - Initializing module TC_26_6_1_4.
+2026/Jun/26 14:55:53.741455 EXECUTOR - Initialization of module TC_26_6_1_4 finished.
+2026/Jun/26 14:55:53.741457 EXECUTOR - Initializing module TC_26_6_1_5.
+2026/Jun/26 14:55:53.741461 EXECUTOR - Initialization of module TC_26_6_1_5 finished.
+2026/Jun/26 14:55:53.741464 EXECUTOR - Initializing module TC_26_6_2_1_1.
+2026/Jun/26 14:55:53.741468 EXECUTOR - Initialization of module TC_26_6_2_1_1 finished.
+2026/Jun/26 14:55:53.741470 EXECUTOR - Initializing module TC_26_6_2_1_2.
+2026/Jun/26 14:55:53.741474 EXECUTOR - Initialization of module TC_26_6_2_1_2 finished.
+2026/Jun/26 14:55:53.741477 EXECUTOR - Initializing module TC_26_6_2_1_3.
+2026/Jun/26 14:55:53.741482 EXECUTOR - Initialization of module TC_26_6_2_1_3 finished.
+2026/Jun/26 14:55:53.741484 EXECUTOR - Initializing module TC_26_6_2_2.
+2026/Jun/26 14:55:53.741488 EXECUTOR - Initialization of module TC_26_6_2_2 finished.
+2026/Jun/26 14:55:53.741490 EXECUTOR - Initializing module TC_26_6_2_3_1.
+2026/Jun/26 14:55:53.741495 EXECUTOR - Initialization of module TC_26_6_2_3_1 finished.
+2026/Jun/26 14:55:53.741497 EXECUTOR - Initializing module TC_26_6_2_3_2.
+2026/Jun/26 14:55:53.741501 EXECUTOR - Initialization of module TC_26_6_2_3_2 finished.
+2026/Jun/26 14:55:53.741507 EXECUTOR - Initializing module TC_26_6_2_4.
+2026/Jun/26 14:55:53.741512 EXECUTOR - Initialization of module TC_26_6_2_4 finished.
+2026/Jun/26 14:55:53.741514 EXECUTOR - Initializing module TC_26_6_3_1.
+2026/Jun/26 14:55:53.741518 EXECUTOR - Initialization of module TC_26_6_3_1 finished.
+2026/Jun/26 14:55:53.741521 EXECUTOR - Initializing module TC_26_6_3_4.
+2026/Jun/26 14:55:53.741526 EXECUTOR - Initialization of module TC_26_6_3_4 finished.
+2026/Jun/26 14:55:53.741528 EXECUTOR - Initializing module TC_26_6_4_1.
+2026/Jun/26 14:55:53.741533 EXECUTOR - Initialization of module TC_26_6_4_1 finished.
+2026/Jun/26 14:55:53.741535 EXECUTOR - Initializing module TC_26_6_4_2_2.
+2026/Jun/26 14:55:53.741540 EXECUTOR - Initialization of module TC_26_6_4_2_2 finished.
+2026/Jun/26 14:55:53.741542 EXECUTOR - Initializing module TC_26_6_5_1.
+2026/Jun/26 14:55:53.741546 EXECUTOR - Initialization of module TC_26_6_5_1 finished.
+2026/Jun/26 14:55:53.741548 EXECUTOR - Initializing module TC_26_6_5_2_1.
+2026/Jun/26 14:55:53.741553 EXECUTOR - Initialization of module TC_26_6_5_2_1 finished.
+2026/Jun/26 14:55:53.741555 EXECUTOR - Initializing module TC_26_6_8_1.
+2026/Jun/26 14:55:53.741559 EXECUTOR - Initialization of module TC_26_6_8_1 finished.
+2026/Jun/26 14:55:53.741561 EXECUTOR - Initializing module TC_26_6_8_2.
+2026/Jun/26 14:55:53.741566 EXECUTOR - Initialization of module TC_26_6_8_2 finished.
+2026/Jun/26 14:55:53.741568 EXECUTOR - Initializing module TC_26_6_8_3.
+2026/Jun/26 14:55:53.741573 EXECUTOR - Initialization of module TC_26_6_8_3 finished.
+2026/Jun/26 14:55:53.741575 EXECUTOR - Initializing module TC_26_6_8_4.
+2026/Jun/26 14:55:53.741579 EXECUTOR - Initialization of module TC_26_6_8_4 finished.
+2026/Jun/26 14:55:53.741581 EXECUTOR - Initializing module TC_26_6_8_5.
+2026/Jun/26 14:55:53.741586 EXECUTOR - Initialization of module TC_26_6_8_5 finished.
+2026/Jun/26 14:55:53.741588 EXECUTOR - Initializing module TC_26_7_1.
+2026/Jun/26 14:55:53.741592 EXECUTOR - Initialization of module TC_26_7_1 finished.
+2026/Jun/26 14:55:53.741594 EXECUTOR - Initializing module TC_26_7_2_1.
+2026/Jun/26 14:55:53.741599 EXECUTOR - Initialization of module TC_26_7_2_1 finished.
+2026/Jun/26 14:55:53.741601 EXECUTOR - Initializing module TC_26_7_2_2.
+2026/Jun/26 14:55:53.741605 EXECUTOR - Initialization of module TC_26_7_2_2 finished.
+2026/Jun/26 14:55:53.741607 EXECUTOR - Initializing module TC_26_7_3_1.
+2026/Jun/26 14:55:53.741612 EXECUTOR - Initialization of module TC_26_7_3_1 finished.
+2026/Jun/26 14:55:53.741614 EXECUTOR - Initializing module TC_26_7_3_2.
+2026/Jun/26 14:55:53.741619 EXECUTOR - Initialization of module TC_26_7_3_2 finished.
+2026/Jun/26 14:55:53.741621 EXECUTOR - Initializing module TC_26_7_4_1.
+2026/Jun/26 14:55:53.741626 EXECUTOR - Initialization of module TC_26_7_4_1 finished.
+2026/Jun/26 14:55:53.741628 EXECUTOR - Initializing module TC_26_7_4_2_1.
+2026/Jun/26 14:55:53.741632 EXECUTOR - Initialization of module TC_26_7_4_2_1 finished.
+2026/Jun/26 14:55:53.741634 EXECUTOR - Initializing module TC_26_7_4_2_2_1.
+2026/Jun/26 14:55:53.741639 EXECUTOR - Initialization of module TC_26_7_4_2_2_1 finished.
+2026/Jun/26 14:55:53.741641 EXECUTOR - Initializing module TC_26_7_4_2_2_2.
+2026/Jun/26 14:55:53.741645 EXECUTOR - Initialization of module TC_26_7_4_2_2_2 finished.
+2026/Jun/26 14:55:53.741648 EXECUTOR - Initializing module TC_26_7_4_2_3.
+2026/Jun/26 14:55:53.741652 EXECUTOR - Initialization of module TC_26_7_4_2_3 finished.
+2026/Jun/26 14:55:53.741654 EXECUTOR - Initializing module TC_26_7_4_2_4_1.
+2026/Jun/26 14:55:53.741659 EXECUTOR - Initialization of module TC_26_7_4_2_4_1 finished.
+2026/Jun/26 14:55:53.741661 EXECUTOR - Initializing module TC_26_7_4_2_4_2.
+2026/Jun/26 14:55:53.741666 EXECUTOR - Initialization of module TC_26_7_4_2_4_2 finished.
+2026/Jun/26 14:55:53.741668 EXECUTOR - Initializing module TC_26_7_4_2_4_3.
+2026/Jun/26 14:55:53.741673 EXECUTOR - Initialization of module TC_26_7_4_2_4_3 finished.
+2026/Jun/26 14:55:53.741675 EXECUTOR - Initializing module TC_26_7_4_2_4_4.
+2026/Jun/26 14:55:53.741684 EXECUTOR - Initialization of module TC_26_7_4_2_4_4 finished.
+2026/Jun/26 14:55:53.741686 EXECUTOR - Initializing module TC_26_7_4_2_4_5.
+2026/Jun/26 14:55:53.741690 EXECUTOR - Initialization of module TC_26_7_4_2_4_5 finished.
+2026/Jun/26 14:55:53.741692 EXECUTOR - Initializing module TC_26_7_4_3_1.
+2026/Jun/26 14:55:53.741697 EXECUTOR - Initialization of module TC_26_7_4_3_1 finished.
+2026/Jun/26 14:55:53.741699 EXECUTOR - Initializing module TC_26_7_4_3_2.
+2026/Jun/26 14:55:53.741704 EXECUTOR - Initialization of module TC_26_7_4_3_2 finished.
+2026/Jun/26 14:55:53.741707 EXECUTOR - Initializing module TC_26_7_4_3_3.
+2026/Jun/26 14:55:53.741712 EXECUTOR - Initialization of module TC_26_7_4_3_3 finished.
+2026/Jun/26 14:55:53.741714 EXECUTOR - Initializing module TC_26_7_4_3_4.
+2026/Jun/26 14:55:53.741719 EXECUTOR - Initialization of module TC_26_7_4_3_4 finished.
+2026/Jun/26 14:55:53.741721 EXECUTOR - Initializing module TC_26_7_4_4.
+2026/Jun/26 14:55:53.741725 EXECUTOR - Initialization of module TC_26_7_4_4 finished.
+2026/Jun/26 14:55:53.741727 EXECUTOR - Initializing module TC_26_7_4_5_1.
+2026/Jun/26 14:55:53.741732 EXECUTOR - Initialization of module TC_26_7_4_5_1 finished.
+2026/Jun/26 14:55:53.741734 EXECUTOR - Initializing module TC_26_7_4_5_2.
+2026/Jun/26 14:55:53.741739 EXECUTOR - Initialization of module TC_26_7_4_5_2 finished.
+2026/Jun/26 14:55:53.741741 EXECUTOR - Initializing module TC_26_7_4_5_3.
+2026/Jun/26 14:55:53.741746 EXECUTOR - Initialization of module TC_26_7_4_5_3 finished.
+2026/Jun/26 14:55:53.741748 EXECUTOR - Initializing module TC_26_7_4_5_4_2.
+2026/Jun/26 14:55:53.741753 EXECUTOR - Initialization of module TC_26_7_4_5_4_2 finished.
+2026/Jun/26 14:55:53.741755 EXECUTOR - Initializing module TC_26_7_5_2.
+2026/Jun/26 14:55:53.741759 EXECUTOR - Initialization of module TC_26_7_5_2 finished.
+2026/Jun/26 14:55:53.741761 EXECUTOR - Initializing module TC_26_7_5_3.
+2026/Jun/26 14:55:53.741766 EXECUTOR - Initialization of module TC_26_7_5_3 finished.
+2026/Jun/26 14:55:53.741768 EXECUTOR - Initializing module TC_26_7_5_4.
+2026/Jun/26 14:55:53.741774 EXECUTOR - Initialization of module TC_26_7_5_4 finished.
+2026/Jun/26 14:55:53.741776 EXECUTOR - Initializing module TC_26_7_5_5.
+2026/Jun/26 14:55:53.741780 EXECUTOR - Initialization of module TC_26_7_5_5 finished.
+2026/Jun/26 14:55:53.741782 EXECUTOR - Initializing module TC_26_7_5_6.
+2026/Jun/26 14:55:53.741787 EXECUTOR - Initialization of module TC_26_7_5_6 finished.
+2026/Jun/26 14:55:53.741790 EXECUTOR - Initializing module TC_26_7_5_7_1.
+2026/Jun/26 14:55:53.741794 EXECUTOR - Initialization of module TC_26_7_5_7_1 finished.
+2026/Jun/26 14:55:53.741797 EXECUTOR - Initializing module TC_26_7_5_8_1.
+2026/Jun/26 14:55:53.741801 EXECUTOR - Initialization of module TC_26_7_5_8_1 finished.
+2026/Jun/26 14:55:53.741803 EXECUTOR - Initializing module TC_26_7_5_8_2.
+2026/Jun/26 14:55:53.741808 EXECUTOR - Initialization of module TC_26_7_5_8_2 finished.
+2026/Jun/26 14:55:53.741810 EXECUTOR - Initializing module TC_26_7_5_8_3.
+2026/Jun/26 14:55:53.741815 EXECUTOR - Initialization of module TC_26_7_5_8_3 finished.
+2026/Jun/26 14:55:53.741817 EXECUTOR - Initializing module TC_26_8_1_2_1_1.
+2026/Jun/26 14:55:53.741828 EXECUTOR - Initialization of module TC_26_8_1_2_1_1 finished.
+2026/Jun/26 14:55:53.741833 EXECUTOR - Initializing module TC_26_8_1_2_2_1.
+2026/Jun/26 14:55:53.741838 EXECUTOR - Initialization of module TC_26_8_1_2_2_1 finished.
+2026/Jun/26 14:55:53.741840 EXECUTOR - Initializing module TC_26_8_1_2_2_2.
+2026/Jun/26 14:55:53.741846 EXECUTOR - Initialization of module TC_26_8_1_2_2_2 finished.
+2026/Jun/26 14:55:53.741848 EXECUTOR - Initializing module TC_26_8_1_2_2_3.
+2026/Jun/26 14:55:53.741852 EXECUTOR - Initialization of module TC_26_8_1_2_2_3 finished.
+2026/Jun/26 14:55:53.741855 EXECUTOR - Initializing module TC_26_8_1_2_3_1.
+2026/Jun/26 14:55:53.741859 EXECUTOR - Initialization of module TC_26_8_1_2_3_1 finished.
+2026/Jun/26 14:55:53.741861 EXECUTOR - Initializing module TC_26_8_1_2_3_2.
+2026/Jun/26 14:55:53.741866 EXECUTOR - Initialization of module TC_26_8_1_2_3_2 finished.
+2026/Jun/26 14:55:53.741871 EXECUTOR - Initializing module TC_26_8_1_2_3_3.
+2026/Jun/26 14:55:53.741876 EXECUTOR - Initialization of module TC_26_8_1_2_3_3 finished.
+2026/Jun/26 14:55:53.741878 EXECUTOR - Initializing module TC_26_8_1_2_3_4.
+2026/Jun/26 14:55:53.741882 EXECUTOR - Initialization of module TC_26_8_1_2_3_4 finished.
+2026/Jun/26 14:55:53.741884 EXECUTOR - Initializing module TC_26_8_1_2_3_5.
+2026/Jun/26 14:55:53.741889 EXECUTOR - Initialization of module TC_26_8_1_2_3_5 finished.
+2026/Jun/26 14:55:53.741891 EXECUTOR - Initializing module TC_26_8_1_2_3_6.
+2026/Jun/26 14:55:53.741895 EXECUTOR - Initialization of module TC_26_8_1_2_3_6 finished.
+2026/Jun/26 14:55:53.741897 EXECUTOR - Initializing module TC_26_8_1_2_3_7.
+2026/Jun/26 14:55:53.741902 EXECUTOR - Initialization of module TC_26_8_1_2_3_7 finished.
+2026/Jun/26 14:55:53.741904 EXECUTOR - Initializing module TC_26_8_1_2_4_1.
+2026/Jun/26 14:55:53.741909 EXECUTOR - Initialization of module TC_26_8_1_2_4_1 finished.
+2026/Jun/26 14:55:53.741911 EXECUTOR - Initializing module TC_26_8_1_2_4_13.
+2026/Jun/26 14:55:53.741916 EXECUTOR - Initialization of module TC_26_8_1_2_4_13 finished.
+2026/Jun/26 14:55:53.741918 EXECUTOR - Initializing module TC_26_8_1_2_4_2.
+2026/Jun/26 14:55:53.741923 EXECUTOR - Initialization of module TC_26_8_1_2_4_2 finished.
+2026/Jun/26 14:55:53.741925 EXECUTOR - Initializing module TC_26_8_1_2_4_3.
+2026/Jun/26 14:55:53.741930 EXECUTOR - Initialization of module TC_26_8_1_2_4_3 finished.
+2026/Jun/26 14:55:53.741932 EXECUTOR - Initializing module TC_26_8_1_2_4_4.
+2026/Jun/26 14:55:53.741937 EXECUTOR - Initialization of module TC_26_8_1_2_4_4 finished.
+2026/Jun/26 14:55:53.741939 EXECUTOR - Initializing module TC_26_8_1_2_4_5.
+2026/Jun/26 14:55:53.741943 EXECUTOR - Initialization of module TC_26_8_1_2_4_5 finished.
+2026/Jun/26 14:55:53.741945 EXECUTOR - Initializing module TC_26_8_1_2_6_1.
+2026/Jun/26 14:55:53.741949 EXECUTOR - Initialization of module TC_26_8_1_2_6_1 finished.
+2026/Jun/26 14:55:53.741951 EXECUTOR - Initializing module TC_26_8_1_2_6_2.
+2026/Jun/26 14:55:53.741956 EXECUTOR - Initialization of module TC_26_8_1_2_6_2 finished.
+2026/Jun/26 14:55:53.741958 EXECUTOR - Initializing module TC_26_8_1_2_6_3.
+2026/Jun/26 14:55:53.741962 EXECUTOR - Initialization of module TC_26_8_1_2_6_3 finished.
+2026/Jun/26 14:55:53.741964 EXECUTOR - Initializing module TC_26_8_1_2_6_6.
+2026/Jun/26 14:55:53.741969 EXECUTOR - Initialization of module TC_26_8_1_2_6_6 finished.
+2026/Jun/26 14:55:53.741971 EXECUTOR - Initializing module TC_26_8_1_3_1_1.
+2026/Jun/26 14:55:53.741976 EXECUTOR - Initialization of module TC_26_8_1_3_1_1 finished.
+2026/Jun/26 14:55:53.741978 EXECUTOR - Initializing module TC_26_8_1_3_2_1.
+2026/Jun/26 14:55:53.741983 EXECUTOR - Initialization of module TC_26_8_1_3_2_1 finished.
+2026/Jun/26 14:55:53.741985 EXECUTOR - Initializing module TC_26_8_1_3_3_1.
+2026/Jun/26 14:55:53.741990 EXECUTOR - Initialization of module TC_26_8_1_3_3_1 finished.
+2026/Jun/26 14:55:53.741992 EXECUTOR - Initializing module TC_26_8_1_3_3_2.
+2026/Jun/26 14:55:53.741997 EXECUTOR - Initialization of module TC_26_8_1_3_3_2 finished.
+2026/Jun/26 14:55:53.741999 EXECUTOR - Initializing module TC_26_8_1_3_3_3.
+2026/Jun/26 14:55:53.742003 EXECUTOR - Initialization of module TC_26_8_1_3_3_3 finished.
+2026/Jun/26 14:55:53.742006 EXECUTOR - Initializing module TC_26_8_1_3_3_4.
+2026/Jun/26 14:55:53.742011 EXECUTOR - Initialization of module TC_26_8_1_3_3_4 finished.
+2026/Jun/26 14:55:53.742013 EXECUTOR - Initializing module TC_26_8_1_3_3_5.
+2026/Jun/26 14:55:53.742017 EXECUTOR - Initialization of module TC_26_8_1_3_3_5 finished.
+2026/Jun/26 14:55:53.742019 EXECUTOR - Initializing module TC_26_8_1_3_3_6.
+2026/Jun/26 14:55:53.742024 EXECUTOR - Initialization of module TC_26_8_1_3_3_6 finished.
+2026/Jun/26 14:55:53.742026 EXECUTOR - Initializing module TC_26_8_1_3_3_7.
+2026/Jun/26 14:55:53.742031 EXECUTOR - Initialization of module TC_26_8_1_3_3_7 finished.
+2026/Jun/26 14:55:53.742033 EXECUTOR - Initializing module TC_26_8_1_3_4_1.
+2026/Jun/26 14:55:53.742040 EXECUTOR - Initialization of module TC_26_8_1_3_4_1 finished.
+2026/Jun/26 14:55:53.742043 EXECUTOR - Initializing module TC_26_8_1_3_4_2.
+2026/Jun/26 14:55:53.742047 EXECUTOR - Initialization of module TC_26_8_1_3_4_2 finished.
+2026/Jun/26 14:55:53.742049 EXECUTOR - Initializing module TC_26_8_1_3_4_3.
+2026/Jun/26 14:55:53.742054 EXECUTOR - Initialization of module TC_26_8_1_3_4_3 finished.
+2026/Jun/26 14:55:53.742056 EXECUTOR - Initializing module TC_26_8_1_3_4_4.
+2026/Jun/26 14:55:53.742061 EXECUTOR - Initialization of module TC_26_8_1_3_4_4 finished.
+2026/Jun/26 14:55:53.742063 EXECUTOR - Initializing module TC_26_8_1_3_4_5.
+2026/Jun/26 14:55:53.742068 EXECUTOR - Initialization of module TC_26_8_1_3_4_5 finished.
+2026/Jun/26 14:55:53.742070 EXECUTOR - Initializing module TC_26_8_1_3_4_6.
+2026/Jun/26 14:55:53.742075 EXECUTOR - Initialization of module TC_26_8_1_3_4_6 finished.
+2026/Jun/26 14:55:53.742077 EXECUTOR - Initializing module TC_26_8_1_3_4_7.
+2026/Jun/26 14:55:53.742082 EXECUTOR - Initialization of module TC_26_8_1_3_4_7 finished.
+2026/Jun/26 14:55:53.742084 EXECUTOR - Initializing module TC_26_8_1_3_4_8.
+2026/Jun/26 14:55:53.742089 EXECUTOR - Initialization of module TC_26_8_1_3_4_8 finished.
+2026/Jun/26 14:55:53.742091 EXECUTOR - Initializing module TC_26_8_1_3_5_1.
+2026/Jun/26 14:55:53.742096 EXECUTOR - Initialization of module TC_26_8_1_3_5_1 finished.
+2026/Jun/26 14:55:53.742098 EXECUTOR - Initializing module TC_26_8_1_3_5_2.
+2026/Jun/26 14:55:53.742103 EXECUTOR - Initialization of module TC_26_8_1_3_5_2 finished.
+2026/Jun/26 14:55:53.742105 EXECUTOR - Initializing module TC_26_8_1_3_5_3.
+2026/Jun/26 14:55:53.742109 EXECUTOR - Initialization of module TC_26_8_1_3_5_3 finished.
+2026/Jun/26 14:55:53.742112 EXECUTOR - Initializing module TC_26_8_1_3_5_4.
+2026/Jun/26 14:55:53.742117 EXECUTOR - Initialization of module TC_26_8_1_3_5_4 finished.
+2026/Jun/26 14:55:53.742119 EXECUTOR - Initializing module TC_26_8_1_3_5_5.
+2026/Jun/26 14:55:53.742124 EXECUTOR - Initialization of module TC_26_8_1_3_5_5 finished.
+2026/Jun/26 14:55:53.742126 EXECUTOR - Initializing module TC_26_8_1_3_5_6.
+2026/Jun/26 14:55:53.742132 EXECUTOR - Initialization of module TC_26_8_1_3_5_6 finished.
+2026/Jun/26 14:55:53.742134 EXECUTOR - Initializing module TC_26_8_1_3_5_7.
+2026/Jun/26 14:55:53.742139 EXECUTOR - Initialization of module TC_26_8_1_3_5_7 finished.
+2026/Jun/26 14:55:53.742141 EXECUTOR - Initializing module TC_26_8_1_3_5_8.
+2026/Jun/26 14:55:53.742146 EXECUTOR - Initialization of module TC_26_8_1_3_5_8 finished.
+2026/Jun/26 14:55:53.742148 EXECUTOR - Initializing module TC_26_8_1_3_5_9.
+2026/Jun/26 14:55:53.742153 EXECUTOR - Initialization of module TC_26_8_1_3_5_9 finished.
+2026/Jun/26 14:55:53.742155 EXECUTOR - Initializing module TC_26_8_2_1.
+2026/Jun/26 14:55:53.742160 EXECUTOR - Initialization of module TC_26_8_2_1 finished.
+2026/Jun/26 14:55:53.742162 EXECUTOR - Initializing module TC_26_8_2_2.
+2026/Jun/26 14:55:53.742167 EXECUTOR - Initialization of module TC_26_8_2_2 finished.
+2026/Jun/26 14:55:53.742169 EXECUTOR - Initializing module TC_26_8_2_3.
+2026/Jun/26 14:55:53.742174 EXECUTOR - Initialization of module TC_26_8_2_3 finished.
+2026/Jun/26 14:55:53.742176 EXECUTOR - Initializing module TC_26_8_3.
+2026/Jun/26 14:55:53.742182 EXECUTOR - Initialization of module TC_26_8_3 finished.
+2026/Jun/26 14:55:53.742184 EXECUTOR - Initializing module TC_34_2_2.
+2026/Jun/26 14:55:53.742189 EXECUTOR - Initialization of module TC_34_2_2 finished.
+2026/Jun/26 14:55:53.742191 EXECUTOR - Initializing module TitanLoggerApi.
+2026/Jun/26 14:55:53.742193 EXECUTOR - Initialization of module TitanLoggerApi finished.
+2026/Jun/26 14:55:53.742195 EXECUTOR - Initializing module TitanLoggerControl.
+2026/Jun/26 14:55:53.742197 EXECUTOR - Initialization of module TitanLoggerControl finished.
+2026/Jun/26 14:55:53.742209 EXECUTOR - Configuration data was processed successfully.
+2026/Jun/26 14:55:53.743733 EXECUTOR - MTC was created. Process id: 39.
+2026/Jun/26 15:23:18.466047 EXECUTOR - Exit was requested from MC. Terminating HC.
+2026/Jun/26 15:23:18.466261 EXECUTOR - Disconnected from MC.
+2026/Jun/26 15:23:18.466282 EXECUTOR - TTCN-3 Host Controller finished.
+2026/Jun/26 14:55:53.744486 EXECUTOR - TTCN-3 Main Test Component started on ttcn3-tc-26-7-4-5-2-1-4dfv5. Version: 11.1.0.
+2026/Jun/26 14:55:53.744592 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/26 14:55:53.744654 EXECUTOR - Connected to MC.
+2026/Jun/26 14:55:53.744773 EXECUTOR - Executing test case TC_26_7_4_5_2 in module TC_26_7_4_5_2.
+2026/Jun/26 14:55:53.745044 TESTCASE TC_26_7_4_5_2.ttcn3:239 Test case TC_26_7_4_5_2 started.
+2026/Jun/26 14:55:53.745118 PARALLEL TC_26_7_4_5_2.ttcn3:239 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_7_4_5_2.
+2026/Jun/26 14:55:53.745378 USER TC_26_7_4_5_2.ttcn3:239 MSC_Port: set_parameter msc_stub_host = 10.42.0.74
+2026/Jun/26 14:55:53.745432 USER TC_26_7_4_5_2.ttcn3:239 MSC_Port: set_parameter msc_stub_port = 5000
+2026/Jun/26 14:55:53.745448 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+2026/Jun/26 14:55:53.745463 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: set_parameter gsmtap_port = 4729
+2026/Jun/26 14:55:53.745470 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: set_parameter local_port = 4729
+2026/Jun/26 14:55:53.745475 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+2026/Jun/26 14:55:53.745480 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/26 14:55:53.745484 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: set_parameter arfcn = 51
+2026/Jun/26 14:55:53.745523 USER TC_26_7_4_5_2.ttcn3:239 L3_Port: user_start called
+2026/Jun/26 14:55:53.745534 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port L was started.
+2026/Jun/26 14:55:53.745593 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port RR was started.
+2026/Jun/26 14:55:53.745599 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port MM was started.
+2026/Jun/26 14:55:53.745603 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port CC was started.
+2026/Jun/26 14:55:53.745606 USER TC_26_7_4_5_2.ttcn3:239 MSC_Port: user_start called
+2026/Jun/26 14:55:53.745611 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port MSC was started.
+2026/Jun/26 14:55:53.745616 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port BSC was started.
+2026/Jun/26 14:55:53.745621 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port RSL was started.
+2026/Jun/26 14:55:53.745631 USER TC_26_7_4_5_2.ttcn3:239 VTY_PT: Starting
+2026/Jun/26 14:55:53.745637 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port VTY was started.
+2026/Jun/26 14:55:53.745641 PORTEVENT TC_26_7_4_5_2.ttcn3:239 Port COORD was started.
+2026/Jun/26 14:55:53.745644 PARALLEL TC_26_7_4_5_2.ttcn3:239 Component type GSM_Component_Definitions.GSM_CT was initialized.
+2026/Jun/26 14:55:53.745669 USER TC_26_7_4_5_2.ttcn3:268 ==========================================================
+2026/Jun/26 14:55:53.745675 USER TC_26_7_4_5_2.ttcn3:269 *** TC_26_7_4_5_2: T3212 Timer Stop and Reset on MM-Connection ***
+2026/Jun/26 14:55:53.745679 USER TC_26_7_4_5_2.ttcn3:270 ==========================================================
+2026/Jun/26 14:55:53.745684 USER TC_26_7_4_5_2.ttcn3:271 Purpose 1: MS stops T3212 on first MM-message in MO connection (no ciphering)
+2026/Jun/26 14:55:53.745688 USER TC_26_7_4_5_2.ttcn3:272 Purpose 2: MS stops T3212 on first correct L3 message after paging response
+2026/Jun/26 14:55:53.745696 USER TC_26_7_4_5_2.ttcn3:273 T_guard=1900.000000s T3212_period=720.000000s T_dly=705.000000s LU_window=30.000000s
+2026/Jun/26 14:55:53.745781 PARALLEL TC_26_7_4_5_2.ttcn3:276 Mapping port mtc:MSC to system:MSC.
+2026/Jun/26 14:55:53.745852 USER TC_26_7_4_5_2.ttcn3:276 MSC_Port: Mapping to MSC
+2026/Jun/26 14:55:53.746385 WARNING TC_26_7_4_5_2.ttcn3:276 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "MSC")
+2026/Jun/26 14:55:53.746439 USER TC_26_7_4_5_2.ttcn3:276 MSC_Port: Registered socket for async events
+2026/Jun/26 14:55:53.746445 USER TC_26_7_4_5_2.ttcn3:276 MSC_Port: Connected to MSC stub at 10.42.0.74:5000
+2026/Jun/26 14:55:53.746455 PORTEVENT TC_26_7_4_5_2.ttcn3:276 Port MSC was mapped to system:MSC.
+2026/Jun/26 14:55:53.746560 PARALLEL TC_26_7_4_5_2.ttcn3:276 Map operation of mtc:MSC to system:MSC finished.
+2026/Jun/26 14:55:53.746599 PARALLEL TC_26_7_4_5_2.ttcn3:277 Mapping port mtc:VTY to system:VTY.
+2026/Jun/26 14:55:53.746618 USER TC_26_7_4_5_2.ttcn3:277 VTY_PT: Mapping port to VTY interface
+2026/Jun/26 14:55:53.746906 USER TC_26_7_4_5_2.ttcn3:277 VTY_PT: Connected to VTY at 10.43.26.255:4247
+2026/Jun/26 14:55:54.247136 USER TC_26_7_4_5_2.ttcn3:277 VTY_PT: Initial banner received
+2026/Jun/26 14:55:54.247193 PORTEVENT TC_26_7_4_5_2.ttcn3:277 Port VTY was mapped to system:VTY.
+2026/Jun/26 14:55:54.247252 USER TC_26_7_4_5_2.ttcn3:277 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+2026/Jun/26 14:55:54.247306 PORTEVENT TC_26_7_4_5_2.ttcn3:277 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/26 14:55:54.247354 PARALLEL TC_26_7_4_5_2.ttcn3:277 Map operation of mtc:VTY to system:VTY finished.
+2026/Jun/26 14:55:54.247376 TIMEROP TC_26_7_4_5_2.ttcn3:280 Start timer T_guard: 1900 s
+2026/Jun/26 14:55:54.247437 USER TC_26_7_4_5_2.ttcn3:294 *** Phase 0: Setting BSC T3212=2 (12 min = 720s period) ***
+2026/Jun/26 14:55:54.247458 USER TC_26_7_4_5_2.ttcn3:295 === Setting BSC T3212: periodic location update 12 minutes (T3212 encoded = 2) via VTY 10.42.0.69:4242 ===
+2026/Jun/26 14:55:54.448686 USER TC_26_7_4_5_2.ttcn3:295 BSC T3212 set to 12 minutes (T3212=2). SI3 will be rebroadcast within ~5s.
+2026/Jun/26 14:55:54.448784 TIMEROP TC_26_7_4_5_2.ttcn3:141 Start timer T_drain: 10 s
+2026/Jun/26 14:55:54.448857 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/26 14:55:54.448901 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 1 was extracted from the queue of MSC.
+2026/Jun/26 14:55:54.449023 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"type\": \"WELCOME\", \"status\": \"connected\"}"
+2026/Jun/26 14:55:58.751082 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:55:58.751175 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/26 14:55:58.751207 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/26 14:55:58.751221 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 2 was extracted from the queue of MSC.
+2026/Jun/26 14:56:03.756094 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:03.756188 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/26 14:56:03.756230 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/26 14:56:03.756249 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 3 was extracted from the queue of MSC.
+2026/Jun/26 14:56:04.448875 TIMEROP TC_26_7_4_5_2.ttcn3:151 Timeout T_drain: 10 s
+2026/Jun/26 14:56:04.448945 USER TC_26_7_4_5_2.ttcn3:304 *** Phase 0: Waiting for initial LU Request ***
+2026/Jun/26 14:56:04.448972 TIMEROP TC_26_7_4_5_2.ttcn3:308 Start timer T_drain_init: 3 s
+2026/Jun/26 14:56:07.450853 TIMEROP TC_26_7_4_5_2.ttcn3:327 Timeout T_drain_init: 3 s
+2026/Jun/26 14:56:07.450946 TIMEROP TC_26_7_4_5_2.ttcn3:333 Start timer T_lu_wait: 60 s
+2026/Jun/26 14:56:08.761131 USER TC_26_7_4_5_2.ttcn3:334 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:08.761218 PORTEVENT TC_26_7_4_5_2.ttcn3:334 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/26 14:56:08.761251 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/26 14:56:08.761285 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Message with id 4 was extracted from the queue of MSC.
+2026/Jun/26 14:56:09.133645 USER TC_26_7_4_5_2.ttcn3:334 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 14:56:13.766062 USER TC_26_7_4_5_2.ttcn3:334 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:13.766136 PORTEVENT TC_26_7_4_5_2.ttcn3:334 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/26 14:56:13.766165 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/26 14:56:13.766178 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Message with id 5 was extracted from the queue of MSC.
+2026/Jun/26 14:56:18.771083 USER TC_26_7_4_5_2.ttcn3:334 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:18.771156 PORTEVENT TC_26_7_4_5_2.ttcn3:334 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/26 14:56:18.771178 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/26 14:56:18.771186 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Message with id 6 was extracted from the queue of MSC.
+2026/Jun/26 14:56:23.776205 USER TC_26_7_4_5_2.ttcn3:334 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:23.776297 PORTEVENT TC_26_7_4_5_2.ttcn3:334 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/26 14:56:23.776335 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/26 14:56:23.776353 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Message with id 7 was extracted from the queue of MSC.
+2026/Jun/26 14:56:24.676470 USER TC_26_7_4_5_2.ttcn3:334 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 2, "msc_slr": 2, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/26 14:56:24.676537 PORTEVENT TC_26_7_4_5_2.ttcn3:334 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 8
+2026/Jun/26 14:56:24.676563 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 8
+2026/Jun/26 14:56:24.676572 PORTEVENT TC_26_7_4_5_2.ttcn3:335 Message with id 8 was extracted from the queue of MSC.
+2026/Jun/26 14:56:24.676658 USER TC_26_7_4_5_2.ttcn3:337 *** Received initial LU Request ***
+2026/Jun/26 14:56:24.677490 USER TC_26_7_4_5_2.ttcn3:95 Extracted bsc_slr = 2 from event
+2026/Jun/26 14:56:24.677531 TIMEROP TC_26_7_4_5_2.ttcn3:340 Stop timer T_lu_wait: 60 s
+2026/Jun/26 14:56:24.677554 USER TC_26_7_4_5_2.ttcn3:406 *** Phase 0: Sending LU Accept (LAC=4242, TMSI) ***
+2026/Jun/26 14:56:24.677607 PORTEVENT TC_26_7_4_5_2.ttcn3:106 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 2, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+2026/Jun/26 14:56:24.677697 USER TC_26_7_4_5_2.ttcn3:106 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 2, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+2026/Jun/26 14:56:24.677708 TIMEROP TC_26_7_4_5_2.ttcn3:110 Start timer T_tmsi: 10 s
+2026/Jun/26 14:56:25.179379 USER TC_26_7_4_5_2.ttcn3:111 MSC_Port: RX: {"status": "ok", "sent": true}
+2026/Jun/26 14:56:25.179444 PORTEVENT TC_26_7_4_5_2.ttcn3:111 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 9
+2026/Jun/26 14:56:25.179468 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 9
+2026/Jun/26 14:56:25.179486 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Message with id 9 was extracted from the queue of MSC.
+2026/Jun/26 14:56:25.179588 USER TC_26_7_4_5_2.ttcn3:120 Event during TMSI wait: "{\"status\": \"ok\", \"sent\": true}"
+2026/Jun/26 14:56:25.328986 USER TC_26_7_4_5_2.ttcn3:111 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 2, "pd": 5, "msg_type": 27}
+2026/Jun/26 14:56:25.329041 PORTEVENT TC_26_7_4_5_2.ttcn3:111 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 10
+2026/Jun/26 14:56:25.329063 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 10
+2026/Jun/26 14:56:25.329071 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Message with id 10 was extracted from the queue of MSC.
+2026/Jun/26 14:56:25.329162 USER TC_26_7_4_5_2.ttcn3:120 Event during TMSI wait: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}"
+2026/Jun/26 14:56:25.329182 USER TC_26_7_4_5_2.ttcn3:111 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 2}
+2026/Jun/26 14:56:25.329190 PORTEVENT TC_26_7_4_5_2.ttcn3:111 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 11
+2026/Jun/26 14:56:25.329198 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 11
+2026/Jun/26 14:56:25.329202 PORTEVENT TC_26_7_4_5_2.ttcn3:112 Message with id 11 was extracted from the queue of MSC.
+2026/Jun/26 14:56:25.329310 USER TC_26_7_4_5_2.ttcn3:115 *** TMSI Realloc Complete ***
+2026/Jun/26 14:56:25.329318 TIMEROP TC_26_7_4_5_2.ttcn3:116 Stop timer T_tmsi: 10 s
+2026/Jun/26 14:56:25.329334 PORTEVENT TC_26_7_4_5_2.ttcn3:132 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 2, \"cause\": 0}}"
+2026/Jun/26 14:56:25.329378 USER TC_26_7_4_5_2.ttcn3:132 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 2, "cause": 0}}
+2026/Jun/26 14:56:25.329386 USER TC_26_7_4_5_2.ttcn3:410 *** Phase 0: 25s settle time - MS in idle-updated state ***
+2026/Jun/26 14:56:25.329393 TIMEROP TC_26_7_4_5_2.ttcn3:141 Start timer T_drain: 25 s
+2026/Jun/26 14:56:25.329710 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"status": "ok"}
+2026/Jun/26 14:56:25.329720 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 12
+2026/Jun/26 14:56:25.329727 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 12
+2026/Jun/26 14:56:25.329732 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 12 was extracted from the queue of MSC.
+2026/Jun/26 14:56:25.329753 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"status\": \"ok\"}"
+2026/Jun/26 14:56:25.370920 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 2}
+2026/Jun/26 14:56:25.370977 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 13
+2026/Jun/26 14:56:25.370999 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 13
+2026/Jun/26 14:56:25.371008 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 13 was extracted from the queue of MSC.
+2026/Jun/26 14:56:25.371050 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}"
+2026/Jun/26 14:56:25.942064 USER TC_26_7_4_5_2.ttcn3:142 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/26 14:56:29.333138 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:29.333248 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/26 14:56:29.333285 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/26 14:56:29.333302 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 14 was extracted from the queue of MSC.
+2026/Jun/26 14:56:34.338066 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:34.338132 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/26 14:56:34.338153 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/26 14:56:34.338162 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 15 was extracted from the queue of MSC.
+2026/Jun/26 14:56:39.343040 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:39.343103 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/26 14:56:39.343127 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/26 14:56:39.343136 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 16 was extracted from the queue of MSC.
+2026/Jun/26 14:56:44.348135 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:44.348235 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+2026/Jun/26 14:56:44.348275 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+2026/Jun/26 14:56:44.348294 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 17 was extracted from the queue of MSC.
+2026/Jun/26 14:56:49.353043 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:49.353111 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/26 14:56:49.353134 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/26 14:56:49.353144 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 18 was extracted from the queue of MSC.
+2026/Jun/26 14:56:50.329849 TIMEROP TC_26_7_4_5_2.ttcn3:151 Timeout T_drain: 25 s
+2026/Jun/26 14:56:50.329910 USER TC_26_7_4_5_2.ttcn3:443 ==========================================================
+2026/Jun/26 14:56:50.329931 USER TC_26_7_4_5_2.ttcn3:444 *** SUBTEST 1: MO Connection - T3212 stops on CM SERVICE REJECT ***
+2026/Jun/26 14:56:50.329939 USER TC_26_7_4_5_2.ttcn3:445 ==========================================================
+2026/Jun/26 14:56:50.329945 USER TC_26_7_4_5_2.ttcn3:449 *** subtest1[3]: Triggering MO call via VTY (enable + call 1 22222) ***
+2026/Jun/26 14:56:50.329976 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "enable"
+2026/Jun/26 14:56:50.330006 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "enable"
+2026/Jun/26 14:56:50.330036 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "enable"
+2026/Jun/26 14:56:50.530254 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: 
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% On Network, normal service: International, 70
+enable
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+2026/Jun/26 14:56:50.530425 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+2026/Jun/26 14:56:50.530472 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/26 14:56:50.530547 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+2026/Jun/26 14:56:50.530568 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 1 was extracted from the queue of VTY.
+2026/Jun/26 14:56:50.530589 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/26 14:56:50.530601 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/26 14:56:50.530644 USER TC_26_7_4_5_2.ttcn3:451 VTY enable response: "\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/26 14:56:50.530676 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "call 1 22222"
+2026/Jun/26 14:56:50.530698 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "call 1 22222"
+2026/Jun/26 14:56:50.530714 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "call 1 22222"
+2026/Jun/26 14:56:50.730865 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: call 1 22222
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+2026/Jun/26 14:56:50.730935 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "call 1 22222\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+2026/Jun/26 14:56:50.730953 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/26 14:56:50.730974 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "call 1 22222\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+2026/Jun/26 14:56:50.730982 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 2 was extracted from the queue of VTY.
+2026/Jun/26 14:56:50.730987 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/26 14:56:50.730993 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "call 1 22222\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/26 14:56:50.731006 USER TC_26_7_4_5_2.ttcn3:453 VTY call response: "call 1 22222\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+2026/Jun/26 14:56:50.731018 USER TC_26_7_4_5_2.ttcn3:457 *** subtest1[5][7][8]: Waiting for CM SERVICE REQUEST from MS ***
+2026/Jun/26 14:56:50.731027 TIMEROP TC_26_7_4_5_2.ttcn3:462 Start timer T_cm_svc: 30 s
+2026/Jun/26 14:56:51.036307 USER TC_26_7_4_5_2.ttcn3:463 MSC_Port: RX: {"type": "EVENT_CM_SERVICE_REQUEST", "bsc_slr": 3, "cm_service_type": 1, "cm_service_type_name": "MO call / Packet"}
+2026/Jun/26 14:56:51.036425 PORTEVENT TC_26_7_4_5_2.ttcn3:463 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 3, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 19
+2026/Jun/26 14:56:51.036470 PORTEVENT TC_26_7_4_5_2.ttcn3:464 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 3, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 19
+2026/Jun/26 14:56:51.036487 PORTEVENT TC_26_7_4_5_2.ttcn3:464 Message with id 19 was extracted from the queue of MSC.
+2026/Jun/26 14:56:51.036654 USER TC_26_7_4_5_2.ttcn3:468 *** subtest1[8]: CM SERVICE REQUEST received - verdict (P) ***
+2026/Jun/26 14:56:51.038608 USER TC_26_7_4_5_2.ttcn3:95 Extracted bsc_slr = 3 from event
+2026/Jun/26 14:56:51.038643 TIMEROP TC_26_7_4_5_2.ttcn3:471 Stop timer T_cm_svc: 30 s
+2026/Jun/26 14:56:51.038734 USER TC_26_7_4_5_2.ttcn3:513 *** subtest1[10]: Sending CM SERVICE REJECT (cause: network failure) ***
+2026/Jun/26 14:56:51.038761 USER TC_26_7_4_5_2.ttcn3:514 *** Comment: MS shall stop T3212 after receiving first L3-message ***
+2026/Jun/26 14:56:51.038785 PORTEVENT TC_26_7_4_5_2.ttcn3:517 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CM_SERVICE_REJECT\", \"params\": {\"bsc_slr\": 3, \"cause\": 17}}"
+2026/Jun/26 14:56:51.038870 USER TC_26_7_4_5_2.ttcn3:517 MSC_Port: TX: {"command": "CMD_SEND_CM_SERVICE_REJECT", "params": {"bsc_slr": 3, "cause": 17}}
+2026/Jun/26 14:56:51.038894 TIMEROP TC_26_7_4_5_2.ttcn3:141 Start timer T_drain: 2 s
+2026/Jun/26 14:56:51.039247 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"status": "ok"}
+2026/Jun/26 14:56:51.039269 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 20
+2026/Jun/26 14:56:51.039288 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 20
+2026/Jun/26 14:56:51.039301 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 20 was extracted from the queue of MSC.
+2026/Jun/26 14:56:51.039352 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"status\": \"ok\"}"
+2026/Jun/26 14:56:51.361037 USER TC_26_7_4_5_2.ttcn3:142 VTY_PT: Received data (buffered): 38 bytes
+2026/Jun/26 14:56:53.038924 TIMEROP TC_26_7_4_5_2.ttcn3:151 Timeout T_drain: 2 s
+2026/Jun/26 14:56:53.038988 USER TC_26_7_4_5_2.ttcn3:523 *** subtest1[11]: ChanRel - releasing channel ***
+2026/Jun/26 14:56:53.039027 PORTEVENT TC_26_7_4_5_2.ttcn3:526 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 3, \"cause\": 0}}"
+2026/Jun/26 14:56:53.039089 USER TC_26_7_4_5_2.ttcn3:526 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 3, "cause": 0}}
+2026/Jun/26 14:56:53.039100 TIMEROP TC_26_7_4_5_2.ttcn3:141 Start timer T_drain: 5 s
+2026/Jun/26 14:56:53.039487 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"status": "ok"}
+2026/Jun/26 14:56:53.039499 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 21
+2026/Jun/26 14:56:53.039513 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 21
+2026/Jun/26 14:56:53.039520 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 21 was extracted from the queue of MSC.
+2026/Jun/26 14:56:53.039564 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"status\": \"ok\"}"
+2026/Jun/26 14:56:53.040416 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 3}
+2026/Jun/26 14:56:53.040430 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}" id 22
+2026/Jun/26 14:56:53.040439 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}" id 22
+2026/Jun/26 14:56:53.040445 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 22 was extracted from the queue of MSC.
+2026/Jun/26 14:56:53.040463 USER TC_26_7_4_5_2.ttcn3:147 Draining event: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}"
+2026/Jun/26 14:56:55.041023 USER TC_26_7_4_5_2.ttcn3:142 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:56:55.041089 PORTEVENT TC_26_7_4_5_2.ttcn3:142 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 23
+2026/Jun/26 14:56:55.041114 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 23
+2026/Jun/26 14:56:55.041124 PORTEVENT TC_26_7_4_5_2.ttcn3:143 Message with id 23 was extracted from the queue of MSC.
+2026/Jun/26 14:56:55.740743 USER TC_26_7_4_5_2.ttcn3:142 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/26 14:56:58.040853 TIMEROP TC_26_7_4_5_2.ttcn3:151 Timeout T_drain: 5 s
+2026/Jun/26 14:56:58.040921 USER TC_26_7_4_5_2.ttcn3:540 *** subtest1[4][12]: Waiting T_dly=705.000000s (705s) ***
+2026/Jun/26 14:56:58.040969 USER TC_26_7_4_5_2.ttcn3:541 *** After 705s, T3212 (720s period) should fire within 30s window ***
+2026/Jun/26 14:56:58.040977 TIMEROP TC_26_7_4_5_2.ttcn3:544 Start timer T_dly_body: 705 s
+2026/Jun/26 14:57:00.046086 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:00.046158 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+2026/Jun/26 14:57:00.046185 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 24
+2026/Jun/26 14:57:00.046194 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 24 was extracted from the queue of MSC.
+2026/Jun/26 14:57:05.051051 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:05.051161 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+2026/Jun/26 14:57:05.051203 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 25
+2026/Jun/26 14:57:05.051222 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 25 was extracted from the queue of MSC.
+2026/Jun/26 14:57:10.056015 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:10.056083 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/26 14:57:10.056109 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 26
+2026/Jun/26 14:57:10.056118 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 26 was extracted from the queue of MSC.
+2026/Jun/26 14:57:15.062888 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:15.062965 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/26 14:57:15.062990 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+2026/Jun/26 14:57:15.062999 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 27 was extracted from the queue of MSC.
+2026/Jun/26 14:57:20.066033 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:20.066107 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/26 14:57:20.066134 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 28
+2026/Jun/26 14:57:20.066145 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 28 was extracted from the queue of MSC.
+2026/Jun/26 14:57:25.071004 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:25.071092 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/26 14:57:25.071128 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 29
+2026/Jun/26 14:57:25.071142 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 29 was extracted from the queue of MSC.
+2026/Jun/26 14:57:30.076022 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:30.076101 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 30
+2026/Jun/26 14:57:30.076127 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 30
+2026/Jun/26 14:57:30.076137 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 30 was extracted from the queue of MSC.
+2026/Jun/26 14:57:35.081081 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:35.081154 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/26 14:57:35.081187 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+2026/Jun/26 14:57:35.081195 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 31 was extracted from the queue of MSC.
+2026/Jun/26 14:57:40.086025 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:40.086096 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+2026/Jun/26 14:57:40.086121 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+2026/Jun/26 14:57:40.086130 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 32 was extracted from the queue of MSC.
+2026/Jun/26 14:57:45.091036 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:45.091119 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+2026/Jun/26 14:57:45.091145 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+2026/Jun/26 14:57:45.091154 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 33 was extracted from the queue of MSC.
+2026/Jun/26 14:57:50.096007 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:50.096076 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/26 14:57:50.096103 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 34
+2026/Jun/26 14:57:50.096113 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 34 was extracted from the queue of MSC.
+2026/Jun/26 14:57:55.101010 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:57:55.101089 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/26 14:57:55.101116 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+2026/Jun/26 14:57:55.101127 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 35 was extracted from the queue of MSC.
+2026/Jun/26 14:58:00.106499 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:00.106573 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+2026/Jun/26 14:58:00.106598 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+2026/Jun/26 14:58:00.106607 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 36 was extracted from the queue of MSC.
+2026/Jun/26 14:58:05.111024 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:05.111096 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 37
+2026/Jun/26 14:58:05.111120 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 37
+2026/Jun/26 14:58:05.111129 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 37 was extracted from the queue of MSC.
+2026/Jun/26 14:58:10.116036 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:10.116106 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 38
+2026/Jun/26 14:58:10.116131 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 38
+2026/Jun/26 14:58:10.116140 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 38 was extracted from the queue of MSC.
+2026/Jun/26 14:58:15.121144 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:15.121302 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 39
+2026/Jun/26 14:58:15.121345 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 39
+2026/Jun/26 14:58:15.121362 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 39 was extracted from the queue of MSC.
+2026/Jun/26 14:58:20.126048 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:20.126122 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 40
+2026/Jun/26 14:58:20.126145 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 40
+2026/Jun/26 14:58:20.126154 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 40 was extracted from the queue of MSC.
+2026/Jun/26 14:58:25.131004 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:25.131077 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 41
+2026/Jun/26 14:58:25.131103 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 41
+2026/Jun/26 14:58:25.131113 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 41 was extracted from the queue of MSC.
+2026/Jun/26 14:58:30.136035 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:30.136106 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 42
+2026/Jun/26 14:58:30.136132 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 42
+2026/Jun/26 14:58:30.136141 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 42 was extracted from the queue of MSC.
+2026/Jun/26 14:58:35.142124 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:35.142195 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 43
+2026/Jun/26 14:58:35.142218 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 43
+2026/Jun/26 14:58:35.142227 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 43 was extracted from the queue of MSC.
+2026/Jun/26 14:58:40.147073 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:40.147135 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 44
+2026/Jun/26 14:58:40.147156 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 44
+2026/Jun/26 14:58:40.147165 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 44 was extracted from the queue of MSC.
+2026/Jun/26 14:58:45.152059 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:45.152126 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 45
+2026/Jun/26 14:58:45.152148 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 45
+2026/Jun/26 14:58:45.152156 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 45 was extracted from the queue of MSC.
+2026/Jun/26 14:58:50.158033 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:50.158111 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 46
+2026/Jun/26 14:58:50.158139 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 46
+2026/Jun/26 14:58:50.158165 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 46 was extracted from the queue of MSC.
+2026/Jun/26 14:58:55.163053 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:58:55.163127 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 47
+2026/Jun/26 14:58:55.163149 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 47
+2026/Jun/26 14:58:55.163158 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 47 was extracted from the queue of MSC.
+2026/Jun/26 14:59:00.168703 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:00.168768 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 48
+2026/Jun/26 14:59:00.168787 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 48
+2026/Jun/26 14:59:00.168796 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 48 was extracted from the queue of MSC.
+2026/Jun/26 14:59:05.174104 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:05.174170 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 49
+2026/Jun/26 14:59:05.174191 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 49
+2026/Jun/26 14:59:05.174199 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 49 was extracted from the queue of MSC.
+2026/Jun/26 14:59:10.180050 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:10.180112 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 50
+2026/Jun/26 14:59:10.180133 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 50
+2026/Jun/26 14:59:10.180141 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 50 was extracted from the queue of MSC.
+2026/Jun/26 14:59:15.185059 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:15.185130 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 51
+2026/Jun/26 14:59:15.185154 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 51
+2026/Jun/26 14:59:15.185164 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 51 was extracted from the queue of MSC.
+2026/Jun/26 14:59:20.190075 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:20.190140 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 52
+2026/Jun/26 14:59:20.190161 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 52
+2026/Jun/26 14:59:20.190169 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 52 was extracted from the queue of MSC.
+2026/Jun/26 14:59:25.195118 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:25.195216 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 53
+2026/Jun/26 14:59:25.195254 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 53
+2026/Jun/26 14:59:25.195273 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 53 was extracted from the queue of MSC.
+2026/Jun/26 14:59:30.200057 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:30.200153 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 54
+2026/Jun/26 14:59:30.200192 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 54
+2026/Jun/26 14:59:30.200224 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 54 was extracted from the queue of MSC.
+2026/Jun/26 14:59:35.205041 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:35.205137 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 55
+2026/Jun/26 14:59:35.205176 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 55
+2026/Jun/26 14:59:35.205194 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 55 was extracted from the queue of MSC.
+2026/Jun/26 14:59:40.210070 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:40.210154 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 56
+2026/Jun/26 14:59:40.210177 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 56
+2026/Jun/26 14:59:40.210186 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 56 was extracted from the queue of MSC.
+2026/Jun/26 14:59:45.215031 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:45.215122 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 57
+2026/Jun/26 14:59:45.215148 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 57
+2026/Jun/26 14:59:45.215161 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 57 was extracted from the queue of MSC.
+2026/Jun/26 14:59:50.220059 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:50.220136 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 58
+2026/Jun/26 14:59:50.220167 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 58
+2026/Jun/26 14:59:50.220182 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 58 was extracted from the queue of MSC.
+2026/Jun/26 14:59:55.225043 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:59:55.225108 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 59
+2026/Jun/26 14:59:55.225129 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 59
+2026/Jun/26 14:59:55.225137 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 59 was extracted from the queue of MSC.
+2026/Jun/26 15:00:00.231072 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:00.231140 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 60
+2026/Jun/26 15:00:00.231161 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 60
+2026/Jun/26 15:00:00.231170 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 60 was extracted from the queue of MSC.
+2026/Jun/26 15:00:05.236090 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:05.236163 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 61
+2026/Jun/26 15:00:05.236184 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 61
+2026/Jun/26 15:00:05.236192 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 61 was extracted from the queue of MSC.
+2026/Jun/26 15:00:10.241084 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:10.241162 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 62
+2026/Jun/26 15:00:10.241197 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 62
+2026/Jun/26 15:00:10.241205 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 62 was extracted from the queue of MSC.
+2026/Jun/26 15:00:15.246072 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:15.246147 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 63
+2026/Jun/26 15:00:15.246168 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 63
+2026/Jun/26 15:00:15.246176 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 63 was extracted from the queue of MSC.
+2026/Jun/26 15:00:20.251046 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:20.251108 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 64
+2026/Jun/26 15:00:20.251133 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 64
+2026/Jun/26 15:00:20.251141 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 64 was extracted from the queue of MSC.
+2026/Jun/26 15:00:25.256061 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:25.256153 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 65
+2026/Jun/26 15:00:25.256192 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 65
+2026/Jun/26 15:00:25.256211 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 65 was extracted from the queue of MSC.
+2026/Jun/26 15:00:30.261106 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:30.261173 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 66
+2026/Jun/26 15:00:30.261195 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 66
+2026/Jun/26 15:00:30.261204 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 66 was extracted from the queue of MSC.
+2026/Jun/26 15:00:35.266141 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:35.266242 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 67
+2026/Jun/26 15:00:35.266283 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 67
+2026/Jun/26 15:00:35.266302 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 67 was extracted from the queue of MSC.
+2026/Jun/26 15:00:40.271086 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:40.271150 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 68
+2026/Jun/26 15:00:40.271173 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 68
+2026/Jun/26 15:00:40.271181 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 68 was extracted from the queue of MSC.
+2026/Jun/26 15:00:45.276047 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:45.276111 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 69
+2026/Jun/26 15:00:45.276133 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 69
+2026/Jun/26 15:00:45.276141 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 69 was extracted from the queue of MSC.
+2026/Jun/26 15:00:50.281161 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:50.281246 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 70
+2026/Jun/26 15:00:50.281272 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 70
+2026/Jun/26 15:00:50.281281 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 70 was extracted from the queue of MSC.
+2026/Jun/26 15:00:55.286080 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:00:55.286153 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 71
+2026/Jun/26 15:00:55.286185 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 71
+2026/Jun/26 15:00:55.286195 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 71 was extracted from the queue of MSC.
+2026/Jun/26 15:01:00.291053 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:00.291119 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 72
+2026/Jun/26 15:01:00.291142 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 72
+2026/Jun/26 15:01:00.291152 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 72 was extracted from the queue of MSC.
+2026/Jun/26 15:01:05.296147 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:05.296243 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 73
+2026/Jun/26 15:01:05.296282 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 73
+2026/Jun/26 15:01:05.296301 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 73 was extracted from the queue of MSC.
+2026/Jun/26 15:01:10.301166 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:10.301261 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 74
+2026/Jun/26 15:01:10.301301 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 74
+2026/Jun/26 15:01:10.301319 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 74 was extracted from the queue of MSC.
+2026/Jun/26 15:01:15.307117 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:15.307190 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 75
+2026/Jun/26 15:01:15.307212 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 75
+2026/Jun/26 15:01:15.307220 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 75 was extracted from the queue of MSC.
+2026/Jun/26 15:01:20.312036 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:20.312113 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 76
+2026/Jun/26 15:01:20.312139 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 76
+2026/Jun/26 15:01:20.312148 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 76 was extracted from the queue of MSC.
+2026/Jun/26 15:01:25.317042 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:25.317118 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 77
+2026/Jun/26 15:01:25.317145 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 77
+2026/Jun/26 15:01:25.317162 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 77 was extracted from the queue of MSC.
+2026/Jun/26 15:01:30.322045 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:30.322133 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 78
+2026/Jun/26 15:01:30.322159 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 78
+2026/Jun/26 15:01:30.322168 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 78 was extracted from the queue of MSC.
+2026/Jun/26 15:01:35.327005 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:35.327078 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 79
+2026/Jun/26 15:01:35.327105 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 79
+2026/Jun/26 15:01:35.327114 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 79 was extracted from the queue of MSC.
+2026/Jun/26 15:01:40.332079 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:40.332183 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 80
+2026/Jun/26 15:01:40.332220 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 80
+2026/Jun/26 15:01:40.332236 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 80 was extracted from the queue of MSC.
+2026/Jun/26 15:01:45.338038 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 15:01:45.338115 PORTEVENT TC_26_7_4_5_2.ttcn3:545 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 81
+2026/Jun/26 15:01:45.338142 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 81
+2026/Jun/26 15:01:45.338152 PORTEVENT TC_26_7_4_5_2.ttcn3:546 Message with id 81 was extracted from the queue of MSC.
+2026/Jun/26 15:01:46.827987 USER TC_26_7_4_5_2.ttcn3:545 MSC_Port: Connection closed by stub
+2026/Jun/26 15:08:43.139851 TIMEROP TC_26_7_4_5_2.ttcn3:567 Timeout T_dly_body: 705 s
+2026/Jun/26 15:08:43.139918 USER TC_26_7_4_5_2.ttcn3:568 *** subtest1[12]: T_dly(705s) expired - entering local_continue ***
+2026/Jun/26 15:08:43.139940 USER TC_26_7_4_5_2.ttcn3:582 *** subtest1 local_continue[0]: Waiting for periodic LU within 30.000000s window ***
+2026/Jun/26 15:08:43.139960 TIMEROP TC_26_7_4_5_2.ttcn3:165 Start timer T_window: 30 s
+2026/Jun/26 15:09:13.168856 TIMEROP TC_26_7_4_5_2.ttcn3:200 Timeout T_window: 30 s
+2026/Jun/26 15:09:13.168923 USER TC_26_7_4_5_2.ttcn3:201 FAIL: ["subtest1"] No periodic LU received within 30.000000s window
+2026/Jun/26 15:09:13.168964 USER TC_26_7_4_5_2.ttcn3:591 *** SUBTEST 1 FAIL: MS did not send periodic LU within 30s after 705s wait ***
+2026/Jun/26 15:09:13.168971 USER TC_26_7_4_5_2.ttcn3:596 *** local_continue[2][3]: Waiting T_dly=60.000000s (60s) ***
+2026/Jun/26 15:09:13.168980 TIMEROP TC_26_7_4_5_2.ttcn3:598 Start timer T_dly_local: 60 s
+2026/Jun/26 15:09:16.527269 USER TC_26_7_4_5_2.ttcn3:599 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:09:39.287128 USER TC_26_7_4_5_2.ttcn3:599 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:10:00.704060 USER TC_26_7_4_5_2.ttcn3:599 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:10:13.179855 TIMEROP TC_26_7_4_5_2.ttcn3:621 Timeout T_dly_local: 60 s
+2026/Jun/26 15:10:13.179925 USER TC_26_7_4_5_2.ttcn3:622 *** local_continue[3]: T_dly(60s) expired - entering ltree_continue1 ***
+2026/Jun/26 15:10:13.179951 USER TC_26_7_4_5_2.ttcn3:663 ==========================================================
+2026/Jun/26 15:10:13.179957 USER TC_26_7_4_5_2.ttcn3:664 *** SUBTEST 2: Paging Response - T3212 stops on first L3 message ***
+2026/Jun/26 15:10:13.179961 USER TC_26_7_4_5_2.ttcn3:665 ==========================================================
+2026/Jun/26 15:10:13.179974 USER TC_26_7_4_5_2.ttcn3:669 *** subtest2[0]: Sending PAGING REQUEST (IMSI=901700000000001) ***
+2026/Jun/26 15:10:13.179993 PORTEVENT TC_26_7_4_5_2.ttcn3:671 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_PAGING\", \"params\": {\"imsi\": \"901700000000001\", \"lac\": 4242, \"cell_id\": 0}}"
+2026/Jun/26 15:10:13.180014 WARNING TC_26_7_4_5_2.ttcn3:671 MSC_Port: Not connected
+2026/Jun/26 15:10:13.180020 USER TC_26_7_4_5_2.ttcn3:675 *** subtest2[1][4]: Waiting for PAGING RESPONSE from MS ***
+2026/Jun/26 15:10:13.180026 TIMEROP TC_26_7_4_5_2.ttcn3:680 Start timer T_paging: 45 s
+2026/Jun/26 15:10:22.094751 USER TC_26_7_4_5_2.ttcn3:681 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:10:58.215875 TIMEROP TC_26_7_4_5_2.ttcn3:708 Timeout T_paging: 45 s
+2026/Jun/26 15:10:58.215969 USER TC_26_7_4_5_2.ttcn3:709 WARNING: PAGING RESPONSE not received within 45s
+2026/Jun/26 15:10:58.216007 USER TC_26_7_4_5_2.ttcn3:804 WARNING: No paging response received - continuing with timer wait
+2026/Jun/26 15:10:58.216026 TIMEROP TC_26_7_4_5_2.ttcn3:141 Start timer T_drain: 5 s
+2026/Jun/26 15:11:03.219859 TIMEROP TC_26_7_4_5_2.ttcn3:151 Timeout T_drain: 5 s
+2026/Jun/26 15:11:03.219924 USER TC_26_7_4_5_2.ttcn3:811 *** subtest2[8][9]: Waiting T_dly=705.000000s (705s) ***
+2026/Jun/26 15:11:03.219954 USER TC_26_7_4_5_2.ttcn3:812 *** After 705s, T3212 (720s period) should fire within 30s window ***
+2026/Jun/26 15:11:03.219962 TIMEROP TC_26_7_4_5_2.ttcn3:815 Start timer T_dly_ltree: 705 s
+2026/Jun/26 15:21:37.456127 USER TC_26_7_4_5_2.ttcn3:816 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:22:00.217150 USER TC_26_7_4_5_2.ttcn3:816 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:22:23.046030 USER TC_26_7_4_5_2.ttcn3:816 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:22:48.243852 TIMEROP TC_26_7_4_5_2.ttcn3:838 Timeout T_dly_ltree: 705 s
+2026/Jun/26 15:22:48.243920 USER TC_26_7_4_5_2.ttcn3:839 *** subtest2[9]: T_dly(705s) expired - expecting periodic LU ***
+2026/Jun/26 15:22:48.243947 USER TC_26_7_4_5_2.ttcn3:852 *** subtest2 ltree_continue1[10]: Waiting for periodic LU within 30.000000s window ***
+2026/Jun/26 15:22:48.243966 TIMEROP TC_26_7_4_5_2.ttcn3:165 Start timer T_window: 30 s
+2026/Jun/26 15:22:58.892309 USER TC_26_7_4_5_2.ttcn3:166 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 15:23:18.261869 TIMEROP TC_26_7_4_5_2.ttcn3:200 Timeout T_window: 30 s
+2026/Jun/26 15:23:18.261963 USER TC_26_7_4_5_2.ttcn3:201 FAIL: ["subtest2"] No periodic LU received within 30.000000s window
+2026/Jun/26 15:23:18.262024 USER TC_26_7_4_5_2.ttcn3:862 *** SUBTEST 2 FAIL: MS did not send periodic LU within 30s after 705s wait ***
+2026/Jun/26 15:23:18.262042 USER TC_26_7_4_5_2.ttcn3:869 ========== TEST SUMMARY ==========
+2026/Jun/26 15:23:18.262097 USER TC_26_7_4_5_2.ttcn3:876 subtest1 (MO call - CM SERVICE REJECT stops T3212): FAIL
+2026/Jun/26 15:23:18.262111 USER TC_26_7_4_5_2.ttcn3:884 subtest2 (Paging - first L3 msg stops T3212): FAIL
+2026/Jun/26 15:23:18.262124 USER TC_26_7_4_5_2.ttcn3:887 Total: 2 Passed: 0 Failed: 2
+2026/Jun/26 15:23:18.262192 VERDICTOP TC_26_7_4_5_2.ttcn3:892 setverdict(fail): none -> fail
+2026/Jun/26 15:23:18.262309 USER TC_26_7_4_5_2.ttcn3:896 *** Cleanup: Restoring BSC T3212=30 (180 min) ***
+2026/Jun/26 15:23:18.262329 USER TC_26_7_4_5_2.ttcn3:897 === Setting BSC T3212: periodic location update 180 minutes (T3212 encoded = 30) via VTY 10.42.0.69:4242 ===
+2026/Jun/26 15:23:18.464061 USER TC_26_7_4_5_2.ttcn3:897 BSC T3212 set to 180 minutes (T3212=30). SI3 will be rebroadcast within ~5s.
+2026/Jun/26 15:23:18.464146 TIMEROP TC_26_7_4_5_2.ttcn3:902 Stop timer T_guard: 1900 s
+2026/Jun/26 15:23:18.464209 PARALLEL TC_26_7_4_5_2.ttcn3:903 Unmapping port mtc:MSC from system:MSC.
+2026/Jun/26 15:23:18.464360 USER TC_26_7_4_5_2.ttcn3:903 MSC_Port: Unmapping from MSC
+2026/Jun/26 15:23:18.464421 PORTEVENT TC_26_7_4_5_2.ttcn3:903 Port MSC was unmapped from system:MSC.
+2026/Jun/26 15:23:18.464521 PARALLEL TC_26_7_4_5_2.ttcn3:903 Unmap operation of mtc:MSC from system:MSC finished.
+2026/Jun/26 15:23:18.464545 PARALLEL TC_26_7_4_5_2.ttcn3:904 Unmapping port mtc:VTY from system:VTY.
+2026/Jun/26 15:23:18.464598 USER TC_26_7_4_5_2.ttcn3:904 VTY_PT: Unmapping port from VTY interface
+2026/Jun/26 15:23:18.464709 USER TC_26_7_4_5_2.ttcn3:904 VTY_PT: Disconnected from VTY
+2026/Jun/26 15:23:18.464728 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port VTY was unmapped from system:VTY.
+2026/Jun/26 15:23:18.464775 PARALLEL TC_26_7_4_5_2.ttcn3:904 Unmap operation of mtc:VTY from system:VTY finished.
+2026/Jun/26 15:23:18.464810 PARALLEL TC_26_7_4_5_2.ttcn3:904 Terminating component type GSM_Component_Definitions.GSM_CT.
+2026/Jun/26 15:23:18.464875 USER TC_26_7_4_5_2.ttcn3:904 L3_Port: user_stop called
+2026/Jun/26 15:23:18.464891 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port L was stopped.
+2026/Jun/26 15:23:18.464916 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port RR was stopped.
+2026/Jun/26 15:23:18.464940 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port MM was stopped.
+2026/Jun/26 15:23:18.464958 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port CC was stopped.
+2026/Jun/26 15:23:18.464966 USER TC_26_7_4_5_2.ttcn3:904 MSC_Port: user_stop called
+2026/Jun/26 15:23:18.464978 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port MSC was stopped.
+2026/Jun/26 15:23:18.464999 USER TC_26_7_4_5_2.ttcn3:904 BSC_Port: user_stop called
+2026/Jun/26 15:23:18.465011 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port BSC was stopped.
+2026/Jun/26 15:23:18.465020 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port RSL was stopped.
+2026/Jun/26 15:23:18.465027 USER TC_26_7_4_5_2.ttcn3:904 VTY_PT: Stopping
+2026/Jun/26 15:23:18.465040 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port VTY was stopped.
+2026/Jun/26 15:23:18.465049 PORTEVENT TC_26_7_4_5_2.ttcn3:904 Port COORD was stopped.
+2026/Jun/26 15:23:18.465057 PARALLEL TC_26_7_4_5_2.ttcn3:904 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_7_4_5_2.
+2026/Jun/26 15:23:18.465072 EXECUTOR TC_26_7_4_5_2.ttcn3:904 Waiting for PTCs to finish.
+2026/Jun/26 15:23:18.465154 VERDICTOP TC_26_7_4_5_2.ttcn3:904 Setting final verdict of the test case.
+2026/Jun/26 15:23:18.465237 VERDICTOP TC_26_7_4_5_2.ttcn3:904 Local verdict of MTC: fail
+2026/Jun/26 15:23:18.465283 VERDICTOP TC_26_7_4_5_2.ttcn3:904 No PTCs were created.
+2026/Jun/26 15:23:18.465307 TESTCASE TC_26_7_4_5_2.ttcn3:904 Test case TC_26_7_4_5_2 finished. Verdict: fail
+2026/Jun/26 15:23:18.465587 STATISTICS - Verdict statistics: 0 none (0.00 %), 0 pass (0.00 %), 0 inconc (0.00 %), 1 fail (100.00 %), 0 error (0.00 %).
+2026/Jun/26 15:23:18.465747 STATISTICS - Test execution summary: 1 test case was executed. Overall verdict: fail
+2026/Jun/26 15:23:18.465761 EXECUTOR - Exit was requested from MC. Terminating MTC.
+======================================================
+TEST RESULT: FAIL

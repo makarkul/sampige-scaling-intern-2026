@@ -1,0 +1,763 @@
+Defaulted container "ttcn3" out of: ttcn3, setup-mobile-vty-dnat (init)
+======================================================
+Waiting for mobile to register (5 seconds)...
+======================================================
+======================================================
+Starting TC_26_7_5_7_1 Test Case
+======================================================
+Resolved: msc=10.42.0.209 mobile=10.43.143.168 bsc=10.42.0.207
+DEBUG: [EXECUTE] section:
+[EXECUTE]
+TC_26_7_5_7_1.control
+  Waiting for MC... (1/30)
+Main Controller ready (attempt 2)
+Starting Host Controller...
+TTCN-3 Host Controller (parallel mode), version 11.1.0
+The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+Result dir: /results/TC_26_7_5_7_1-2026-06-26-152655
+Waiting for log files...
+15:26:56.514083 TTCN-3 Host Controller started on ttcn3-tc-26-7-5-7-1-1-5xqx9. Version: 11.1.0.
+15:26:56.514269 TTCN Logger v2.2 options: TimeStampFormat:=Time; LogEntityName:=No; LogEventTypes:=No; SourceInfoFormat:=None; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+15:26:56.514283 Maximum number of open file descriptors: 1048576,   FD_SETSIZE = 1024
+15:26:56.514433 Warning: The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+15:26:56.514474 The address of MC was set to 127.0.0.1:0.
+15:26:56.514613 Connected to MC.
+15:26:56.514742 This host supports UNIX domain sockets for local communication.
+15:26:56.515044 Processing configuration data received from MC.
+15:26:56.515301 Warning: Skeleton `/results/TC_26_7_5_7_1-2026-06-26-152655/%n.log' does not guarantee unique log file name for every test system process. It may cause unpredictable results if several test components try to write into the same log file.
+15:26:56.515621 Module GSM_Constants has the following parameters: { TSPC_Serv_TS11 := true, TSPC_Serv_TS61 := false, TSPC_Serv_TS62 := false, TSPC_Serv_BS21 := false, TSPC_Serv_BS22 := false, TSPC_Serv_BS24 := false, TSPC_Serv_BS25 := false, TSPC_Serv_BS26 := false, TSPC_Serv_BS31 := false, TSPC_Serv_BS32 := false, TSPC_Serv_BS33 := false, TSPC_Serv_BS34 := false, TSPC_Serv_BS41 := false, TSPC_Serv_BS42 := false, TSPC_Serv_BS43 := false, TSPC_Serv_BS44 := false, TSPC_Serv_BS45 := false, TSPC_Serv_BS51 := false, TSPC_Serv_BS61 := false, TSPC_Serv_BS81 := false, TSPC_DualRate := false, TSPC_MTsvc := true, TSPX_IMSI := '901700000000001F'O, TSPX_TMSI := '1914D97F'O, TSPX_CKSNDef := 0, TSPX_RANDDef := '00112233445566778899AABBCCDDEEFF'O, TSPX_SRES := '12345678'O, TSPX_Kc := '0000000000000000'O, TSPX_SDCCH4SubDef := 0, TSPX_TmSltDef := 0, TSPX_TscDef := 7, TSPX_TCHHSubDef := 0, TCV_CC := true, TSPX_Telephony_Rate := C_Full (0), TSPX_MOBscSvcA := C_Telephony (0), TSPX_MOBscSvcB := C_Telephony (0), TSPX_MOBscSvcC := C_Telephony (0), TSPX_MOBscSvcD := C_Telephony (0), TSPX_MOBscSvcE := C_Telephony (0), TSPX_MOBscSvcF := C_Telephony (0), TSPX_MOBscSvcG := C_Telephony (0), TSPX_MOChRateA := C_Full (0), TSPX_MOChRateB := C_Full (0), TSPX_MOChRateC := C_Full (0), TSPX_MOChRateD := C_Full (0), TSPX_MOChRateE := C_Full (0), TSPX_MOChRateF := C_Full (0), TSPX_MOChRateG := C_Full (0), TSPX_MTBscSvcA := C_Telephony (0), TSPX_MTBscSvcB := C_Telephony (0), TSPX_MTBscSvcC := C_Telephony (0), TSPX_MTBscSvcD := C_Telephony (0), TSPX_MTBscSvcE := C_Telephony (0), TSPX_MTBscSvcF := C_Telephony (0), TSPX_MTBscSvcG := C_Telephony (0), TSPX_MTBscSvcH := C_Telephony (0), TSPX_MTBscSvcI := C_Telephony (0), TSPX_MTBscSvcJ := C_Telephony (0), TSPX_MTChRateA := C_Full (0), TSPX_MTChRateB := C_Full (0), TSPX_MTChRateC := C_Full (0), TSPX_MTChRateD := C_Full (0), TSPX_MTChRateE := C_Full (0), TSPX_MTChRateF := C_Full (0), TSPX_MTChRateG := C_Full (0), TSPX_MTChRateH := C_Full (0), TSPX_MTChRateI := C_Full (0), TSPX_MTChRateJ := C_Full (0), C_arfcnA := 100 }
+15:26:56.515706 Module TC_26_6_1_2 has the following parameters: { TSPX_nPara := 3, TSPX_i1Para := 3, TSPX_kPara := 5, TSPX_i2Para := 1, TSPX_rPara := 4, TSPX_i3Para := 4 }
+15:26:56.515745 Initializing module GSM_Component_Definitions.
+15:26:56.515754 Initializing module GSM_Templates.
+15:26:56.515760 Initializing module GSM_Constants.
+15:26:56.515764 Initializing module GSM_Types.
+15:26:56.515766 Initialization of module GSM_Types finished.
+15:26:56.515768 Initialization of module GSM_Constants finished.
+15:26:56.515842 Initialization of module GSM_Templates finished.
+15:26:56.515849 Initialization of module GSM_Component_Definitions finished.
+15:26:56.515851 Initializing module GSM_Functions.
+15:26:56.515874 Initialization of module GSM_Functions finished.
+15:26:56.515876 Initializing module PreGenRecordOf.
+15:26:56.515878 Initialization of module PreGenRecordOf finished.
+15:26:56.515880 Initializing module TC_26_2_1_3.
+15:26:56.515892 Initialization of module TC_26_2_1_3 finished.
+15:26:56.515895 Initializing module TC_26_2_2.
+15:26:56.515900 Initialization of module TC_26_2_2 finished.
+15:26:56.515901 Initializing module TC_26_2_3.
+15:26:56.515906 Initialization of module TC_26_2_3 finished.
+15:26:56.515908 Initializing module TC_26_6_11_1.
+15:26:56.515913 Initialization of module TC_26_6_11_1 finished.
+15:26:56.515915 Initializing module TC_26_6_11_2.
+15:26:56.515919 Initialization of module TC_26_6_11_2 finished.
+15:26:56.515921 Initializing module TC_26_6_12_1.
+15:26:56.515926 Initialization of module TC_26_6_12_1 finished.
+15:26:56.515927 Initializing module TC_26_6_12_2.
+15:26:56.515932 Initialization of module TC_26_6_12_2 finished.
+15:26:56.515934 Initializing module TC_26_6_12_3.
+15:26:56.515939 Initialization of module TC_26_6_12_3 finished.
+15:26:56.515941 Initializing module TC_26_6_12_4.
+15:26:56.515945 Initialization of module TC_26_6_12_4 finished.
+15:26:56.515947 Initializing module TC_26_6_13_10.
+15:26:56.515952 Initialization of module TC_26_6_13_10 finished.
+15:26:56.515954 Initializing module TC_26_6_13_9.
+15:26:56.515958 Initialization of module TC_26_6_13_9 finished.
+15:26:56.515960 Initializing module TC_26_6_1_1.
+15:26:56.515965 Initialization of module TC_26_6_1_1 finished.
+15:26:56.515967 Initializing module TC_26_6_1_2.
+15:26:56.515971 Initialization of module TC_26_6_1_2 finished.
+15:26:56.515973 Initializing module TC_26_6_1_3.
+15:26:56.515978 Initialization of module TC_26_6_1_3 finished.
+15:26:56.515980 Initializing module TC_26_6_1_4.
+15:26:56.515985 Initialization of module TC_26_6_1_4 finished.
+15:26:56.515987 Initializing module TC_26_6_1_5.
+15:26:56.515992 Initialization of module TC_26_6_1_5 finished.
+15:26:56.515993 Initializing module TC_26_6_2_1_1.
+15:26:56.515998 Initialization of module TC_26_6_2_1_1 finished.
+15:26:56.516000 Initializing module TC_26_6_2_1_2.
+15:26:56.516005 Initialization of module TC_26_6_2_1_2 finished.
+15:26:56.516007 Initializing module TC_26_6_2_1_3.
+15:26:56.516012 Initialization of module TC_26_6_2_1_3 finished.
+15:26:56.516014 Initializing module TC_26_6_2_2.
+15:26:56.516019 Initialization of module TC_26_6_2_2 finished.
+15:26:56.516021 Initializing module TC_26_6_2_3_1.
+15:26:56.516026 Initialization of module TC_26_6_2_3_1 finished.
+15:26:56.516028 Initializing module TC_26_6_2_3_2.
+15:26:56.516033 Initialization of module TC_26_6_2_3_2 finished.
+15:26:56.516035 Initializing module TC_26_6_2_4.
+15:26:56.516040 Initialization of module TC_26_6_2_4 finished.
+15:26:56.516041 Initializing module TC_26_6_3_1.
+15:26:56.516046 Initialization of module TC_26_6_3_1 finished.
+15:26:56.516048 Initializing module TC_26_6_3_4.
+15:26:56.516053 Initialization of module TC_26_6_3_4 finished.
+15:26:56.516055 Initializing module TC_26_6_4_1.
+15:26:56.516059 Initialization of module TC_26_6_4_1 finished.
+15:26:56.516061 Initializing module TC_26_6_4_2_2.
+15:26:56.516066 Initialization of module TC_26_6_4_2_2 finished.
+15:26:56.516068 Initializing module TC_26_6_5_1.
+15:26:56.516073 Initialization of module TC_26_6_5_1 finished.
+15:26:56.516075 Initializing module TC_26_6_5_2_1.
+15:26:56.516079 Initialization of module TC_26_6_5_2_1 finished.
+15:26:56.516081 Initializing module TC_26_6_8_1.
+15:26:56.516086 Initialization of module TC_26_6_8_1 finished.
+15:26:56.516088 Initializing module TC_26_6_8_2.
+15:26:56.516092 Initialization of module TC_26_6_8_2 finished.
+15:26:56.516094 Initializing module TC_26_6_8_3.
+15:26:56.516099 Initialization of module TC_26_6_8_3 finished.
+15:26:56.516100 Initializing module TC_26_6_8_4.
+15:26:56.516105 Initialization of module TC_26_6_8_4 finished.
+15:26:56.516106 Initializing module TC_26_6_8_5.
+15:26:56.516111 Initialization of module TC_26_6_8_5 finished.
+15:26:56.516113 Initializing module TC_26_7_1.
+15:26:56.516119 Initialization of module TC_26_7_1 finished.
+15:26:56.516121 Initializing module TC_26_7_2_1.
+15:26:56.516125 Initialization of module TC_26_7_2_1 finished.
+15:26:56.516127 Initializing module TC_26_7_2_2.
+15:26:56.516132 Initialization of module TC_26_7_2_2 finished.
+15:26:56.516136 Initializing module TC_26_7_3_1.
+15:26:56.516141 Initialization of module TC_26_7_3_1 finished.
+15:26:56.516143 Initializing module TC_26_7_3_2.
+15:26:56.516147 Initialization of module TC_26_7_3_2 finished.
+15:26:56.516149 Initializing module TC_26_7_4_1.
+15:26:56.516154 Initialization of module TC_26_7_4_1 finished.
+15:26:56.516155 Initializing module TC_26_7_4_2_1.
+15:26:56.516160 Initialization of module TC_26_7_4_2_1 finished.
+15:26:56.516162 Initializing module TC_26_7_4_2_2_1.
+15:26:56.516167 Initialization of module TC_26_7_4_2_2_1 finished.
+15:26:56.516169 Initializing module TC_26_7_4_2_2_2.
+15:26:56.516174 Initialization of module TC_26_7_4_2_2_2 finished.
+15:26:56.516176 Initializing module TC_26_7_4_2_3.
+15:26:56.516180 Initialization of module TC_26_7_4_2_3 finished.
+15:26:56.516182 Initializing module TC_26_7_4_2_4_1.
+15:26:56.516187 Initialization of module TC_26_7_4_2_4_1 finished.
+15:26:56.516189 Initializing module TC_26_7_4_2_4_2.
+15:26:56.516194 Initialization of module TC_26_7_4_2_4_2 finished.
+15:26:56.516196 Initializing module TC_26_7_4_2_4_3.
+15:26:56.516200 Initialization of module TC_26_7_4_2_4_3 finished.
+15:26:56.516203 Initializing module TC_26_7_4_2_4_4.
+15:26:56.516208 Initialization of module TC_26_7_4_2_4_4 finished.
+15:26:56.516210 Initializing module TC_26_7_4_2_4_5.
+15:26:56.516215 Initialization of module TC_26_7_4_2_4_5 finished.
+15:26:56.516217 Initializing module TC_26_7_4_3_1.
+15:26:56.516221 Initialization of module TC_26_7_4_3_1 finished.
+15:26:56.516223 Initializing module TC_26_7_4_3_2.
+15:26:56.516228 Initialization of module TC_26_7_4_3_2 finished.
+15:26:56.516230 Initializing module TC_26_7_4_3_3.
+15:26:56.516235 Initialization of module TC_26_7_4_3_3 finished.
+15:26:56.516237 Initializing module TC_26_7_4_3_4.
+15:26:56.516241 Initialization of module TC_26_7_4_3_4 finished.
+15:26:56.516243 Initializing module TC_26_7_4_4.
+15:26:56.516248 Initialization of module TC_26_7_4_4 finished.
+15:26:56.516250 Initializing module TC_26_7_4_5_1.
+15:26:56.516255 Initialization of module TC_26_7_4_5_1 finished.
+15:26:56.516257 Initializing module TC_26_7_4_5_2.
+15:26:56.516262 Initialization of module TC_26_7_4_5_2 finished.
+15:26:56.516264 Initializing module TC_26_7_4_5_3.
+15:26:56.516269 Initialization of module TC_26_7_4_5_3 finished.
+15:26:56.516271 Initializing module TC_26_7_4_5_4_2.
+15:26:56.516276 Initialization of module TC_26_7_4_5_4_2 finished.
+15:26:56.516278 Initializing module TC_26_7_5_2.
+15:26:56.516282 Initialization of module TC_26_7_5_2 finished.
+15:26:56.516284 Initializing module TC_26_7_5_3.
+15:26:56.516289 Initialization of module TC_26_7_5_3 finished.
+15:26:56.516291 Initializing module TC_26_7_5_4.
+15:26:56.516295 Initialization of module TC_26_7_5_4 finished.
+15:26:56.516297 Initializing module TC_26_7_5_5.
+15:26:56.516301 Initialization of module TC_26_7_5_5 finished.
+15:26:56.516303 Initializing module TC_26_7_5_6.
+15:26:56.516307 Initialization of module TC_26_7_5_6 finished.
+15:26:56.516309 Initializing module TC_26_7_5_7_1.
+15:26:56.516314 Initialization of module TC_26_7_5_7_1 finished.
+15:26:56.516316 Initializing module TC_26_7_5_8_1.
+15:26:56.516321 Initialization of module TC_26_7_5_8_1 finished.
+15:26:56.516323 Initializing module TC_26_7_5_8_2.
+15:26:56.516327 Initialization of module TC_26_7_5_8_2 finished.
+15:26:56.516329 Initializing module TC_26_7_5_8_3.
+15:26:56.516333 Initialization of module TC_26_7_5_8_3 finished.
+15:26:56.516335 Initializing module TC_26_8_1_2_1_1.
+15:26:56.516340 Initialization of module TC_26_8_1_2_1_1 finished.
+15:26:56.516342 Initializing module TC_26_8_1_2_2_1.
+15:26:56.516346 Initialization of module TC_26_8_1_2_2_1 finished.
+15:26:56.516348 Initializing module TC_26_8_1_2_2_2.
+15:26:56.516353 Initialization of module TC_26_8_1_2_2_2 finished.
+15:26:56.516356 Initializing module TC_26_8_1_2_2_3.
+15:26:56.516361 Initialization of module TC_26_8_1_2_2_3 finished.
+15:26:56.516363 Initializing module TC_26_8_1_2_3_1.
+15:26:56.516368 Initialization of module TC_26_8_1_2_3_1 finished.
+15:26:56.516373 Initializing module TC_26_8_1_2_3_2.
+15:26:56.516378 Initialization of module TC_26_8_1_2_3_2 finished.
+15:26:56.516380 Initializing module TC_26_8_1_2_3_3.
+15:26:56.516384 Initialization of module TC_26_8_1_2_3_3 finished.
+15:26:56.516386 Initializing module TC_26_8_1_2_3_4.
+15:26:56.516391 Initialization of module TC_26_8_1_2_3_4 finished.
+15:26:56.516393 Initializing module TC_26_8_1_2_3_5.
+15:26:56.516398 Initialization of module TC_26_8_1_2_3_5 finished.
+15:26:56.516400 Initializing module TC_26_8_1_2_3_6.
+15:26:56.516405 Initialization of module TC_26_8_1_2_3_6 finished.
+15:26:56.516407 Initializing module TC_26_8_1_2_3_7.
+15:26:56.516411 Initialization of module TC_26_8_1_2_3_7 finished.
+15:26:56.516413 Initializing module TC_26_8_1_2_4_1.
+15:26:56.516417 Initialization of module TC_26_8_1_2_4_1 finished.
+15:26:56.516420 Initializing module TC_26_8_1_2_4_13.
+15:26:56.516425 Initialization of module TC_26_8_1_2_4_13 finished.
+15:26:56.516427 Initializing module TC_26_8_1_2_4_2.
+15:26:56.516432 Initialization of module TC_26_8_1_2_4_2 finished.
+15:26:56.516434 Initializing module TC_26_8_1_2_4_3.
+15:26:56.516439 Initialization of module TC_26_8_1_2_4_3 finished.
+15:26:56.516441 Initializing module TC_26_8_1_2_4_4.
+15:26:56.516445 Initialization of module TC_26_8_1_2_4_4 finished.
+15:26:56.516447 Initializing module TC_26_8_1_2_4_5.
+15:26:56.516452 Initialization of module TC_26_8_1_2_4_5 finished.
+15:26:56.516454 Initializing module TC_26_8_1_2_6_1.
+15:26:56.516459 Initialization of module TC_26_8_1_2_6_1 finished.
+15:26:56.516461 Initializing module TC_26_8_1_2_6_2.
+15:26:56.516466 Initialization of module TC_26_8_1_2_6_2 finished.
+15:26:56.516467 Initializing module TC_26_8_1_2_6_3.
+15:26:56.516472 Initialization of module TC_26_8_1_2_6_3 finished.
+15:26:56.516474 Initializing module TC_26_8_1_2_6_6.
+15:26:56.516479 Initialization of module TC_26_8_1_2_6_6 finished.
+15:26:56.516481 Initializing module TC_26_8_1_3_1_1.
+15:26:56.516485 Initialization of module TC_26_8_1_3_1_1 finished.
+15:26:56.516487 Initializing module TC_26_8_1_3_2_1.
+15:26:56.516492 Initialization of module TC_26_8_1_3_2_1 finished.
+15:26:56.516494 Initializing module TC_26_8_1_3_3_1.
+15:26:56.516498 Initialization of module TC_26_8_1_3_3_1 finished.
+15:26:56.516500 Initializing module TC_26_8_1_3_3_2.
+15:26:56.516505 Initialization of module TC_26_8_1_3_3_2 finished.
+15:26:56.516507 Initializing module TC_26_8_1_3_3_3.
+15:26:56.516513 Initialization of module TC_26_8_1_3_3_3 finished.
+15:26:56.516515 Initializing module TC_26_8_1_3_3_4.
+15:26:56.516520 Initialization of module TC_26_8_1_3_3_4 finished.
+15:26:56.516522 Initializing module TC_26_8_1_3_3_5.
+15:26:56.516527 Initialization of module TC_26_8_1_3_3_5 finished.
+15:26:56.516529 Initializing module TC_26_8_1_3_3_6.
+15:26:56.516535 Initialization of module TC_26_8_1_3_3_6 finished.
+15:26:56.516537 Initializing module TC_26_8_1_3_3_7.
+15:26:56.516541 Initialization of module TC_26_8_1_3_3_7 finished.
+15:26:56.516543 Initializing module TC_26_8_1_3_4_1.
+15:26:56.516548 Initialization of module TC_26_8_1_3_4_1 finished.
+15:26:56.516550 Initializing module TC_26_8_1_3_4_2.
+15:26:56.516554 Initialization of module TC_26_8_1_3_4_2 finished.
+15:26:56.516557 Initializing module TC_26_8_1_3_4_3.
+15:26:56.516561 Initialization of module TC_26_8_1_3_4_3 finished.
+15:26:56.516563 Initializing module TC_26_8_1_3_4_4.
+15:26:56.516568 Initialization of module TC_26_8_1_3_4_4 finished.
+15:26:56.516570 Initializing module TC_26_8_1_3_4_5.
+15:26:56.516576 Initialization of module TC_26_8_1_3_4_5 finished.
+15:26:56.516578 Initializing module TC_26_8_1_3_4_6.
+15:26:56.516583 Initialization of module TC_26_8_1_3_4_6 finished.
+15:26:56.516585 Initializing module TC_26_8_1_3_4_7.
+15:26:56.516589 Initialization of module TC_26_8_1_3_4_7 finished.
+15:26:56.516591 Initializing module TC_26_8_1_3_4_8.
+15:26:56.516596 Initialization of module TC_26_8_1_3_4_8 finished.
+15:26:56.516597 Initializing module TC_26_8_1_3_5_1.
+15:26:56.516602 Initialization of module TC_26_8_1_3_5_1 finished.
+15:26:56.516607 Initializing module TC_26_8_1_3_5_2.
+15:26:56.516612 Initialization of module TC_26_8_1_3_5_2 finished.
+15:26:56.516614 Initializing module TC_26_8_1_3_5_3.
+15:26:56.516620 Initialization of module TC_26_8_1_3_5_3 finished.
+15:26:56.516622 Initializing module TC_26_8_1_3_5_4.
+15:26:56.516626 Initialization of module TC_26_8_1_3_5_4 finished.
+15:26:56.516628 Initializing module TC_26_8_1_3_5_5.
+15:26:56.516632 Initialization of module TC_26_8_1_3_5_5 finished.
+15:26:56.516634 Initializing module TC_26_8_1_3_5_6.
+15:26:56.516639 Initialization of module TC_26_8_1_3_5_6 finished.
+15:26:56.516641 Initializing module TC_26_8_1_3_5_7.
+15:26:56.516646 Initialization of module TC_26_8_1_3_5_7 finished.
+15:26:56.516648 Initializing module TC_26_8_1_3_5_8.
+15:26:56.516653 Initialization of module TC_26_8_1_3_5_8 finished.
+15:26:56.516654 Initializing module TC_26_8_1_3_5_9.
+15:26:56.516659 Initialization of module TC_26_8_1_3_5_9 finished.
+15:26:56.516661 Initializing module TC_26_8_2_1.
+15:26:56.516666 Initialization of module TC_26_8_2_1 finished.
+15:26:56.516668 Initializing module TC_26_8_2_2.
+15:26:56.516672 Initialization of module TC_26_8_2_2 finished.
+15:26:56.516674 Initializing module TC_26_8_2_3.
+15:26:56.516678 Initialization of module TC_26_8_2_3 finished.
+15:26:56.516680 Initializing module TC_26_8_3.
+15:26:56.516685 Initialization of module TC_26_8_3 finished.
+15:26:56.516686 Initializing module TC_34_2_2.
+15:26:56.516691 Initialization of module TC_34_2_2 finished.
+15:26:56.516693 Initializing module TitanLoggerApi.
+15:26:56.516694 Initialization of module TitanLoggerApi finished.
+15:26:56.516696 Initializing module TitanLoggerControl.
+15:26:56.516699 Initialization of module TitanLoggerControl finished.
+15:26:56.516709 Configuration data was processed successfully.
+15:26:56.518278 MTC was created. Process id: 39.
+15:28:27.788345 Exit was requested from MC. Terminating HC.
+15:28:27.788561 Disconnected from MC.
+15:28:27.788606 TTCN-3 Host Controller finished.
+15:26:56.519176 TTCN-3 Main Test Component started on ttcn3-tc-26-7-5-7-1-1-5xqx9. Version: 11.1.0.
+15:26:56.519329 TTCN Logger v2.2 options: TimeStampFormat:=Time; LogEntityName:=No; LogEventTypes:=No; SourceInfoFormat:=None; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+15:26:56.519391 Connected to MC.
+15:26:56.519601 Executing control part of module TC_26_7_5_7_1.
+15:26:56.519852 Execution of control part in module TC_26_7_5_7_1 started.
+15:26:56.519954 Test case TC_26_7_5_7_1 started.
+15:26:56.519999 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_7_5_7_1.
+15:26:56.520212 MSC_Port: set_parameter msc_stub_host = 10.42.0.209
+15:26:56.520265 MSC_Port: set_parameter msc_stub_port = 5000
+15:26:56.520278 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+15:26:56.520291 L3_Port: set_parameter gsmtap_port = 4729
+15:26:56.520297 L3_Port: set_parameter local_port = 4729
+15:26:56.520301 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+15:26:56.520312 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+15:26:56.520316 L3_Port: set_parameter arfcn = 51
+15:26:56.520359 L3_Port: user_start called
+15:26:56.520368 Port L was started.
+15:26:56.520407 Port RR was started.
+15:26:56.520413 Port MM was started.
+15:26:56.520417 Port CC was started.
+15:26:56.520420 MSC_Port: user_start called
+15:26:56.520424 Port MSC was started.
+15:26:56.520429 Port BSC was started.
+15:26:56.520434 Port RSL was started.
+15:26:56.520439 VTY_PT: Starting
+15:26:56.520446 Port VTY was started.
+15:26:56.520451 Port COORD was started.
+15:26:56.520453 Component type GSM_Component_Definitions.GSM_CT was initialized.
+15:26:56.520470 Warning: Stopping inactive timer T_guard.
+15:26:56.520478 Warning: Stopping inactive timer T301.
+15:26:56.520482 Warning: Stopping inactive timer T303.
+15:26:56.520485 Warning: Stopping inactive timer T305.
+15:26:56.520489 Warning: Stopping inactive timer T308.
+15:26:56.520492 Warning: Stopping inactive timer T310.
+15:26:56.520496 Warning: Stopping inactive timer T313.
+15:26:56.520502 Component initialized
+15:26:56.520516 Mapping port mtc:L to system:L.
+15:26:56.520583 L3_Port: Mapping to L
+15:26:56.520647 L3_Port: Joined UL multicast group 239.193.23.2 for RACH capture
+15:26:56.520656 L3_Port: GSMTAP listening on port 4729
+15:26:56.520660 L3_Port: Mapped successfully (GSMTAP: 127.0.0.1:4729)
+15:26:56.520666 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "L")
+15:26:56.520692 Port L was mapped to system:L.
+15:26:56.520760 Map operation of mtc:L to system:L finished.
+15:26:56.520786 Mapping port mtc:RR to system:RR.
+15:26:56.520815 Port RR was mapped to system:RR.
+15:26:56.520846 Map operation of mtc:RR to system:RR finished.
+15:26:56.520854 Mapping port mtc:MM to system:MM.
+15:26:56.520880 Port MM was mapped to system:MM.
+15:26:56.520905 Map operation of mtc:MM to system:MM finished.
+15:26:56.520909 Mapping port mtc:CC to system:CC.
+15:26:56.520933 Port CC was mapped to system:CC.
+15:26:56.520963 Map operation of mtc:CC to system:CC finished.
+15:26:56.520966 Mapping port mtc:MSC to system:MSC.
+15:26:56.520992 MSC_Port: Mapping to MSC
+15:26:56.521335 MSC_Port: Registered socket for async events
+15:26:56.521351 MSC_Port: Connected to MSC stub at 10.42.0.209:5000
+15:26:56.521358 Port MSC was mapped to system:MSC.
+15:26:56.521416 Map operation of mtc:MSC to system:MSC finished.
+15:26:56.521423 Mapping port mtc:VTY to system:VTY.
+15:26:56.521447 VTY_PT: Mapping port to VTY interface
+15:26:56.521617 VTY_PT: Connected to VTY at 10.43.143.168:4247
+15:26:57.021907 VTY_PT: Initial banner received
+15:26:57.021973 Port VTY was mapped to system:VTY.
+15:26:57.022043 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+15:26:57.022110 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+15:26:57.022177 Map operation of mtc:VTY to system:VTY finished.
+15:26:57.022206 Start timer T_guard: 300 s
+15:26:57.022287 Sent on MSC to system charstring : "{\"command\": \"SET_AUTO_RESPOND\", \"params\": {\"enabled\": false}}"
+15:26:57.022402 MSC_Port: TX: {"command": "SET_AUTO_RESPOND", "params": {"enabled": false}}
+15:26:57.022417 TC_26_7_5_7_1: START
+15:26:57.022472 docker.sock not found — using VTY power-cycle (k8s mode)
+15:26:57.022483 === k8s fallback: VTY power-cycle mobile at 10.43.143.168:4247 ===
+15:27:02.733973 Waiting 10 seconds (power off)...
+15:27:18.093915 VTY 'clear-loci' sent — LOCI erased
+15:27:24.749965 === VTY power-cycle complete — MS will send LU shortly ===
+15:27:24.750150 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+15:27:24.750240 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+15:27:24.750281 Start timer T_drain: 5 s
+15:27:24.750376 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+15:27:24.750448 Message with id 1 was extracted from the queue of MSC.
+15:27:24.750719 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"WELCOME\", \"status\": \"connected\"}"
+15:27:24.750881 VTY_PT: Received data (buffered): 94 bytes
+15:27:24.750939 MSC_Port: RX: {"status": "ok", "auto_respond": false}
+15:27:24.750977 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 2
+15:27:24.750994 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:24.751009 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+15:27:24.751021 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:24.751034 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+15:27:24.751045 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:24.751057 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+15:27:24.751069 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:24.751083 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+15:27:24.751094 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:24.751108 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+15:27:24.751125 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 2
+15:27:24.751138 Message with id 2 was extracted from the queue of MSC.
+15:27:24.751205 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"status\": \"ok\", \"auto_respond\": false}"
+15:27:24.751239 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+15:27:24.751250 Message with id 3 was extracted from the queue of MSC.
+15:27:24.751309 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:24.751339 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+15:27:24.751350 Message with id 4 was extracted from the queue of MSC.
+15:27:24.751399 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:24.751425 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+15:27:24.751435 Message with id 5 was extracted from the queue of MSC.
+15:27:24.751489 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:24.751517 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+15:27:24.751527 Message with id 6 was extracted from the queue of MSC.
+15:27:24.751578 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:24.751604 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+15:27:24.751615 Message with id 7 was extracted from the queue of MSC.
+15:27:24.751676 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:24.751711 MSC_Port: RX: {"status": "ok"}
+15:27:24.751727 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 8
+15:27:24.751739 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 8
+15:27:24.751747 Message with id 8 was extracted from the queue of MSC.
+15:27:24.751786 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"status\": \"ok\"}"
+15:27:27.266311 VTY_PT: Received data (buffered): 68 bytes
+15:27:27.754000 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:27.754059 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+15:27:27.754080 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+15:27:27.754087 Message with id 9 was extracted from the queue of MSC.
+15:27:27.754133 "TC_26_7_5_7_1: drain " & char(0, 0, 32, 20) & " discarding: ""{\"type\": \"HEARTBEAT\"}"
+15:27:29.751877 Timeout T_drain: 5 s
+15:27:29.751940 "TC_26_7_5_7_1: drain complete " & char(0, 0, 32, 20) & " second CLEAR"
+15:27:29.751984 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+15:27:29.752066 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+15:27:29.752077 Start timer T_settle: 2 s
+15:27:29.752410 MSC_Port: RX: {"status": "ok"}
+15:27:29.752419 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 10
+15:27:31.752845 Timeout T_settle: 2 s
+15:27:31.752897 TC_26_7_5_7_1: waiting for fresh LU REQUEST...
+15:27:31.752916 Start timer T_lu: 45 s
+15:27:31.752934 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 10
+15:27:31.752945 Message with id 10 was extracted from the queue of MSC.
+15:27:31.752990 TC_26_7_5_7_1: ignoring: "{\"status\": \"ok\"}"
+15:27:32.755028 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:32.755096 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+15:27:32.755126 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+15:27:32.755137 Message with id 11 was extracted from the queue of MSC.
+15:27:32.755200 TC_26_7_5_7_1: ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:27:37.759091 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:37.759183 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+15:27:37.759220 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+15:27:37.759236 Message with id 12 was extracted from the queue of MSC.
+15:27:37.759323 TC_26_7_5_7_1: ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:27:42.729807 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 2, "msc_slr": 2, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+15:27:42.729915 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 13
+15:27:42.729955 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 13
+15:27:42.729970 Message with id 13 was extracted from the queue of MSC.
+15:27:42.730206 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}"
+15:27:42.730336 f_extractJsonInt: Found key at position 29 (pattern: "\"bsc_slr\":")
+15:27:42.730439 f_extractJsonInt: Extracted number string '"2"' => integer 2
+15:27:42.730463 TC_26_7_5_7_1: LU REQUEST bsc_slr=2
+15:27:42.730489 Stop timer T_lu: 45 s
+15:27:42.730513 TC_26_7_5_7_1: sending LU ACCEPT (tmsi=305419896, lac=4242)
+15:27:42.730558 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT_CUSTOM\", \"params\": {\"bsc_slr\": 2, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242, \"tmsi\": 305419896}}"
+15:27:42.730622 MSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT_CUSTOM", "params": {"bsc_slr": 2, "mcc": "901", "mnc": "70", "lac": 4242, "tmsi": 305419896}}
+15:27:42.730635 Start timer T_tmsi: 10 s
+15:27:43.232116 MSC_Port: RX: {"status": "ok", "sent": true}
+15:27:43.232181 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 14
+15:27:43.232202 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 14
+15:27:43.232211 Message with id 14 was extracted from the queue of MSC.
+15:27:43.232280 TC_26_7_5_7_1: (TMSI wait) ignoring: "{\"status\": \"ok\", \"sent\": true}"
+15:27:43.485803 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 2, "pd": 5, "msg_type": 27}
+15:27:43.485913 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 15
+15:27:43.485954 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}" id 15
+15:27:43.485972 Message with id 15 was extracted from the queue of MSC.
+15:27:43.486101 TC_26_7_5_7_1: (TMSI wait) ignoring: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 2, \"pd\": 5, \"msg_type\": 27}"
+15:27:43.486147 MSC_Port: RX: {"type": "EVENT_TMSI_REALLOC_COMPLETE", "bsc_slr": 2}
+15:27:43.486168 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 16
+15:27:43.486187 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}" id 16
+15:27:43.486199 Message with id 16 was extracted from the queue of MSC.
+15:27:43.486356 TC_26_7_5_7_1: (TMSI wait) ignoring: "{\"type\": \"EVENT_TMSI_REALLOC_COMPLETE\", \"bsc_slr\": 2}"
+15:27:44.233082 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:44.233161 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+15:27:44.233197 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 17
+15:27:44.233213 Message with id 17 was extracted from the queue of MSC.
+15:27:44.233325 TC_26_7_5_7_1: (TMSI wait) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:27:49.238082 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:49.238183 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+15:27:49.238219 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+15:27:49.238236 Message with id 18 was extracted from the queue of MSC.
+15:27:49.238346 TC_26_7_5_7_1: (TMSI wait) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:27:52.733858 Timeout T_tmsi: 10 s
+15:27:52.733912 TC_26_7_5_7_1: no TMSI REALLOC COMPLETE (continuing)
+15:27:52.733947 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 2, \"cause\": 0}}"
+15:27:52.734013 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 2, "cause": 0}}
+15:27:52.734023 Start timer T_lu_drain: 5 s
+15:27:52.734750 MSC_Port: RX: {"status": "ok"}
+15:27:52.734783 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 19
+15:27:52.734799 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 19
+15:27:52.734807 Message with id 19 was extracted from the queue of MSC.
+15:27:52.734811 TC_26_7_5_7_1: (post-LU drain) "{\"status\": \"ok\"}"
+15:27:52.737228 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 2}
+15:27:52.737338 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 20
+15:27:52.737354 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}" id 20
+15:27:52.737369 Message with id 20 was extracted from the queue of MSC.
+15:27:52.737372 TC_26_7_5_7_1: (post-LU drain) "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 2}"
+15:27:53.226230 VTY_PT: Received data (buffered): 61 bytes
+15:27:54.736101 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:27:54.736189 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 21
+15:27:54.736225 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 21
+15:27:54.736241 Message with id 21 was extracted from the queue of MSC.
+15:27:54.736251 TC_26_7_5_7_1: (post-LU drain) "{\"type\": \"HEARTBEAT\"}"
+15:27:57.735862 Timeout T_lu_drain: 5 s
+15:27:57.735939 TC_26_7_5_7_1: triggering MO call via VTY (call 1 12345)
+15:27:57.735981 VTY: Sending command: "enable"
+15:27:57.736040 Sent on VTY to system charstring : "enable"
+15:27:57.736086 VTY_PT: Sending command: "enable"
+15:27:57.936334 VTY_PT: Received response: 
+% (MS 1)
+% Power off!
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% On Network, normal service: International, 70
+enable
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+15:27:57.936503 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+15:27:57.936546 Start timer T_vty: 5 s
+15:27:57.936611 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 1
+15:27:57.936630 Message with id 1 was extracted from the queue of VTY.
+15:27:57.936645 Stop timer T_vty: 5 s
+15:27:57.936657 VTY: Received response: "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:57.936704 TC_26_7_5_7_1: VTY enable(1): "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nenable\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:57.936741 VTY: Sending command: "enable"
+15:27:57.936761 Sent on VTY to system charstring : "enable"
+15:27:57.936776 VTY_PT: Sending command: "enable"
+15:27:58.137005 VTY_PT: Received response: enable
+% Unknown command.
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+15:27:58.137094 Message enqueued on VTY from system charstring : "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+15:27:58.137120 Start timer T_vty: 5 s
+15:27:58.137150 Receive operation on port VTY succeeded, message from system(): charstring : "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 2
+15:27:58.137164 Message with id 2 was extracted from the queue of VTY.
+15:27:58.137173 Stop timer T_vty: 5 s
+15:27:58.137182 VTY: Received response: "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:58.137205 TC_26_7_5_7_1: VTY enable(2): "enable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:58.137227 VTY: Sending command: "call 1 12345"
+15:27:58.137244 Sent on VTY to system charstring : "call 1 12345"
+15:27:58.137258 VTY_PT: Sending command: "call 1 12345"
+15:27:58.337439 VTY_PT: Received response: call 1 12345
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+15:27:58.337544 Message enqueued on VTY from system charstring : "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+15:27:58.337572 Start timer T_vty: 5 s
+15:27:58.337601 Receive operation on port VTY succeeded, message from system(): charstring : "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 3
+15:27:58.337616 Message with id 3 was extracted from the queue of VTY.
+15:27:58.337624 Stop timer T_vty: 5 s
+15:27:58.337632 VTY: Received response: "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:58.337653 TC_26_7_5_7_1: VTY call: "call 1 12345\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:27:58.337669 TC_26_7_5_7_1: waiting for CM SERVICE REQUEST...
+15:27:58.337682 Start timer T_cm: 20 s
+15:27:58.734718 MSC_Port: RX: {"type": "EVENT_CM_SERVICE_REQUEST", "bsc_slr": 3, "cm_service_type": 1, "cm_service_type_name": "MO call / Packet"}
+15:27:58.734816 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 3, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 22
+15:27:58.734885 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 3, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}" id 22
+15:27:58.734902 Message with id 22 was extracted from the queue of MSC.
+15:27:58.735188 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 3, \"cm_service_type\": 1, \"cm_service_type_name\": \"MO call / Packet\"}"
+15:27:58.735250 f_extractJsonInt: Found key at position 37 (pattern: "\"bsc_slr\":")
+15:27:58.735283 f_extractJsonInt: Extracted number string '"3"' => integer 3
+15:27:58.735300 TC_26_7_5_7_1: CM SERVICE REQUEST bsc_slr=3
+15:27:58.735314 Stop timer T_cm: 20 s
+15:27:58.735332 TC_26_7_5_7_1: sending AUTH REQUEST
+15:27:58.735359 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_AUTH_REQ\", \"params\": {\"bsc_slr\": 3, \"cksn\": 1, \"rand\": \"0123456789abcdef0123456789abcdef\"}}"
+15:27:58.735445 MSC_Port: TX: {"command": "CMD_SEND_AUTH_REQ", "params": {"bsc_slr": 3, "cksn": 1, "rand": "0123456789abcdef0123456789abcdef"}}
+15:27:58.735464 Start timer T_auth_wait: 5 s
+15:27:58.736132 MSC_Port: RX: {"status": "ok", "sent": true}
+15:27:58.736159 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 23
+15:27:58.736178 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 23
+15:27:58.736189 Message with id 23 was extracted from the queue of MSC.
+15:27:58.736253 TC_26_7_5_7_1: (auth wait) ignoring: "{\"status\": \"ok\", \"sent\": true}"
+15:27:59.205036 MSC_Port: RX: {"type": "EVENT_DTAP", "bsc_slr": 3, "pd": 5, "msg_type": 20}
+15:27:59.205124 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 3, \"pd\": 5, \"msg_type\": 20}" id 24
+15:27:59.205162 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 3, \"pd\": 5, \"msg_type\": 20}" id 24
+15:27:59.205178 Message with id 24 was extracted from the queue of MSC.
+15:27:59.205287 TC_26_7_5_7_1: (auth wait) ignoring: "{\"type\": \"EVENT_DTAP\", \"bsc_slr\": 3, \"pd\": 5, \"msg_type\": 20}"
+15:27:59.205330 MSC_Port: RX: {"type": "EVENT_AUTH_RESPONSE", "bsc_slr": 3, "sres": "51e2bd26"}
+15:27:59.205351 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_AUTH_RESPONSE\", \"bsc_slr\": 3, \"sres\": \"51e2bd26\"}" id 25
+15:27:59.205370 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_AUTH_RESPONSE\", \"bsc_slr\": 3, \"sres\": \"51e2bd26\"}" id 25
+15:27:59.205380 Message with id 25 was extracted from the queue of MSC.
+15:27:59.205532 TC_26_7_5_7_1: AUTH RESPONSE received
+15:27:59.205545 Stop timer T_auth_wait: 5 s
+15:27:59.205562 TC_26_7_5_7_1: sending MM ABORT (cause=#6 illegal_me)
+15:27:59.205586 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_MM_ABORT\", \"params\": {\"bsc_slr\": 3, \"cause\": 6}}"
+15:27:59.205678 MSC_Port: TX: {"command": "CMD_SEND_MM_ABORT", "params": {"bsc_slr": 3, "cause": 6}}
+15:27:59.205697 "TC_26_7_5_7_1: SUB-TEST 1 " & char(0, 0, 32, 20) & " NoReaction 5s after ABORT"
+15:27:59.205720 Start timer T_no_react: 5 s
+15:27:59.206430 MSC_Port: RX: {"status": "ok", "sent": true}
+15:27:59.206457 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 26
+15:27:59.206478 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 26
+15:27:59.206491 Message with id 26 was extracted from the queue of MSC.
+15:27:59.206732 "TC_26_7_5_7_1: SUB-TEST 1 " & char(0, 0, 32, 20) & " stub ACK (OK): ""{\"status\": \"ok\", \"sent\": true}"
+15:27:59.581513 VTY_PT: Received data (buffered): 38 bytes
+15:28:00.207222 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:00.207320 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+15:28:00.207359 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 27
+15:28:00.207376 Message with id 27 was extracted from the queue of MSC.
+15:28:00.207696 "TC_26_7_5_7_1: SUB-TEST 1 " & char(0, 0, 32, 20) & " ignoring unknown event: ""{\"type\": \"HEARTBEAT\"}"
+15:28:04.208787 Timeout T_no_react: 5 s
+15:28:04.208897 "TC_26_7_5_7_1: SUB-TEST 1 PASS " & char(0, 0, 32, 20) & " no MS L3 messages in 5s"
+15:28:04.208971 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 3, \"cause\": 0}}"
+15:28:04.209101 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 3, "cause": 0}}
+15:28:04.209130 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+15:28:04.209149 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+15:28:04.209165 Start timer T_rel_wait: 3 s
+15:28:04.209939 MSC_Port: RX: {"status": "ok"}
+15:28:04.209968 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 28
+15:28:04.210426 MSC_Port: RX: {"status": "ok"}
+15:28:04.210447 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 29
+15:28:04.251015 MSC_Port: RX: {"type": "EVENT_BSSMAP_CLEAR_COMPLETE", "bsc_slr": 3}
+15:28:04.251106 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}" id 30
+15:28:05.211087 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:05.211175 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+15:28:06.550517 VTY_PT: Received data (buffered): 62 bytes
+15:28:07.209186 Timeout T_rel_wait: 3 s
+15:28:07.209275 "TC_26_7_5_7_1: SUB-TEST 2 " & char(0, 0, 32, 20) & " no LU for 10s in restricted state"
+15:28:07.209334 Start timer T_no_lu: 10 s
+15:28:07.209361 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 28
+15:28:07.209380 Message with id 28 was extracted from the queue of MSC.
+15:28:07.209463 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"status\": \"ok\"}"
+15:28:07.209490 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 29
+15:28:07.209502 Message with id 29 was extracted from the queue of MSC.
+15:28:07.209547 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"status\": \"ok\"}"
+15:28:07.209573 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}" id 30
+15:28:07.209587 Message with id 30 was extracted from the queue of MSC.
+15:28:07.209661 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"type\": \"EVENT_BSSMAP_CLEAR_COMPLETE\", \"bsc_slr\": 3}"
+15:28:07.209690 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 31
+15:28:07.209700 Message with id 31 was extracted from the queue of MSC.
+15:28:07.209746 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:28:10.216244 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:10.216341 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+15:28:10.216406 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 32
+15:28:10.216421 Message with id 32 was extracted from the queue of MSC.
+15:28:10.216508 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:28:15.220125 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:15.220224 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+15:28:15.220262 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 33
+15:28:15.220278 Message with id 33 was extracted from the queue of MSC.
+15:28:15.220366 TC_26_7_5_7_1: (no-LU monitor) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:28:17.209869 Timeout T_no_lu: 10 s
+15:28:17.209950 "TC_26_7_5_7_1: SUB-TEST 2 PASS " & char(0, 0, 32, 20) & " no LU in 10s"
+15:28:17.210004 "TC_26_7_5_7_1: SUB-TEST 3 " & char(0, 0, 32, 20) & " send TMSI paging, expect no response"
+15:28:17.210051 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_PAGING\", \"params\": {\"imsi\": \"901700000000001\", \"tmsi\": 305419896, \"lac\": 4242, \"cell_id\": 4242}}"
+15:28:17.210157 MSC_Port: TX: {"command": "CMD_SEND_PAGING", "params": {"imsi": "901700000000001", "tmsi": 305419896, "lac": 4242, "cell_id": 4242}}
+15:28:17.210180 Start timer T_no_paging_rsp: 10 s
+15:28:17.211237 MSC_Port: RX: {"status": "ok", "sent": true}
+15:28:17.211268 Message enqueued on MSC from system charstring : "{\"status\": \"ok\", \"sent\": true}" id 34
+15:28:17.211294 Receive operation on port MSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"sent\": true}" id 34
+15:28:17.211310 Message with id 34 was extracted from the queue of MSC.
+15:28:17.211469 TC_26_7_5_7_1: (paging monitor) ignoring: "{\"status\": \"ok\", \"sent\": true}"
+15:28:21.215125 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:21.215227 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+15:28:21.215265 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 35
+15:28:21.215280 Message with id 35 was extracted from the queue of MSC.
+15:28:21.215453 TC_26_7_5_7_1: (paging monitor) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:28:26.220090 MSC_Port: RX: {"type": "HEARTBEAT"}
+15:28:26.220171 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+15:28:26.220207 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 36
+15:28:26.220225 Message with id 36 was extracted from the queue of MSC.
+15:28:26.220397 TC_26_7_5_7_1: (paging monitor) ignoring: "{\"type\": \"HEARTBEAT\"}"
+15:28:27.210208 Timeout T_no_paging_rsp: 10 s
+15:28:27.210302 "TC_26_7_5_7_1: SUB-TEST 3 PASS " & char(0, 0, 32, 20) & " no paging response in 10s"
+15:28:27.210355 "TC_26_7_5_7_1: SUB-TEST 4 " & char(0, 0, 32, 20) & " trigger emergency call"
+15:28:27.210379 VTY: Sending command: "enable"
+15:28:27.210402 Sent on VTY to system charstring : "enable"
+15:28:27.210427 VTY_PT: Sending command: "enable"
+15:28:27.410670 VTY_PT: Received response: 
+% (MS 1)
+% Call has been released
+
+% (MS 1)
+% Limited service, emergency calls are possible.
+enable
+% Unknown command.
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+15:28:27.410777 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% Limited service, emergency calls are possible.\r\nenable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 4
+15:28:27.410806 Start timer T_vty: 5 s
+15:28:27.410875 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% Limited service, emergency calls are possible.\r\nenable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 4
+15:28:27.410893 Message with id 4 was extracted from the queue of VTY.
+15:28:27.410903 Stop timer T_vty: 5 s
+15:28:27.410914 VTY: Received response: "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% Limited service, emergency calls are possible.\r\nenable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:28:27.410965 TC_26_7_5_7_1: VTY enable: "\r\n% (MS 1)\r\n% Call has been released\r\n\r\n% (MS 1)\r\n% Limited service, emergency calls are possible.\r\nenable\r\n% Unknown command.\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:28:27.410993 VTY: Sending command: "call 1 112"
+15:28:27.411012 Sent on VTY to system charstring : "call 1 112"
+15:28:27.411025 VTY_PT: Sending command: "call 1 112"
+15:28:27.611223 VTY_PT: Received response: call 1 112
+OsmocomBB(mobile)# 
+OsmocomBB(mobile)# 
+15:28:27.611294 Message enqueued on VTY from system charstring : "call 1 112\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 5
+15:28:27.611312 Start timer T_vty: 5 s
+15:28:27.611333 Receive operation on port VTY succeeded, message from system(): charstring : "call 1 112\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# " id 5
+15:28:27.611341 Message with id 5 was extracted from the queue of VTY.
+15:28:27.611345 Stop timer T_vty: 5 s
+15:28:27.611350 VTY: Received response: "call 1 112\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:28:27.611362 TC_26_7_5_7_1: VTY emergency call: "call 1 112\r\nOsmocomBB(mobile)# \r\nOsmocomBB(mobile)# "
+15:28:27.611371 Start timer T_emerg: 10 s
+15:28:27.785186 MSC_Port: RX: {"type": "EVENT_CM_SERVICE_REQUEST", "bsc_slr": 4, "cm_service_type": 2, "cm_service_type_name": "Emergency call"}
+15:28:27.785274 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 4, \"cm_service_type\": 2, \"cm_service_type_name\": \"Emergency call\"}" id 37
+15:28:27.785316 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 4, \"cm_service_type\": 2, \"cm_service_type_name\": \"Emergency call\"}" id 37
+15:28:27.785331 Message with id 37 was extracted from the queue of MSC.
+15:28:27.785616 f_extractJsonInt: Searching for key '"bsc_slr"' in JSON: "{\"type\": \"EVENT_CM_SERVICE_REQUEST\", \"bsc_slr\": 4, \"cm_service_type\": 2, \"cm_service_type_name\": \"Emergency call\"}"
+15:28:27.785674 f_extractJsonInt: Found key at position 37 (pattern: "\"bsc_slr\":")
+15:28:27.785705 f_extractJsonInt: Extracted number string '"4"' => integer 4
+15:28:27.785722 "TC_26_7_5_7_1: SUB-TEST 4 PASS " & char(0, 0, 32, 20) & " emergency CM_SERVICE_REQUEST bsc_slr="4
+15:28:27.785773 Stop timer T_emerg: 10 s
+15:28:27.785806 Sent on MSC to system charstring : "{\"command\": \"CMD_SEND_CLEAR_CMD\", \"params\": {\"bsc_slr\": 4, \"cause\": 0}}"
+15:28:27.785903 MSC_Port: TX: {"command": "CMD_SEND_CLEAR_CMD", "params": {"bsc_slr": 4, "cause": 0}}
+15:28:27.785926 "TC_26_7_5_7_1: SUB-TEST 5 INCONCLUSIVE " & char(0, 0, 32, 20) & " IMSI detach requires SIM removal"
+15:28:27.785952 "TC_26_7_5_7_1: RESULTS " & char(0, 0, 32, 20) & " ST1="true ST2=true ST3=true ST4=true (ST4_inconc=false) ST5=INCONCLUSIVE
+15:28:27.786002 "TC_26_7_5_7_1: PASS " & char(0, 0, 32, 20) & " all sub-tests passed"
+15:28:27.786064 setverdict(pass): none -> pass
+15:28:27.786193 Sent on MSC to system charstring : "{\"command\": \"CLEAR\", \"params\": {}}"
+15:28:27.786211 MSC_Port: TX: {"command": "CLEAR", "params": {}}
+15:28:27.786234 Unmapping port mtc:L from system:L.
+15:28:27.786323 L3_Port: Unmapping from L
+15:28:27.786375 Port L was unmapped from system:L.
+15:28:27.786436 Unmap operation of mtc:L from system:L finished.
+15:28:27.786454 Unmapping port mtc:RR from system:RR.
+15:28:27.786498 Port RR was unmapped from system:RR.
+15:28:27.786547 MSC_Port: RX: {"status": "ok"}
+15:28:27.786564 Message enqueued on MSC from system charstring : "{\"status\": \"ok\"}" id 38
+15:28:27.786577 Unmap operation of mtc:RR from system:RR finished.
+15:28:27.786587 Unmapping port mtc:MM from system:MM.
+15:28:27.786628 Port MM was unmapped from system:MM.
+15:28:27.786668 Unmap operation of mtc:MM from system:MM finished.
+15:28:27.786680 Unmapping port mtc:CC from system:CC.
+15:28:27.786733 Port CC was unmapped from system:CC.
+15:28:27.786773 Unmap operation of mtc:CC from system:CC finished.
+15:28:27.786784 Unmapping port mtc:MSC from system:MSC.
+15:28:27.786836 MSC_Port: Unmapping from MSC
+15:28:27.786918 Port MSC was unmapped from system:MSC.
+15:28:27.786969 Unmap operation of mtc:MSC from system:MSC finished.
+15:28:27.786982 Unmapping port mtc:VTY from system:VTY.
+15:28:27.787024 VTY_PT: Unmapping port from VTY interface
+15:28:27.787114 VTY_PT: Disconnected from VTY
+15:28:27.787132 Port VTY was unmapped from system:VTY.
+15:28:27.787208 Unmap operation of mtc:VTY from system:VTY finished.
+15:28:27.787242 Terminating component type GSM_Component_Definitions.GSM_CT.
+15:28:27.787263 Stop timer T_guard: 300 s
+15:28:27.787294 L3_Port: user_stop called
+15:28:27.787305 Port L was stopped.
+15:28:27.787331 Port RR was stopped.
+15:28:27.787353 Port MM was stopped.
+15:28:27.787359 Port CC was stopped.
+15:28:27.787365 MSC_Port: user_stop called
+15:28:27.787377 Message with id 38 was extracted from the queue of MSC.
+15:28:27.787386 Port MSC was stopped.
+15:28:27.787401 BSC_Port: user_stop called
+15:28:27.787412 Port BSC was stopped.
+15:28:27.787418 Port RSL was stopped.
+15:28:27.787424 VTY_PT: Stopping
+15:28:27.787433 Port VTY was stopped.
+15:28:27.787440 Port COORD was stopped.
+15:28:27.787446 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_7_5_7_1.
+15:28:27.787456 Waiting for PTCs to finish.
+15:28:27.787529 Setting final verdict of the test case.
+15:28:27.787611 Local verdict of MTC: pass
+15:28:27.787652 No PTCs were created.
+15:28:27.787674 Test case TC_26_7_5_7_1 finished. Verdict: pass
+15:28:27.787769 Execution of control part in module TC_26_7_5_7_1 finished.
+15:28:27.788018 Verdict statistics: 0 none (0.00 %), 1 pass (100.00 %), 0 inconc (0.00 %), 0 fail (0.00 %), 0 error (0.00 %).
+15:28:27.788089 Test execution summary: 1 test case was executed. Overall verdict: pass
+15:28:27.788097 Exit was requested from MC. Terminating MTC.
+======================================================
+TEST RESULT: PASS

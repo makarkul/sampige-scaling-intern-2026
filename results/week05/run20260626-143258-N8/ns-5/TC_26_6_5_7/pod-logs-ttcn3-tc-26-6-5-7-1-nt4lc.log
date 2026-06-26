@@ -1,0 +1,618 @@
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
+(1/4) Installing libmnl (1.0.5-r2)
+(2/4) Installing libnftnl (1.2.6-r0)
+(3/4) Installing libxtables (1.8.10-r3)
+(4/4) Installing iptables (1.8.10-r3)
+Executing busybox-1.36.1-r20.trigger
+OK: 10 MiB in 19 packages
+======================================================
+Waiting for mobile to register (5 seconds)...
+======================================================
+======================================================
+Starting TC_26_6_5_7 Test Case
+======================================================
+Resolved: msc=10.42.0.103 mobile=10.43.32.240 bsc=10.42.0.108
+DEBUG: [EXECUTE] section:
+[EXECUTE]
+TC_26_6_5_7.TC_26_6_5_7
+Main Controller ready (attempt 1)
+Starting Host Controller...
+TTCN-3 Host Controller (parallel mode), version 11.1.0
+The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+Result dir: /results/TC_26_6_5_7-2026-06-26-144043
+Waiting for log files...
+2026/Jun/26 14:40:43.910517 EXECUTOR - TTCN-3 Host Controller started on ttcn3-tc-26-6-5-7-1-nt4lc. Version: 11.1.0.
+2026/Jun/26 14:40:43.910709 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/26 14:40:43.910723 EXECUTOR - Maximum number of open file descriptors: 1048576,   FD_SETSIZE = 1024
+2026/Jun/26 14:40:43.910922 WARNING - Warning: The address of MC was set to a local IP address. This may cause incorrect behavior if a HC from a remote host also connects to MC.
+2026/Jun/26 14:40:43.910966 EXECUTOR - The address of MC was set to 127.0.0.1:0.
+2026/Jun/26 14:40:43.911110 EXECUTOR - Connected to MC.
+2026/Jun/26 14:40:43.911251 EXECUTOR - This host supports UNIX domain sockets for local communication.
+2026/Jun/26 14:40:43.911673 EXECUTOR - Processing configuration data received from MC.
+2026/Jun/26 14:40:43.912124 WARNING - Warning: Skeleton `/results/TC_26_6_5_7-2026-06-26-144043/%n.log' does not guarantee unique log file name for every test system process. It may cause unpredictable results if several test components try to write into the same log file.
+2026/Jun/26 14:40:43.912456 EXECUTOR - Module GSM_Constants has the following parameters: { TSPC_Serv_TS11 := true, TSPC_Serv_TS61 := false, TSPC_Serv_TS62 := false, TSPC_Serv_BS21 := false, TSPC_Serv_BS22 := false, TSPC_Serv_BS24 := false, TSPC_Serv_BS25 := false, TSPC_Serv_BS26 := false, TSPC_Serv_BS31 := false, TSPC_Serv_BS32 := false, TSPC_Serv_BS33 := false, TSPC_Serv_BS34 := false, TSPC_Serv_BS41 := false, TSPC_Serv_BS42 := false, TSPC_Serv_BS43 := false, TSPC_Serv_BS44 := false, TSPC_Serv_BS45 := false, TSPC_Serv_BS51 := false, TSPC_Serv_BS61 := false, TSPC_Serv_BS81 := false, TSPC_DualRate := false, TSPC_MTsvc := true, TSPX_IMSI := '901700000000001F'O, TSPX_TMSI := '1914D97F'O, TSPX_CKSNDef := 0, TSPX_RANDDef := '00112233445566778899AABBCCDDEEFF'O, TSPX_SRES := '12345678'O, TSPX_Kc := '0000000000000000'O, TSPX_SDCCH4SubDef := 0, TSPX_TmSltDef := 0, TSPX_TscDef := 7, TSPX_TCHHSubDef := 0, TCV_CC := true, TSPX_Telephony_Rate := C_Full (0), TSPX_MOBscSvcA := C_Telephony (0), TSPX_MOBscSvcB := C_Telephony (0), TSPX_MOBscSvcC := C_Telephony (0), TSPX_MOBscSvcD := C_Telephony (0), TSPX_MOBscSvcE := C_Telephony (0), TSPX_MOBscSvcF := C_Telephony (0), TSPX_MOBscSvcG := C_Telephony (0), TSPX_MOChRateA := C_Full (0), TSPX_MOChRateB := C_Full (0), TSPX_MOChRateC := C_Full (0), TSPX_MOChRateD := C_Full (0), TSPX_MOChRateE := C_Full (0), TSPX_MOChRateF := C_Full (0), TSPX_MOChRateG := C_Full (0), TSPX_MTBscSvcA := C_Telephony (0), TSPX_MTBscSvcB := C_Telephony (0), TSPX_MTBscSvcC := C_Telephony (0), TSPX_MTBscSvcD := C_Telephony (0), TSPX_MTBscSvcE := C_Telephony (0), TSPX_MTBscSvcF := C_Telephony (0), TSPX_MTBscSvcG := C_Telephony (0), TSPX_MTBscSvcH := C_Telephony (0), TSPX_MTBscSvcI := C_Telephony (0), TSPX_MTBscSvcJ := C_Telephony (0), TSPX_MTChRateA := C_Full (0), TSPX_MTChRateB := C_Full (0), TSPX_MTChRateC := C_Full (0), TSPX_MTChRateD := C_Full (0), TSPX_MTChRateE := C_Full (0), TSPX_MTChRateF := C_Full (0), TSPX_MTChRateG := C_Full (0), TSPX_MTChRateH := C_Full (0), TSPX_MTChRateI := C_Full (0), TSPX_MTChRateJ := C_Full (0), C_arfcnA := 100 }
+2026/Jun/26 14:40:43.912544 EXECUTOR - Module TC_26_3_3 has the following parameters: { TSPC_Serv_TS12 := false }
+2026/Jun/26 14:40:43.912563 EXECUTOR - Module TC_26_6_13_5 has the following parameters: { TSPC_NonSynchronizedHO := false, TSPC_FreqHopping := false, TSPC_TwoCellSetup := false }
+2026/Jun/26 14:40:43.912573 EXECUTOR - Module TC_26_6_13_6 has the following parameters: { TSPC_StartingTime := false, TSPC_TwoCellSetup := false, TSPC_FhChannelConfig := false, TSPC_FhMaListCheck := false, TSPC_NonSynchronizedHO := false, TSPC_MaListEncoding := false }
+2026/Jun/26 14:40:43.912584 EXECUTOR - Module TC_26_6_1_2 has the following parameters: { TSPX_nPara := 3, TSPX_i1Para := 3, TSPX_kPara := 5, TSPX_i2Para := 1, TSPX_rPara := 4, TSPX_i3Para := 4 }
+2026/Jun/26 14:40:43.912604 EXECUTOR - Module TC_26_6_2_5 has the following parameters: { TSPX_CcchConf_MultiNonComb := true, TSPC_CcchgPositive := true, TSPC_CcchgComputation := false, TSPC_SdcchOmConfig := false }
+2026/Jun/26 14:40:43.912614 EXECUTOR - Module TC_26_6_3_2 has the following parameters: { TSPC_SacchSiInjection := false, TSPC_MeasurementReportCheck := false }
+2026/Jun/26 14:40:43.912624 EXECUTOR - Module TC_26_6_4_2_1 has the following parameters: { TSPC_SacchL1PowerCheck := false, TSPC_HalfRateChannel := false, TSPC_CCStateU10 := false }
+2026/Jun/26 14:40:43.912635 EXECUTOR - Module TC_26_6_5_2_10 has the following parameters: { TSPC_FnTimingCheck := false }
+2026/Jun/26 14:40:43.912645 EXECUTOR - Module TC_26_6_5_2_9 has the following parameters: { TSPC_OM_NoL2Ack := false, TSPC_SacchMrCheck := false, TSPC_FreqHopping := false, TSPC_OM_SendNextOnHO := false }
+2026/Jun/26 14:40:43.912655 EXECUTOR - Module TC_26_6_5_3_1 has the following parameters: { TSPC_InterCellHO := false, TSPC_FnTiming := false, TSPC_CheckCellsPresent := false, TSPC_TimadvPwrlvlChk := false }
+2026/Jun/26 14:40:43.912665 EXECUTOR - Module TC_26_6_5_4_1 has the following parameters: { TSPC_StartCellB := false, TSPC_OM_GetTxFn := false, TSPC_FnTimingCheck := false, TSPC_TimadvPwrlvlChk := false }
+2026/Jun/26 14:40:43.912676 EXECUTOR - Module TC_26_6_5_8 has the following parameters: { TSPC_CCStateU10 := false, TSPC_HoAccessObserve := false, TSPC_SacchL1PowerCheck := false, TSPC_CheckCellsPresent := false, TSPC_OM_ReturnFn := false }
+2026/Jun/26 14:40:43.912686 EXECUTOR - Module TC_26_6_6_1 has the following parameters: { TSPC_FHCHK := false, TSPC_StartingTime := false, TSPC_DualRate := false, TSPC_PerSubtestChannel := false, TSPC_FHImmAsgn := false, TSPC_PerSubtestRelease := false, TSPC_OM_StopCell := false }
+2026/Jun/26 14:40:43.912697 EXECUTOR - Module TC_26_6_7_2 has the following parameters: { TSPC_48DataH := false, TSPC_24DataH := false, TSPC_HalfRateSpeech := false }
+2026/Jun/26 14:40:43.912735 EXECUTOR - Initializing module GSM_Component_Definitions.
+2026/Jun/26 14:40:43.912744 EXECUTOR GSM_Component_Definitions.ttcn3:0 Initializing module GSM_Templates.
+2026/Jun/26 14:40:43.912766 EXECUTOR GSM_Templates.ttcn3:0 Initializing module GSM_Constants.
+2026/Jun/26 14:40:43.912771 EXECUTOR GSM_Constants.ttcn3:0 Initializing module GSM_Types.
+2026/Jun/26 14:40:43.912774 EXECUTOR GSM_Constants.ttcn3:0 Initialization of module GSM_Types finished.
+2026/Jun/26 14:40:43.912777 EXECUTOR GSM_Templates.ttcn3:0 Initialization of module GSM_Constants finished.
+2026/Jun/26 14:40:43.912858 EXECUTOR GSM_Component_Definitions.ttcn3:0 Initialization of module GSM_Templates finished.
+2026/Jun/26 14:40:43.912865 EXECUTOR - Initialization of module GSM_Component_Definitions finished.
+2026/Jun/26 14:40:43.912868 EXECUTOR - Initializing module GSM_Functions.
+2026/Jun/26 14:40:43.912896 EXECUTOR - Initialization of module GSM_Functions finished.
+2026/Jun/26 14:40:43.912898 EXECUTOR - Initializing module PreGenRecordOf.
+2026/Jun/26 14:40:43.912901 EXECUTOR - Initialization of module PreGenRecordOf finished.
+2026/Jun/26 14:40:43.912903 EXECUTOR - Initializing module TC_26_2_1_3.
+2026/Jun/26 14:40:43.912909 EXECUTOR - Initialization of module TC_26_2_1_3 finished.
+2026/Jun/26 14:40:43.912912 EXECUTOR - Initializing module TC_26_2_2.
+2026/Jun/26 14:40:43.912917 EXECUTOR - Initialization of module TC_26_2_2 finished.
+2026/Jun/26 14:40:43.912919 EXECUTOR - Initializing module TC_26_2_3.
+2026/Jun/26 14:40:43.912924 EXECUTOR - Initialization of module TC_26_2_3 finished.
+2026/Jun/26 14:40:43.912926 EXECUTOR - Initializing module TC_26_3_2.
+2026/Jun/26 14:40:43.912932 EXECUTOR - Initialization of module TC_26_3_2 finished.
+2026/Jun/26 14:40:43.912934 EXECUTOR - Initializing module TC_26_3_3.
+2026/Jun/26 14:40:43.912938 EXECUTOR - Initialization of module TC_26_3_3 finished.
+2026/Jun/26 14:40:43.912941 EXECUTOR - Initializing module TC_26_3_4.
+2026/Jun/26 14:40:43.912946 EXECUTOR - Initialization of module TC_26_3_4 finished.
+2026/Jun/26 14:40:43.912953 EXECUTOR - Initializing module TC_26_6_11_1.
+2026/Jun/26 14:40:43.912959 EXECUTOR - Initialization of module TC_26_6_11_1 finished.
+2026/Jun/26 14:40:43.912962 EXECUTOR - Initializing module TC_26_6_11_2.
+2026/Jun/26 14:40:43.912968 EXECUTOR - Initialization of module TC_26_6_11_2 finished.
+2026/Jun/26 14:40:43.912970 EXECUTOR - Initializing module TC_26_6_12_1.
+2026/Jun/26 14:40:43.912975 EXECUTOR - Initialization of module TC_26_6_12_1 finished.
+2026/Jun/26 14:40:43.912977 EXECUTOR - Initializing module TC_26_6_12_2.
+2026/Jun/26 14:40:43.912983 EXECUTOR - Initialization of module TC_26_6_12_2 finished.
+2026/Jun/26 14:40:43.912985 EXECUTOR - Initializing module TC_26_6_12_3.
+2026/Jun/26 14:40:43.912991 EXECUTOR - Initialization of module TC_26_6_12_3 finished.
+2026/Jun/26 14:40:43.912993 EXECUTOR - Initializing module TC_26_6_12_4.
+2026/Jun/26 14:40:43.912998 EXECUTOR - Initialization of module TC_26_6_12_4 finished.
+2026/Jun/26 14:40:43.913000 EXECUTOR - Initializing module TC_26_6_13_1.
+2026/Jun/26 14:40:43.913006 EXECUTOR - Initialization of module TC_26_6_13_1 finished.
+2026/Jun/26 14:40:43.913008 EXECUTOR - Initializing module TC_26_6_13_10.
+2026/Jun/26 14:40:43.913014 EXECUTOR - Initialization of module TC_26_6_13_10 finished.
+2026/Jun/26 14:40:43.913017 EXECUTOR - Initializing module TC_26_6_13_2.
+2026/Jun/26 14:40:43.913022 EXECUTOR - Initialization of module TC_26_6_13_2 finished.
+2026/Jun/26 14:40:43.913024 EXECUTOR - Initializing module TC_26_6_13_3.
+2026/Jun/26 14:40:43.913030 EXECUTOR - Initialization of module TC_26_6_13_3 finished.
+2026/Jun/26 14:40:43.913033 EXECUTOR - Initializing module TC_26_6_13_4.
+2026/Jun/26 14:40:43.913038 EXECUTOR - Initialization of module TC_26_6_13_4 finished.
+2026/Jun/26 14:40:43.913041 EXECUTOR - Initializing module TC_26_6_13_5.
+2026/Jun/26 14:40:43.913045 EXECUTOR - Initialization of module TC_26_6_13_5 finished.
+2026/Jun/26 14:40:43.913047 EXECUTOR - Initializing module TC_26_6_13_6.
+2026/Jun/26 14:40:43.913052 EXECUTOR - Initialization of module TC_26_6_13_6 finished.
+2026/Jun/26 14:40:43.913054 EXECUTOR - Initializing module TC_26_6_13_7.
+2026/Jun/26 14:40:43.913061 EXECUTOR - Initialization of module TC_26_6_13_7 finished.
+2026/Jun/26 14:40:43.913063 EXECUTOR - Initializing module TC_26_6_13_9.
+2026/Jun/26 14:40:43.913068 EXECUTOR - Initialization of module TC_26_6_13_9 finished.
+2026/Jun/26 14:40:43.913070 EXECUTOR - Initializing module TC_26_6_1_1.
+2026/Jun/26 14:40:43.913076 EXECUTOR - Initialization of module TC_26_6_1_1 finished.
+2026/Jun/26 14:40:43.913078 EXECUTOR - Initializing module TC_26_6_1_2.
+2026/Jun/26 14:40:43.913084 EXECUTOR - Initialization of module TC_26_6_1_2 finished.
+2026/Jun/26 14:40:43.913086 EXECUTOR - Initializing module TC_26_6_1_3.
+2026/Jun/26 14:40:43.913092 EXECUTOR - Initialization of module TC_26_6_1_3 finished.
+2026/Jun/26 14:40:43.913094 EXECUTOR - Initializing module TC_26_6_1_4.
+2026/Jun/26 14:40:43.913100 EXECUTOR - Initialization of module TC_26_6_1_4 finished.
+2026/Jun/26 14:40:43.913102 EXECUTOR - Initializing module TC_26_6_1_5.
+2026/Jun/26 14:40:43.913107 EXECUTOR - Initialization of module TC_26_6_1_5 finished.
+2026/Jun/26 14:40:43.913109 EXECUTOR - Initializing module TC_26_6_2_1_1.
+2026/Jun/26 14:40:43.913115 EXECUTOR - Initialization of module TC_26_6_2_1_1 finished.
+2026/Jun/26 14:40:43.913117 EXECUTOR - Initializing module TC_26_6_2_1_2.
+2026/Jun/26 14:40:43.913123 EXECUTOR - Initialization of module TC_26_6_2_1_2 finished.
+2026/Jun/26 14:40:43.913125 EXECUTOR - Initializing module TC_26_6_2_1_3.
+2026/Jun/26 14:40:43.913131 EXECUTOR - Initialization of module TC_26_6_2_1_3 finished.
+2026/Jun/26 14:40:43.913133 EXECUTOR - Initializing module TC_26_6_2_2.
+2026/Jun/26 14:40:43.913139 EXECUTOR - Initialization of module TC_26_6_2_2 finished.
+2026/Jun/26 14:40:43.913141 EXECUTOR - Initializing module TC_26_6_2_3_1.
+2026/Jun/26 14:40:43.913147 EXECUTOR - Initialization of module TC_26_6_2_3_1 finished.
+2026/Jun/26 14:40:43.913149 EXECUTOR - Initializing module TC_26_6_2_3_2.
+2026/Jun/26 14:40:43.913158 EXECUTOR - Initialization of module TC_26_6_2_3_2 finished.
+2026/Jun/26 14:40:43.913160 EXECUTOR - Initializing module TC_26_6_2_4.
+2026/Jun/26 14:40:43.913166 EXECUTOR - Initialization of module TC_26_6_2_4 finished.
+2026/Jun/26 14:40:43.913168 EXECUTOR - Initializing module TC_26_6_2_5.
+2026/Jun/26 14:40:43.913173 EXECUTOR - Initialization of module TC_26_6_2_5 finished.
+2026/Jun/26 14:40:43.913175 EXECUTOR - Initializing module TC_26_6_3_1.
+2026/Jun/26 14:40:43.913181 EXECUTOR - Initialization of module TC_26_6_3_1 finished.
+2026/Jun/26 14:40:43.913183 EXECUTOR - Initializing module TC_26_6_3_2.
+2026/Jun/26 14:40:43.913188 EXECUTOR - Initialization of module TC_26_6_3_2 finished.
+2026/Jun/26 14:40:43.913190 EXECUTOR - Initializing module TC_26_6_3_3.
+2026/Jun/26 14:40:43.913195 EXECUTOR - Initialization of module TC_26_6_3_3 finished.
+2026/Jun/26 14:40:43.913198 EXECUTOR - Initializing module TC_26_6_3_4.
+2026/Jun/26 14:40:43.913203 EXECUTOR - Initialization of module TC_26_6_3_4 finished.
+2026/Jun/26 14:40:43.913206 EXECUTOR - Initializing module TC_26_6_3_5.
+2026/Jun/26 14:40:43.913212 EXECUTOR - Initialization of module TC_26_6_3_5 finished.
+2026/Jun/26 14:40:43.913214 EXECUTOR - Initializing module TC_26_6_4_1.
+2026/Jun/26 14:40:43.913220 EXECUTOR - Initialization of module TC_26_6_4_1 finished.
+2026/Jun/26 14:40:43.913222 EXECUTOR - Initializing module TC_26_6_4_2_1.
+2026/Jun/26 14:40:43.913227 EXECUTOR - Initialization of module TC_26_6_4_2_1 finished.
+2026/Jun/26 14:40:43.913229 EXECUTOR - Initializing module TC_26_6_4_2_2.
+2026/Jun/26 14:40:43.913234 EXECUTOR - Initialization of module TC_26_6_4_2_2 finished.
+2026/Jun/26 14:40:43.913236 EXECUTOR - Initializing module TC_26_6_5_1.
+2026/Jun/26 14:40:43.913242 EXECUTOR - Initialization of module TC_26_6_5_1 finished.
+2026/Jun/26 14:40:43.913245 EXECUTOR - Initializing module TC_26_6_5_2_1.
+2026/Jun/26 14:40:43.913250 EXECUTOR - Initialization of module TC_26_6_5_2_1 finished.
+2026/Jun/26 14:40:43.913252 EXECUTOR - Initializing module TC_26_6_5_2_10.
+2026/Jun/26 14:40:43.913257 EXECUTOR - Initialization of module TC_26_6_5_2_10 finished.
+2026/Jun/26 14:40:43.913259 EXECUTOR - Initializing module TC_26_6_5_2_2.
+2026/Jun/26 14:40:43.913265 EXECUTOR - Initialization of module TC_26_6_5_2_2 finished.
+2026/Jun/26 14:40:43.913267 EXECUTOR - Initializing module TC_26_6_5_2_3.
+2026/Jun/26 14:40:43.913273 EXECUTOR - Initialization of module TC_26_6_5_2_3 finished.
+2026/Jun/26 14:40:43.913275 EXECUTOR - Initializing module TC_26_6_5_2_4.
+2026/Jun/26 14:40:43.913280 EXECUTOR - Initialization of module TC_26_6_5_2_4 finished.
+2026/Jun/26 14:40:43.913282 EXECUTOR - Initializing module TC_26_6_5_2_5.
+2026/Jun/26 14:40:43.913288 EXECUTOR - Initialization of module TC_26_6_5_2_5 finished.
+2026/Jun/26 14:40:43.913290 EXECUTOR - Initializing module TC_26_6_5_2_6.
+2026/Jun/26 14:40:43.913296 EXECUTOR - Initialization of module TC_26_6_5_2_6 finished.
+2026/Jun/26 14:40:43.913299 EXECUTOR - Initializing module TC_26_6_5_2_7.
+2026/Jun/26 14:40:43.913304 EXECUTOR - Initialization of module TC_26_6_5_2_7 finished.
+2026/Jun/26 14:40:43.913306 EXECUTOR - Initializing module TC_26_6_5_2_8.
+2026/Jun/26 14:40:43.913311 EXECUTOR - Initialization of module TC_26_6_5_2_8 finished.
+2026/Jun/26 14:40:43.913313 EXECUTOR - Initializing module TC_26_6_5_2_9.
+2026/Jun/26 14:40:43.913319 EXECUTOR - Initialization of module TC_26_6_5_2_9 finished.
+2026/Jun/26 14:40:43.913321 EXECUTOR - Initializing module TC_26_6_5_3_1.
+2026/Jun/26 14:40:43.913327 EXECUTOR - Initialization of module TC_26_6_5_3_1 finished.
+2026/Jun/26 14:40:43.913329 EXECUTOR - Initializing module TC_26_6_5_3_2.
+2026/Jun/26 14:40:43.913335 EXECUTOR - Initialization of module TC_26_6_5_3_2 finished.
+2026/Jun/26 14:40:43.913337 EXECUTOR - Initializing module TC_26_6_5_4_1.
+2026/Jun/26 14:40:43.913342 EXECUTOR - Initialization of module TC_26_6_5_4_1 finished.
+2026/Jun/26 14:40:43.913344 EXECUTOR - Initializing module TC_26_6_5_4_2.
+2026/Jun/26 14:40:43.913349 EXECUTOR - Initialization of module TC_26_6_5_4_2 finished.
+2026/Jun/26 14:40:43.913354 EXECUTOR - Initializing module TC_26_6_5_5_2.
+2026/Jun/26 14:40:43.913360 EXECUTOR - Initialization of module TC_26_6_5_5_2 finished.
+2026/Jun/26 14:40:43.913363 EXECUTOR - Initializing module TC_26_6_5_6.
+2026/Jun/26 14:40:43.913368 EXECUTOR - Initialization of module TC_26_6_5_6 finished.
+2026/Jun/26 14:40:43.913370 EXECUTOR - Initializing module TC_26_6_5_7.
+2026/Jun/26 14:40:43.913376 EXECUTOR - Initialization of module TC_26_6_5_7 finished.
+2026/Jun/26 14:40:43.913379 EXECUTOR - Initializing module TC_26_6_5_8.
+2026/Jun/26 14:40:43.913384 EXECUTOR - Initialization of module TC_26_6_5_8 finished.
+2026/Jun/26 14:40:43.913386 EXECUTOR - Initializing module TC_26_6_6_1.
+2026/Jun/26 14:40:43.913391 EXECUTOR - Initialization of module TC_26_6_6_1 finished.
+2026/Jun/26 14:40:43.913393 EXECUTOR - Initializing module TC_26_6_7_2.
+2026/Jun/26 14:40:43.913398 EXECUTOR - Initialization of module TC_26_6_7_2 finished.
+2026/Jun/26 14:40:43.913400 EXECUTOR - Initializing module TC_26_6_8_1.
+2026/Jun/26 14:40:43.913406 EXECUTOR - Initialization of module TC_26_6_8_1 finished.
+2026/Jun/26 14:40:43.913408 EXECUTOR - Initializing module TC_26_6_8_2.
+2026/Jun/26 14:40:43.913413 EXECUTOR - Initialization of module TC_26_6_8_2 finished.
+2026/Jun/26 14:40:43.913415 EXECUTOR - Initializing module TC_26_6_8_3.
+2026/Jun/26 14:40:43.913421 EXECUTOR - Initialization of module TC_26_6_8_3 finished.
+2026/Jun/26 14:40:43.913423 EXECUTOR - Initializing module TC_26_6_8_4.
+2026/Jun/26 14:40:43.913429 EXECUTOR - Initialization of module TC_26_6_8_4 finished.
+2026/Jun/26 14:40:43.913431 EXECUTOR - Initializing module TC_26_6_8_5.
+2026/Jun/26 14:40:43.913437 EXECUTOR - Initialization of module TC_26_6_8_5 finished.
+2026/Jun/26 14:40:43.913439 EXECUTOR - Initializing module TC_26_7_1.
+2026/Jun/26 14:40:43.913445 EXECUTOR - Initialization of module TC_26_7_1 finished.
+2026/Jun/26 14:40:43.913447 EXECUTOR - Initializing module TC_26_7_2_1.
+2026/Jun/26 14:40:43.913452 EXECUTOR - Initialization of module TC_26_7_2_1 finished.
+2026/Jun/26 14:40:43.913455 EXECUTOR - Initializing module TC_26_7_2_2.
+2026/Jun/26 14:40:43.913461 EXECUTOR - Initialization of module TC_26_7_2_2 finished.
+2026/Jun/26 14:40:43.913463 EXECUTOR - Initializing module TC_26_7_3_1.
+2026/Jun/26 14:40:43.913469 EXECUTOR - Initialization of module TC_26_7_3_1 finished.
+2026/Jun/26 14:40:43.913471 EXECUTOR - Initializing module TC_26_7_3_2.
+2026/Jun/26 14:40:43.913476 EXECUTOR - Initialization of module TC_26_7_3_2 finished.
+2026/Jun/26 14:40:43.913478 EXECUTOR - Initializing module TC_26_7_4_1.
+2026/Jun/26 14:40:43.913484 EXECUTOR - Initialization of module TC_26_7_4_1 finished.
+2026/Jun/26 14:40:43.913486 EXECUTOR - Initializing module TC_26_7_4_2_1.
+2026/Jun/26 14:40:43.913491 EXECUTOR - Initialization of module TC_26_7_4_2_1 finished.
+2026/Jun/26 14:40:43.913493 EXECUTOR - Initializing module TC_26_7_4_2_2_1.
+2026/Jun/26 14:40:43.913499 EXECUTOR - Initialization of module TC_26_7_4_2_2_1 finished.
+2026/Jun/26 14:40:43.913501 EXECUTOR - Initializing module TC_26_7_4_2_2_2.
+2026/Jun/26 14:40:43.913506 EXECUTOR - Initialization of module TC_26_7_4_2_2_2 finished.
+2026/Jun/26 14:40:43.913508 EXECUTOR - Initializing module TC_26_7_4_2_3.
+2026/Jun/26 14:40:43.913513 EXECUTOR - Initialization of module TC_26_7_4_2_3 finished.
+2026/Jun/26 14:40:43.913516 EXECUTOR - Initializing module TC_26_7_4_2_4_1.
+2026/Jun/26 14:40:43.913521 EXECUTOR - Initialization of module TC_26_7_4_2_4_1 finished.
+2026/Jun/26 14:40:43.913523 EXECUTOR - Initializing module TC_26_7_4_2_4_2.
+2026/Jun/26 14:40:43.913529 EXECUTOR - Initialization of module TC_26_7_4_2_4_2 finished.
+2026/Jun/26 14:40:43.913531 EXECUTOR - Initializing module TC_26_7_4_2_4_3.
+2026/Jun/26 14:40:43.913536 EXECUTOR - Initialization of module TC_26_7_4_2_4_3 finished.
+2026/Jun/26 14:40:43.913538 EXECUTOR - Initializing module TC_26_7_4_2_4_4.
+2026/Jun/26 14:40:43.913544 EXECUTOR - Initialization of module TC_26_7_4_2_4_4 finished.
+2026/Jun/26 14:40:43.913546 EXECUTOR - Initializing module TC_26_7_4_2_4_5.
+2026/Jun/26 14:40:43.913551 EXECUTOR - Initialization of module TC_26_7_4_2_4_5 finished.
+2026/Jun/26 14:40:43.913556 EXECUTOR - Initializing module TC_26_7_4_3_1.
+2026/Jun/26 14:40:43.913562 EXECUTOR - Initialization of module TC_26_7_4_3_1 finished.
+2026/Jun/26 14:40:43.913564 EXECUTOR - Initializing module TC_26_7_4_3_2.
+2026/Jun/26 14:40:43.913569 EXECUTOR - Initialization of module TC_26_7_4_3_2 finished.
+2026/Jun/26 14:40:43.913571 EXECUTOR - Initializing module TC_26_7_4_3_3.
+2026/Jun/26 14:40:43.913577 EXECUTOR - Initialization of module TC_26_7_4_3_3 finished.
+2026/Jun/26 14:40:43.913579 EXECUTOR - Initializing module TC_26_7_4_3_4.
+2026/Jun/26 14:40:43.913584 EXECUTOR - Initialization of module TC_26_7_4_3_4 finished.
+2026/Jun/26 14:40:43.913587 EXECUTOR - Initializing module TC_26_7_4_4.
+2026/Jun/26 14:40:43.913593 EXECUTOR - Initialization of module TC_26_7_4_4 finished.
+2026/Jun/26 14:40:43.913595 EXECUTOR - Initializing module TC_26_7_4_5_1.
+2026/Jun/26 14:40:43.913601 EXECUTOR - Initialization of module TC_26_7_4_5_1 finished.
+2026/Jun/26 14:40:43.913603 EXECUTOR - Initializing module TC_26_7_4_5_2.
+2026/Jun/26 14:40:43.913608 EXECUTOR - Initialization of module TC_26_7_4_5_2 finished.
+2026/Jun/26 14:40:43.913610 EXECUTOR - Initializing module TC_26_7_4_5_3.
+2026/Jun/26 14:40:43.913616 EXECUTOR - Initialization of module TC_26_7_4_5_3 finished.
+2026/Jun/26 14:40:43.913618 EXECUTOR - Initializing module TC_26_7_4_5_4_2.
+2026/Jun/26 14:40:43.913624 EXECUTOR - Initialization of module TC_26_7_4_5_4_2 finished.
+2026/Jun/26 14:40:43.913626 EXECUTOR - Initializing module TC_26_7_4_5_4_3.
+2026/Jun/26 14:40:43.913632 EXECUTOR - Initialization of module TC_26_7_4_5_4_3 finished.
+2026/Jun/26 14:40:43.913634 EXECUTOR - Initializing module TC_26_7_5_2.
+2026/Jun/26 14:40:43.913640 EXECUTOR - Initialization of module TC_26_7_5_2 finished.
+2026/Jun/26 14:40:43.913642 EXECUTOR - Initializing module TC_26_7_5_3.
+2026/Jun/26 14:40:43.913647 EXECUTOR - Initialization of module TC_26_7_5_3 finished.
+2026/Jun/26 14:40:43.913649 EXECUTOR - Initializing module TC_26_7_5_4.
+2026/Jun/26 14:40:43.913655 EXECUTOR - Initialization of module TC_26_7_5_4 finished.
+2026/Jun/26 14:40:43.913658 EXECUTOR - Initializing module TC_26_7_5_5.
+2026/Jun/26 14:40:43.913663 EXECUTOR - Initialization of module TC_26_7_5_5 finished.
+2026/Jun/26 14:40:43.913665 EXECUTOR - Initializing module TC_26_7_5_6.
+2026/Jun/26 14:40:43.913671 EXECUTOR - Initialization of module TC_26_7_5_6 finished.
+2026/Jun/26 14:40:43.913673 EXECUTOR - Initializing module TC_26_7_5_7_1.
+2026/Jun/26 14:40:43.913678 EXECUTOR - Initialization of module TC_26_7_5_7_1 finished.
+2026/Jun/26 14:40:43.913681 EXECUTOR - Initializing module TC_26_7_5_8_1.
+2026/Jun/26 14:40:43.913687 EXECUTOR - Initialization of module TC_26_7_5_8_1 finished.
+2026/Jun/26 14:40:43.913689 EXECUTOR - Initializing module TC_26_7_5_8_2.
+2026/Jun/26 14:40:43.913694 EXECUTOR - Initialization of module TC_26_7_5_8_2 finished.
+2026/Jun/26 14:40:43.913696 EXECUTOR - Initializing module TC_26_7_5_8_3.
+2026/Jun/26 14:40:43.913702 EXECUTOR - Initialization of module TC_26_7_5_8_3 finished.
+2026/Jun/26 14:40:43.913704 EXECUTOR - Initializing module TC_26_8_1_2_1_1.
+2026/Jun/26 14:40:43.913710 EXECUTOR - Initialization of module TC_26_8_1_2_1_1 finished.
+2026/Jun/26 14:40:43.913712 EXECUTOR - Initializing module TC_26_8_1_2_2_1.
+2026/Jun/26 14:40:43.913718 EXECUTOR - Initialization of module TC_26_8_1_2_2_1 finished.
+2026/Jun/26 14:40:43.913720 EXECUTOR - Initializing module TC_26_8_1_2_2_2.
+2026/Jun/26 14:40:43.913726 EXECUTOR - Initialization of module TC_26_8_1_2_2_2 finished.
+2026/Jun/26 14:40:43.913728 EXECUTOR - Initializing module TC_26_8_1_2_2_3.
+2026/Jun/26 14:40:43.913734 EXECUTOR - Initialization of module TC_26_8_1_2_2_3 finished.
+2026/Jun/26 14:40:43.913736 EXECUTOR - Initializing module TC_26_8_1_2_3_1.
+2026/Jun/26 14:40:43.913742 EXECUTOR - Initialization of module TC_26_8_1_2_3_1 finished.
+2026/Jun/26 14:40:43.913744 EXECUTOR - Initializing module TC_26_8_1_2_3_2.
+2026/Jun/26 14:40:43.913750 EXECUTOR - Initialization of module TC_26_8_1_2_3_2 finished.
+2026/Jun/26 14:40:43.913754 EXECUTOR - Initializing module TC_26_8_1_2_3_3.
+2026/Jun/26 14:40:43.913760 EXECUTOR - Initialization of module TC_26_8_1_2_3_3 finished.
+2026/Jun/26 14:40:43.913762 EXECUTOR - Initializing module TC_26_8_1_2_3_4.
+2026/Jun/26 14:40:43.913768 EXECUTOR - Initialization of module TC_26_8_1_2_3_4 finished.
+2026/Jun/26 14:40:43.913770 EXECUTOR - Initializing module TC_26_8_1_2_3_5.
+2026/Jun/26 14:40:43.913776 EXECUTOR - Initialization of module TC_26_8_1_2_3_5 finished.
+2026/Jun/26 14:40:43.913778 EXECUTOR - Initializing module TC_26_8_1_2_3_6.
+2026/Jun/26 14:40:43.913784 EXECUTOR - Initialization of module TC_26_8_1_2_3_6 finished.
+2026/Jun/26 14:40:43.913786 EXECUTOR - Initializing module TC_26_8_1_2_3_7.
+2026/Jun/26 14:40:43.913791 EXECUTOR - Initialization of module TC_26_8_1_2_3_7 finished.
+2026/Jun/26 14:40:43.913794 EXECUTOR - Initializing module TC_26_8_1_2_4_1.
+2026/Jun/26 14:40:43.913799 EXECUTOR - Initialization of module TC_26_8_1_2_4_1 finished.
+2026/Jun/26 14:40:43.913801 EXECUTOR - Initializing module TC_26_8_1_2_4_13.
+2026/Jun/26 14:40:43.913810 EXECUTOR - Initialization of module TC_26_8_1_2_4_13 finished.
+2026/Jun/26 14:40:43.913812 EXECUTOR - Initializing module TC_26_8_1_2_4_2.
+2026/Jun/26 14:40:43.913819 EXECUTOR - Initialization of module TC_26_8_1_2_4_2 finished.
+2026/Jun/26 14:40:43.913829 EXECUTOR - Initializing module TC_26_8_1_2_4_3.
+2026/Jun/26 14:40:43.913835 EXECUTOR - Initialization of module TC_26_8_1_2_4_3 finished.
+2026/Jun/26 14:40:43.913837 EXECUTOR - Initializing module TC_26_8_1_2_4_4.
+2026/Jun/26 14:40:43.913843 EXECUTOR - Initialization of module TC_26_8_1_2_4_4 finished.
+2026/Jun/26 14:40:43.913846 EXECUTOR - Initializing module TC_26_8_1_2_4_5.
+2026/Jun/26 14:40:43.913851 EXECUTOR - Initialization of module TC_26_8_1_2_4_5 finished.
+2026/Jun/26 14:40:43.913854 EXECUTOR - Initializing module TC_26_8_1_2_5_7.
+2026/Jun/26 14:40:43.913859 EXECUTOR - Initialization of module TC_26_8_1_2_5_7 finished.
+2026/Jun/26 14:40:43.913862 EXECUTOR - Initializing module TC_26_8_1_2_6_1.
+2026/Jun/26 14:40:43.913867 EXECUTOR - Initialization of module TC_26_8_1_2_6_1 finished.
+2026/Jun/26 14:40:43.913870 EXECUTOR - Initializing module TC_26_8_1_2_6_2.
+2026/Jun/26 14:40:43.913875 EXECUTOR - Initialization of module TC_26_8_1_2_6_2 finished.
+2026/Jun/26 14:40:43.913877 EXECUTOR - Initializing module TC_26_8_1_2_6_3.
+2026/Jun/26 14:40:43.913883 EXECUTOR - Initialization of module TC_26_8_1_2_6_3 finished.
+2026/Jun/26 14:40:43.913885 EXECUTOR - Initializing module TC_26_8_1_2_6_5.
+2026/Jun/26 14:40:43.913891 EXECUTOR - Initialization of module TC_26_8_1_2_6_5 finished.
+2026/Jun/26 14:40:43.913893 EXECUTOR - Initializing module TC_26_8_1_2_6_6.
+2026/Jun/26 14:40:43.913899 EXECUTOR - Initialization of module TC_26_8_1_2_6_6 finished.
+2026/Jun/26 14:40:43.913901 EXECUTOR - Initializing module TC_26_8_1_2_7_3.
+2026/Jun/26 14:40:43.913907 EXECUTOR - Initialization of module TC_26_8_1_2_7_3 finished.
+2026/Jun/26 14:40:43.913909 EXECUTOR - Initializing module TC_26_8_1_2_7_4.
+2026/Jun/26 14:40:43.913914 EXECUTOR - Initialization of module TC_26_8_1_2_7_4 finished.
+2026/Jun/26 14:40:43.913917 EXECUTOR - Initializing module TC_26_8_1_2_8_3.
+2026/Jun/26 14:40:43.913922 EXECUTOR - Initialization of module TC_26_8_1_2_8_3 finished.
+2026/Jun/26 14:40:43.913924 EXECUTOR - Initializing module TC_26_8_1_2_9_2.
+2026/Jun/26 14:40:43.913931 EXECUTOR - Initialization of module TC_26_8_1_2_9_2 finished.
+2026/Jun/26 14:40:43.913933 EXECUTOR - Initializing module TC_26_8_1_2_9_4.
+2026/Jun/26 14:40:43.913939 EXECUTOR - Initialization of module TC_26_8_1_2_9_4 finished.
+2026/Jun/26 14:40:43.913941 EXECUTOR - Initializing module TC_26_8_1_2_9_5.
+2026/Jun/26 14:40:43.913946 EXECUTOR - Initialization of module TC_26_8_1_2_9_5 finished.
+2026/Jun/26 14:40:43.913949 EXECUTOR - Initializing module TC_26_8_1_3_1_1.
+2026/Jun/26 14:40:43.913954 EXECUTOR - Initialization of module TC_26_8_1_3_1_1 finished.
+2026/Jun/26 14:40:43.913957 EXECUTOR - Initializing module TC_26_8_1_3_2_1.
+2026/Jun/26 14:40:43.913965 EXECUTOR - Initialization of module TC_26_8_1_3_2_1 finished.
+2026/Jun/26 14:40:43.913968 EXECUTOR - Initializing module TC_26_8_1_3_3_1.
+2026/Jun/26 14:40:43.913973 EXECUTOR - Initialization of module TC_26_8_1_3_3_1 finished.
+2026/Jun/26 14:40:43.913976 EXECUTOR - Initializing module TC_26_8_1_3_3_2.
+2026/Jun/26 14:40:43.913982 EXECUTOR - Initialization of module TC_26_8_1_3_3_2 finished.
+2026/Jun/26 14:40:43.913984 EXECUTOR - Initializing module TC_26_8_1_3_3_3.
+2026/Jun/26 14:40:43.913991 EXECUTOR - Initialization of module TC_26_8_1_3_3_3 finished.
+2026/Jun/26 14:40:43.913994 EXECUTOR - Initializing module TC_26_8_1_3_3_4.
+2026/Jun/26 14:40:43.914000 EXECUTOR - Initialization of module TC_26_8_1_3_3_4 finished.
+2026/Jun/26 14:40:43.914002 EXECUTOR - Initializing module TC_26_8_1_3_3_5.
+2026/Jun/26 14:40:43.914008 EXECUTOR - Initialization of module TC_26_8_1_3_3_5 finished.
+2026/Jun/26 14:40:43.914010 EXECUTOR - Initializing module TC_26_8_1_3_3_6.
+2026/Jun/26 14:40:43.914016 EXECUTOR - Initialization of module TC_26_8_1_3_3_6 finished.
+2026/Jun/26 14:40:43.914019 EXECUTOR - Initializing module TC_26_8_1_3_3_7.
+2026/Jun/26 14:40:43.914024 EXECUTOR - Initialization of module TC_26_8_1_3_3_7 finished.
+2026/Jun/26 14:40:43.914026 EXECUTOR - Initializing module TC_26_8_1_3_4_1.
+2026/Jun/26 14:40:43.914032 EXECUTOR - Initialization of module TC_26_8_1_3_4_1 finished.
+2026/Jun/26 14:40:43.914034 EXECUTOR - Initializing module TC_26_8_1_3_4_2.
+2026/Jun/26 14:40:43.914040 EXECUTOR - Initialization of module TC_26_8_1_3_4_2 finished.
+2026/Jun/26 14:40:43.914042 EXECUTOR - Initializing module TC_26_8_1_3_4_3.
+2026/Jun/26 14:40:43.914048 EXECUTOR - Initialization of module TC_26_8_1_3_4_3 finished.
+2026/Jun/26 14:40:43.914050 EXECUTOR - Initializing module TC_26_8_1_3_4_4.
+2026/Jun/26 14:40:43.914056 EXECUTOR - Initialization of module TC_26_8_1_3_4_4 finished.
+2026/Jun/26 14:40:43.914058 EXECUTOR - Initializing module TC_26_8_1_3_4_5.
+2026/Jun/26 14:40:43.914064 EXECUTOR - Initialization of module TC_26_8_1_3_4_5 finished.
+2026/Jun/26 14:40:43.914066 EXECUTOR - Initializing module TC_26_8_1_3_4_6.
+2026/Jun/26 14:40:43.914072 EXECUTOR - Initialization of module TC_26_8_1_3_4_6 finished.
+2026/Jun/26 14:40:43.914074 EXECUTOR - Initializing module TC_26_8_1_3_4_7.
+2026/Jun/26 14:40:43.914079 EXECUTOR - Initialization of module TC_26_8_1_3_4_7 finished.
+2026/Jun/26 14:40:43.914081 EXECUTOR - Initializing module TC_26_8_1_3_4_8.
+2026/Jun/26 14:40:43.914086 EXECUTOR - Initialization of module TC_26_8_1_3_4_8 finished.
+2026/Jun/26 14:40:43.914089 EXECUTOR - Initializing module TC_26_8_1_3_5_1.
+2026/Jun/26 14:40:43.914095 EXECUTOR - Initialization of module TC_26_8_1_3_5_1 finished.
+2026/Jun/26 14:40:43.914097 EXECUTOR - Initializing module TC_26_8_1_3_5_2.
+2026/Jun/26 14:40:43.914103 EXECUTOR - Initialization of module TC_26_8_1_3_5_2 finished.
+2026/Jun/26 14:40:43.914105 EXECUTOR - Initializing module TC_26_8_1_3_5_3.
+2026/Jun/26 14:40:43.914111 EXECUTOR - Initialization of module TC_26_8_1_3_5_3 finished.
+2026/Jun/26 14:40:43.914113 EXECUTOR - Initializing module TC_26_8_1_3_5_4.
+2026/Jun/26 14:40:43.914119 EXECUTOR - Initialization of module TC_26_8_1_3_5_4 finished.
+2026/Jun/26 14:40:43.914121 EXECUTOR - Initializing module TC_26_8_1_3_5_5.
+2026/Jun/26 14:40:43.914127 EXECUTOR - Initialization of module TC_26_8_1_3_5_5 finished.
+2026/Jun/26 14:40:43.914129 EXECUTOR - Initializing module TC_26_8_1_3_5_6.
+2026/Jun/26 14:40:43.914134 EXECUTOR - Initialization of module TC_26_8_1_3_5_6 finished.
+2026/Jun/26 14:40:43.914137 EXECUTOR - Initializing module TC_26_8_1_3_5_7.
+2026/Jun/26 14:40:43.914142 EXECUTOR - Initialization of module TC_26_8_1_3_5_7 finished.
+2026/Jun/26 14:40:43.914144 EXECUTOR - Initializing module TC_26_8_1_3_5_8.
+2026/Jun/26 14:40:43.914150 EXECUTOR - Initialization of module TC_26_8_1_3_5_8 finished.
+2026/Jun/26 14:40:43.914152 EXECUTOR - Initializing module TC_26_8_1_3_5_9.
+2026/Jun/26 14:40:43.914157 EXECUTOR - Initialization of module TC_26_8_1_3_5_9 finished.
+2026/Jun/26 14:40:43.914159 EXECUTOR - Initializing module TC_26_8_1_4_3_1.
+2026/Jun/26 14:40:43.914168 EXECUTOR - Initialization of module TC_26_8_1_4_3_1 finished.
+2026/Jun/26 14:40:43.914170 EXECUTOR - Initializing module TC_26_8_1_4_3_2.
+2026/Jun/26 14:40:43.914176 EXECUTOR - Initialization of module TC_26_8_1_4_3_2 finished.
+2026/Jun/26 14:40:43.914179 EXECUTOR - Initializing module TC_26_8_1_4_5_6.
+2026/Jun/26 14:40:43.914184 EXECUTOR - Initialization of module TC_26_8_1_4_5_6 finished.
+2026/Jun/26 14:40:43.914187 EXECUTOR - Initializing module TC_26_8_2_1.
+2026/Jun/26 14:40:43.914192 EXECUTOR - Initialization of module TC_26_8_2_1 finished.
+2026/Jun/26 14:40:43.914195 EXECUTOR - Initializing module TC_26_8_2_2.
+2026/Jun/26 14:40:43.914200 EXECUTOR - Initialization of module TC_26_8_2_2 finished.
+2026/Jun/26 14:40:43.914202 EXECUTOR - Initializing module TC_26_8_2_3.
+2026/Jun/26 14:40:43.914208 EXECUTOR - Initialization of module TC_26_8_2_3 finished.
+2026/Jun/26 14:40:43.914210 EXECUTOR - Initializing module TC_26_8_3.
+2026/Jun/26 14:40:43.914216 EXECUTOR - Initialization of module TC_26_8_3 finished.
+2026/Jun/26 14:40:43.914218 EXECUTOR - Initializing module TC_34_2_2.
+2026/Jun/26 14:40:43.914224 EXECUTOR - Initialization of module TC_34_2_2 finished.
+2026/Jun/26 14:40:43.914227 EXECUTOR - Initializing module TitanLoggerApi.
+2026/Jun/26 14:40:43.914229 EXECUTOR - Initialization of module TitanLoggerApi finished.
+2026/Jun/26 14:40:43.914231 EXECUTOR - Initializing module TitanLoggerControl.
+2026/Jun/26 14:40:43.914233 EXECUTOR - Initialization of module TitanLoggerControl finished.
+2026/Jun/26 14:40:43.914245 EXECUTOR - Configuration data was processed successfully.
+2026/Jun/26 14:40:43.916396 EXECUTOR - MTC was created. Process id: 35.
+2026/Jun/26 14:42:18.420170 EXECUTOR - Exit was requested from MC. Terminating HC.
+2026/Jun/26 14:42:18.420345 EXECUTOR - Disconnected from MC.
+2026/Jun/26 14:42:18.420367 EXECUTOR - TTCN-3 Host Controller finished.
+2026/Jun/26 14:40:43.917522 EXECUTOR - TTCN-3 Main Test Component started on ttcn3-tc-26-6-5-7-1-nt4lc. Version: 11.1.0.
+2026/Jun/26 14:40:43.917683 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/26 14:40:43.917744 EXECUTOR - Connected to MC.
+2026/Jun/26 14:40:43.917947 EXECUTOR - Executing test case TC_26_6_5_7 in module TC_26_6_5_7.
+2026/Jun/26 14:40:43.918260 TESTCASE TC_26_6_5_7.ttcn3:165 Test case TC_26_6_5_7 started.
+2026/Jun/26 14:40:43.918326 PARALLEL TC_26_6_5_7.ttcn3:165 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_6_5_7.
+2026/Jun/26 14:40:43.918565 USER TC_26_6_5_7.ttcn3:165 MSC_Port: set_parameter msc_stub_host = 10.42.0.103
+2026/Jun/26 14:40:43.918620 USER TC_26_6_5_7.ttcn3:165 MSC_Port: set_parameter msc_stub_port = 5000
+2026/Jun/26 14:40:43.918650 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+2026/Jun/26 14:40:43.918665 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter gsmtap_port = 4729
+2026/Jun/26 14:40:43.918672 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter local_port = 4729
+2026/Jun/26 14:40:43.918677 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+2026/Jun/26 14:40:43.918681 USER TC_26_6_5_7.ttcn3:165 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/26 14:40:43.918685 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter arfcn = 51
+2026/Jun/26 14:40:43.918725 USER TC_26_6_5_7.ttcn3:165 L3_Port: user_start called
+2026/Jun/26 14:40:43.918735 PORTEVENT TC_26_6_5_7.ttcn3:165 Port L was started.
+2026/Jun/26 14:40:43.918794 PORTEVENT TC_26_6_5_7.ttcn3:165 Port RR was started.
+2026/Jun/26 14:40:43.918800 PORTEVENT TC_26_6_5_7.ttcn3:165 Port MM was started.
+2026/Jun/26 14:40:43.918805 PORTEVENT TC_26_6_5_7.ttcn3:165 Port CC was started.
+2026/Jun/26 14:40:43.918808 USER TC_26_6_5_7.ttcn3:165 MSC_Port: user_start called
+2026/Jun/26 14:40:43.918812 PORTEVENT TC_26_6_5_7.ttcn3:165 Port MSC was started.
+2026/Jun/26 14:40:43.918815 PORTEVENT TC_26_6_5_7.ttcn3:165 Port BSC was started.
+2026/Jun/26 14:40:43.918827 PORTEVENT TC_26_6_5_7.ttcn3:165 Port RSL was started.
+2026/Jun/26 14:40:43.918836 USER TC_26_6_5_7.ttcn3:165 VTY_PT: Starting
+2026/Jun/26 14:40:43.918841 PORTEVENT TC_26_6_5_7.ttcn3:165 Port VTY was started.
+2026/Jun/26 14:40:43.918846 PORTEVENT TC_26_6_5_7.ttcn3:165 Port COORD was started.
+2026/Jun/26 14:40:43.918849 PARALLEL TC_26_6_5_7.ttcn3:165 Component type GSM_Component_Definitions.GSM_CT was initialized.
+2026/Jun/26 14:40:43.918888 PARALLEL TC_26_6_5_7.ttcn3:216 Mapping port mtc:BSC to system:BSC.
+2026/Jun/26 14:40:43.918956 USER TC_26_6_5_7.ttcn3:216 BSC_Port: Mapping to 10.42.0.108:5001
+2026/Jun/26 14:40:43.919421 WARNING TC_26_6_5_7.ttcn3:216 BSC_Port: Connection failed: Connection refused
+2026/Jun/26 14:40:43.919449 WARNING TC_26_6_5_7.ttcn3:216 BSC_Port: Failed to connect
+2026/Jun/26 14:40:43.919461 PORTEVENT TC_26_6_5_7.ttcn3:216 Port BSC was mapped to system:BSC.
+2026/Jun/26 14:40:43.919535 PARALLEL TC_26_6_5_7.ttcn3:216 Map operation of mtc:BSC to system:BSC finished.
+2026/Jun/26 14:40:43.919572 PARALLEL TC_26_6_5_7.ttcn3:217 Mapping port mtc:MSC to system:MSC.
+2026/Jun/26 14:40:43.919601 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Mapping to MSC
+2026/Jun/26 14:40:43.919843 WARNING TC_26_6_5_7.ttcn3:217 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "MSC")
+2026/Jun/26 14:40:43.919882 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Registered socket for async events
+2026/Jun/26 14:40:43.919888 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Connected to MSC stub at 10.42.0.103:5000
+2026/Jun/26 14:40:43.919892 PORTEVENT TC_26_6_5_7.ttcn3:217 Port MSC was mapped to system:MSC.
+2026/Jun/26 14:40:43.919928 PARALLEL TC_26_6_5_7.ttcn3:217 Map operation of mtc:MSC to system:MSC finished.
+2026/Jun/26 14:40:43.919935 PARALLEL TC_26_6_5_7.ttcn3:218 Mapping port mtc:L to system:L.
+2026/Jun/26 14:40:43.919955 USER TC_26_6_5_7.ttcn3:218 L3_Port: Mapping to L
+2026/Jun/26 14:40:43.920011 USER TC_26_6_5_7.ttcn3:218 L3_Port: Joined UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/26 14:40:43.920021 USER TC_26_6_5_7.ttcn3:218 L3_Port: GSMTAP listening on port 4729
+2026/Jun/26 14:40:43.920030 USER TC_26_6_5_7.ttcn3:218 L3_Port: Mapped successfully (GSMTAP: 127.0.0.1:4729)
+2026/Jun/26 14:40:43.920039 PORTEVENT TC_26_6_5_7.ttcn3:218 Port L was mapped to system:L.
+2026/Jun/26 14:40:43.920059 PARALLEL TC_26_6_5_7.ttcn3:218 Map operation of mtc:L to system:L finished.
+2026/Jun/26 14:40:43.920065 PARALLEL TC_26_6_5_7.ttcn3:219 Mapping port mtc:VTY to system:VTY.
+2026/Jun/26 14:40:43.920085 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Mapping port to VTY interface
+2026/Jun/26 14:40:43.920321 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Connected to VTY at 10.43.32.240:4247
+2026/Jun/26 14:40:44.422011 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Initial banner received
+2026/Jun/26 14:40:44.422077 PORTEVENT TC_26_6_5_7.ttcn3:219 Port VTY was mapped to system:VTY.
+2026/Jun/26 14:40:44.422140 USER TC_26_6_5_7.ttcn3:219 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+2026/Jun/26 14:40:44.422198 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/26 14:40:44.422249 PARALLEL TC_26_6_5_7.ttcn3:219 Map operation of mtc:VTY to system:VTY finished.
+2026/Jun/26 14:40:44.422276 TIMEROP TC_26_6_5_7.ttcn3:221 Start timer T_guard: 300 s
+2026/Jun/26 14:40:44.422336 USER TC_26_6_5_7.ttcn3:223 ==========================================================
+2026/Jun/26 14:40:44.422342 USER TC_26_6_5_7.ttcn3:224 *** TC_26_6_5_7: Non-Synchronised Inter-Cell Handover with OTD Report ***
+2026/Jun/26 14:40:44.422350 USER TC_26_6_5_7.ttcn3:225 "*** Reference: GSM 04.08 " & char(0, 0, 0, 167) & "3.4.4, TC_26_6_5_7 ***"
+2026/Jun/26 14:40:44.422370 USER TC_26_6_5_7.ttcn3:226 *** Purpose: Verify MS reports time difference (motdif) after non-sync HO ***
+2026/Jun/26 14:40:44.422374 USER TC_26_6_5_7.ttcn3:227 *** TWO_CELL: ARFCN 51 (Cell A main BTS) + ARFCN 56 (Cell B n56 BTS) ***
+2026/Jun/26 14:40:44.422378 USER TC_26_6_5_7.ttcn3:228 *** FH-SKIP: C_Test_fh preamble and TCH hopping approximated as h=0 fixed ***
+2026/Jun/26 14:40:44.422382 USER TC_26_6_5_7.ttcn3:229 ==========================================================
+2026/Jun/26 14:40:44.422386 USER TC_26_6_5_7.ttcn3:230 *** Spec comments: ***
+2026/Jun/26 14:40:44.422390 USER TC_26_6_5_7.ttcn3:231 ***   1. Cell A with BCCH, CCCH, SDCCH4 and a traffic channel ***
+2026/Jun/26 14:40:44.422401 USER TC_26_6_5_7.ttcn3:232 ***   2. Cell B with BCCH, CCCH, SDCCH4 and a traffic channel ***
+2026/Jun/26 14:40:44.422405 USER TC_26_6_5_7.ttcn3:233 ***   3. In cell A the timing advance = TSPX_y3 (=20) ***
+2026/Jun/26 14:40:44.422409 USER TC_26_6_5_7.ttcn3:234 ***   4. non-synch, rot=1, nci=0, handover reference = TSPX_HoRefB ***
+2026/Jun/26 14:40:44.422412 USER TC_26_6_5_7.ttcn3:235 ==========================================================
+2026/Jun/26 14:40:44.422416 USER TC_26_6_5_7.ttcn3:240 *** FH-SKIP: Spec uses C_Test_fh (hopping channel). Virtual BTS enforces h=0 (fixed channel). ***
+2026/Jun/26 14:40:44.422420 USER TC_26_6_5_7.ttcn3:241 *** PARTIAL: FH channel-switching sequence skipped; core RR/MM signaling preserved. ***
+2026/Jun/26 14:40:44.422446 PORTEVENT TC_26_6_5_7.ttcn3:244 Sent on BSC to system charstring : "{\"command\": \"SET_AUTO_RESPOND\", \"enabled\": false}"
+2026/Jun/26 14:40:44.422465 WARNING TC_26_6_5_7.ttcn3:244 BSC_Port: Not connected
+2026/Jun/26 14:40:44.422477 TIMEROP TC_26_6_5_7.ttcn3:246 Start timer T_ack: 3 s
+2026/Jun/26 14:40:44.422521 PORTEVENT TC_26_6_5_7.ttcn3:253 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/26 14:40:44.422556 PORTEVENT TC_26_6_5_7.ttcn3:253 Message with id 1 was extracted from the queue of MSC.
+2026/Jun/26 14:40:47.174036 USER TC_26_6_5_7.ttcn3:247 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 14:40:47.422536 TIMEROP TC_26_6_5_7.ttcn3:257 Timeout T_ack: 3 s
+2026/Jun/26 14:40:47.422609 TIMEROP TC_26_6_5_7.ttcn3:262 Start timer T_drain: 2.5 s
+2026/Jun/26 14:40:48.925029 USER TC_26_6_5_7.ttcn3:263 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:40:48.925101 PORTEVENT TC_26_6_5_7.ttcn3:263 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/26 14:40:48.925158 PORTEVENT TC_26_6_5_7.ttcn3:265 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/26 14:40:48.925167 PORTEVENT TC_26_6_5_7.ttcn3:265 Message with id 2 was extracted from the queue of MSC.
+2026/Jun/26 14:40:49.922854 TIMEROP TC_26_6_5_7.ttcn3:267 Timeout T_drain: 2.5 s
+2026/Jun/26 14:40:49.922938 USER TC_26_6_5_7.ttcn3:280 *** Phase 1: LU preamble (spec [3] +IdleUpdated, FH-SKIP: using h=0 ARFCN 51) ***
+2026/Jun/26 14:40:49.922960 USER TC_26_6_5_7.ttcn3:281 *** FH-SKIP: Spec step [3] uses C_Test_fh (hopping channel). Virtual BTS enforces h=0. ***
+2026/Jun/26 14:40:49.922966 USER TC_26_6_5_7.ttcn3:282 *** PARTIAL: FH channel-switching sequence skipped; core RR/MM LU signaling preserved. ***
+2026/Jun/26 14:40:49.923046 USER TC_26_6_5_7.ttcn3:284 docker.sock not found — using VTY power-cycle (k8s mode)
+2026/Jun/26 14:40:49.923059 USER TC_26_6_5_7.ttcn3:284 === k8s fallback: VTY power-cycle mobile at 10.43.32.240:4247 ===
+2026/Jun/26 14:40:55.374967 USER TC_26_6_5_7.ttcn3:284 Waiting 10 seconds (power off)...
+2026/Jun/26 14:41:10.734920 USER TC_26_6_5_7.ttcn3:284 VTY 'clear-loci' sent — LOCI erased
+2026/Jun/26 14:41:18.414038 USER TC_26_6_5_7.ttcn3:284 === VTY power-cycle complete — MS will send LU shortly ===
+2026/Jun/26 14:41:18.414241 TIMEROP TC_26_6_5_7.ttcn3:298 Start timer T_lu_wait: 60 s
+2026/Jun/26 14:41:18.414309 USER TC_26_6_5_7.ttcn3:299 VTY_PT: Received data (buffered): 94 bytes
+2026/Jun/26 14:41:18.414386 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.414417 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/26 14:41:18.414442 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.414462 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/26 14:41:18.414477 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.414495 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/26 14:41:18.414508 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.414526 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/26 14:41:18.414540 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.414558 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/26 14:41:18.414577 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/26 14:41:18.414595 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 3 was extracted from the queue of MSC.
+2026/Jun/26 14:41:18.414609 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/26 14:41:18.414621 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 4 was extracted from the queue of MSC.
+2026/Jun/26 14:41:18.414633 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/26 14:41:18.414658 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 5 was extracted from the queue of MSC.
+2026/Jun/26 14:41:18.414669 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/26 14:41:18.414678 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 6 was extracted from the queue of MSC.
+2026/Jun/26 14:41:18.414687 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/26 14:41:18.414696 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 7 was extracted from the queue of MSC.
+2026/Jun/26 14:41:18.957086 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:18.957159 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/26 14:41:18.957183 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/26 14:41:18.957193 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 8 was extracted from the queue of MSC.
+2026/Jun/26 14:41:21.038579 USER TC_26_6_5_7.ttcn3:299 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 14:41:23.962037 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:23.962107 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/26 14:41:23.962129 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/26 14:41:23.962138 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 9 was extracted from the queue of MSC.
+2026/Jun/26 14:41:28.967078 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:28.967151 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/26 14:41:28.967174 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/26 14:41:28.967183 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 10 was extracted from the queue of MSC.
+2026/Jun/26 14:41:33.972172 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:33.972238 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/26 14:41:33.972259 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/26 14:41:33.972268 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 11 was extracted from the queue of MSC.
+2026/Jun/26 14:41:36.528695 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "EVENT_LU_REQUEST", "bsc_slr": 2, "msc_slr": 2, "cksn": 7, "lu_type": 0, "old_mcc": "901", "old_mnc": "70", "old_lac": 0, "mi_type": "imsi"}
+2026/Jun/26 14:41:36.528759 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 12
+2026/Jun/26 14:41:36.528785 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"EVENT_LU_REQUEST\", \"bsc_slr\": 2, \"msc_slr\": 2, \"cksn\": 7, \"lu_type\": 0, \"old_mcc\": \"901\", \"old_mnc\": \"70\", \"old_lac\": 0, \"mi_type\": \"imsi\"}" id 12
+2026/Jun/26 14:41:36.528794 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 12 was extracted from the queue of MSC.
+2026/Jun/26 14:41:38.977088 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:38.977152 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/26 14:41:38.977174 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/26 14:41:38.977190 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 13 was extracted from the queue of MSC.
+2026/Jun/26 14:41:43.982064 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:43.982129 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/26 14:41:43.982151 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/26 14:41:43.982160 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 14 was extracted from the queue of MSC.
+2026/Jun/26 14:41:48.987026 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:48.987099 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/26 14:41:48.987125 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/26 14:41:48.987136 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 15 was extracted from the queue of MSC.
+2026/Jun/26 14:41:53.992070 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:53.992143 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/26 14:41:53.992165 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/26 14:41:53.992174 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 16 was extracted from the queue of MSC.
+2026/Jun/26 14:41:56.769521 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "EVENT_CLEAR_REQUEST", "bsc_slr": 2}
+2026/Jun/26 14:41:56.769582 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 2}" id 17
+2026/Jun/26 14:41:56.769605 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"EVENT_CLEAR_REQUEST\", \"bsc_slr\": 2}" id 17
+2026/Jun/26 14:41:56.769614 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 17 was extracted from the queue of MSC.
+2026/Jun/26 14:41:56.912364 USER TC_26_6_5_7.ttcn3:299 VTY_PT: Received data (buffered): 68 bytes
+2026/Jun/26 14:41:58.997053 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:41:58.997123 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/26 14:41:58.997146 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 18
+2026/Jun/26 14:41:58.997155 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 18 was extracted from the queue of MSC.
+2026/Jun/26 14:42:04.002105 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:42:04.002177 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 19
+2026/Jun/26 14:42:04.002200 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 19
+2026/Jun/26 14:42:04.002208 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 19 was extracted from the queue of MSC.
+2026/Jun/26 14:42:09.007122 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:42:09.023174 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/26 14:42:09.023215 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 20
+2026/Jun/26 14:42:09.023224 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 20 was extracted from the queue of MSC.
+2026/Jun/26 14:42:14.012066 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/26 14:42:14.054533 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 21
+2026/Jun/26 14:42:14.054574 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 21
+2026/Jun/26 14:42:14.054582 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 21 was extracted from the queue of MSC.
+2026/Jun/26 14:42:18.417859 TIMEROP TC_26_6_5_7.ttcn3:346 Timeout T_lu_wait: 60 s
+2026/Jun/26 14:42:18.418062 VERDICTOP TC_26_6_5_7.ttcn3:347 setverdict(fail): none -> fail reason: "No LU REQUEST after mobile restart", new component reason: "No LU REQUEST after mobile restart"
+2026/Jun/26 14:42:18.418201 TIMEROP TC_26_6_5_7.ttcn3:348 Stop timer T_guard: 300 s
+2026/Jun/26 14:42:18.418229 PARALLEL TC_26_6_5_7.ttcn3:349 Unmapping port mtc:BSC from system:BSC.
+2026/Jun/26 14:42:18.418307 USER TC_26_6_5_7.ttcn3:349 BSC_Port: Unmapping
+2026/Jun/26 14:42:18.418329 PORTEVENT TC_26_6_5_7.ttcn3:349 Port BSC was unmapped from system:BSC.
+2026/Jun/26 14:42:18.418377 PARALLEL TC_26_6_5_7.ttcn3:349 Unmap operation of mtc:BSC from system:BSC finished.
+2026/Jun/26 14:42:18.418391 PARALLEL TC_26_6_5_7.ttcn3:349 Unmapping port mtc:MSC from system:MSC.
+2026/Jun/26 14:42:18.418423 USER TC_26_6_5_7.ttcn3:349 MSC_Port: Unmapping from MSC
+2026/Jun/26 14:42:18.418537 PORTEVENT TC_26_6_5_7.ttcn3:349 Port MSC was unmapped from system:MSC.
+2026/Jun/26 14:42:18.418591 PARALLEL TC_26_6_5_7.ttcn3:349 Unmap operation of mtc:MSC from system:MSC finished.
+2026/Jun/26 14:42:18.418600 PARALLEL TC_26_6_5_7.ttcn3:350 Unmapping port mtc:L from system:L.
+2026/Jun/26 14:42:18.418629 USER TC_26_6_5_7.ttcn3:350 L3_Port: Unmapping from L
+2026/Jun/26 14:42:18.418667 PORTEVENT TC_26_6_5_7.ttcn3:350 Port L was unmapped from system:L.
+2026/Jun/26 14:42:18.418696 PARALLEL TC_26_6_5_7.ttcn3:350 Unmap operation of mtc:L from system:L finished.
+2026/Jun/26 14:42:18.418705 PARALLEL TC_26_6_5_7.ttcn3:350 Unmapping port mtc:VTY from system:VTY.
+2026/Jun/26 14:42:18.418731 USER TC_26_6_5_7.ttcn3:350 VTY_PT: Unmapping port from VTY interface
+2026/Jun/26 14:42:18.418812 USER TC_26_6_5_7.ttcn3:350 VTY_PT: Disconnected from VTY
+2026/Jun/26 14:42:18.418897 PORTEVENT TC_26_6_5_7.ttcn3:350 Port VTY was unmapped from system:VTY.
+2026/Jun/26 14:42:18.418938 PARALLEL TC_26_6_5_7.ttcn3:350 Unmap operation of mtc:VTY from system:VTY finished.
+2026/Jun/26 14:42:18.418961 PARALLEL TC_26_6_5_7.ttcn3:351 Stopping test component execution.
+2026/Jun/26 14:42:18.419202 FUNCTION TC_26_6_5_7.ttcn3:351 Test case TC_26_6_5_7 was stopped.
+2026/Jun/26 14:42:18.419239 PARALLEL TC_26_6_5_7.ttcn3:351 Terminating component type GSM_Component_Definitions.GSM_CT.
+2026/Jun/26 14:42:18.419272 USER TC_26_6_5_7.ttcn3:351 L3_Port: user_stop called
+2026/Jun/26 14:42:18.419282 PORTEVENT TC_26_6_5_7.ttcn3:351 Port L was stopped.
+2026/Jun/26 14:42:18.419306 PORTEVENT TC_26_6_5_7.ttcn3:351 Port RR was stopped.
+2026/Jun/26 14:42:18.419322 PORTEVENT TC_26_6_5_7.ttcn3:351 Port MM was stopped.
+2026/Jun/26 14:42:18.419334 PORTEVENT TC_26_6_5_7.ttcn3:351 Port CC was stopped.
+2026/Jun/26 14:42:18.419339 USER TC_26_6_5_7.ttcn3:351 MSC_Port: user_stop called
+2026/Jun/26 14:42:18.419348 PORTEVENT TC_26_6_5_7.ttcn3:351 Port MSC was stopped.
+2026/Jun/26 14:42:18.419355 USER TC_26_6_5_7.ttcn3:351 BSC_Port: user_stop called
+2026/Jun/26 14:42:18.419363 PORTEVENT TC_26_6_5_7.ttcn3:351 Port BSC was stopped.
+2026/Jun/26 14:42:18.419369 PORTEVENT TC_26_6_5_7.ttcn3:351 Port RSL was stopped.
+2026/Jun/26 14:42:18.419375 USER TC_26_6_5_7.ttcn3:351 VTY_PT: Stopping
+2026/Jun/26 14:42:18.419383 PORTEVENT TC_26_6_5_7.ttcn3:351 Port VTY was stopped.
+2026/Jun/26 14:42:18.419389 PORTEVENT TC_26_6_5_7.ttcn3:351 Port COORD was stopped.
+2026/Jun/26 14:42:18.419394 PARALLEL TC_26_6_5_7.ttcn3:351 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_6_5_7.
+2026/Jun/26 14:42:18.419404 EXECUTOR TC_26_6_5_7.ttcn3:351 Waiting for PTCs to finish.
+2026/Jun/26 14:42:18.419462 VERDICTOP TC_26_6_5_7.ttcn3:351 Setting final verdict of the test case.
+2026/Jun/26 14:42:18.419542 VERDICTOP TC_26_6_5_7.ttcn3:351 Local verdict of MTC: fail reason: "No LU REQUEST after mobile restart"
+2026/Jun/26 14:42:18.419585 VERDICTOP TC_26_6_5_7.ttcn3:351 No PTCs were created.
+2026/Jun/26 14:42:18.419603 TESTCASE TC_26_6_5_7.ttcn3:351 Test case TC_26_6_5_7 finished. Verdict: fail reason: No LU REQUEST after mobile restart
+2026/Jun/26 14:42:18.419827 STATISTICS - Verdict statistics: 0 none (0.00 %), 0 pass (0.00 %), 0 inconc (0.00 %), 1 fail (100.00 %), 0 error (0.00 %).
+2026/Jun/26 14:42:18.419925 STATISTICS - Test execution summary: 1 test case was executed. Overall verdict: fail
+2026/Jun/26 14:42:18.419934 EXECUTOR - Exit was requested from MC. Terminating MTC.
+======================================================
+TEST RESULT: FAIL
