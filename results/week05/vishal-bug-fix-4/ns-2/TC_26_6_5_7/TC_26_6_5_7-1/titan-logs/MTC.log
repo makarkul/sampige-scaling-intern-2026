@@ -1,0 +1,799 @@
+2026/Jun/29 06:25:00.353458 EXECUTOR - TTCN-3 Main Test Component started on ttcn3-tc-26-6-5-7-1-phpws. Version: 11.1.0.
+2026/Jun/29 06:25:00.353602 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=No; LogEventTypes:=Yes; SourceInfoFormat:=Single; LogSensitiveData:=No; *.FileMask:=LOG_ALL; *.ConsoleMask:=ERROR | TESTCASE | USER | VERDICTOP | WARNING; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2026/Jun/29 06:25:00.353659 EXECUTOR - Connected to MC.
+2026/Jun/29 06:25:00.353770 EXECUTOR - Executing test case TC_26_6_5_7 in module TC_26_6_5_7.
+2026/Jun/29 06:25:00.354081 TESTCASE TC_26_6_5_7.ttcn3:165 Test case TC_26_6_5_7 started.
+2026/Jun/29 06:25:00.354164 PARALLEL TC_26_6_5_7.ttcn3:165 Initializing variables, timers and ports of component type GSM_Component_Definitions.GSM_CT inside testcase TC_26_6_5_7.
+2026/Jun/29 06:25:00.354462 USER TC_26_6_5_7.ttcn3:165 MSC_Port: set_parameter msc_stub_host = 10.42.0.181
+2026/Jun/29 06:25:00.354524 USER TC_26_6_5_7.ttcn3:165 MSC_Port: set_parameter msc_stub_port = 5000
+2026/Jun/29 06:25:00.354563 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter gsmtap_host = 127.0.0.1
+2026/Jun/29 06:25:00.354580 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter gsmtap_port = 4729
+2026/Jun/29 06:25:00.354589 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter local_port = 4729
+2026/Jun/29 06:25:00.354595 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter ul_multicast_group = 239.193.23.2
+2026/Jun/29 06:25:00.354601 USER TC_26_6_5_7.ttcn3:165 L3_Port: Will join UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/29 06:25:00.354607 USER TC_26_6_5_7.ttcn3:165 L3_Port: set_parameter arfcn = 51
+2026/Jun/29 06:25:00.354660 USER TC_26_6_5_7.ttcn3:165 L3_Port: user_start called
+2026/Jun/29 06:25:00.354674 PORTEVENT TC_26_6_5_7.ttcn3:165 Port L was started.
+2026/Jun/29 06:25:00.354750 PORTEVENT TC_26_6_5_7.ttcn3:165 Port RR was started.
+2026/Jun/29 06:25:00.354757 PORTEVENT TC_26_6_5_7.ttcn3:165 Port MM was started.
+2026/Jun/29 06:25:00.354763 PORTEVENT TC_26_6_5_7.ttcn3:165 Port CC was started.
+2026/Jun/29 06:25:00.354766 USER TC_26_6_5_7.ttcn3:165 MSC_Port: user_start called
+2026/Jun/29 06:25:00.354773 PORTEVENT TC_26_6_5_7.ttcn3:165 Port MSC was started.
+2026/Jun/29 06:25:00.354777 PORTEVENT TC_26_6_5_7.ttcn3:165 Port BSC was started.
+2026/Jun/29 06:25:00.354782 PORTEVENT TC_26_6_5_7.ttcn3:165 Port RSL was started.
+2026/Jun/29 06:25:00.354790 USER TC_26_6_5_7.ttcn3:165 VTY_PT: Starting
+2026/Jun/29 06:25:00.354796 PORTEVENT TC_26_6_5_7.ttcn3:165 Port VTY was started.
+2026/Jun/29 06:25:00.354802 PORTEVENT TC_26_6_5_7.ttcn3:165 Port COORD was started.
+2026/Jun/29 06:25:00.354805 PARALLEL TC_26_6_5_7.ttcn3:165 Component type GSM_Component_Definitions.GSM_CT was initialized.
+2026/Jun/29 06:25:00.354859 PARALLEL TC_26_6_5_7.ttcn3:216 Mapping port mtc:BSC to system:BSC.
+2026/Jun/29 06:25:00.354936 USER TC_26_6_5_7.ttcn3:216 BSC_Port: Mapping to 10.42.0.177:5001
+2026/Jun/29 06:25:00.355280 WARNING TC_26_6_5_7.ttcn3:216 Warning: The maximum number of open file descriptors (1048576) is greater than FD_SETSIZE (1024). Ensure that Test Ports using Install_Handler do not try to wait for events of file descriptors with values greater than FD_SETSIZE (1024). (Current caller of Install_Handler is "BSC")
+2026/Jun/29 06:25:00.355318 USER TC_26_6_5_7.ttcn3:216 BSC_Port: Registered socket for async events
+2026/Jun/29 06:25:00.355327 USER TC_26_6_5_7.ttcn3:216 BSC_Port: Connected successfully
+2026/Jun/29 06:25:00.355338 PORTEVENT TC_26_6_5_7.ttcn3:216 Port BSC was mapped to system:BSC.
+2026/Jun/29 06:25:00.355451 PARALLEL TC_26_6_5_7.ttcn3:216 Map operation of mtc:BSC to system:BSC finished.
+2026/Jun/29 06:25:00.355497 PARALLEL TC_26_6_5_7.ttcn3:217 Mapping port mtc:MSC to system:MSC.
+2026/Jun/29 06:25:00.355531 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Mapping to MSC
+2026/Jun/29 06:25:00.355732 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Registered socket for async events
+2026/Jun/29 06:25:00.355745 USER TC_26_6_5_7.ttcn3:217 MSC_Port: Connected to MSC stub at 10.42.0.181:5000
+2026/Jun/29 06:25:00.355751 PORTEVENT TC_26_6_5_7.ttcn3:217 Port MSC was mapped to system:MSC.
+2026/Jun/29 06:25:00.355795 PARALLEL TC_26_6_5_7.ttcn3:217 Map operation of mtc:MSC to system:MSC finished.
+2026/Jun/29 06:25:00.355804 PARALLEL TC_26_6_5_7.ttcn3:218 Mapping port mtc:L to system:L.
+2026/Jun/29 06:25:00.355856 USER TC_26_6_5_7.ttcn3:218 L3_Port: Mapping to L
+2026/Jun/29 06:25:00.355930 USER TC_26_6_5_7.ttcn3:218 L3_Port: Joined UL multicast group 239.193.23.2 for RACH capture
+2026/Jun/29 06:25:00.355944 USER TC_26_6_5_7.ttcn3:218 L3_Port: GSMTAP listening on port 4729
+2026/Jun/29 06:25:00.355950 USER TC_26_6_5_7.ttcn3:218 L3_Port: Mapped successfully (GSMTAP: 127.0.0.1:4729)
+2026/Jun/29 06:25:00.355962 PORTEVENT TC_26_6_5_7.ttcn3:218 Port L was mapped to system:L.
+2026/Jun/29 06:25:00.356077 USER TC_26_6_5_7.ttcn3:218 BSC_Port: RX: {"event": "WELCOME", "data": {"status": "connected"}}
+2026/Jun/29 06:25:00.356140 PORTEVENT TC_26_6_5_7.ttcn3:218 Message enqueued on BSC from system charstring : "{\"event\": \"WELCOME\", \"data\": {\"status\": \"connected\"}}" id 1
+2026/Jun/29 06:25:00.356187 PARALLEL TC_26_6_5_7.ttcn3:218 Map operation of mtc:L to system:L finished.
+2026/Jun/29 06:25:00.356194 PARALLEL TC_26_6_5_7.ttcn3:219 Mapping port mtc:VTY to system:VTY.
+2026/Jun/29 06:25:00.356228 USER TC_26_6_5_7.ttcn3:219 MSC_Port: RX: {"type": "WELCOME", "status": "connected"}
+2026/Jun/29 06:25:00.356246 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on MSC from system charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/29 06:25:00.356260 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Mapping port to VTY interface
+2026/Jun/29 06:25:00.356466 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Connected to VTY at 10.43.166.178:4247
+2026/Jun/29 06:25:00.856790 USER TC_26_6_5_7.ttcn3:219 VTY_PT: Initial banner received
+2026/Jun/29 06:25:00.856865 PORTEVENT TC_26_6_5_7.ttcn3:219 Port VTY was mapped to system:VTY.
+2026/Jun/29 06:25:00.856927 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "BTS_CONNECTED", "data": {"unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.856946 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"BTS_CONNECTED\", \"data\": {\"unit_id\": \"4242/0/0\"}}" id 2
+2026/Jun/29 06:25:00.856957 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "BTS_READY", "data": {"unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.856967 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"BTS_READY\", \"data\": {\"unit_id\": \"4242/0/0\"}}" id 3
+2026/Jun/29 06:25:00.856972 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "BTS_CONNECTED", "data": {"unit_id": "4248/0/0"}}
+2026/Jun/29 06:25:00.856981 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"BTS_CONNECTED\", \"data\": {\"unit_id\": \"4248/0/0\"}}" id 4
+2026/Jun/29 06:25:00.856987 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "BTS_READY", "data": {"unit_id": "4248/0/0"}}
+2026/Jun/29 06:25:00.856996 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"BTS_READY\", \"data\": {\"unit_id\": \"4248/0/0\"}}" id 5
+2026/Jun/29 06:25:00.857001 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 415, "frame_number_encoded": 505, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857013 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 415, \"frame_number_encoded\": 505, \"unit_id\": \"4242/0/0\"}}" id 6
+2026/Jun/29 06:25:00.857019 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 601, "frame_number_encoded": 739, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857030 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 601, \"frame_number_encoded\": 739, \"unit_id\": \"4242/0/0\"}}" id 7
+2026/Jun/29 06:25:00.857035 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 13, "frame_number": 650, "frame_number_encoded": 800, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857056 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 13, \"frame_number\": 650, \"frame_number_encoded\": 800, \"unit_id\": \"4242/0/0\"}}" id 8
+2026/Jun/29 06:25:00.857062 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 5, "frame_number": 2051, "frame_number_encoded": 2935, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857073 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 2051, \"frame_number_encoded\": 2935, \"unit_id\": \"4242/0/0\"}}" id 9
+2026/Jun/29 06:25:00.857079 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 3, "frame_number": 2046, "frame_number_encoded": 2930, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857089 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 3, \"frame_number\": 2046, \"frame_number_encoded\": 2930, \"unit_id\": \"4242/0/0\"}}" id 10
+2026/Jun/29 06:25:00.857095 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 1, "frame_number": 1906, "frame_number_encoded": 2760, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857106 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 1906, \"frame_number_encoded\": 2760, \"unit_id\": \"4242/0/0\"}}" id 11
+2026/Jun/29 06:25:00.857112 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 14, "frame_number": 1955, "frame_number_encoded": 2821, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857122 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 1955, \"frame_number_encoded\": 2821, \"unit_id\": \"4242/0/0\"}}" id 12
+2026/Jun/29 06:25:00.857127 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 9, "frame_number": 1841, "frame_number_encoded": 2677, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857145 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 9, \"frame_number\": 1841, \"frame_number_encoded\": 2677, \"unit_id\": \"4242/0/0\"}}" id 13
+2026/Jun/29 06:25:00.857151 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 0, "frame_number": 7299, "frame_number_encoded": 11059, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857163 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 7299, \"frame_number_encoded\": 11059, \"unit_id\": \"4242/0/0\"}}" id 14
+2026/Jun/29 06:25:00.857168 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 7213, "frame_number_encoded": 10955, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857190 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 7213, \"frame_number_encoded\": 10955, \"unit_id\": \"4242/0/0\"}}" id 15
+2026/Jun/29 06:25:00.857195 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 15, "frame_number": 7316, "frame_number_encoded": 11082, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857210 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 15, \"frame_number\": 7316, \"frame_number_encoded\": 11082, \"unit_id\": \"4242/0/0\"}}" id 16
+2026/Jun/29 06:25:00.857216 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 7203, "frame_number_encoded": 10945, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857231 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 7203, \"frame_number_encoded\": 10945, \"unit_id\": \"4242/0/0\"}}" id 17
+2026/Jun/29 06:25:00.857239 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 14, "frame_number": 8577, "frame_number_encoded": 13047, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857251 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 8577, \"frame_number_encoded\": 13047, \"unit_id\": \"4242/0/0\"}}" id 18
+2026/Jun/29 06:25:00.857256 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 0, "frame_number": 8680, "frame_number_encoded": 13174, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857266 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 8680, \"frame_number_encoded\": 13174, \"unit_id\": \"4242/0/0\"}}" id 19
+2026/Jun/29 06:25:00.857271 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 6, "frame_number": 8756, "frame_number_encoded": 13268, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857282 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 6, \"frame_number\": 8756, \"frame_number_encoded\": 13268, \"unit_id\": \"4242/0/0\"}}" id 20
+2026/Jun/29 06:25:00.857287 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 13, "frame_number": 8589, "frame_number_encoded": 13065, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857297 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 13, \"frame_number\": 8589, \"frame_number_encoded\": 13065, \"unit_id\": \"4242/0/0\"}}" id 21
+2026/Jun/29 06:25:00.857303 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 5, "frame_number": 12342, "frame_number_encoded": 18930, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857316 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 12342, \"frame_number_encoded\": 18930, \"unit_id\": \"4242/0/0\"}}" id 22
+2026/Jun/29 06:25:00.857321 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 0, "frame_number": 13934, "frame_number_encoded": 21304, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857336 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 13934, \"frame_number_encoded\": 21304, \"unit_id\": \"4242/0/0\"}}" id 23
+2026/Jun/29 06:25:00.857341 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 11, "frame_number": 13902, "frame_number_encoded": 21266, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857352 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 11, \"frame_number\": 13902, \"frame_number_encoded\": 21266, \"unit_id\": \"4242/0/0\"}}" id 24
+2026/Jun/29 06:25:00.857357 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 12, "frame_number": 13816, "frame_number_encoded": 21162, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857368 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 13816, \"frame_number_encoded\": 21162, \"unit_id\": \"4242/0/0\"}}" id 25
+2026/Jun/29 06:25:00.857373 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 12, "frame_number": 14000, "frame_number_encoded": 21388, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857383 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 14000, \"frame_number_encoded\": 21388, \"unit_id\": \"4242/0/0\"}}" id 26
+2026/Jun/29 06:25:00.857392 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 1, "frame_number": 13778, "frame_number_encoded": 21112, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857403 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 13778, \"frame_number_encoded\": 21112, \"unit_id\": \"4242/0/0\"}}" id 27
+2026/Jun/29 06:25:00.857408 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 5, "frame_number": 15261, "frame_number_encoded": 23353, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857418 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 15261, \"frame_number_encoded\": 23353, \"unit_id\": \"4242/0/0\"}}" id 28
+2026/Jun/29 06:25:00.857423 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 11, "frame_number": 15121, "frame_number_encoded": 23183, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857433 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 11, \"frame_number\": 15121, \"frame_number_encoded\": 23183, \"unit_id\": \"4242/0/0\"}}" id 29
+2026/Jun/29 06:25:00.857439 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 14, "frame_number": 19091, "frame_number_encoded": 29319, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857449 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 19091, \"frame_number_encoded\": 29319, \"unit_id\": \"4242/0/0\"}}" id 30
+2026/Jun/29 06:25:00.857455 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 12, "frame_number": 19167, "frame_number_encoded": 29413, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857467 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 19167, \"frame_number_encoded\": 29413, \"unit_id\": \"4242/0/0\"}}" id 31
+2026/Jun/29 06:25:00.857472 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 10, "frame_number": 19216, "frame_number_encoded": 29474, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857483 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 10, \"frame_number\": 19216, \"frame_number_encoded\": 29474, \"unit_id\": \"4242/0/0\"}}" id 32
+2026/Jun/29 06:25:00.857488 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 20455, "frame_number_encoded": 31411, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857498 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 20455, \"frame_number_encoded\": 31411, \"unit_id\": \"4242/0/0\"}}" id 33
+2026/Jun/29 06:25:00.857503 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 15, "frame_number": 20504, "frame_number_encoded": 31472, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857514 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 15, \"frame_number\": 20504, \"frame_number_encoded\": 31472, \"unit_id\": \"4242/0/0\"}}" id 34
+2026/Jun/29 06:25:00.857520 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 8, "frame_number": 20607, "frame_number_encoded": 31599, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857530 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 20607, \"frame_number_encoded\": 31599, \"unit_id\": \"4242/0/0\"}}" id 35
+2026/Jun/29 06:25:00.857535 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 0, "frame_number": 20386, "frame_number_encoded": 31330, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857551 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 20386, \"frame_number_encoded\": 31330, \"unit_id\": \"4242/0/0\"}}" id 36
+2026/Jun/29 06:25:00.857557 USER TC_26_6_5_7.ttcn3:219 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 10, "frame_number": 20651, "frame_number_encoded": 31655, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:00.857572 PORTEVENT TC_26_6_5_7.ttcn3:219 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 10, \"frame_number\": 20651, \"frame_number_encoded\": 31655, \"unit_id\": \"4242/0/0\"}}" id 37
+2026/Jun/29 06:25:00.857587 PARALLEL TC_26_6_5_7.ttcn3:219 Map operation of mtc:VTY to system:VTY finished.
+2026/Jun/29 06:25:00.857619 TIMEROP TC_26_6_5_7.ttcn3:221 Start timer T_guard: 300 s
+2026/Jun/29 06:25:00.857702 USER TC_26_6_5_7.ttcn3:223 ==========================================================
+2026/Jun/29 06:25:00.857709 USER TC_26_6_5_7.ttcn3:224 *** TC_26_6_5_7: Non-Synchronised Inter-Cell Handover with OTD Report ***
+2026/Jun/29 06:25:00.857719 USER TC_26_6_5_7.ttcn3:225 "*** Reference: GSM 04.08 " & char(0, 0, 0, 167) & "3.4.4, TC_26_6_5_7 ***"
+2026/Jun/29 06:25:00.857741 USER TC_26_6_5_7.ttcn3:226 *** Purpose: Verify MS reports time difference (motdif) after non-sync HO ***
+2026/Jun/29 06:25:00.857747 USER TC_26_6_5_7.ttcn3:227 *** TWO_CELL: ARFCN 51 (Cell A main BTS) + ARFCN 56 (Cell B n56 BTS) ***
+2026/Jun/29 06:25:00.857752 USER TC_26_6_5_7.ttcn3:228 *** FH-SKIP: C_Test_fh preamble and TCH hopping approximated as h=0 fixed ***
+2026/Jun/29 06:25:00.857757 USER TC_26_6_5_7.ttcn3:229 ==========================================================
+2026/Jun/29 06:25:00.857762 USER TC_26_6_5_7.ttcn3:230 *** Spec comments: ***
+2026/Jun/29 06:25:00.857768 USER TC_26_6_5_7.ttcn3:231 ***   1. Cell A with BCCH, CCCH, SDCCH4 and a traffic channel ***
+2026/Jun/29 06:25:00.857773 USER TC_26_6_5_7.ttcn3:232 ***   2. Cell B with BCCH, CCCH, SDCCH4 and a traffic channel ***
+2026/Jun/29 06:25:00.857778 USER TC_26_6_5_7.ttcn3:233 ***   3. In cell A the timing advance = TSPX_y3 (=20) ***
+2026/Jun/29 06:25:00.857783 USER TC_26_6_5_7.ttcn3:234 ***   4. non-synch, rot=1, nci=0, handover reference = TSPX_HoRefB ***
+2026/Jun/29 06:25:00.857788 USER TC_26_6_5_7.ttcn3:235 ==========================================================
+2026/Jun/29 06:25:00.857793 USER TC_26_6_5_7.ttcn3:240 *** FH-SKIP: Spec uses C_Test_fh (hopping channel). Virtual BTS enforces h=0 (fixed channel). ***
+2026/Jun/29 06:25:00.857798 USER TC_26_6_5_7.ttcn3:241 *** PARTIAL: FH channel-switching sequence skipped; core RR/MM signaling preserved. ***
+2026/Jun/29 06:25:00.857840 PORTEVENT TC_26_6_5_7.ttcn3:244 Sent on BSC to system charstring : "{\"command\": \"SET_AUTO_RESPOND\", \"enabled\": false}"
+2026/Jun/29 06:25:00.857950 USER TC_26_6_5_7.ttcn3:244 BSC_Port: TX: {"command": "SET_AUTO_RESPOND", "enabled": false}
+2026/Jun/29 06:25:00.857972 TIMEROP TC_26_6_5_7.ttcn3:246 Start timer T_ack: 3 s
+2026/Jun/29 06:25:00.858025 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"WELCOME\", \"data\": {\"status\": \"connected\"}}" id 1
+2026/Jun/29 06:25:00.858064 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 1 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858271 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"BTS_CONNECTED\", \"data\": {\"unit_id\": \"4242/0/0\"}}" id 2
+2026/Jun/29 06:25:00.858279 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 2 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858314 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"BTS_READY\", \"data\": {\"unit_id\": \"4242/0/0\"}}" id 3
+2026/Jun/29 06:25:00.858320 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 3 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858354 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"BTS_CONNECTED\", \"data\": {\"unit_id\": \"4248/0/0\"}}" id 4
+2026/Jun/29 06:25:00.858360 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 4 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858386 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"BTS_READY\", \"data\": {\"unit_id\": \"4248/0/0\"}}" id 5
+2026/Jun/29 06:25:00.858391 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 5 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858420 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 415, \"frame_number_encoded\": 505, \"unit_id\": \"4242/0/0\"}}" id 6
+2026/Jun/29 06:25:00.858425 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 6 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858491 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 601, \"frame_number_encoded\": 739, \"unit_id\": \"4242/0/0\"}}" id 7
+2026/Jun/29 06:25:00.858498 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 7 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858538 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 13, \"frame_number\": 650, \"frame_number_encoded\": 800, \"unit_id\": \"4242/0/0\"}}" id 8
+2026/Jun/29 06:25:00.858544 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 8 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858582 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 2051, \"frame_number_encoded\": 2935, \"unit_id\": \"4242/0/0\"}}" id 9
+2026/Jun/29 06:25:00.858591 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 9 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858629 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 3, \"frame_number\": 2046, \"frame_number_encoded\": 2930, \"unit_id\": \"4242/0/0\"}}" id 10
+2026/Jun/29 06:25:00.858635 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 10 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858672 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 1906, \"frame_number_encoded\": 2760, \"unit_id\": \"4242/0/0\"}}" id 11
+2026/Jun/29 06:25:00.858678 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 11 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858713 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 1955, \"frame_number_encoded\": 2821, \"unit_id\": \"4242/0/0\"}}" id 12
+2026/Jun/29 06:25:00.858719 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 12 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858755 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 9, \"frame_number\": 1841, \"frame_number_encoded\": 2677, \"unit_id\": \"4242/0/0\"}}" id 13
+2026/Jun/29 06:25:00.858760 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 13 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858795 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 7299, \"frame_number_encoded\": 11059, \"unit_id\": \"4242/0/0\"}}" id 14
+2026/Jun/29 06:25:00.858805 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 14 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858848 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 7213, \"frame_number_encoded\": 10955, \"unit_id\": \"4242/0/0\"}}" id 15
+2026/Jun/29 06:25:00.858857 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 15 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858895 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 15, \"frame_number\": 7316, \"frame_number_encoded\": 11082, \"unit_id\": \"4242/0/0\"}}" id 16
+2026/Jun/29 06:25:00.858901 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 16 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858938 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 7203, \"frame_number_encoded\": 10945, \"unit_id\": \"4242/0/0\"}}" id 17
+2026/Jun/29 06:25:00.858943 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 17 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.858979 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 8577, \"frame_number_encoded\": 13047, \"unit_id\": \"4242/0/0\"}}" id 18
+2026/Jun/29 06:25:00.858984 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 18 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859019 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 8680, \"frame_number_encoded\": 13174, \"unit_id\": \"4242/0/0\"}}" id 19
+2026/Jun/29 06:25:00.859025 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 19 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859060 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 6, \"frame_number\": 8756, \"frame_number_encoded\": 13268, \"unit_id\": \"4242/0/0\"}}" id 20
+2026/Jun/29 06:25:00.859065 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 20 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859100 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 13, \"frame_number\": 8589, \"frame_number_encoded\": 13065, \"unit_id\": \"4242/0/0\"}}" id 21
+2026/Jun/29 06:25:00.859106 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 21 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859141 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 12342, \"frame_number_encoded\": 18930, \"unit_id\": \"4242/0/0\"}}" id 22
+2026/Jun/29 06:25:00.859146 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 22 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859181 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 13934, \"frame_number_encoded\": 21304, \"unit_id\": \"4242/0/0\"}}" id 23
+2026/Jun/29 06:25:00.859187 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 23 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859222 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 11, \"frame_number\": 13902, \"frame_number_encoded\": 21266, \"unit_id\": \"4242/0/0\"}}" id 24
+2026/Jun/29 06:25:00.859228 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 24 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859263 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 13816, \"frame_number_encoded\": 21162, \"unit_id\": \"4242/0/0\"}}" id 25
+2026/Jun/29 06:25:00.859272 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 25 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859308 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 14000, \"frame_number_encoded\": 21388, \"unit_id\": \"4242/0/0\"}}" id 26
+2026/Jun/29 06:25:00.859313 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 26 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859349 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 13778, \"frame_number_encoded\": 21112, \"unit_id\": \"4242/0/0\"}}" id 27
+2026/Jun/29 06:25:00.859354 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 27 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859390 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 5, \"frame_number\": 15261, \"frame_number_encoded\": 23353, \"unit_id\": \"4242/0/0\"}}" id 28
+2026/Jun/29 06:25:00.859395 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 28 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859431 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 11, \"frame_number\": 15121, \"frame_number_encoded\": 23183, \"unit_id\": \"4242/0/0\"}}" id 29
+2026/Jun/29 06:25:00.859436 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 29 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859472 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 19091, \"frame_number_encoded\": 29319, \"unit_id\": \"4242/0/0\"}}" id 30
+2026/Jun/29 06:25:00.859477 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 30 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859513 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 19167, \"frame_number_encoded\": 29413, \"unit_id\": \"4242/0/0\"}}" id 31
+2026/Jun/29 06:25:00.859519 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 31 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859554 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 10, \"frame_number\": 19216, \"frame_number_encoded\": 29474, \"unit_id\": \"4242/0/0\"}}" id 32
+2026/Jun/29 06:25:00.859559 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 32 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859596 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 20455, \"frame_number_encoded\": 31411, \"unit_id\": \"4242/0/0\"}}" id 33
+2026/Jun/29 06:25:00.859602 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 33 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859638 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 15, \"frame_number\": 20504, \"frame_number_encoded\": 31472, \"unit_id\": \"4242/0/0\"}}" id 34
+2026/Jun/29 06:25:00.859643 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 34 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859679 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 8, \"frame_number\": 20607, \"frame_number_encoded\": 31599, \"unit_id\": \"4242/0/0\"}}" id 35
+2026/Jun/29 06:25:00.859688 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 35 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859726 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 0, \"frame_number\": 20386, \"frame_number_encoded\": 31330, \"unit_id\": \"4242/0/0\"}}" id 36
+2026/Jun/29 06:25:00.859731 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 36 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859768 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 10, \"frame_number\": 20651, \"frame_number_encoded\": 31655, \"unit_id\": \"4242/0/0\"}}" id 37
+2026/Jun/29 06:25:00.859774 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 37 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859810 PORTEVENT TC_26_6_5_7.ttcn3:253 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"WELCOME\", \"status\": \"connected\"}" id 1
+2026/Jun/29 06:25:00.859817 PORTEVENT TC_26_6_5_7.ttcn3:253 Message with id 1 was extracted from the queue of MSC.
+2026/Jun/29 06:25:00.859859 USER TC_26_6_5_7.ttcn3:247 BSC_Port: RX: {"status": "ok", "auto_respond": false}
+2026/Jun/29 06:25:00.859876 PORTEVENT TC_26_6_5_7.ttcn3:247 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 38
+2026/Jun/29 06:25:00.859886 PORTEVENT TC_26_6_5_7.ttcn3:248 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"auto_respond\": false}" id 38
+2026/Jun/29 06:25:00.859891 PORTEVENT TC_26_6_5_7.ttcn3:248 Message with id 38 was extracted from the queue of BSC.
+2026/Jun/29 06:25:00.859939 TIMEROP TC_26_6_5_7.ttcn3:250 Stop timer T_ack: 3 s
+2026/Jun/29 06:25:00.859957 TIMEROP TC_26_6_5_7.ttcn3:262 Start timer T_drain: 2.5 s
+2026/Jun/29 06:25:03.360885 TIMEROP TC_26_6_5_7.ttcn3:267 Timeout T_drain: 2.5 s
+2026/Jun/29 06:25:03.360964 USER TC_26_6_5_7.ttcn3:280 *** Phase 1: LU preamble (spec [3] +IdleUpdated, FH-SKIP: using h=0 ARFCN 51) ***
+2026/Jun/29 06:25:03.360989 USER TC_26_6_5_7.ttcn3:281 *** FH-SKIP: Spec step [3] uses C_Test_fh (hopping channel). Virtual BTS enforces h=0. ***
+2026/Jun/29 06:25:03.360999 USER TC_26_6_5_7.ttcn3:282 *** PARTIAL: FH channel-switching sequence skipped; core RR/MM LU signaling preserved. ***
+2026/Jun/29 06:25:03.361065 USER TC_26_6_5_7.ttcn3:284 docker.sock not found — using VTY power-cycle (k8s mode)
+2026/Jun/29 06:25:03.361083 USER TC_26_6_5_7.ttcn3:284 === k8s fallback: VTY power-cycle mobile at 10.43.166.178:4247 ===
+2026/Jun/29 06:25:08.685938 USER TC_26_6_5_7.ttcn3:284 Waiting 10 seconds (power off)...
+2026/Jun/29 06:25:24.045925 USER TC_26_6_5_7.ttcn3:284 VTY 'clear-loci' sent — LOCI erased
+2026/Jun/29 06:25:30.701910 USER TC_26_6_5_7.ttcn3:284 === VTY power-cycle complete — MS will send LU shortly ===
+2026/Jun/29 06:25:30.702080 TIMEROP TC_26_6_5_7.ttcn3:298 Start timer T_lu_wait: 60 s
+2026/Jun/29 06:25:30.702116 USER TC_26_6_5_7.ttcn3:299 VTY_PT: Received data (buffered): 94 bytes
+2026/Jun/29 06:25:30.702141 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702153 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/29 06:25:30.702166 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702172 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/29 06:25:30.702177 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702184 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/29 06:25:30.702189 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702201 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/29 06:25:30.702205 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702213 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/29 06:25:30.702217 USER TC_26_6_5_7.ttcn3:299 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:30.702223 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/29 06:25:30.702246 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 1, "frame_number": 41717, "frame_number_encoded": 64237, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:30.702266 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 41717, \"frame_number_encoded\": 64237, \"unit_id\": \"4242/0/0\"}}" id 39
+2026/Jun/29 06:25:30.702276 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 4, "frame_number": 41766, "frame_number_encoded": 64298, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:30.702293 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 4, \"frame_number\": 41766, \"frame_number_encoded\": 64298, \"unit_id\": \"4242/0/0\"}}" id 40
+2026/Jun/29 06:25:30.702301 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 7, "frame_number": 41869, "frame_number_encoded": 64425, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:30.702317 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 7, \"frame_number\": 41869, \"frame_number_encoded\": 64425, \"unit_id\": \"4242/0/0\"}}" id 41
+2026/Jun/29 06:25:30.702326 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 12, "frame_number": 41837, "frame_number_encoded": 64387, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:30.702341 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 41837, \"frame_number_encoded\": 64387, \"unit_id\": \"4242/0/0\"}}" id 42
+2026/Jun/29 06:25:30.702349 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 14, "frame_number": 563, "frame_number_encoded": 689, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:30.702365 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 563, \"frame_number_encoded\": 689, \"unit_id\": \"4242/0/0\"}}" id 43
+2026/Jun/29 06:25:30.702383 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 41717, \"frame_number_encoded\": 64237, \"unit_id\": \"4242/0/0\"}}" id 39
+2026/Jun/29 06:25:30.702397 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 39 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.702549 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 41717, \"frame_number_encoded\": 64237, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.702684 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:30.702778 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"1"' => integer 1
+2026/Jun/29 06:25:30.702810 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 1, \"frame_number\": 41717, \"frame_number_encoded\": 64237, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.702881 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 63 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:30.702903 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"64237"' => integer 64237
+2026/Jun/29 06:25:30.702923 USER TC_26_6_5_7.ttcn3:304 *** Phase 1 CHAN_RQD: RA=1" " & char(0, 0, 32, 20) & " sending IMM_ASS (SDCCH/8 TS1 ARFCN 51) ***"
+2026/Jun/29 06:25:30.703004 PORTEVENT TC_26_6_5_7.ttcn3:305 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 1, \"frame_number\": 0, \"frame_number_encoded\": 64237}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:30.703096 USER TC_26_6_5_7.ttcn3:305 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 1, "frame_number": 0, "frame_number_encoded": 64237}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:30.703124 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 4, \"frame_number\": 41766, \"frame_number_encoded\": 64298, \"unit_id\": \"4242/0/0\"}}" id 40
+2026/Jun/29 06:25:30.703135 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 40 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.703220 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 4, \"frame_number\": 41766, \"frame_number_encoded\": 64298, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703249 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:30.703265 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"4"' => integer 4
+2026/Jun/29 06:25:30.703277 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 4, \"frame_number\": 41766, \"frame_number_encoded\": 64298, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703308 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 63 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:30.703327 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"64298"' => integer 64298
+2026/Jun/29 06:25:30.703339 USER TC_26_6_5_7.ttcn3:304 *** Phase 1 CHAN_RQD: RA=4" " & char(0, 0, 32, 20) & " sending IMM_ASS (SDCCH/8 TS1 ARFCN 51) ***"
+2026/Jun/29 06:25:30.703379 PORTEVENT TC_26_6_5_7.ttcn3:305 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 4, \"frame_number\": 0, \"frame_number_encoded\": 64298}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:30.703396 USER TC_26_6_5_7.ttcn3:305 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 4, "frame_number": 0, "frame_number_encoded": 64298}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:30.703415 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 7, \"frame_number\": 41869, \"frame_number_encoded\": 64425, \"unit_id\": \"4242/0/0\"}}" id 41
+2026/Jun/29 06:25:30.703424 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 41 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.703486 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 7, \"frame_number\": 41869, \"frame_number_encoded\": 64425, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703529 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:30.703544 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"7"' => integer 7
+2026/Jun/29 06:25:30.703556 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 7, \"frame_number\": 41869, \"frame_number_encoded\": 64425, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703587 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 63 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:30.703604 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"64425"' => integer 64425
+2026/Jun/29 06:25:30.703615 USER TC_26_6_5_7.ttcn3:304 *** Phase 1 CHAN_RQD: RA=7" " & char(0, 0, 32, 20) & " sending IMM_ASS (SDCCH/8 TS1 ARFCN 51) ***"
+2026/Jun/29 06:25:30.703652 PORTEVENT TC_26_6_5_7.ttcn3:305 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 7, \"frame_number\": 0, \"frame_number_encoded\": 64425}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:30.703666 USER TC_26_6_5_7.ttcn3:305 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 7, "frame_number": 0, "frame_number_encoded": 64425}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:30.703684 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 41837, \"frame_number_encoded\": 64387, \"unit_id\": \"4242/0/0\"}}" id 42
+2026/Jun/29 06:25:30.703693 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 42 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.703762 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 41837, \"frame_number_encoded\": 64387, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703790 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:30.703805 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"12"' => integer 12
+2026/Jun/29 06:25:30.703818 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 12, \"frame_number\": 41837, \"frame_number_encoded\": 64387, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.703866 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 64 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:30.703883 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"64387"' => integer 64387
+2026/Jun/29 06:25:30.703894 USER TC_26_6_5_7.ttcn3:304 *** Phase 1 CHAN_RQD: RA=12" " & char(0, 0, 32, 20) & " sending IMM_ASS (SDCCH/8 TS1 ARFCN 51) ***"
+2026/Jun/29 06:25:30.703931 PORTEVENT TC_26_6_5_7.ttcn3:305 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 12, \"frame_number\": 0, \"frame_number_encoded\": 64387}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:30.703946 USER TC_26_6_5_7.ttcn3:305 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 12, "frame_number": 0, "frame_number_encoded": 64387}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:30.703969 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 563, \"frame_number_encoded\": 689, \"unit_id\": \"4242/0/0\"}}" id 43
+2026/Jun/29 06:25:30.703978 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 43 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.704040 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 563, \"frame_number_encoded\": 689, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.704068 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:30.704082 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"14"' => integer 14
+2026/Jun/29 06:25:30.704094 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 14, \"frame_number\": 563, \"frame_number_encoded\": 689, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:30.704124 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 62 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:30.704140 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"689"' => integer 689
+2026/Jun/29 06:25:30.704152 USER TC_26_6_5_7.ttcn3:304 *** Phase 1 CHAN_RQD: RA=14" " & char(0, 0, 32, 20) & " sending IMM_ASS (SDCCH/8 TS1 ARFCN 51) ***"
+2026/Jun/29 06:25:30.704189 PORTEVENT TC_26_6_5_7.ttcn3:305 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 14, \"frame_number\": 0, \"frame_number_encoded\": 689}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:30.704202 USER TC_26_6_5_7.ttcn3:305 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 14, "frame_number": 0, "frame_number_encoded": 689}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:30.704224 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 2
+2026/Jun/29 06:25:30.704232 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 2 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.704240 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 3
+2026/Jun/29 06:25:30.704247 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 3 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.704253 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 4
+2026/Jun/29 06:25:30.704259 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 4 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.704265 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 5
+2026/Jun/29 06:25:30.704271 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 5 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.704277 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 6
+2026/Jun/29 06:25:30.704283 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 6 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.704294 PORTEVENT TC_26_6_5_7.ttcn3:344 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 7
+2026/Jun/29 06:25:30.704301 PORTEVENT TC_26_6_5_7.ttcn3:344 Message with id 7 was extracted from the queue of MSC.
+2026/Jun/29 06:25:30.705357 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:30.705375 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 44
+2026/Jun/29 06:25:30.705386 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 44
+2026/Jun/29 06:25:30.705392 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 44 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.706057 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:30.706073 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 45
+2026/Jun/29 06:25:30.706083 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 45
+2026/Jun/29 06:25:30.706088 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 45 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.746938 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:30.747007 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 46
+2026/Jun/29 06:25:30.747026 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:30.747038 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 47
+2026/Jun/29 06:25:30.747046 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:30.747056 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 48
+2026/Jun/29 06:25:30.747071 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 46
+2026/Jun/29 06:25:30.747082 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 46 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.747180 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 47
+2026/Jun/29 06:25:30.747187 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 47 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.747244 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 48
+2026/Jun/29 06:25:30.747251 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 48 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.992440 USER TC_26_6_5_7.ttcn3:299 BSC_Port: RX: {"event": "ESTABLISH_IND", "data": {"chan_nr": 65, "bsc_slr": 65, "l3_data": "05087009f107000033089910070000000010"}}
+2026/Jun/29 06:25:30.992498 PORTEVENT TC_26_6_5_7.ttcn3:299 Message enqueued on BSC from system charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"05087009f107000033089910070000000010\"}}" id 49
+2026/Jun/29 06:25:30.992522 PORTEVENT TC_26_6_5_7.ttcn3:300 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"05087009f107000033089910070000000010\"}}" id 49
+2026/Jun/29 06:25:30.992530 PORTEVENT TC_26_6_5_7.ttcn3:300 Message with id 49 was extracted from the queue of BSC.
+2026/Jun/29 06:25:30.992670 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"chan_nr"' in JSON: "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"05087009f107000033089910070000000010\"}}"
+2026/Jun/29 06:25:30.992696 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 36 (pattern: "\"chan_nr\":")
+2026/Jun/29 06:25:30.992711 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"65"' => integer 65
+2026/Jun/29 06:25:30.992724 USER TC_26_6_5_7.ttcn3:317 *** Phase 1: LU REQUEST in ESTABLISH_IND, chan_nr=65 ***
+2026/Jun/29 06:25:30.992737 PORTEVENT TC_26_6_5_7.ttcn3:320 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_LU_ACCEPT\", \"chan_nr\": 65, \"mcc\": \"901\", \"mnc\": \"70\", \"lac\": 4242}"
+2026/Jun/29 06:25:30.992774 USER TC_26_6_5_7.ttcn3:320 BSC_Port: TX: {"command": "CMD_SEND_LU_ACCEPT", "chan_nr": 65, "mcc": "901", "mnc": "70", "lac": 4242}
+2026/Jun/29 06:25:30.992809 TIMEROP TC_26_6_5_7.ttcn3:323 Stop timer T_lu_wait: 60 s
+2026/Jun/29 06:25:30.992819 USER TC_26_6_5_7.ttcn3:356 *** Phase 1: LU ACCEPT sent; waiting for mobile to become idle-updated ***
+2026/Jun/29 06:25:30.992841 TIMEROP TC_26_6_5_7.ttcn3:358 Start timer T_lu_idle: 8 s
+2026/Jun/29 06:25:30.992855 USER TC_26_6_5_7.ttcn3:359 BSC_Port: RX: {"event": "EVENT_LU_REQUEST", "data": {"chan_nr": 65, "bsc_slr": 65, "location_updating_request": true, "l3_data": "05087009f107000033089910070000000010"}}
+2026/Jun/29 06:25:30.992866 PORTEVENT TC_26_6_5_7.ttcn3:359 Message enqueued on BSC from system charstring : "{\"event\": \"EVENT_LU_REQUEST\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"location_updating_request\": true, \"l3_data\": \"05087009f107000033089910070000000010\"}}" id 50
+2026/Jun/29 06:25:30.992878 PORTEVENT TC_26_6_5_7.ttcn3:360 Receive operation on port BSC succeeded, message from system(): charstring: "{\"event\": \"EVENT_LU_REQUEST\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"location_updating_request\": true, \"l3_data\": \"05087009f107000033089910070000000010\"}}" id 50
+2026/Jun/29 06:25:30.992883 PORTEVENT TC_26_6_5_7.ttcn3:360 Message with id 50 was extracted from the queue of BSC.
+2026/Jun/29 06:25:31.916414 USER TC_26_6_5_7.ttcn3:359 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 65, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:31.916498 PORTEVENT TC_26_6_5_7.ttcn3:359 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 65, \"ncells\": 0, \"l3_data\": \"\"}}" id 51
+2026/Jun/29 06:25:31.916533 PORTEVENT TC_26_6_5_7.ttcn3:360 Receive operation on port BSC succeeded, message from system(): charstring: "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 65, \"ncells\": 0, \"l3_data\": \"\"}}" id 51
+2026/Jun/29 06:25:31.916548 PORTEVENT TC_26_6_5_7.ttcn3:360 Message with id 51 was extracted from the queue of BSC.
+2026/Jun/29 06:25:32.170335 USER TC_26_6_5_7.ttcn3:359 BSC_Port: RX: {"event": "RELEASE_IND", "data": {"chan_nr": 65}}
+2026/Jun/29 06:25:32.170423 PORTEVENT TC_26_6_5_7.ttcn3:359 Message enqueued on BSC from system charstring : "{\"event\": \"RELEASE_IND\", \"data\": {\"chan_nr\": 65}}" id 52
+2026/Jun/29 06:25:32.170461 PORTEVENT TC_26_6_5_7.ttcn3:360 Receive operation on port BSC succeeded, message from system(): charstring: "{\"event\": \"RELEASE_IND\", \"data\": {\"chan_nr\": 65}}" id 52
+2026/Jun/29 06:25:32.170478 PORTEVENT TC_26_6_5_7.ttcn3:360 Message with id 52 was extracted from the queue of BSC.
+2026/Jun/29 06:25:32.330873 USER TC_26_6_5_7.ttcn3:359 VTY_PT: Received data (buffered): 61 bytes
+2026/Jun/29 06:25:33.994041 USER TC_26_6_5_7.ttcn3:359 BSC_Port: RX: {"status": "ok", "chan_nr": 65, "lac": 4242}
+2026/Jun/29 06:25:33.994129 PORTEVENT TC_26_6_5_7.ttcn3:359 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 65, \"lac\": 4242}" id 53
+2026/Jun/29 06:25:33.994164 PORTEVENT TC_26_6_5_7.ttcn3:360 Receive operation on port BSC succeeded, message from system(): charstring: "{\"status\": \"ok\", \"chan_nr\": 65, \"lac\": 4242}" id 53
+2026/Jun/29 06:25:33.994179 PORTEVENT TC_26_6_5_7.ttcn3:360 Message with id 53 was extracted from the queue of BSC.
+2026/Jun/29 06:25:35.390078 USER TC_26_6_5_7.ttcn3:359 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:35.390157 PORTEVENT TC_26_6_5_7.ttcn3:359 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/29 06:25:35.390178 PORTEVENT TC_26_6_5_7.ttcn3:361 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 8
+2026/Jun/29 06:25:35.390196 PORTEVENT TC_26_6_5_7.ttcn3:361 Message with id 8 was extracted from the queue of MSC.
+2026/Jun/29 06:25:38.995382 TIMEROP TC_26_6_5_7.ttcn3:362 Timeout T_lu_idle: 8 s
+2026/Jun/29 06:25:38.995464 USER TC_26_6_5_7.ttcn3:365 *** Phase 1 complete: mobile idle-updated (LAC=4242) ***
+2026/Jun/29 06:25:38.995523 USER GSM_Component_Definitions.ttcn3:455 VTY: Sending command: "show subscriber"
+2026/Jun/29 06:25:38.995556 PORTEVENT GSM_Component_Definitions.ttcn3:456 Sent on VTY to system charstring : "show subscriber"
+2026/Jun/29 06:25:38.995593 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Sending command: "show subscriber"
+2026/Jun/29 06:25:39.195843 USER GSM_Component_Definitions.ttcn3:456 VTY_PT: Received response: 
+% (MS 1)
+% Power off!
+
+% (MS 1)
+% Trying to register with network International, 70...
+
+% (MS 1)
+% On Network, normal service: International, 70
+show subscriber
+Mobile Subscriber of MS '1':
+ IMSI: 901700000000001
+ Status: U1_UPDATED  IMSI attached
+         LAI: 901-70-4242  (International, 70)
+ GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid
+  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)
+ Access barred cells: no
+ Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15
+
+OsmocomBB(mobile)> 
+OsmocomBB(mobile)> 
+2026/Jun/29 06:25:39.196077 PORTEVENT GSM_Component_Definitions.ttcn3:456 Message enqueued on VTY from system charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/29 06:25:39.196131 TIMEROP GSM_Component_Definitions.ttcn3:459 Start timer T_vty: 5 s
+2026/Jun/29 06:25:39.196231 PORTEVENT GSM_Component_Definitions.ttcn3:462 Receive operation on port VTY succeeded, message from system(): charstring : "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " id 1
+2026/Jun/29 06:25:39.196258 PORTEVENT GSM_Component_Definitions.ttcn3:462 Message with id 1 was extracted from the queue of VTY.
+2026/Jun/29 06:25:39.196283 TIMEROP GSM_Component_Definitions.ttcn3:463 Stop timer T_vty: 5 s
+2026/Jun/29 06:25:39.196296 USER GSM_Component_Definitions.ttcn3:464 VTY: Received response: "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> "
+2026/Jun/29 06:25:39.196412 USER TC_26_6_5_7.ttcn3:369 *** Subscriber state after LU: "\r\n% (MS 1)\r\n% Power off!\r\n\r\n% (MS 1)\r\n% Trying to register with network International, 70...\r\n\r\n% (MS 1)\r\n% On Network, normal service: International, 70\r\nshow subscriber\r\nMobile Subscriber of MS '1':\r\n IMSI: 901700000000001\r\n Status: U1_UPDATED  IMSI attached\r\n         LAI: 901-70-4242  (International, 70)\r\n GPRS Status: GU0_NULL IMSI detached  PTMSI 0xffffffff  PTMSI-sig 0x000000  RAI: invalid\r\n  P-TMSI 0x00000000 Registered PLMN: MCC-MNC 901-70  (International, 70)\r\n Access barred cells: no\r\n Access classes: C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15\r\n\r\nOsmocomBB(mobile)> \r\nOsmocomBB(mobile)> " ***
+2026/Jun/29 06:25:39.196497 USER TC_26_6_5_7.ttcn3:394 *** Phase 2: MT Call Setup (spec [8] +PreEnterCCstateU10_r01) ***
+2026/Jun/29 06:25:39.196511 USER TC_26_6_5_7.ttcn3:395 *** FH-SKIP: Spec step [6] uses FreqTCH(TSPX_TCHcarrierB) hopping TCH on Cell B ***
+2026/Jun/29 06:25:39.196523 USER TC_26_6_5_7.ttcn3:396 *** PARTIAL: FH hopping TCH approximated as fixed ARFCN 56 TCH/F TS2 ***
+2026/Jun/29 06:25:39.196533 TIMEROP TC_26_6_5_7.ttcn3:400 Start timer T_drain2: 1 s
+2026/Jun/29 06:25:40.196555 TIMEROP TC_26_6_5_7.ttcn3:404 Timeout T_drain2: 1 s
+2026/Jun/29 06:25:40.196612 USER TC_26_6_5_7.ttcn3:410 *** Sending PAGING REQUEST for MT call (spec [8] +PreEnterCCstateU10_r01) ***
+2026/Jun/29 06:25:40.196645 PORTEVENT TC_26_6_5_7.ttcn3:411 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_PAGING\", \"imsi\": \"901700000000001\"}"
+2026/Jun/29 06:25:40.196732 USER TC_26_6_5_7.ttcn3:411 BSC_Port: TX: {"command": "CMD_SEND_PAGING", "imsi": "901700000000001"}
+2026/Jun/29 06:25:40.196743 TIMEROP TC_26_6_5_7.ttcn3:414 Start timer T_pg_ack: 5 s
+2026/Jun/29 06:25:40.197143 USER TC_26_6_5_7.ttcn3:415 BSC_Port: RX: {"status": "ok", "imsi": "901700000000001", "tmsi": null}
+2026/Jun/29 06:25:40.197159 PORTEVENT TC_26_6_5_7.ttcn3:415 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"imsi\": \"901700000000001\", \"tmsi\": null}" id 54
+2026/Jun/29 06:25:40.197175 PORTEVENT TC_26_6_5_7.ttcn3:416 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"imsi\": \"901700000000001\", \"tmsi\": null}" id 54
+2026/Jun/29 06:25:40.197183 PORTEVENT TC_26_6_5_7.ttcn3:416 Message with id 54 was extracted from the queue of BSC.
+2026/Jun/29 06:25:40.197236 TIMEROP TC_26_6_5_7.ttcn3:418 Stop timer T_pg_ack: 5 s
+2026/Jun/29 06:25:40.197242 USER TC_26_6_5_7.ttcn3:419 *** Paging sent ***
+2026/Jun/29 06:25:40.197248 USER TC_26_6_5_7.ttcn3:431 *** Waiting for CHAN_RQD (paging response) ***
+2026/Jun/29 06:25:40.197254 TIMEROP TC_26_6_5_7.ttcn3:433 Start timer T_rqd: 30 s
+2026/Jun/29 06:25:40.395123 USER TC_26_6_5_7.ttcn3:434 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:40.395229 PORTEVENT TC_26_6_5_7.ttcn3:434 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/29 06:25:40.395267 PORTEVENT TC_26_6_5_7.ttcn3:452 Receive operation on port MSC succeeded, message from system(): charstring: "{\"type\": \"HEARTBEAT\"}" id 9
+2026/Jun/29 06:25:40.395283 PORTEVENT TC_26_6_5_7.ttcn3:452 Message with id 9 was extracted from the queue of MSC.
+2026/Jun/29 06:25:40.832713 USER TC_26_6_5_7.ttcn3:434 BSC_Port: RX: {"event": "CHAN_RQD", "data": {"ra": 152, "frame_number": 1464, "frame_number_encoded": 2216, "unit_id": "4242/0/0"}}
+2026/Jun/29 06:25:40.832817 PORTEVENT TC_26_6_5_7.ttcn3:434 Message enqueued on BSC from system charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 152, \"frame_number\": 1464, \"frame_number_encoded\": 2216, \"unit_id\": \"4242/0/0\"}}" id 55
+2026/Jun/29 06:25:40.832888 PORTEVENT TC_26_6_5_7.ttcn3:435 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 152, \"frame_number\": 1464, \"frame_number_encoded\": 2216, \"unit_id\": \"4242/0/0\"}}" id 55
+2026/Jun/29 06:25:40.832907 PORTEVENT TC_26_6_5_7.ttcn3:435 Message with id 55 was extracted from the queue of BSC.
+2026/Jun/29 06:25:40.833057 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"ra"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 152, \"frame_number\": 1464, \"frame_number_encoded\": 2216, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:40.833115 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 31 (pattern: "\"ra\":")
+2026/Jun/29 06:25:40.833151 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"152"' => integer 152
+2026/Jun/29 06:25:40.833173 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"frame_number_encoded"' in JSON: "{\"event\": \"CHAN_RQD\", \"data\": {\"ra\": 152, \"frame_number\": 1464, \"frame_number_encoded\": 2216, \"unit_id\": \"4242/0/0\"}}"
+2026/Jun/29 06:25:40.833227 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 64 (pattern: "\"frame_number_encoded\":")
+2026/Jun/29 06:25:40.833254 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"2216"' => integer 2216
+2026/Jun/29 06:25:40.833384 TIMEROP TC_26_6_5_7.ttcn3:442 Stop timer T_rqd: 30 s
+2026/Jun/29 06:25:40.833406 USER TC_26_6_5_7.ttcn3:443 *** CHAN_RQD (paging response): RA=152 FN_enc=2216 ***
+2026/Jun/29 06:25:40.833426 USER TC_26_6_5_7.ttcn3:483 *** Sending CMD_SEND_IMM_ASS_EXT -> SDCCH/8 TS1 ARFCN 51 (paging response channel) ***
+2026/Jun/29 06:25:40.833475 PORTEVENT TC_26_6_5_7.ttcn3:484 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_IMM_ASS_EXT\", \"req_ref1\": {\"ra\": 152, \"frame_number\": 0, \"frame_number_encoded\": 2216}, \"req_ref2\": {\"ra\": 255, \"frame_number\": 0, \"frame_number_encoded\": 0}, \"chan_desc1\": {\"ts\": 1, \"subslot\": 0, \"arfcn\": 51, \"chan_type\": 1}, \"chan_desc2\": {\"ts\": 1, \"subslot\": 1, \"arfcn\": 51, \"chan_type\": 1}, \"timing_advance\": 0}"
+2026/Jun/29 06:25:40.833561 USER TC_26_6_5_7.ttcn3:484 BSC_Port: TX: {"command": "CMD_SEND_IMM_ASS_EXT", "req_ref1": {"ra": 152, "frame_number": 0, "frame_number_encoded": 2216}, "req_ref2": {"ra": 255, "frame_number": 0, "frame_number_encoded": 0}, "chan_desc1": {"ts": 1, "subslot": 0, "arfcn": 51, "chan_type": 1}, "chan_desc2": {"ts": 1, "subslot": 1, "arfcn": 51, "chan_type": 1}, "timing_advance": 0}
+2026/Jun/29 06:25:40.833582 TIMEROP TC_26_6_5_7.ttcn3:493 Start timer T_imm: 10 s
+2026/Jun/29 06:25:40.835353 USER TC_26_6_5_7.ttcn3:494 BSC_Port: RX: {"status": "ok"}
+2026/Jun/29 06:25:40.835402 PORTEVENT TC_26_6_5_7.ttcn3:494 Message enqueued on BSC from system charstring : "{\"status\": \"ok\"}" id 56
+2026/Jun/29 06:25:40.835428 PORTEVENT TC_26_6_5_7.ttcn3:495 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\"}" id 56
+2026/Jun/29 06:25:40.835443 PORTEVENT TC_26_6_5_7.ttcn3:495 Message with id 56 was extracted from the queue of BSC.
+2026/Jun/29 06:25:40.835612 TIMEROP TC_26_6_5_7.ttcn3:497 Stop timer T_imm: 10 s
+2026/Jun/29 06:25:40.835630 USER TC_26_6_5_7.ttcn3:497 *** IMM_ASS_EXT sent ***
+2026/Jun/29 06:25:40.835646 USER TC_26_6_5_7.ttcn3:522 *** Waiting for ESTABLISH_IND on SDCCH (paging response) ***
+2026/Jun/29 06:25:40.835659 TIMEROP TC_26_6_5_7.ttcn3:525 Start timer T_est: 20 s
+2026/Jun/29 06:25:41.114122 USER TC_26_6_5_7.ttcn3:526 BSC_Port: RX: {"event": "ESTABLISH_IND", "data": {"chan_nr": 65, "bsc_slr": 65, "l3_data": "06270703331f01089910070000000010"}}
+2026/Jun/29 06:25:41.114216 PORTEVENT TC_26_6_5_7.ttcn3:526 Message enqueued on BSC from system charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"06270703331f01089910070000000010\"}}" id 57
+2026/Jun/29 06:25:41.114257 PORTEVENT TC_26_6_5_7.ttcn3:527 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"06270703331f01089910070000000010\"}}" id 57
+2026/Jun/29 06:25:41.114273 PORTEVENT TC_26_6_5_7.ttcn3:527 Message with id 57 was extracted from the queue of BSC.
+2026/Jun/29 06:25:41.114410 TIMEROP TC_26_6_5_7.ttcn3:529 Stop timer T_est: 20 s
+2026/Jun/29 06:25:41.114446 USER GSM_Functions.ttcn3:365 f_extractJsonInt: Searching for key '"chan_nr"' in JSON: "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 65, \"bsc_slr\": 65, \"l3_data\": \"06270703331f01089910070000000010\"}}"
+2026/Jun/29 06:25:41.114496 USER GSM_Functions.ttcn3:372 f_extractJsonInt: Found key at position 36 (pattern: "\"chan_nr\":")
+2026/Jun/29 06:25:41.114525 USER GSM_Functions.ttcn3:422 f_extractJsonInt: Extracted number string '"65"' => integer 65
+2026/Jun/29 06:25:41.114611 USER TC_26_6_5_7.ttcn3:600 *** ESTABLISH_IND on SDCCH: chan_nr=65 ***
+2026/Jun/29 06:25:41.114627 USER TC_26_6_5_7.ttcn3:618 *** Sending CM_SERVICE_ACCEPT (spec [8] preamble step after PAGING RESPONSE) ***
+2026/Jun/29 06:25:41.114648 PORTEVENT TC_26_6_5_7.ttcn3:619 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_CM_SERVICE_ACCEPT\", \"chan_nr\": 65}"
+2026/Jun/29 06:25:41.114726 USER TC_26_6_5_7.ttcn3:619 BSC_Port: TX: {"command": "CMD_SEND_CM_SERVICE_ACCEPT", "chan_nr": 65}
+2026/Jun/29 06:25:41.114742 TIMEROP TC_26_6_5_7.ttcn3:623 Start timer T_csacc: 3 s
+2026/Jun/29 06:25:41.115381 USER TC_26_6_5_7.ttcn3:624 BSC_Port: RX: {"status": "ok", "chan_nr": 65}
+2026/Jun/29 06:25:41.115406 PORTEVENT TC_26_6_5_7.ttcn3:624 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 65}" id 58
+2026/Jun/29 06:25:41.115424 PORTEVENT TC_26_6_5_7.ttcn3:625 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"chan_nr\": 65}" id 58
+2026/Jun/29 06:25:41.115435 PORTEVENT TC_26_6_5_7.ttcn3:625 Message with id 58 was extracted from the queue of BSC.
+2026/Jun/29 06:25:41.115486 TIMEROP TC_26_6_5_7.ttcn3:626 Stop timer T_csacc: 3 s
+2026/Jun/29 06:25:41.115496 USER TC_26_6_5_7.ttcn3:638 *** Assigning TCH/F TS3 on ARFCN 51 (spec [8] +CCAssignTCH, FH-SKIP: fixed channel) ***
+2026/Jun/29 06:25:41.115520 PORTEVENT TC_26_6_5_7.ttcn3:641 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_ASSIGNMENT\", \"chan_nr\": 65, \"target_chan_nr\": 11, \"target_arfcn\": 51, \"act_type\": 4}"
+2026/Jun/29 06:25:41.115571 USER TC_26_6_5_7.ttcn3:641 BSC_Port: TX: {"command": "CMD_SEND_ASSIGNMENT", "chan_nr": 65, "target_chan_nr": 11, "target_arfcn": 51, "act_type": 4}
+2026/Jun/29 06:25:41.115586 TIMEROP TC_26_6_5_7.ttcn3:648 Start timer T_ass: 15 s
+2026/Jun/29 06:25:41.117019 USER TC_26_6_5_7.ttcn3:649 BSC_Port: RX: {"status": "ok", "old_chan_nr": 65, "new_chan_nr": 11}
+2026/Jun/29 06:25:41.117049 PORTEVENT TC_26_6_5_7.ttcn3:649 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"old_chan_nr\": 65, \"new_chan_nr\": 11}" id 59
+2026/Jun/29 06:25:41.117067 PORTEVENT TC_26_6_5_7.ttcn3:650 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"old_chan_nr\": 65, \"new_chan_nr\": 11}" id 59
+2026/Jun/29 06:25:41.117077 PORTEVENT TC_26_6_5_7.ttcn3:650 Message with id 59 was extracted from the queue of BSC.
+2026/Jun/29 06:25:41.117178 USER TC_26_6_5_7.ttcn3:664 Assignment event: "{\"status\": \"ok\", \"old_chan_nr\": 65, \"new_chan_nr\": 11}"
+2026/Jun/29 06:25:41.751130 USER TC_26_6_5_7.ttcn3:649 BSC_Port: RX: {"event": "ESTABLISH_IND", "data": {"chan_nr": 11, "bsc_slr": 11, "l3_data": ""}}
+2026/Jun/29 06:25:41.751225 PORTEVENT TC_26_6_5_7.ttcn3:649 Message enqueued on BSC from system charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 11, \"bsc_slr\": 11, \"l3_data\": \"\"}}" id 60
+2026/Jun/29 06:25:41.751269 PORTEVENT TC_26_6_5_7.ttcn3:650 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 11, \"bsc_slr\": 11, \"l3_data\": \"\"}}" id 60
+2026/Jun/29 06:25:41.751287 PORTEVENT TC_26_6_5_7.ttcn3:650 Message with id 60 was extracted from the queue of BSC.
+2026/Jun/29 06:25:41.751541 USER TC_26_6_5_7.ttcn3:658 *** ESTABLISH_IND during assignment (may be TCH establishment): "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 11, \"bsc_slr\": 11, \"l3_data\": \"\"}}" ***
+2026/Jun/29 06:25:41.751627 TIMEROP TC_26_6_5_7.ttcn3:661 Stop timer T_ass: 15 s
+2026/Jun/29 06:25:41.751648 USER TC_26_6_5_7.ttcn3:676 *** Phase 2: MS in CC state U10 (MT call active on Cell A TCH/F) ***
+2026/Jun/29 06:25:41.751660 USER TC_26_6_5_7.ttcn3:695 *** Phase 3: Non-synchronised HANDOVER COMMAND (spec [14] +local_handoverCMD) ***
+2026/Jun/29 06:25:41.751671 USER TC_26_6_5_7.ttcn3:696 *** Spec [9] OM_SendNextOnHO(TCV_chTch1, 2): queue PHYS INFO after 2 access bursts ***
+2026/Jun/29 06:25:41.751681 USER TC_26_6_5_7.ttcn3:697 "*** FH-SKIP: HandOverCmd_nfh uses fixed ARFCN 56 (spec C_arfcnB=10 " & char(0, 0, 33, 146) & " n56 BTS) ***"
+2026/Jun/29 06:25:41.751705 USER TC_26_6_5_7.ttcn3:698 "*** FH-SKIP: Spec step [6] +FullRateCh_B_1_pwr FreqTCH hopping " & char(0, 0, 33, 146) & " fixed ARFCN 56 ***"
+2026/Jun/29 06:25:41.751726 TIMEROP TC_26_6_5_7.ttcn3:702 Start timer T_settle: 1 s
+2026/Jun/29 06:25:41.801561 USER TC_26_6_5_7.ttcn3:703 BSC_Port: RX: {"event": "DATA_IND", "data": {"chan_nr": 11, "bsc_slr": 11, "l3_data": "062900"}}
+2026/Jun/29 06:25:41.801651 PORTEVENT TC_26_6_5_7.ttcn3:703 Message enqueued on BSC from system charstring : "{\"event\": \"DATA_IND\", \"data\": {\"chan_nr\": 11, \"bsc_slr\": 11, \"l3_data\": \"062900\"}}" id 61
+2026/Jun/29 06:25:42.751854 TIMEROP TC_26_6_5_7.ttcn3:703 Timeout T_settle: 1 s
+2026/Jun/29 06:25:42.751971 PORTEVENT TC_26_6_5_7.ttcn3:714 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_HANDOVER\", \"chan_nr\": 11, \"target_arfcn\": 56, \"target_chan_nr\": 10, \"target_bsic\": 63, \"ho_ref\": 1, \"synchronized\": false, \"report_otd\": true}"
+2026/Jun/29 06:25:42.752072 USER TC_26_6_5_7.ttcn3:714 BSC_Port: TX: {"command": "CMD_SEND_HANDOVER", "chan_nr": 11, "target_arfcn": 56, "target_chan_nr": 10, "target_bsic": 63, "ho_ref": 1, "synchronized": false, "report_otd": true}
+2026/Jun/29 06:25:42.752106 TIMEROP TC_26_6_5_7.ttcn3:717 Start timer T_ho: 10 s
+2026/Jun/29 06:25:42.752139 PORTEVENT TC_26_6_5_7.ttcn3:719 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"DATA_IND\", \"data\": {\"chan_nr\": 11, \"bsc_slr\": 11, \"l3_data\": \"062900\"}}" id 61
+2026/Jun/29 06:25:42.752156 PORTEVENT TC_26_6_5_7.ttcn3:719 Message with id 61 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.754053 USER TC_26_6_5_7.ttcn3:718 BSC_Port: RX: {"event": "EVENT_PHYSICAL_INFO", "data": {"bts_id": 0, "chan_nr": 10, "ta": 0}}
+2026/Jun/29 06:25:42.754095 PORTEVENT TC_26_6_5_7.ttcn3:718 Message enqueued on BSC from system charstring : "{\"event\": \"EVENT_PHYSICAL_INFO\", \"data\": {\"bts_id\": 0, \"chan_nr\": 10, \"ta\": 0}}" id 62
+2026/Jun/29 06:25:42.754120 PORTEVENT TC_26_6_5_7.ttcn3:719 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"EVENT_PHYSICAL_INFO\", \"data\": {\"bts_id\": 0, \"chan_nr\": 10, \"ta\": 0}}" id 62
+2026/Jun/29 06:25:42.754132 PORTEVENT TC_26_6_5_7.ttcn3:719 Message with id 62 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.754549 USER TC_26_6_5_7.ttcn3:718 BSC_Port: RX: {"status": "ok", "chan_nr": 11, "target_arfcn": 56}
+2026/Jun/29 06:25:42.754617 PORTEVENT TC_26_6_5_7.ttcn3:718 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 11, \"target_arfcn\": 56}" id 63
+2026/Jun/29 06:25:42.754650 PORTEVENT TC_26_6_5_7.ttcn3:719 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"chan_nr\": 11, \"target_arfcn\": 56}" id 63
+2026/Jun/29 06:25:42.754666 PORTEVENT TC_26_6_5_7.ttcn3:719 Message with id 63 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.754842 TIMEROP TC_26_6_5_7.ttcn3:721 Stop timer T_ho: 10 s
+2026/Jun/29 06:25:42.754871 USER TC_26_6_5_7.ttcn3:722 *** CMD_SEND_HANDOVER accepted (non-sync, report_otd): TCH/F TS3 (ARFCN 51) -> TCH/F TS2 (ARFCN 56) ***
+2026/Jun/29 06:25:42.754888 USER TC_26_6_5_7.ttcn3:760 "*** Phase 3b: localtree(TCV_chTch1) " & char(0, 0, 32, 20) & " receive HO access bursts ***"
+2026/Jun/29 06:25:42.754916 USER TC_26_6_5_7.ttcn3:761 *** PARTIAL-3: L?DL_RacInHoacc approximated via HANDOVER_DETECTED BSC event ***
+2026/Jun/29 06:25:42.754946 USER TC_26_6_5_7.ttcn3:762 *** Spec [9] OM_SendNextOnHO(TCV_chTch1, 2): wait for 2 HANDOVER_DETECTED events ***
+2026/Jun/29 06:25:42.754958 TIMEROP TC_26_6_5_7.ttcn3:765 Start timer T_hoacc: 15 s
+2026/Jun/29 06:25:42.797925 USER TC_26_6_5_7.ttcn3:766 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:42.798012 PORTEVENT TC_26_6_5_7.ttcn3:766 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 64
+2026/Jun/29 06:25:42.798052 PORTEVENT TC_26_6_5_7.ttcn3:767 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 64
+2026/Jun/29 06:25:42.798069 PORTEVENT TC_26_6_5_7.ttcn3:767 Message with id 64 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.825427 USER TC_26_6_5_7.ttcn3:766 BSC_Port: RX: {"event": "ESTABLISH_IND", "data": {"chan_nr": 10, "bsc_slr": 10, "l3_data": ""}}
+2026/Jun/29 06:25:42.825517 PORTEVENT TC_26_6_5_7.ttcn3:766 Message enqueued on BSC from system charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 10, \"bsc_slr\": 10, \"l3_data\": \"\"}}" id 65
+2026/Jun/29 06:25:42.825558 PORTEVENT TC_26_6_5_7.ttcn3:767 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"ESTABLISH_IND\", \"data\": {\"chan_nr\": 10, \"bsc_slr\": 10, \"l3_data\": \"\"}}" id 65
+2026/Jun/29 06:25:42.825574 PORTEVENT TC_26_6_5_7.ttcn3:767 Message with id 65 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.825761 TIMEROP TC_26_6_5_7.ttcn3:792 Stop timer T_hoacc: 15 s
+2026/Jun/29 06:25:42.825784 USER TC_26_6_5_7.ttcn3:793 *** ESTABLISH_IND on target cell (unexpected before PHYS INFO) ***
+2026/Jun/29 06:25:42.825800 USER TC_26_6_5_7.ttcn3:815 *** Phase 3c: Sending PHYSICAL INFORMATION (spec [15] L!DL_DatRqPhyinfo) ***
+2026/Jun/29 06:25:42.825812 USER TC_26_6_5_7.ttcn3:816 *** PhyInfo_01(TCV_chTch1, TimingAdv(20)): chan_nr=10 timing_adv=20 target_arfcn=56 ***
+2026/Jun/29 06:25:42.825864 PORTEVENT TC_26_6_5_7.ttcn3:818 Sent on BSC to system charstring : "{\"command\": \"CMD_SEND_PHYSICAL_INFO\", \"chan_nr\": 10, \"timing_adv\": 20, \"target_arfcn\": 56}"
+2026/Jun/29 06:25:42.825931 USER TC_26_6_5_7.ttcn3:818 BSC_Port: TX: {"command": "CMD_SEND_PHYSICAL_INFO", "chan_nr": 10, "timing_adv": 20, "target_arfcn": 56}
+2026/Jun/29 06:25:42.825950 TIMEROP TC_26_6_5_7.ttcn3:824 Start timer T_phys: 5 s
+2026/Jun/29 06:25:42.826573 USER TC_26_6_5_7.ttcn3:825 BSC_Port: RX: {"status": "ok", "chan_nr": 10, "timing_adv": 20}
+2026/Jun/29 06:25:42.826599 PORTEVENT TC_26_6_5_7.ttcn3:825 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 10, \"timing_adv\": 20}" id 66
+2026/Jun/29 06:25:42.826621 PORTEVENT TC_26_6_5_7.ttcn3:826 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"chan_nr\": 10, \"timing_adv\": 20}" id 66
+2026/Jun/29 06:25:42.826633 PORTEVENT TC_26_6_5_7.ttcn3:826 Message with id 66 was extracted from the queue of BSC.
+2026/Jun/29 06:25:42.826789 TIMEROP TC_26_6_5_7.ttcn3:828 Stop timer T_phys: 5 s
+2026/Jun/29 06:25:42.826804 USER TC_26_6_5_7.ttcn3:830 *** CMD_SEND_PHYSICAL_INFO sent (TA=20 = TSPX_y3 = '0010100'B) ***
+2026/Jun/29 06:25:42.826818 USER TC_26_6_5_7.ttcn3:859 "*** Phase 4: localtree1 " & char(0, 0, 32, 20) & " waiting for HANDOVER COMPLETE on Cell B TCH/F ***"
+2026/Jun/29 06:25:42.826862 USER TC_26_6_5_7.ttcn3:860 *** PARTIAL-4: L?DL_DatInHoCom motdif extraction approximated via ESTABLISH_IND ***
+2026/Jun/29 06:25:42.826875 USER TC_26_6_5_7.ttcn3:861 *** Spec localtree1 [4]: check TCV_L1Head.ta = '0010100'B = 20 ***
+2026/Jun/29 06:25:42.826927 TIMEROP TC_26_6_5_7.ttcn3:864 Start timer T_ho_est: 30 s
+2026/Jun/29 06:25:42.885684 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "DATA_IND", "data": {"chan_nr": 10, "bsc_slr": 10, "l3_data": "062c00"}}
+2026/Jun/29 06:25:42.885751 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"DATA_IND\", \"data\": {\"chan_nr\": 10, \"bsc_slr\": 10, \"l3_data\": \"062c00\"}}" id 67
+2026/Jun/29 06:25:42.885775 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"DATA_IND\", \"data\": {\"chan_nr\": 10, \"bsc_slr\": 10, \"l3_data\": \"062c00\"}}" id 67
+2026/Jun/29 06:25:42.885783 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 67 was extracted from the queue of BSC.
+2026/Jun/29 06:25:43.886037 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:43.886097 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 68
+2026/Jun/29 06:25:43.886122 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 68
+2026/Jun/29 06:25:43.886131 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 68 was extracted from the queue of BSC.
+2026/Jun/29 06:25:44.846295 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:44.846396 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 69
+2026/Jun/29 06:25:44.846442 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 69
+2026/Jun/29 06:25:44.846461 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 69 was extracted from the queue of BSC.
+2026/Jun/29 06:25:45.399023 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:45.399087 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/29 06:25:45.399110 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 10
+2026/Jun/29 06:25:45.399119 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 10 was extracted from the queue of MSC.
+2026/Jun/29 06:25:45.806886 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:45.806983 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 70
+2026/Jun/29 06:25:45.807030 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 70
+2026/Jun/29 06:25:45.807049 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 70 was extracted from the queue of BSC.
+2026/Jun/29 06:25:46.887183 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:46.887285 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 71
+2026/Jun/29 06:25:46.887331 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 71
+2026/Jun/29 06:25:46.887351 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 71 was extracted from the queue of BSC.
+2026/Jun/29 06:25:47.846757 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:47.846875 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 72
+2026/Jun/29 06:25:47.846932 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 72
+2026/Jun/29 06:25:47.846951 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 72 was extracted from the queue of BSC.
+2026/Jun/29 06:25:48.805466 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:48.805532 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 73
+2026/Jun/29 06:25:48.805557 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 73
+2026/Jun/29 06:25:48.805567 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 73 was extracted from the queue of BSC.
+2026/Jun/29 06:25:49.885553 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:49.885656 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 74
+2026/Jun/29 06:25:49.885697 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 74
+2026/Jun/29 06:25:49.885715 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 74 was extracted from the queue of BSC.
+2026/Jun/29 06:25:50.404118 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:50.404232 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/29 06:25:50.404275 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 11
+2026/Jun/29 06:25:50.404295 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 11 was extracted from the queue of MSC.
+2026/Jun/29 06:25:50.845915 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:50.845985 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 75
+2026/Jun/29 06:25:50.846013 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 75
+2026/Jun/29 06:25:50.846024 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 75 was extracted from the queue of BSC.
+2026/Jun/29 06:25:51.806184 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:51.806293 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 76
+2026/Jun/29 06:25:51.806339 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 76
+2026/Jun/29 06:25:51.806359 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 76 was extracted from the queue of BSC.
+2026/Jun/29 06:25:52.886162 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:52.886268 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 77
+2026/Jun/29 06:25:52.886327 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 77
+2026/Jun/29 06:25:52.886346 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 77 was extracted from the queue of BSC.
+2026/Jun/29 06:25:53.840881 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:53.840983 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 78
+2026/Jun/29 06:25:53.841025 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 78
+2026/Jun/29 06:25:53.841042 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 78 was extracted from the queue of BSC.
+2026/Jun/29 06:25:54.800895 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:54.800999 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 79
+2026/Jun/29 06:25:54.801041 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 79
+2026/Jun/29 06:25:54.801058 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 79 was extracted from the queue of BSC.
+2026/Jun/29 06:25:55.408998 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:25:55.409059 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/29 06:25:55.409084 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 12
+2026/Jun/29 06:25:55.409093 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 12 was extracted from the queue of MSC.
+2026/Jun/29 06:25:55.886138 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:55.886241 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 80
+2026/Jun/29 06:25:55.886285 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 80
+2026/Jun/29 06:25:55.886305 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 80 was extracted from the queue of BSC.
+2026/Jun/29 06:25:56.844867 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:56.844934 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 81
+2026/Jun/29 06:25:56.844959 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 81
+2026/Jun/29 06:25:56.844968 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 81 was extracted from the queue of BSC.
+2026/Jun/29 06:25:57.805247 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:57.805320 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 82
+2026/Jun/29 06:25:57.805356 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 82
+2026/Jun/29 06:25:57.805365 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 82 was extracted from the queue of BSC.
+2026/Jun/29 06:25:58.885413 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:58.885483 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 83
+2026/Jun/29 06:25:58.885506 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 83
+2026/Jun/29 06:25:58.885514 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 83 was extracted from the queue of BSC.
+2026/Jun/29 06:25:59.845010 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:25:59.845121 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 84
+2026/Jun/29 06:25:59.845163 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 84
+2026/Jun/29 06:25:59.845180 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 84 was extracted from the queue of BSC.
+2026/Jun/29 06:26:00.414063 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:26:00.414123 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/29 06:26:00.414147 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 13
+2026/Jun/29 06:26:00.414155 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 13 was extracted from the queue of MSC.
+2026/Jun/29 06:26:00.804809 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:00.804941 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 85
+2026/Jun/29 06:26:00.804983 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 85
+2026/Jun/29 06:26:00.805000 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 85 was extracted from the queue of BSC.
+2026/Jun/29 06:26:01.885060 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:01.885167 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 86
+2026/Jun/29 06:26:01.885213 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 86
+2026/Jun/29 06:26:01.885232 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 86 was extracted from the queue of BSC.
+2026/Jun/29 06:26:02.844805 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:02.844890 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 87
+2026/Jun/29 06:26:02.844914 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 87
+2026/Jun/29 06:26:02.844930 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 87 was extracted from the queue of BSC.
+2026/Jun/29 06:26:03.804381 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:03.804449 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 88
+2026/Jun/29 06:26:03.804474 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 88
+2026/Jun/29 06:26:03.804483 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 88 was extracted from the queue of BSC.
+2026/Jun/29 06:26:04.884373 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:04.884445 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 89
+2026/Jun/29 06:26:04.884469 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 89
+2026/Jun/29 06:26:04.884478 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 89 was extracted from the queue of BSC.
+2026/Jun/29 06:26:05.419104 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:26:05.419171 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/29 06:26:05.419202 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 14
+2026/Jun/29 06:26:05.419211 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 14 was extracted from the queue of MSC.
+2026/Jun/29 06:26:05.844400 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:05.844468 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 90
+2026/Jun/29 06:26:05.844490 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 90
+2026/Jun/29 06:26:05.844499 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 90 was extracted from the queue of BSC.
+2026/Jun/29 06:26:06.804716 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:06.804805 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 91
+2026/Jun/29 06:26:06.804855 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 91
+2026/Jun/29 06:26:06.804871 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 91 was extracted from the queue of BSC.
+2026/Jun/29 06:26:07.884042 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:07.884151 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 92
+2026/Jun/29 06:26:07.884196 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 92
+2026/Jun/29 06:26:07.884229 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 92 was extracted from the queue of BSC.
+2026/Jun/29 06:26:08.845027 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:08.845133 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 93
+2026/Jun/29 06:26:08.845176 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 93
+2026/Jun/29 06:26:08.845194 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 93 was extracted from the queue of BSC.
+2026/Jun/29 06:26:09.924517 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:09.924627 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 94
+2026/Jun/29 06:26:09.924670 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 94
+2026/Jun/29 06:26:09.924688 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 94 was extracted from the queue of BSC.
+2026/Jun/29 06:26:10.424033 USER TC_26_6_5_7.ttcn3:865 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:26:10.424120 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/29 06:26:10.424157 PORTEVENT TC_26_6_5_7.ttcn3:933 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 15
+2026/Jun/29 06:26:10.424171 PORTEVENT TC_26_6_5_7.ttcn3:933 Message with id 15 was extracted from the queue of MSC.
+2026/Jun/29 06:26:10.883725 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:10.883805 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 95
+2026/Jun/29 06:26:10.883853 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 95
+2026/Jun/29 06:26:10.883864 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 95 was extracted from the queue of BSC.
+2026/Jun/29 06:26:11.844561 USER TC_26_6_5_7.ttcn3:865 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:11.844627 PORTEVENT TC_26_6_5_7.ttcn3:865 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 96
+2026/Jun/29 06:26:11.844651 PORTEVENT TC_26_6_5_7.ttcn3:866 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 96
+2026/Jun/29 06:26:11.844660 PORTEVENT TC_26_6_5_7.ttcn3:866 Message with id 96 was extracted from the queue of BSC.
+2026/Jun/29 06:26:12.827860 TIMEROP TC_26_6_5_7.ttcn3:938 Timeout T_ho_est: 30 s
+2026/Jun/29 06:26:12.827918 USER TC_26_6_5_7.ttcn3:939 *** Timeout waiting for ESTABLISH_IND/HANDOVER COMPLETE on Cell B TCH/F ***
+2026/Jun/29 06:26:12.827945 USER TC_26_6_5_7.ttcn3:940 *** Check: PHYSICAL INFO delivered? OsmocomBB gsm48_rr_rx_phys_info dispatch? ***
+2026/Jun/29 06:26:12.827988 USER TC_26_6_5_7.ttcn3:994 *** localtree1 [2] L!MDL_RelRq: releasing original Cell A channel (spec: MDLRelReq(TCV_chTch)) ***
+2026/Jun/29 06:26:12.828006 PORTEVENT TC_26_6_5_7.ttcn3:995 Sent on BSC to system charstring : "{\"command\": \"CMD_RELEASE_CHANNEL\", \"chan_nr\": 11}"
+2026/Jun/29 06:26:12.828076 USER TC_26_6_5_7.ttcn3:995 BSC_Port: TX: {"command": "CMD_RELEASE_CHANNEL", "chan_nr": 11}
+2026/Jun/29 06:26:12.828087 TIMEROP TC_26_6_5_7.ttcn3:997 Start timer T_rel_a: 3 s
+2026/Jun/29 06:26:12.923247 USER TC_26_6_5_7.ttcn3:998 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:12.923321 PORTEVENT TC_26_6_5_7.ttcn3:998 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 97
+2026/Jun/29 06:26:12.923346 PORTEVENT TC_26_6_5_7.ttcn3:999 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 97
+2026/Jun/29 06:26:12.923355 PORTEVENT TC_26_6_5_7.ttcn3:999 Message with id 97 was extracted from the queue of BSC.
+2026/Jun/29 06:26:13.884419 USER TC_26_6_5_7.ttcn3:998 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:13.884525 PORTEVENT TC_26_6_5_7.ttcn3:998 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 98
+2026/Jun/29 06:26:13.884571 PORTEVENT TC_26_6_5_7.ttcn3:999 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 98
+2026/Jun/29 06:26:13.884591 PORTEVENT TC_26_6_5_7.ttcn3:999 Message with id 98 was extracted from the queue of BSC.
+2026/Jun/29 06:26:14.829165 USER TC_26_6_5_7.ttcn3:998 BSC_Port: RX: {"status": "ok", "chan_nr": 11}
+2026/Jun/29 06:26:14.829252 PORTEVENT TC_26_6_5_7.ttcn3:998 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 11}" id 99
+2026/Jun/29 06:26:14.829296 PORTEVENT TC_26_6_5_7.ttcn3:999 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"chan_nr\": 11}" id 99
+2026/Jun/29 06:26:14.829316 PORTEVENT TC_26_6_5_7.ttcn3:999 Message with id 99 was extracted from the queue of BSC.
+2026/Jun/29 06:26:14.829414 TIMEROP TC_26_6_5_7.ttcn3:1000 Stop timer T_rel_a: 3 s
+2026/Jun/29 06:26:14.829439 USER TC_26_6_5_7.ttcn3:1035 *** localtree1 [5] +PostMainLinkRel(TCV_chTch1): releasing Cell B TCH/F ***
+2026/Jun/29 06:26:14.829469 PORTEVENT TC_26_6_5_7.ttcn3:1036 Sent on BSC to system charstring : "{\"command\": \"CMD_RELEASE_CHANNEL\", \"chan_nr\": 10}"
+2026/Jun/29 06:26:14.829562 USER TC_26_6_5_7.ttcn3:1036 BSC_Port: TX: {"command": "CMD_RELEASE_CHANNEL", "chan_nr": 10}
+2026/Jun/29 06:26:14.829585 TIMEROP TC_26_6_5_7.ttcn3:1038 Start timer T_rel: 5 s
+2026/Jun/29 06:26:14.843472 USER TC_26_6_5_7.ttcn3:1039 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:14.843578 PORTEVENT TC_26_6_5_7.ttcn3:1039 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 100
+2026/Jun/29 06:26:14.843625 PORTEVENT TC_26_6_5_7.ttcn3:1040 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 100
+2026/Jun/29 06:26:14.843644 PORTEVENT TC_26_6_5_7.ttcn3:1040 Message with id 100 was extracted from the queue of BSC.
+2026/Jun/29 06:26:15.430057 USER TC_26_6_5_7.ttcn3:1039 MSC_Port: RX: {"type": "HEARTBEAT"}
+2026/Jun/29 06:26:15.430136 PORTEVENT TC_26_6_5_7.ttcn3:1039 Message enqueued on MSC from system charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/29 06:26:15.430173 PORTEVENT TC_26_6_5_7.ttcn3:1044 Receive operation on port MSC succeeded, message from system(): charstring : "{\"type\": \"HEARTBEAT\"}" id 16
+2026/Jun/29 06:26:15.430188 PORTEVENT TC_26_6_5_7.ttcn3:1044 Message with id 16 was extracted from the queue of MSC.
+2026/Jun/29 06:26:15.919373 USER TC_26_6_5_7.ttcn3:1039 BSC_Port: RX: {"event": "MEAS_RES", "data": {"chan_nr": 10, "ncells": 0, "l3_data": ""}}
+2026/Jun/29 06:26:15.919495 PORTEVENT TC_26_6_5_7.ttcn3:1039 Message enqueued on BSC from system charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 101
+2026/Jun/29 06:26:15.919538 PORTEVENT TC_26_6_5_7.ttcn3:1040 Receive operation on port BSC succeeded, message from system(): charstring : "{\"event\": \"MEAS_RES\", \"data\": {\"chan_nr\": 10, \"ncells\": 0, \"l3_data\": \"\"}}" id 101
+2026/Jun/29 06:26:15.919554 PORTEVENT TC_26_6_5_7.ttcn3:1040 Message with id 101 was extracted from the queue of BSC.
+2026/Jun/29 06:26:16.832489 USER TC_26_6_5_7.ttcn3:1039 BSC_Port: RX: {"status": "ok", "chan_nr": 10}
+2026/Jun/29 06:26:16.832557 PORTEVENT TC_26_6_5_7.ttcn3:1039 Message enqueued on BSC from system charstring : "{\"status\": \"ok\", \"chan_nr\": 10}" id 102
+2026/Jun/29 06:26:16.832585 PORTEVENT TC_26_6_5_7.ttcn3:1040 Receive operation on port BSC succeeded, message from system(): charstring : "{\"status\": \"ok\", \"chan_nr\": 10}" id 102
+2026/Jun/29 06:26:16.832593 PORTEVENT TC_26_6_5_7.ttcn3:1040 Message with id 102 was extracted from the queue of BSC.
+2026/Jun/29 06:26:16.832645 TIMEROP TC_26_6_5_7.ttcn3:1041 Stop timer T_rel: 5 s
+2026/Jun/29 06:26:16.832688 USER TC_26_6_5_7.ttcn3:1078 ========== TEST SUMMARY ==========
+2026/Jun/29 06:26:16.832694 USER TC_26_6_5_7.ttcn3:1079 TC_26_6_5_7: Non-Synchronised Inter-Cell Handover with OTD Report
+2026/Jun/29 06:26:16.832699 USER TC_26_6_5_7.ttcn3:1080 Total sub-tests: 5
+2026/Jun/29 06:26:16.832709 USER TC_26_6_5_7.ttcn3:1081 Passed: 2
+2026/Jun/29 06:26:16.832715 USER TC_26_6_5_7.ttcn3:1082 Failed: 3
+2026/Jun/29 06:26:16.832719 USER TC_26_6_5_7.ttcn3:1083 Sub-test 1 (idle-updated, FH-SKIP):            true
+2026/Jun/29 06:26:16.832733 USER TC_26_6_5_7.ttcn3:1084 Sub-test 2 (MT call on Cell A TCH/F):          true
+2026/Jun/29 06:26:16.832739 USER TC_26_6_5_7.ttcn3:1085 Sub-test 3 (HO access burst L_0259 P):         false (ref_fail=false)
+2026/Jun/29 06:26:16.832750 USER TC_26_6_5_7.ttcn3:1086 Sub-test 4 (HO COMPLETE on Cell B, localtree1):false (ta_fail=false)
+2026/Jun/29 06:26:16.832755 USER TC_26_6_5_7.ttcn3:1087 Sub-test 5 (CheckMTDif L_1063 P):              false (fail=false motdif=-1)
+2026/Jun/29 06:26:16.832761 USER TC_26_6_5_7.ttcn3:1088 HO access burst count:                         0
+2026/Jun/29 06:26:16.832766 USER TC_26_6_5_7.ttcn3:1089 PHYSICAL INFO sent (TA=20):                    true
+2026/Jun/29 06:26:16.832771 USER TC_26_6_5_7.ttcn3:1090 --- PARTIAL items (infrastructure/FH-SKIP adaptations) ---
+2026/Jun/29 06:26:16.832774 USER TC_26_6_5_7.ttcn3:1091 "FH-SKIP-1: Step [3] +IdleUpdated C_Test_fh " & char(0, 0, 32, 20) & " h=0 fixed channel preamble"
+2026/Jun/29 06:26:16.832784 USER TC_26_6_5_7.ttcn3:1092 "FH-SKIP-2: Step [6] +FullRateCh_B_1_pwr FreqTCH hopping " & char(0, 0, 32, 20) & " fixed ARFCN 56"
+2026/Jun/29 06:26:16.832791 USER TC_26_6_5_7.ttcn3:1093 "PARTIAL-3: localtree L?DL_RacInHoacc " & char(0, 0, 32, 20) & " approximated via HANDOVER_DETECTED BSC event"
+2026/Jun/29 06:26:16.832798 USER TC_26_6_5_7.ttcn3:1094 "PARTIAL-1: localtree1 OM_GetL1Hd " & char(0, 0, 32, 20) & " SACCH L1 header not readable via BSC stub"
+2026/Jun/29 06:26:16.832805 USER TC_26_6_5_7.ttcn3:1095 --- Spec verdict conditions ---
+2026/Jun/29 06:26:16.832809 USER TC_26_6_5_7.ttcn3:1096 L_0259 [TCV_Hrf=TSPX_HoRefB] (P):              false
+2026/Jun/29 06:26:16.832813 USER TC_26_6_5_7.ttcn3:1097 L_0258 [TCV_Hrf<>TSPX_HoRefB] (F):             false
+2026/Jun/29 06:26:16.832817 USER TC_26_6_5_7.ttcn3:1098 "L_1063 [CheckMTDif within " & char(0, 0, 0, 177) & "2] (P):             "false
+2026/Jun/29 06:26:16.832842 USER TC_26_6_5_7.ttcn3:1099 L_1049 [CheckMTDif out of range] (F):          false
+2026/Jun/29 06:26:16.832847 USER TC_26_6_5_7.ttcn3:1100 L_0257 [TCV_L1Head.ta<>'0010100'B] (F):         false
+2026/Jun/29 06:26:16.832851 USER TC_26_6_5_7.ttcn3:1101 ========== TEST SUMMARY END ==========
+2026/Jun/29 06:26:16.832856 TIMEROP TC_26_6_5_7.ttcn3:1103 Stop timer T_guard: 300 s
+2026/Jun/29 06:26:16.832874 PARALLEL TC_26_6_5_7.ttcn3:1104 Unmapping port mtc:BSC from system:BSC.
+2026/Jun/29 06:26:16.833038 USER TC_26_6_5_7.ttcn3:1104 BSC_Port: Unmapping
+2026/Jun/29 06:26:16.833139 PORTEVENT TC_26_6_5_7.ttcn3:1104 Port BSC was unmapped from system:BSC.
+2026/Jun/29 06:26:16.833179 PARALLEL TC_26_6_5_7.ttcn3:1104 Unmap operation of mtc:BSC from system:BSC finished.
+2026/Jun/29 06:26:16.833189 PARALLEL TC_26_6_5_7.ttcn3:1105 Unmapping port mtc:MSC from system:MSC.
+2026/Jun/29 06:26:16.833207 USER TC_26_6_5_7.ttcn3:1105 MSC_Port: Unmapping from MSC
+2026/Jun/29 06:26:16.833265 PORTEVENT TC_26_6_5_7.ttcn3:1105 Port MSC was unmapped from system:MSC.
+2026/Jun/29 06:26:16.833285 PARALLEL TC_26_6_5_7.ttcn3:1105 Unmap operation of mtc:MSC from system:MSC finished.
+2026/Jun/29 06:26:16.833291 PARALLEL TC_26_6_5_7.ttcn3:1106 Unmapping port mtc:L from system:L.
+2026/Jun/29 06:26:16.833305 USER TC_26_6_5_7.ttcn3:1106 L3_Port: Unmapping from L
+2026/Jun/29 06:26:16.833340 PORTEVENT TC_26_6_5_7.ttcn3:1106 Port L was unmapped from system:L.
+2026/Jun/29 06:26:16.833357 PARALLEL TC_26_6_5_7.ttcn3:1106 Unmap operation of mtc:L from system:L finished.
+2026/Jun/29 06:26:16.833361 PARALLEL TC_26_6_5_7.ttcn3:1107 Unmapping port mtc:VTY from system:VTY.
+2026/Jun/29 06:26:16.833374 USER TC_26_6_5_7.ttcn3:1107 VTY_PT: Unmapping port from VTY interface
+2026/Jun/29 06:26:16.833435 USER TC_26_6_5_7.ttcn3:1107 VTY_PT: Disconnected from VTY
+2026/Jun/29 06:26:16.833454 PORTEVENT TC_26_6_5_7.ttcn3:1107 Port VTY was unmapped from system:VTY.
+2026/Jun/29 06:26:16.833469 PARALLEL TC_26_6_5_7.ttcn3:1107 Unmap operation of mtc:VTY from system:VTY finished.
+2026/Jun/29 06:26:16.833514 VERDICTOP TC_26_6_5_7.ttcn3:1116 setverdict(inconc): none -> inconc
+2026/Jun/29 06:26:16.833604 PARALLEL TC_26_6_5_7.ttcn3:1116 Terminating component type GSM_Component_Definitions.GSM_CT.
+2026/Jun/29 06:26:16.833626 USER TC_26_6_5_7.ttcn3:1116 L3_Port: user_stop called
+2026/Jun/29 06:26:16.833640 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port L was stopped.
+2026/Jun/29 06:26:16.833654 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port RR was stopped.
+2026/Jun/29 06:26:16.833664 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port MM was stopped.
+2026/Jun/29 06:26:16.833672 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port CC was stopped.
+2026/Jun/29 06:26:16.833675 USER TC_26_6_5_7.ttcn3:1116 MSC_Port: user_stop called
+2026/Jun/29 06:26:16.833689 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port MSC was stopped.
+2026/Jun/29 06:26:16.833695 USER TC_26_6_5_7.ttcn3:1116 BSC_Port: user_stop called
+2026/Jun/29 06:26:16.833707 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port BSC was stopped.
+2026/Jun/29 06:26:16.833711 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port RSL was stopped.
+2026/Jun/29 06:26:16.833714 USER TC_26_6_5_7.ttcn3:1116 VTY_PT: Stopping
+2026/Jun/29 06:26:16.833725 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port VTY was stopped.
+2026/Jun/29 06:26:16.833730 PORTEVENT TC_26_6_5_7.ttcn3:1116 Port COORD was stopped.
+2026/Jun/29 06:26:16.833733 PARALLEL TC_26_6_5_7.ttcn3:1116 Component type GSM_Component_Definitions.GSM_CT was shut down inside testcase TC_26_6_5_7.
+2026/Jun/29 06:26:16.833739 EXECUTOR TC_26_6_5_7.ttcn3:1116 Waiting for PTCs to finish.
+2026/Jun/29 06:26:16.833774 VERDICTOP TC_26_6_5_7.ttcn3:1116 Setting final verdict of the test case.
+2026/Jun/29 06:26:16.833863 VERDICTOP TC_26_6_5_7.ttcn3:1116 Local verdict of MTC: inconc
+2026/Jun/29 06:26:16.833912 VERDICTOP TC_26_6_5_7.ttcn3:1116 No PTCs were created.
+2026/Jun/29 06:26:16.833933 TESTCASE TC_26_6_5_7.ttcn3:1116 Test case TC_26_6_5_7 finished. Verdict: inconc
+2026/Jun/29 06:26:16.834080 STATISTICS - Verdict statistics: 0 none (0.00 %), 0 pass (0.00 %), 1 inconc (100.00 %), 0 fail (0.00 %), 0 error (0.00 %).
+2026/Jun/29 06:26:16.834125 STATISTICS - Test execution summary: 1 test case was executed. Overall verdict: inconc
+2026/Jun/29 06:26:16.834128 EXECUTOR - Exit was requested from MC. Terminating MTC.
