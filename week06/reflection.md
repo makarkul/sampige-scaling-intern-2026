@@ -30,7 +30,7 @@
   1 FAIL / 2 PASS on identical code — confirmed the failure was parallelism-
   induced rather than a test defect by re-running `TC_26_6_2_1_1` solo
   (`run20260701-104516-N1`, PASS, committed as `ff27321`) (W6.3).
-- Started widening the validated test corpus beyond the original 16-test set:
+- Started running a wider batch of new tests beyond the original 16-test set:
   5 separate N=8 discovery runs on 2026-07-02 (`run20260702-071554` through
   `-095213`, revision `8987268`) against ~30 previously-unrun test IDs
   (`TC_26_3_2`, `TC_26_6_12_3`, `TC_26_7_4_2_4_5`, `TC_26_8_1_2_4_13`,
@@ -58,7 +58,7 @@
   for the rest of the batch); `TC_26_7_4_2_2_1` FAILed at 939.2 s in a later
   batch. Neither looks like a scheduling artifact — both ran 4–8× longer than
   every passing test around them before failing.
-- **`TC_26_3_2` is flaky in the wider corpus** — PASSed (238.1 s) in one N=8
+- **`TC_26_3_2` is flaky in the wider test batch** — PASSed (238.1 s) in one N=8
   batch and FAILed (148.6 s) in another otherwise-identical batch on the same
   revision (`8987268`).
 
@@ -87,4 +87,4 @@
   before FAIL) — likely a stack-level timeout bug, not a harness issue.
 - Resolve the `TC_26_3_2` flake.
 - Continue assembling a validated "set 2" 16-test campaign from the
-  corpus-expansion runs.
+  new-test runs.

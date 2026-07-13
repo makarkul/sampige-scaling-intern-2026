@@ -17,7 +17,7 @@
   `${DEMO_REPO}/scripts/run-one.sh`) — not yet re-validated with a rerun
   (W7.1).
 - Assembled `scripts/sliding-window-campaign-2.cfg`: a second, non-overlapping
-  16-test set, continuing the corpus-expansion work started in week06 (W7.2).
+  16-test set, continuing the new-test work started in week06 (W7.2).
 
 ## 2. Key findings
 
@@ -26,9 +26,10 @@
   `run-one.sh` that predated week06's isolation fixes.
 - **"All tests failed identically" is a harness signal, not a test-content
   signal** — worth checking the script path being resolved before concluding a
-  wide-corpus batch itself is bad.
-- Corpus expansion is currently blocked on validating the path fix: campaign-2
-  (16 tests) is drafted but has not yet been run against a corrected harness.
+  wider test batch itself is bad.
+- The new-test work is currently blocked on validating the path fix:
+  campaign-2 (16 tests) is drafted but has not yet been run against a
+  corrected harness.
 
 ## 3. Surprises
 
@@ -51,4 +52,4 @@
   `results/week06`/`results/week07` run bundles.
 - Reconcile `tracking.csv`: week06/07 rows still describe a Tune/Robustness
   plan (pod tuning, LPT sharding, Prometheus/Grafana) that wasn't executed as
-  written; actual work was isolation-bug diagnosis and test-corpus expansion.
+  written; actual work was isolation-bug diagnosis and running new tests.

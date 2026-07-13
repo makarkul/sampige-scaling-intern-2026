@@ -193,7 +193,7 @@ worker() {
     # run-one.sh owns the full Helm lifecycle for this test:
     #   helm install → wait_deployments → wait_attached → wait_boot_lu_clear
     #   → run TTCN-3 job → collect verdict → helm uninstall → kubectl delete ns
-    RUN_ONE_OUT="${tc_dir}" "${SCRIPT_DIR}/run-one.sh" "${ns}" "${tc}" \
+    RUN_ONE_OUT="${tc_dir}" "${DEMO_REPO}/scripts/run-one.sh" "${ns}" "${tc}" \
       >> "${ns_dir}/run-one-outer.log" 2>&1 || true
     # When run-one.sh returns, loop back and claim the next test immediately.
   done
