@@ -31,7 +31,7 @@ Steps 1 and 3 (bring-up + teardown) take about **96 seconds**, no matter how sho
 ### Docker
 - A **container** packages an app with everything it needs to run, isolated from the host.
 - `docker compose` starts a group of containers together and wires up networking between them using service names as hostnames.
-- Containers on the same compose network can reach each other by name (e.g. `osmo-stp:2905`), but that name resolution doesn't carry over into Kubernetes — this caused real bugs (see Section 6).
+- Containers on the same compose network can reach each other by name (e.g. `osmo-stp:2905`), but that name resolution doesn't carry over into Kubernetes — this caused real bugs (see Section 12).
 
 ### Kubernetes
 - **Pod** — the smallest deployable unit; one or more containers that share a network and storage.
@@ -41,10 +41,160 @@ Steps 1 and 3 (bring-up + teardown) take about **96 seconds**, no matter how sho
 - **Job** — a pod that runs to completion (used to run the TTCN-3 test) instead of running forever like a normal service.
 - **ConfigMap** — configuration files injected into pods without baking them into the image.
 - **ResourceQuota / LimitRange** — caps how much CPU/memory a namespace (Quota) or a single container (LimitRange) is allowed to use.
-- **Readiness/liveness probes** — health checks Kubernetes uses to decide if a pod is ready for traffic, or if it should be restarted. (These caused two of the bugs found in this project — see Section 6.)
-- **Helm** — a templating tool for Kubernetes manifests. One "chart" + different values (namespace name, socket paths) can stamp out many identical, isolated copies of the stack. This is what let the project go from "1 namespace by hand" to "N namespaces on demand."
+- **Readiness/liveness probes** — health checks Kubernetes uses to decide if a pod is ready for traffic, or if it should be restarted. (These caused two of the bugs found in this project — see Section 12.)
+- **Helm** — a templating tool for Kubernetes manifests. One "chart" + different values (namespace name, socket paths) can stamp out many identical, isolated copies of the stack. More on this in Section 9.
 
-## 4. The speed-up numbers
+## 4. How the parallelism actually happened — Docker to Kubernetes
+
+This is the core trick of the whole project, so it's worth walking through step by step.
+
+### 4.1 Why docker-compose can't just be "run twice"
+
+The original setup is one docker-compose network, with fixed container names, a fixed docker network, and a fixed host folder for the mobile's L1CTL socket:
+
+```mermaid
+flowchart LR
+    subgraph Host["Single Docker host"]
+        subgraph Net["one docker-compose network — fixed names"]
+            TTCN[ttcn3 runner] --> MSC[osmo-msc]
+            MSC --> HLR[osmo-hlr]
+            MSC --> STP[osmo-stp]
+            STP --> BSC[osmo-bsc]
+            BSC --> MGW[osmo-mgw]
+            BSC --> BTS[osmo-bts-virtual]
+            BTS --> PHY[osmo-virtphy]
+            PHY --> MOBILE[osmo-mobile]
+        end
+    end
+```
+
+If you tried to start this stack a second time on the same host, the second copy would try to create containers with the same names, bind the same docker network, and write to the same host folder as the first — it would either fail to start or silently corrupt the first copy's state. **docker-compose has no built-in idea of "isolated copy N of this stack."** Every name is shared and global to the host.
+
+### 4.2 What Kubernetes namespaces give us for free
+
+A Kubernetes **namespace** is a boundary that scopes names: a Service called `osmo-stp` in namespace `gsm-1` is a completely different object, with a completely different DNS name (`osmo-stp.gsm-1.svc.cluster.local`) and IP, than a Service called `osmo-stp` in namespace `gsm-2`. Same manifest, same names inside it — but Kubernetes keeps every namespace's copy separate automatically.
+
+```mermaid
+flowchart TB
+    subgraph Node["One Kubernetes node (k3s), 48 cores"]
+        subgraph NS1["Namespace: gsm-1"]
+            A1["8 GSM stack pods\n(bsc, bts, msc-stub, hlr, mgw, stp, mobile, virtphy)"] --> J1[ttcn3 Job pod]
+        end
+        subgraph NS2["Namespace: gsm-2"]
+            A2["8 GSM stack pods"] --> J2[ttcn3 Job pod]
+        end
+        subgraph NS3["Namespace: gsm-N"]
+            A3["8 GSM stack pods"] --> J3[ttcn3 Job pod]
+        end
+    end
+    Launcher["launcher\n(run-n.sh / run-sliding-window.sh)"] -->|helm install gsm-1| NS1
+    Launcher -->|helm install gsm-2| NS2
+    Launcher -->|helm install gsm-N| NS3
+```
+
+This namespace boundary is *why* the parallelism is possible at all: converting docker-compose to Kubernetes manifests (Week 2) plus wrapping them in a namespace-parameterized Helm chart (Week 3) turned "one fixed stack" into "a stack template that can be stamped out N times, side by side, on the same physical machine."
+
+### 4.3 What still had to be fixed by hand
+
+Kubernetes gives namespace isolation for DNS and pod IPs automatically, but a few things from the docker-compose days were **not** namespace-aware out of the box, and had to be explicitly parameterized per namespace before parallel runs actually worked cleanly:
+
+| Leftover single-instance assumption | Fix |
+|---|---|
+| The mobile's L1CTL Unix socket was written to one fixed host folder (`/tmp/osmocom-l2`) | Rewritten per namespace: `/tmp/osmocom-l2-<namespace>` |
+| The fake radio (GSMTAP) used one fixed multicast group for every instance | Each namespace derives its own multicast group from its namespace number |
+| A CPU quota template divided the namespace limit by a hardcoded container count | Fixed to match the real per-namespace pod count |
+
+Once these were parameterized per namespace (alongside the namespace name itself), N fully isolated copies of the stack could run at the same time without stepping on each other — which is what actually produces the speed-up numbers in Section 10.
+
+## 5. How a Docker run works
+
+```mermaid
+flowchart TD
+    A["./build-images.sh<br/>(build all images)"] --> B["./run-ttcn3-tests.sh TC_xxx"]
+    B --> C["docker compose -f compose/ttcn3.yml up<br/>ONE full GSM stack"]
+    C --> D["TITAN compiles + runs the test"]
+    D --> E["verdict →<br/>ttcn3/logs/TC_xxx-&lt;ts&gt;/MTC.log"]
+    E --> F["docker compose down -v<br/>(tear down)"]
+    F --> G{"more tests?"}
+    G -->|"yes → sequential"| B
+    G -->|"no"| H(["Done"])
+```
+
+## 6. How a Kubernetes run works
+
+```mermaid
+flowchart TD
+    A["./build-images.sh"] --> B["./k8s/import-images.sh<br/>push images →<br/>localhost:5000"]
+    B --> C["run-k8s-campaign.sh --<br/>workers N --file tests.txt"]
+    C --> D["run-n.sh<br/>schedules N tests in<br/>parallel"]
+    D --> E1["namespace gsm-1<br/>helm install full stack"]
+    D --> E2["namespace gsm-2<br/>helm install full stack"]
+    D --> E3["namespace gsm-N<br/>..."]
+    E1 --> F["per-namespace verdict"]
+    E2 --> F
+    E3 --> F
+    F --> G["results.json + logs<br/>+ live status feed"]
+```
+
+*Each namespace is an independent, isolated copy of the whole GSM stack (deployed by the Helm chart in `k8s/chart/`), with its own GSMTAP multicast group so parallel tests don't interfere. When one test finishes, its namespace is torn down and the next test takes the slot.*
+
+## 7. Docker vs Kubernetes — quick comparison
+
+```mermaid
+flowchart TD
+    subgraph K8S["Kubernetes (parallel, N=6)"]
+        RN["run-n.sh"] --> NS1["gsm-1"]
+        RN --> NS2["gsm-2"]
+        RN --> NS3["gsm-3"]
+        RN --> NS4["gsm-4"]
+        RN --> NS5["gsm-5"]
+        RN --> NS6["gsm-6"]
+    end
+
+    subgraph DK["Docker (sequential)"]
+        S["stack"] --> T1["test 1"] --> T2["test 2"] --> T3["test 3 ..."]
+    end
+
+    K8S ~~~ DK
+
+    style K8S fill:#fdf8d6,stroke:#8b0000,color:#8b0000
+    style DK fill:#fdf8d6,stroke:#8b0000,color:#8b0000
+```
+
+## 8. Why Kubernetes for large scale
+
+Compared to just running more docker-compose stacks by hand, Kubernetes gives several things this project relied on directly:
+
+1. **Namespace isolation, for free.** As shown above, N independent copies of the same stack can exist on one host without manually renaming every container, network, and volume path — Kubernetes handles the DNS/IP scoping automatically. Doing the equivalent in plain docker-compose would mean hand-managing unique project names, container names, networks, and host paths for every one of the N copies — fragile and easy to get wrong.
+2. **A built-in scheduler.** Kubernetes decides which physical resources each pod gets and packs pods onto the node automatically. Nobody had to manually figure out "which containers can share this core."
+3. **Declarative, repeatable setup.** The whole stack is described in YAML/Helm templates. Bringing up (or tearing down) a namespace is one command, and it produces the same result every time — this is what makes the speed-up numbers in this report reproducible.
+4. **Resource controls per tenant.** `ResourceQuota` and `LimitRange` let many parallel copies safely share one host without one namespace starving the others of CPU (Section 13). Docker-compose has no equivalent per-project quota system.
+5. **Self-healing.** A crashed pod is restarted automatically by its Deployment. (This cuts both ways here — two of the bugs in Section 12 were caused by a *health check itself* being wrong, not by the crash-recovery idea being bad.)
+6. **A natural fit for "run to completion" work.** Kubernetes' `Job` primitive is built exactly for one-shot work like a TTCN-3 test run, as opposed to `Deployment`, which is built for long-running services.
+7. **Room to grow.** Nothing here is single-node-specific by design — the same namespace + Helm chart approach would extend to a multi-node cluster if the server ever needed to grow beyond 48 cores (explicitly out of scope for this internship, but a natural next step).
+
+## 9. Helm charts and how they enabled the scaling
+
+**What Helm is:** a templating tool for Kubernetes manifests. A "chart" is a set of YAML templates with placeholders; a set of "values" fills in those placeholders. `helm install <release-name> <chart> --set key=value` renders the templates and applies them to the cluster in one step.
+
+**Before Helm (Week 2):** the single-namespace setup worked by running `sed` substitutions over raw YAML files to swap in a namespace name. This worked for one namespace, but every new thing that needed to vary per namespace (a socket path, a multicast group, a CPU limit) meant writing another fragile string-replacement pass in the launcher script.
+
+**After Helm (Week 3 onward):** the manifests became a chart, and everything that needs to differ per copy of the stack became a named value:
+
+```mermaid
+flowchart LR
+    Chart["Helm chart\n(k8s/chart/templates/*.yaml)"]
+    Values["values.yaml\nnamespace, l1ctlSocketDir,\ndlGroup/ulGroup, cpuLimit, testName"]
+    Chart --> Render
+    Values --> Render
+    Render["helm install gsm-N\n(template + values)"] --> R1[Release: gsm-1]
+    Render --> R2[Release: gsm-2]
+    Render --> R3[Release: gsm-N]
+```
+
+This is what turned "one namespace, wired up by hand" into "N namespaces on demand": the launcher scripts (`run-n.sh`, `run-sliding-window.sh`) just call `helm install`/`helm uninstall` in a loop, once per namespace, and Helm guarantees every copy is built from the same template and stays internally consistent. Every new isolation fix found during the project (per-namespace socket path, per-namespace GSMTAP group, the CPU `ResourceQuota`/`LimitRange` pair) was added as one more chart value rather than another one-off script hack — so the chart is now the single source of truth for "what does one isolated instance of this stack look like," and scaling to a new N is just calling it more times.
+
+## 10. The speed-up numbers
 
 **Definitions used throughout:**
 - `T_suite(N)` — wall-clock time for the whole run at N parallel namespaces.
@@ -84,7 +234,7 @@ Safe max N = floor((110 − 5) / 9) = 11
 
 N=12 needs 113 pods — over the limit. It caused pods to get stuck "Pending" and one test failed that normally passes, consistent with pods waiting for a scheduling slot rather than a real test bug. **N=11 was confirmed as the safe ceiling** for this server.
 
-## 5. Sliding-window scheduling (instead of static/smart sharding)
+## 11. Sliding-window scheduling (instead of static/smart sharding)
 
 The plan originally called for **round-robin sharding** first (split tests evenly across N namespaces up front), then **smart sharding** later — sort tests by known duration and pack them so each namespace gets roughly equal total work (longest-processing-time-first, "LPT" bin packing).
 
@@ -104,9 +254,9 @@ read + remove one line from the queue file   →  the exclusive section
 
 If two slots finish at the same moment and both try to claim the next test, one gets the lock first and pops its test; the second one simply waits (blocked by the lock) until the first is done, then pops the *next* line — so it's mathematically impossible for two slots to claim the same test. This is exactly the classic mutex pattern (lock → critical section → unlock), just implemented with a file lock instead of an in-memory one, which works fine across separate shell processes.
 
-**Result:** the sliding window kept all 11 namespaces continuously busy on the 16-test suite and reached 5.76× speed-up at N=11 — matching what LPT sharding aims for, but without ever needing to know test durations ahead of time, and with worse-case idle time only ever as large as one slot waiting briefly on a lock, not an entire namespace sitting idle for a whole run.
+**Result:** the sliding window kept all 11 namespaces continuously busy on the 16-test suite and reached 5.76× speed-up at N=11 — matching what LPT sharding aims for, but without ever needing to know test durations ahead of time, and with worst-case idle time only ever as large as one slot waiting briefly on a lock, not an entire namespace sitting idle for a whole run.
 
-## 6. Bugs found (parallelism surfaced real bugs, not just resource limits)
+## 12. Bugs found (parallelism surfaced real bugs, not just resource limits)
 
 Running many copies of the same network side-by-side exposed problems that never showed up running one at a time:
 
@@ -119,7 +269,7 @@ Running many copies of the same network side-by-side exposed problems that never
 
 **Common thread:** most of these bugs were invisible at N=1 and only appeared once multiple namespaces ran side by side. Scaling up doesn't just test resource limits — it also finds hidden shared-state bugs.
 
-## 7. CPU limits — the math
+## 13. CPU limits — the math
 
 **Question:** how little CPU can we give each namespace and still have every test pass? Giving each namespace a hard cap matters because with no cap, one namespace can "steal" CPU from the others when all N are running at once.
 
@@ -169,25 +319,6 @@ More namespaces competing for the same 48 physical cores means each one needs mo
 - Too little CPU doesn't just slow tests down — below a certain point it makes them fail outright, because GSM protocol timers expire while a starved pod waits for CPU time.
 - There's a small band ("the elbow") between "just barely enough" and "clearly enough" — always leave a margin above it.
 
-## 8. Status vs. the original plan
-
-Completed:
-- Reproducible single-namespace and multi-namespace Kubernetes setup (Helm chart).
-- Launcher that runs N namespaces in parallel and collects results, using a mutex-protected sliding-window dispatcher instead of static sharding.
-- Full measurement harness with timing, CPU/memory logs, and plots.
-- Speed-up curve from N=1 to N=11, with the ceiling explained (pod limit).
-- CPU-limit math worked out and validated at two different N values.
-
-Not completed (carried over, should be next steps):
-- **Node-level tuning** (kernel sysctls, ulimits) — never attempted; time went into fixing the parallelism bugs above instead.
-- **Failure isolation / retries** — a single namespace failing can still affect the whole run.
-- **Prometheus/Grafana dashboard** — not built.
-- **Runbook for a new engineer** — not written yet.
-
-## 9. Recommendations
+## 14. Recommendations
 
 1. **Use N=11 as the default parallelism** on this 48-core / 110-pod-limit server, with a CPU limit around **300m per namespace** for 8-test batches, scaled up (e.g. 500m+) as N grows.
-2. **Fix the one long test (TC_26_6_1_1, ~412 s)** or exclude it from timing-critical runs — it alone sets the floor for how fast the whole suite can finish, regardless of N.
-3. **Treat health probes with suspicion** when a test fails right after parallelizing — two of the six bugs found were probes killing healthy processes.
-4. Before trusting a "test failed" result, **double check which script version actually ran** — a stale script silently produced a batch of false failures in Week 7.
-5. Next engineer picking this up should prioritize: node-level tuning, the retry/isolation logic, and the dashboard — these were planned but not done.
