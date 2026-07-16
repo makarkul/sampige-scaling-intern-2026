@@ -12,8 +12,8 @@ how to reproduce this calculation on any new server.
 
 Running N namespaces in parallel means N × (stack pods) all competing for the same node's
 CPU, RAM, and the Kubernetes hard pod-count limit. Running too many causes overcommitted
-pods, throttling, or evictions; running too few wastes available hardware. The goal is a
-repeatable formula — not trial and error — for picking N on any server.
+pods and throttling and running too few wastes available hardware. The goal is a
+repeatable formula for picking N on any server.
 
 There are **three independent ceilings**. The real answer is whichever one is *smallest*:
 
@@ -63,19 +63,20 @@ on lab hardware:
 
 | Runner | Specs | W_ram | W_cpu | min(W_ram, W_cpu) | What actually happened |
 |---|---|---|---|---|---|
-| Laptop | 12 CPU, 19 GB RAM | (19−4)/4 = **3** | (12−2)/1.5 = **6** | 3 | Ran N=6 in practice — overcommitted RAM. Reduced to **N=4** for reliability. |
-| CI/CD server | ~16 CPU, ~48 GB RAM | (48−4)/4 = **11** | (16−2)/1.5 = **9** | 9 | Pod-count ceiling (see §4) actually capped this to N=11 max; ran **N=6** conservatively (~48% RAM used), well under the pod-count and RAM ceilings, prioritizing reproducibility over squeezing out the last few workers. |
+| Laptop | 12 CPU, 19 GB RAM | (19−4)/4 = **3** | (12−2)/1.5 = **6** | 3 | Ran **N=6** in practice — above the RAM-bound estimate, but held steady with no observed issues. |
+| CI/CD server | ~16 CPU, ~48 GB RAM | (48−4)/4 = **11** | (16−2)/1.5 = **9** | 9 | No pod-count limit was set on this server. Ran **N=6** conservatively (~48% RAM used), well under both the RAM and CPU ceilings, prioritizing reproducibility over squeezing out the last few workers. |
 
-**Takeaway:** the formula told us the theoretical ceiling; we deliberately ran *below* it
-on both machines for stability and reproducible test results. The formula is a safe upper
-bound, not a target to hit exactly.
+**Takeaway:** the formula gives a theoretical ceiling, not a target to hit exactly. On the
+laptop, the CPU-bound number (6) turned out to be usable in practice despite RAM being the
+tighter constraint on paper; on the CI/CD server, N was kept well under both ceilings for
+stability and reproducible test results.
 
 ---
 
 ## 4. Pod-count ceiling (Kubernetes default limit)
 
 Kubernetes defaults to a **110 pods per node** limit regardless of how much CPU/RAM is free.
-On the CI/CD server this was the first ceiling hit:
+On the CDAC server this was the first ceiling hit:
 
 ```
 Safe max N = floor( (110 − system_pods) / pods_per_namespace )
@@ -83,9 +84,7 @@ Safe max N = floor( (110 − system_pods) / pods_per_namespace )
            = 11
 ```
 
-This is why the CI/CD server was tested with **N = 11** even though the RAM/CPU formula
-above (§3) allowed up to 9–11 depending on the bound — pod count and RAM converged around
-the same practical ceiling for that machine.
+This is why the CDAC server was tested with **N = 11**.
 
 ---
 
@@ -96,14 +95,12 @@ server-specific number, measure actual per-pod CPU usage under load and derive a
 budget:
 
 ```
-1. Sample actual CPU usage per pod during a real test run (kubectl top pods).
-2. max_cpu_per_pod   = highest observed value across pods (e.g. 34m)
-3. cpu_per_namespace = max_cpu_per_pod × pods_per_namespace          (34m × 9 = 306m)
-4. cpu_per_namespace_with_headroom = cpu_per_namespace × 1.2         (+20% safety margin → 370m)
-5. effective_cpu_per_pod = cpu_per_namespace_with_headroom / pods_per_namespace   (370m / 9 ≈ 41m)
-6. total_cluster_cpu_millicores = CPU_cores × 1000                    (48 cores → 48,000m)
-7. max_pods_cpu_bound  = floor(total_cluster_cpu_millicores / effective_cpu_per_pod)
-8. W_cpu_precise        = floor(max_pods_cpu_bound / pods_per_namespace)
+cpu_per_namespace                 = max_cpu_per_pod × pods_per_namespace
+cpu_per_namespace_with_headroom   = cpu_per_namespace × 1.2
+effective_cpu_per_pod             = cpu_per_namespace_with_headroom / pods_per_namespace
+total_cluster_cpu_millicores      = CPU_cores × 1000
+max_pods_cpu_bound                = floor(total_cluster_cpu_millicores / effective_cpu_per_pod)
+W_cpu_precise                     = floor(max_pods_cpu_bound / pods_per_namespace)
 ```
 
 **CDAC server example (48 cores):**
@@ -114,16 +111,6 @@ budget:
 - `max_pods_cpu_bound` = 48,000 / 41 ≈ **1,170 pods**
 - `W_cpu_precise` = 1,170 / 9 ≈ **130 namespaces (theoretical, CPU-only)**
 
-This confirmed on real hardware: with N=11 namespaces running in parallel (constrained by
-the 110-pod limit, not CPU), **16/16 tests passed** with a measured speedup of **S(11) = 5.44×**
-over sequential execution — i.e., CPU was nowhere near saturated at that N, consistent with
-CPU not being the binding constraint.
-
-> **Why this matters:** `LimitRange` only ensures every pod *has* requests/limits set —
-> it doesn't pin pods to specific physical cores, and `ResourceQuota` only caps total
-> namespace-level consumption — it doesn't prevent other workloads from sharing the same
-> cores simultaneously. Neither primitive alone tells you the *safe parallel count*; the
-> millicore-budget calculation above is what actually answers that question.
 
 ---
 
@@ -168,19 +155,11 @@ L2:                   48 MiB (48 instances)
 L3:                   71.5 MiB (2 instances)
 Virtualization:       VT-x (bare-metal Xeon, not a virtualized/QEMU guest)
 ```
-
-This confirms the 48-core figure used in the CPU-bound calculation (§5) and the RAM-bound
-calculation (§6) both refer to the same physical node. One practical note for future runs
-on this class of hardware: it's a **2-NUMA-node** machine (24 cores per node) — if pinning
-or performance consistency ever becomes a concern, namespaces should ideally be scheduled
-so they don't straddle both NUMA nodes, since cross-node memory access is slower than
-same-node access.
-
 ---
 
-## 8. General recipe — applying this to *any* new server
+## 8. General Steps — applying this to *any* new server
 
-1. **Get hardware specs**
+1. **Get hardware specifications**
    ```
    lscpu                      # CPU cores
    free -h                    # total RAM
@@ -195,11 +174,11 @@ same-node access.
    memory in one namespace).
 
 3. **Compute all three ceilings:**
-   - `W_ram` — use §6 (percentage safe-ceiling method) for the most robust result on
-     unfamiliar hardware; use §3's flat-GB method only as a fast rough estimate.
-   - `W_cpu` — use §5 (millicore method) for precision; use §3's flat-vCPU constant as a
+   - `W_ram` — use Section 6 (percentage safe-ceiling method) for the most robust result on
+     unfamiliar hardware; use Section 3's flat-GB method only as a fast rough estimate.
+   - `W_cpu` — use Section 5 (millicore method) for precision; use Section 3's flat-vCPU constant as a
      fast rough estimate.
-   - `W_pod` — use §4, adjusting `system_pods` for whatever's already running on that cluster.
+   - `W_pod` — use Section 4, adjusting `system_pods` for whatever's already running on that cluster.
 
 4. **Take the minimum** of the three — that's the *safe theoretical maximum*.
 
@@ -209,8 +188,7 @@ same-node access.
    ```
    recommended_N = min(theoretical_max, floor(theoretical_max × 0.7–0.85))
    ```
-   (e.g. CI/CD server theoretical ≈ 9–11 → ran at 6; laptop theoretical = 3 → ran at 4
-   after finding 6 was too aggressive in practice.)
+   (e.g. CI/CD server theoretical = 9 → ran at 6; laptop theoretical = 3–6 → ran at 6.)
 
 6. **Validate empirically.** Run a full test campaign at the chosen N and confirm:
    - No pod evictions / OOMKills
@@ -225,9 +203,9 @@ same-node access.
 
 | Server | Total CPU | Total RAM | W_ram | W_cpu | W_pod | Binding factor | N actually used |
 |---|---|---|---|---|---|---|---|
-| Laptop | 12 cores | 19 GB | 3 | 6 | — | RAM | 4 |
-| CI/CD server | 16 cores | 48 GB | 11 | 9 | 11 | CPU / pod-count (tie) | 6 |
-| CDAC server | 48 cores | 187.6 GB | **32** | 130 | — | **RAM** | 11 (pod-count limited the actual test run; 32 is the RAM ceiling for future runs without that limit) |
+| Laptop | 12 cores | 19 GB | 3 | 6 | — | RAM | 6 |
+| CI/CD server | 16 cores | 48 GB | 11 | 9 | — (no limit set) | CPU | 6 |
+| CDAC server | 48 cores | 187.6 GB | **32** | 130 | 11 | **RAM** (pod-count limited the actual test run; 32 is the RAM ceiling for future runs without that limit) | 11 |
 
 **Bottom line:** memory is almost always the binding constraint for this workload, because
 the GSM stack pods are I/O/timer-bound rather than CPU-hot — they sit on memory without
